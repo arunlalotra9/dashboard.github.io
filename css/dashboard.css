@@ -138,8 +138,13 @@ li.dropdown.bxfullnav-list small {
     background-color: #010F33;
     color: #fff;
 }
+.bxNavlist h5{
+    font-size: 20px;
+    font-weight: 700;
+}
 .topbar-menu i {
     font-size: 22px;
+    opacity: 0.7;
 }
 .notification-list .nav-link span {
     display: inline-block;
