@@ -1,0 +1,85 @@
+.navbar-custom {
+    padding: 0 12px;
+    background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
+    min-height: 70px;
+    width: 100%;
+}
+.navbar-custom .topbar-menu {
+    position: relative;
+    z-index: 1;
+}
+.navbar-custom .topbar-menu li {
+    float: left;
+    max-height: 70px;
+}
+.notification-list {
+    margin-left: 0;
+}
+.navbar-custom .topbar-menu .nav-link {
+    padding: 0;
+    color: #fff;
+    min-width: 32px;
+    display: block;
+    text-align: center;
+    margin: 0 7px;
+    position: relative;
+}
+.notification-list .noti-icon {
+    font-size: 22px;
+    vertical-align: middle;
+    line-height: 70px;
+}
+.notification-list .noti-icon-badge {
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 6px;
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+    background-color: #fa5c7c;
+}
+.dropdown-menu-animated.dropdown-menu-end[style] {
+    left: auto;
+    right: 0;
+}
+.dropdown-menu-animated {
+    -webkit-animation-name: DropDownSlide;
+    animation-name: DropDownSlide;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    margin: 0;
+    z-index: 1000;
+}
+.dropdown-menu-animated.show {
+    top: 100%!important;
+}
+.dropdown-menu.show {
+    display: block;
+}
+@-webkit-keyframes DropDownSlide {
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    0% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
+
+@keyframes DropDownSlide {
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    0% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
