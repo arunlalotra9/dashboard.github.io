@@ -151,6 +151,66 @@ li.dropdown.bxfullnav-list small {
     top: 10px;
     right: 18px;
 }
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #010F33;
+    text-align: center;
+    z-index: 11;
+}
+#left-switch {
+    float: left;
+    position: relative;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.collapse-sidebar {
+    position: absolute;
+    text-align: center;
+    left: 100%;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: #717171;
+    z-index: 1;
+    color: #fff;
+    cursor: pointer!important;
+    border-radius: 0 0 4px;
+}
+.collapse-sidebar i {
+    font-size: 20px;
+}
+button.arrow-none::after{
+    display: none;
+}
+.left-sidebar {
+    width: 700px;
+    background-color: #010F33;
+    box-shadow: 6px 0 30px 0 rgba(0,0,0,.15);
+    position: relative;
+    z-index: 2;
+}
+.right-section {
+    width: calc(100% - 700px);
+    float: left;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    padding: 20px 30px;
+}
+#left-switch.collapsed{
+    margin-left: -700px;
+}
+.right-section.left-collapsed{
+    width: 100%;
+}
 
 
 @-webkit-keyframes DropDownSlide {

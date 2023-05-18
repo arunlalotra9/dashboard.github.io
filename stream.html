@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en" class="bxHtml">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,19 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/custom.js"></script>
 
     <title>Binaryflux Stream</title>
   </head>
   <body class="">
     
     <div id="wrapper" class="bxContent">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
             <div class="container-fluid p-md-2 p-0">
                 <div class="bxHeaderLeftNav d-flex align-items-center">
                     <div class="float-star order-md-2">
@@ -247,10 +243,102 @@
             </div>
         </nav>
         
-        <div class="fullwidth main-inner">
+        <div class="fullwidth main-inner" id="bxFullwidthContent">
+            <ul class="nav nav-tabs nav-justified d-md-none alMainTabsMobile" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link  rounded-0" id="leftSwitch-tab" data-bs-toggle="tab" data-bs-target="#left-switch" type="button" role="tab" aria-controls="tasks-switch" aria-selected="false" tabindex="-1">Tasks</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active rounded-0" id="rightSwitch-tab" data-bs-toggle="tab" data-bs-target="#right-switch" type="button" role="tab" aria-controls="map-switch" aria-selected="true">Map</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="left-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
+                    <div class="collapse-sidebar right"><i class="bi bi-chevron-compact-right text-white"></i></div>
+                    <section class="left-task left-sidebar pull-left" id="taskContent">
+                        <div class="pane-header d-flex align-items-center">
+                            <form class="sidebar-search">
+                                <div class="input-group">
+                                  <span class="bi bi-search search-icon text-white"></span>
+                                  <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                                </div>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-filter-left text-white"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Action</a></li>
+                                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </section>
+                </div>
 
+                <div id="right-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
+                    <div class="right-section easy-3s desktop-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <footer id="bxFooter" class="footer">
+        <div class="container-fluid">
+            <p class="text-center m-0">@copyright <a href="binaryflux.com">binaryflux.com</a></p>
+        </div>
+    </footer>
+
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script src="js/custom.js"></script>
+    <!-- <script src="js/app.js"></script> -->
   </body>
 </html>
