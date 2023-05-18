@@ -1,30 +1,29 @@
 
     $(document).ready(function(){
 
-        //var alTab_height = $('.alTabBoxOuterTask').height();
-
         var windowHeight = window.innerHeight;
         var bxHeader_height = $('#bxNavBar').height();
         var bxFooter_height = $("#bxFooter").height();
-
-        //var bxfullwidth_height = $(".alNavTabs").height();
-        //var bxHtml_height = $(".bxHtml").height();
+        var bxPagination_height = $(".bxPagination").height();
+        var bxLeftHeader_height = $(".pane-header").height();
       
         var bxTotal_height = parseInt(bxHeader_height) + parseInt(bxFooter_height);
+
+        var  bxLeftInnerHeight = parseInt(bxLeftHeader_height) + parseInt(bxPagination_height);
       
         var bxTabsHeight = parseInt(windowHeight) - parseInt(bxTotal_height);
+
+        var bxLeftSearchTotal_height = parseInt(bxTabsHeight) - parseInt(bxLeftInnerHeight);
       
-        //var bxfullwidth_height = parseInt(bxHtml_height) - parseInt(bxTotal_height);
       
-        // console.log('mainTabsHeight='+mainTabsHeight + " alWindow_height="+alWindow_height + " alHeader_height="+alHeader_height)
-      
-        //$(".alTabBoxOuterTask").css('max-height', mainTabsHeight+'px');
-      
-        $("html").css('min-height', windowHeight+'px');
+        $(".bxContent").css('min-height', windowHeight+'px');
+
         $("#bxFullwidthContent").css('min-height', bxTabsHeight+'px');
       
-        $(".desktop-right, .left-sidebar").css('height', bxTabsHeight+'px');
-      
+        $(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
+        
+        //$(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
+
         var width = $( window ).width();
       
         if (width<767) {

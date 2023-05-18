@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Nunito:wght@400;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
 * {margin: 0;padding: 0;box-sizing: border-box;}
-body{margin: 0;font-size: 18px;color: #444;font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; background: linear-gradient(99.68deg, #000000 29.52%, #090B19 44.49%, #102A47 88.31%);}
-
+body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; background: linear-gradient(99.68deg, #000000 29.52%, #090B19 44.49%, #102A47 88.31%);}
+html,body{
+  overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {width: 6px;}
+/* Track */
+::-webkit-scrollbar-track {background: #010F33;}
+/* Handle */
+::-webkit-scrollbar-thumb {background: #296fc3;}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #1A4478;}
 li{list-style: none;}
-a{text-decoration: none;}
+a{text-decoration: none;color: rgba(255, 255, 255, 0.6);}
 .bxLogin{
   background-image: url(https://arunlalotra9.github.io/dashboard.github.io/images/Login.jpg); 
   background-size: 100%;

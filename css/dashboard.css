@@ -4,18 +4,17 @@ nav.navbar {
     width: 100%;
     border-bottom: 1px solid rgba(73, 153, 254, 0.4);
 }
- a.navbar-brand {
+a.navbar-brand {
     border-right: 1px solid rgba(73, 153, 254, 0.4);
     padding-right: 25px;
 }
-
 .notification-list {
     margin-left: 0;
 }
 .list-unstyled .dropdown-toggle::after {
     display: none;
 }
-li.dropdown.bxfullnav-list small {
+.dropdown.bxfullnav-list small {
     display: block;color:#fff;font-size: 12px;
 }
 .navbar-custom .topbar-menu .bxfullnav-list .nav-link {
@@ -38,8 +37,8 @@ li.dropdown.bxfullnav-list small {
     padding-right: 25px;
 }
 .nav-user {
-    padding: calc(31px * .5) 20px calc(31px * .5) 57px!important;
-    text-align: left!important;
+    padding: calc(31px * .5) 20px calc(31px * .5) 57px !important;
+    text-align: left !important;
     position: relative;
     background-color: transparent;
     min-height: 70px;
@@ -97,7 +96,7 @@ li.dropdown.bxfullnav-list small {
     z-index: 1000;
 }
 .dropdown-menu-animated.show {
-    top: 100%!important;
+    top: 100% !important;
 }
 .dropdown-menu.show {
     display: block;
@@ -121,7 +120,7 @@ li.dropdown.bxfullnav-list small {
 .nav-link {
     color: #fff;
 }
-.bxNavlist a small{
+.bxNavlist a small {
     color: #C5C6CC;
 }
 .navbar-nav a.nav-link.dropdown-toggle {
@@ -138,7 +137,7 @@ li.dropdown.bxfullnav-list small {
     background-color: #010F33;
     color: #fff;
 }
-.bxNavlist h5{
+.bxNavlist h5 {
     font-size: 20px;
     font-weight: 700;
 }
@@ -159,7 +158,7 @@ li.dropdown.bxfullnav-list small {
     padding: 1rem;
     background-color: #010F33;
     text-align: center;
-    z-index: 11;
+    z-index: 11;margin-top: 60px;
 }
 #left-switch {
     float: left;
@@ -187,7 +186,7 @@ li.dropdown.bxfullnav-list small {
 .collapse-sidebar i {
     font-size: 20px;
 }
-button.arrow-none::after{
+.dropdown-toggle.arrow-none::after {
     display: none;
 }
 .left-sidebar {
@@ -196,6 +195,53 @@ button.arrow-none::after{
     box-shadow: 6px 0 30px 0 rgba(0,0,0,.15);
     position: relative;
     z-index: 2;
+    padding: 0;
+    overflow: hidden;
+}
+.leftSearchBoxArea {
+    overflow: auto;
+    padding-bottom: 55px;
+}
+.leftResultCount span{
+    opacity: 0.6;
+}
+.sidebar-search {
+    width: calc(100% - 50px);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.form-control:focus {
+    color: inherit;
+    background-color: transparent;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+.sidebar-search .input-group {
+    align-items: center;
+    padding-left: 10px;
+}
+.sidebar-search input {
+    background-color: transparent;
+    border: none;
+}
+.pane-header .dropdown {
+    width: auto;
+    padding: 0 0 0 20px;
+}
+.pane-header .dropdown i {
+    font-size: 24px;
+}
+.sidebar-search {
+    width: calc(100% - 50px);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
 }
 .right-section {
     width: calc(100% - 700px);
@@ -205,11 +251,70 @@ button.arrow-none::after{
     z-index: 0;
     padding: 20px 30px;
 }
-#left-switch.collapsed{
+/* .left-section,
+.right-section {
+    overflow: auto;
+} */
+#left-switch.collapsed {
     margin-left: -700px;
 }
-.right-section.left-collapsed{
+.right-section.left-collapsed {
     width: 100%;
+}
+.card {
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 1px solid rgba(73, 153, 254, 0.4);
+}
+.bg-bxinfo {
+    background-color: #42667D;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+}
+.leftSearchBoxArea label {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+.leftSearchBoxArea p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 3px;
+    padding-left: 32px;
+}
+.leftSearchBoxArea .form-check label span {
+    color: #607191;
+    font-size: 20px;
+}
+.leftSearchBoxArea .form-check input {
+    background-color: transparent;
+    border: 1px solid #eee;
+    margin-right: 20px;
+}
+.list-inline {
+    padding-left: 32px;
+}
+.bxPagination {
+    position: sticky;
+    bottom: 55px;
+    background-color: #0F1226;
+}
+.pagination {
+    align-items: end;
+    justify-content: end;
+}
+.page-link {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #0d6efd;
+    border-radius: 5px;
 }
 
 

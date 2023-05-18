@@ -255,72 +255,230 @@
             <div class="tab-content">
                 <div id="left-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
                     <div class="collapse-sidebar right"><i class="bi bi-chevron-compact-right text-white"></i></div>
-                    <section class="left-task left-sidebar pull-left" id="taskContent">
-                        <div class="pane-header d-flex align-items-center">
-                            <form class="sidebar-search">
-                                <div class="input-group">
-                                  <span class="bi bi-search search-icon text-white"></span>
-                                  <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                    <section class="left-task left-sidebar left-section" id="taskContent">
+                        <div class="pane-header px-3 py-2">
+                            <div class="leftSearchHeader d-flex align-items-center">
+                                <form class="sidebar-search">
+                                    <div class="input-group">
+                                      <span class="bi bi-search search-icon text-white"></span>
+                                      <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                                    </div>
+                                </form>
+                                <div class="dropdown">
+                                    <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-filter-left text-white"></i>
+                                    </span>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
                                 </div>
-                            </form>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-filter-left text-white"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Action</a></li>
-                                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                              </div>
+                            </div>
+                            <div class="leftSearchResult d-flex justify-content-between align-items-center mt-3 mb-1">
+                                <div class="leftResultCount">
+                                    <span>40 Streams</span>
+                                </div>
+                                <div class="leftResultActionBtns row g-4">
+                                    <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-trash"></i> Remove</a>
+                                    <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-diagram-3"></i> Add New</a>
+                                </div>
+                            </div>                            
+                        </div>                        
+
+                        <div class="leftSearchBoxArea col-12">
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="row justify-content-sm-between">
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    <span><i class="bi bi-hash"></i></span> Data exfiltration using external drive 
+                                                </label>
+                                                <p class="">Protect from transferring confidential data to external drives.</p>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img class="w-100" src="images/chart_img1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <nav class="bxPagination" aria-label="Page navigation example">
+                            <ul class="pagination mb-0 py-2">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
                     </section>
                 </div>
 
                 <div id="right-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
                     <div class="right-section easy-3s desktop-right">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias explicabo. Excepturi ratione inventore in vitae nobis. Nihil dicta ratione in est aspernatur quam illo iusto quia. Voluptate, accusamus amet.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -329,14 +487,14 @@
 
     <footer id="bxFooter" class="footer">
         <div class="container-fluid">
-            <p class="text-center m-0">@copyright <a href="binaryflux.com">binaryflux.com</a></p>
+            <p class="text-center m-0">@copyright <a href="binaryflux.com">www.binaryflux.com</a></p>
         </div>
     </footer>
 
 
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    
+    <script src="js/highcharts.js"></script>
     
     <script src="js/custom.js"></script>
     <!-- <script src="js/app.js"></script> -->
