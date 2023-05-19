@@ -2,7 +2,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
 * {margin: 0;padding: 0;box-sizing: border-box;}
-body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; background: linear-gradient(99.68deg, #000000 29.52%, #090B19 44.49%, #102A47 88.31%);}
+body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);}
 html,body{
   overflow: hidden;
 }

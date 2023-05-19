@@ -155,10 +155,14 @@ a.navbar-brand {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
+    padding: 5px 25px;
     background-color: #010F33;
-    text-align: center;
-    z-index: 11;margin-top: 60px;
+    text-align: right;
+    z-index: 11;
+    margin-top: 0;
+}
+.footer p{
+    color: #fff;
 }
 #left-switch {
     float: left;
@@ -273,11 +277,23 @@ a.navbar-brand {
     font-size: 10px;
     line-height: 14px;
 }
-.leftSearchBoxArea label {
+.rightSearchBoxArea label, .leftSearchBoxArea label {
     color: #fff;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.rightResultActionBtns {
+    text-align: right;
+    float: right;
+}
+.rightSearchBoxArea p{
+    padding-left: 27px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 3px;
 }
 .leftSearchBoxArea p {
     font-size: 12px;
@@ -285,9 +301,92 @@ a.navbar-brand {
     margin-bottom: 3px;
     padding-left: 32px;
 }
-.leftSearchBoxArea .form-check label span {
+.leftSearchBoxArea .card:hover {
+    background-color: #0F1226;
+}
+.rightSearchBoxArea label span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rightSearchStatus li {
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    padding-left: 15px;
+    position: relative;
+    margin-right: 10px;
+}
+.rightSearchStatus li:after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 5px;
+    background: rgba(73, 153, 254, 0.4);
+    border-radius: 5px;
+    left: 0;
+    top: 6px;
+}
+.rightSideCardLgBox .card .card-body {
+    background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);
+    box-shadow: inset 0px 4px 150px rgba(15, 18, 38, 0.2);
+    border-radius: 4px 4px 0px 0px;
+    padding: 10px 20px !important;
+}
+.rightSideCardLgBox .form-check {
+    margin-left: 30px;
+}
+.rightSideCardLgBox .form-check input[type="checkbox"]{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.rightSideCardLgBox label.form-check-label {
+    display: block;
+}
+.rightSearchStatus li:nth-child(1){
+    padding-left: 0;
+}
+.rightSearchStatus li:nth-child(1)::after {
+display: none;
+}
+.rightSearchStatus li span {
+    opacity: .7;
+    margin-right: 5px;
+}
+.bxRightCardTop .card {
+    background-color: #0E2948;
+    border-radius: 4px;
+}
+.bxRightCardTop .card h3 {
+    font-size: 20px;
+}
+.bxRightCardTop .card h5 {
+    font-size: 14px;
+    color: #C5C6CC;
+}
+.bxRightCardTop .card h3 small {
+    font-size: 12px;
+}
+.bxRightCardTop i {
+    font-size: 16px;
+}
+.bxRightCardTop span {
+    font-size: 12px;
+}
+.rightSearchBoxArea .card .card-body {
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.bxHash {
     color: #607191;
     font-size: 20px;
+}
+.rightSearchBoxArea .form-check {
+    padding-left: 0;
+}
+.rightSearchBoxArea .card {
+    border-top: 0;
 }
 .leftSearchBoxArea .form-check input {
     background-color: transparent;
@@ -299,7 +398,7 @@ a.navbar-brand {
 }
 .bxPagination {
     position: sticky;
-    bottom: 55px;
+    bottom: 20px;
     background-color: #0F1226;
 }
 .pagination {
@@ -316,7 +415,74 @@ a.navbar-brand {
     background-color: #0d6efd;
     border-radius: 5px;
 }
-
+.bxRightSearchBox .rightSidebar-search {
+    width: 40px;
+    float: left;
+    height: 47px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.bxRightSearchBox .rightSidebar-search .search-icon {
+    width: 40px;
+    text-align: center;
+    height: 46px;
+    position: absolute;
+    left: 0;
+    line-height: 2.5;
+    cursor: pointer;
+    z-index: 999;
+}
+.bxRightSearchBox .rightSidebar-search input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding-left: 40px;
+}
+.bxRightSearchBox .rightSidebar-search button.input-group-text.btn {
+    color: #fff;
+    padding: 0 10px;
+    border: 1px solid #fff;
+    line-height: normal;
+    height: 22px;
+    margin-top: 12px;
+    margin-right: 0;
+    border-radius: 10px !important;
+    overflow: hidden;
+    font-size: 12px;
+}
+.bxCloseSearch {
+    position: relative;
+    right: 0;
+    color: #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 2px;
+    font-size: 30px;
+}
+.bxRightSearchBox .rightSidebar-search.open {
+    width: 100%;
+}
+.bxcolorYellow{
+    color: #E8B906;
+}
+.bxcolorRed{
+    color: #D3536C;
+}
+.bxJsonText {
+    color: #C5C6CC;
+}
+.rightSideCardLgBox a{
+    color: #0d6efd;
+}
+.moretext{display: none;}
 
 @-webkit-keyframes DropDownSlide {
     100% {

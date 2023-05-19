@@ -34,20 +34,20 @@
             $('.right-section').css('width', '100%')
         }
       
-        // $('.button-toggle-menu i.mdi').click(function() {
-        //     //$(this).removeClass('mdi-menu');
-        //     //$(this).addClass('mdi-menu-open');
-      
-        //     if($(this).hasClass("mdi-menu"))
-        //      {
-        //         $(this).addClass("mdi-menu-open");
-        //         $(this).removeClass("mdi-menu");
-        //      }
-        //      else{
-        //         $(this).addClass("mdi-menu");
-        //         $(this).removeClass("mdi-menu-open");
-        //      }
-        // });
+         // ================ search bar css =======================
+
+        $(".rightSidebar-search").click(function(){
+            var id = $(this).parent().parent().attr('id');
+            $("#"+id+" .rightSidebar-search").addClass("open");
+        });
+
+
+        // ================ search bar close css =======================
+
+        $(document ).delegate( ".bxCloseSearch", "click", function() {
+            var id = $(this).parent().parent().parent().parent().attr('id');
+            $("#"+id+" .rightSidebar-search").removeClass("open");
+        });
         
         
         // =============== #left-switch left side bar ======================
@@ -55,6 +55,18 @@
         $("#left-switch .collapse-sidebar").click(function(){
             $("#left-switch").toggleClass("collapsed");
             $('.right-section').toggleClass("left-collapsed");
+        });
+
+        // ======================  Expand / Hide ========================
+
+        $('.moreless-button').click(function() {
+            $('.moretext').slideToggle();
+            if ($('.moreless-button').text() == "Expand") {
+            $(this).text("Hide");
+
+            } else {
+            $(this).text("Expand")
+            }
         });
 
     
