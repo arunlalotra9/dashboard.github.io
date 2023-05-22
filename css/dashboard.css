@@ -315,6 +315,61 @@ display: none;
     color: #0d6efd;
 }
 .moretext{display: none;}
-.bxRightCardNumber{
 
+.bxAddStreamOffCanvas {
+    width: 100%;
+    margin-top: 87px;
+    max-width: 800px;
+}
+.bxAddStreamOffCanvas .offcanvas-header {
+    background-color: #090B19;
+}
+.bxAddStreamOffCanvas .offcanvas-header a{
+    font-size: 24px;
+}
+.bxSuggestionTopBar {
+    background: #010F33;
+    box-shadow: inset 0px 4px 150px rgba(73, 153, 254, 0.2);
+    padding: 20px;
+}
+.bxSearchBtn {
+    border: 1px solid #4999FE;
+    border-radius: 3px;
+    color: #ccc;
+}
+.bxSuggestionTopBar ul li {
+    margin-left: 20px;
+    font-size: 14px;
+}
+.bxSuggestionArea {
+    background: #0E2948;
+    padding: 10px 20px;
+}
+.bxSuggestionArea span{
+    font-size: 12px;
+}
+.bxAddCard .card{
+    background: #010F33;
+}
+.bxAddCard label {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.bxAddCard p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 3px;
+    padding-left: 35px;
+}
+.bxAddCard .form-check input {
+    background-color: transparent;
+    border: 1px solid #eee;
+    margin-right: 20px;
+}
+.bxAddCard .card:hover {
+    background-color: #0F1226;
 }

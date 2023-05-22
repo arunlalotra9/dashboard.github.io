@@ -282,7 +282,7 @@
                                 </div>
                                 <div class="leftResultActionBtns row g-4">
                                     <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-trash"></i> Remove</a>
-                                    <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-diagram-3"></i> Add New</a>
+                                    <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-diagram-3"></i> Add New</a>
                                 </div>
                             </div>                            
                         </div>                        
@@ -455,6 +455,9 @@
                                             <a href="#" class="bxCloseSearch"><i class="bi bi-plus text-white"></i></a>
                                         </div>
                                     </form>
+                                    <ul class="">
+                                        <li class=""></li>
+                                    </ul>
 
                                     <ul class="pagination mb-0 py-2">
                                         <li class="page-item">
@@ -499,13 +502,13 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-end">
                                                             <!-- item-->
-                                                            <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                                            <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
                                                             <!-- item-->
-                                                            <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                                            <a href="javascript:void(0);" class="dropdown-item">Copy</a>
                                                             <!-- item-->
-                                                            <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                                            <a href="javascript:void(0);" class="dropdown-item">Share</a>
                                                             <!-- item-->
-                                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                                            <a href="javascript:void(0);" class="dropdown-item">Assign</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -532,6 +535,161 @@
             <p class="text-end m-0">Copyright © <a href="https://binaryflux.xyz/">Binaryflux.</a> All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="bxAddStreamOffCanvas offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Streams</h5>
+          <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="bxSuggestionTopBar">
+                <form class="sidebar-search">
+                    <div class="input-group">
+                      <span class="bi bi-search search-icon text-white"></span>
+                      <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                    </div>
+                </form>
+                <ul class="d-flex align-items-center mt-3 m-0 p-0">
+                    <span>Add to search: </span>
+                    <li><button type="button" class="btn bxSearchBtn">Cloud Computing</button></li>
+                    <li><button type="button" class="btn bxSearchBtn">Network</button></li>
+                    <li><button type="button" class="btn bxSearchBtn">Security</button></li>
+                    <li><button type="button" class="btn bxSearchBtn">Operating System</button></li>
+                </ul>
+            </div>
+            <div class="bxSuggestionArea">
+                <span>200 Streams, 10 Added</span>
+            </div>
+            <div class="col-12 bxAddCard">
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive </span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
 
 
     <script src="js/vendor.min.js"></script>

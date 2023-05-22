@@ -90,6 +90,13 @@
     font-weight: 400;
     font-size: 14px;
 }
-.bxSearchSectionResult .nav.nav-pills{
+.bxSearchSectionResult .nav.nav-pills {
     margin: 0 15px;
+}
+.topbar-menu .search-list.active {
+    background-color: rgba(73, 153, 254, 0.4);
+    border-radius: 2px;
+}
+.topbar-menu .search-list .nav-link {
+    padding: 10px 12px;
 }
