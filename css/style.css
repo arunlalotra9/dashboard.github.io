@@ -4,7 +4,7 @@
 * {margin: 0;padding: 0;box-sizing: border-box;}
 body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);}
 html,body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 /* width */
 ::-webkit-scrollbar {width: 6px;}
@@ -16,6 +16,9 @@ html,body{
 ::-webkit-scrollbar-thumb:hover {background: #1A4478;}
 li{list-style: none;}
 a{text-decoration: none;color: rgba(255, 255, 255, 0.6);}
+a:hover{
+  color: #fff;
+}
 .bxLogin{
   background-image: url(https://arunlalotra9.github.io/dashboard.github.io/images/Login.jpg); 
   background-size: 100%;
@@ -87,4 +90,14 @@ z-index: 0;
 .bxBtn-primary:hover{
   background: #296fc3;
   color: #FFFFFF;
+}
+.dropdown-menu{
+  background-color: #010F33;
+}
+.rightSideCardLgBox a.dropdown-item,
+.dropdown-item{
+  color: #fff;
+}
+.rightSideCardLgBox a.dropdown-item:hover, .dropdown-item:hover {
+  color: #010F33;
 }
