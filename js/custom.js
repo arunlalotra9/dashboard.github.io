@@ -62,7 +62,7 @@
         $('.moreless-button').click(function() {
             $('.moretext').slideToggle();
             if ($('.moreless-button').text() == "Expand") {
-            $(this).text("Hide");
+            $(this).text("Collapse");
 
             } else {
             $(this).text("Expand")

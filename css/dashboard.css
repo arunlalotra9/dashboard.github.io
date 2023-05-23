@@ -373,3 +373,6 @@ display: none;
 .bxAddCard .card:hover {
     background-color: #0F1226;
 }
+.bxSearchBtn:hover {
+    color: #4999FE;
+}

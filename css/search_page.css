@@ -47,6 +47,14 @@
     border: 1px solid #4999FE;
     border-radius: 3px;
     color: #ccc;
+    font-size: 14px;
+}
+.bxSearchSectionArea {
+    background: #0E2948;
+    padding: 10px 20px;
+}
+.bxSearchSectionArea span {
+    font-size: 12px;
 }
 .bxSearchSectionResult {
     overflow: auto;
@@ -99,4 +107,78 @@
 }
 .topbar-menu .search-list .nav-link {
     padding: 10px 12px;
+}
+.bxColorBgSearch {
+    background: #0E2948;    
+    border: 1px solid rgba(73, 153, 254, 0.2);
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.25), inset 0px 0px 150px rgba(73, 153, 254, 0.05);
+    border-radius: 8px;
+}
+.bxSearchLeftStatus {
+    padding-left: 23px;
+}
+.bxSearchLeftInnerCard li:nth-child(1) {
+    padding-left: 0;
+}
+.bxSearchLeftInnerCard li {
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    padding-left: 15px;
+    position: relative;
+    margin-right: 10px;
+}
+.bxSearchLeftInnerCard li span {
+    opacity: .7;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.bxSearchLeftInnerCard label {
+    font-size: 18px;
+    color: #fff;
+}
+.bxColorRed h4,
+.bxColorRed h6,
+.bxColorRed i{
+    color: #FF3D00;
+}
+.bxColorYellow h4,
+.bxColorYellow h6,
+.bxColorYellow i{
+    color: #E59B33;
+}
+.bxSearchLeftInnerCard {
+    background: #010F33;
+    border-bottom: 1px solid #4999FE66;
+}
+.bxSearchLeftStatus  i {
+    font-size: 20px;
+}
+.bxSearchLeftStatus span {
+    font-size: 20px;
+}
+.bxSearchRightArea p {
+    padding-left: 27px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 3px;
+}
+.bxcolorRed {
+    color: #D3536C;
+}
+.bxcolorYellow {
+    color: #E8B906;
+}
+.moretext {
+    display: none;
+}
+.bxJsonText {
+    color: #C5C6CC;
+}
+.bxSearchRightArea a {
+    color: #0d6efd;
+}
+.bxSearchRightInner{
+    background-color: #010F33;
+    border-radius: 5px;
 }

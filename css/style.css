@@ -101,3 +101,9 @@ z-index: 0;
 .rightSideCardLgBox a.dropdown-item:hover, .dropdown-item:hover {
   color: #010F33;
 }
+.bxErrorMessage {
+  position: absolute;
+  font-size: 14px;
+  color: red;
+  bottom: 0;
+}
