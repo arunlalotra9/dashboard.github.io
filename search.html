@@ -201,10 +201,23 @@
                     </li>
 
 
-                    <li class="setting-list">
-                        <a class="nav-link" data-bs-toggle="offcanvas" href="#">
+                    <li class="dropdown setting-list">
+                        <a class="nav-link dropdown-toggle nav-setting arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="bi bi-gear"></i>
                         </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                            <a href="manage_organizations.html" class="dropdown-item notify-item">
+                                <span>Manage Organizations</span>
+                            </a>      
+                            <!-- item-->
+                            <a href="features.html" class="dropdown-item notify-item">
+                                <span>Features</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <span>Setting 2</span>
+                            </a>
+                        </div>
                     </li>
 
                     <li class="dropdown user-list">
@@ -267,7 +280,7 @@
                             </div>
                             
                             <div class="p-5 col-12">
-                                <div class="row">
+                                <div class="row mb-5">
                                     <div class="col-md-4">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <h4 class="mb-0">Recent Detections</h4>
@@ -392,6 +405,133 @@
                                                     <p class="moretext bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat</p>
                                                     <a class="moreless-button" href="#">Expand</a>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4 class="mb-0">Top Association</h4>
+                                            <ul class="m-0 d-flex align-items-center">
+                                                <li>
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-filter-left text-white"></i>
+                                                        </span>
+                                                        <ul class="dropdown-menu">
+                                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="mx-3">
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-funnel text-white"></i>
+                                                        </span>
+                                                        <ul class="dropdown-menu">
+                                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical text-white"></i>
+                                                        </span>
+                                                        <ul class="dropdown-menu">
+                                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bxSearchLeftArea bxColorBgSearch">
+                                            <div class="bxSearchAssociation">
+                                                <table class="w-100">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Link?</th>
+                                                            <th>Score?</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Patents</td>
+                                                            <td>10000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>master_parts_list.docx</td>
+                                                            <td>10000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>system_access.docx</td>
+                                                            <td>10000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>system_access.docx</td>
+                                                            <td>10000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Office 365</td>
+                                                            <td>10000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4 class="m-0">Live Doppler</h4>
+                                            <ul class="m-0 d-flex align-items-center">
+                                                <li>
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-filter-left text-white"></i>
+                                                        </span>
+                                                        <ul class="dropdown-menu">
+                                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="mx-3">
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-funnel text-white"></i>
+                                                        </span>
+                                                        <ul class="dropdown-menu">
+                                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical text-white"></i>
+                                                        </span>
+                                                        <ul class="dropdown-menu">
+                                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bxSearchRightArea bxColorBgSearch">
+                                            <div class="bxSearchLiveDemo">
+                                                <img src="images/live_demo.png" alt="live_demo" class="w-100">pb06ak2133
                                             </div>
                                         </div>
                                     </div>

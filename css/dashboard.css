@@ -306,7 +306,7 @@ display: none;
     color: #E8B906;
 }
 .bxcolorRed{
-    color: #D3536C;
+    color: #FF3D00
 }
 .bxJsonText {
     color: #C5C6CC;
@@ -375,4 +375,52 @@ display: none;
 }
 .bxSearchBtn:hover {
     color: #4999FE;
+}
+.bxPopup .modal-content{
+    background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
+    border: 1px solid #00529D;
+    box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+.bxPopup .modal-header  {
+    background-color: #010F33;
+    border-color: #00529D;;
+}
+.bxPopup .modal-header .modal-title {
+    color: #fff;
+}
+.bxPopup .bxClose {
+    font-size: 25px;
+    font-weight: 400;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.bxPopupLowerText{
+    border-color: #00529D !important;
+}
+.bxPopupContent p{
+    font-size: 12px;
+    font-weight: 700;
+}
+.bxPopupLowerText h4{
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+.bxPopupLowerText  span {
+    font-size: 14px;
+}
+.bxUMGraphText p{
+    font-weight: 700;
+    font-size: 14px;
+}
+.bxUMGraphText span{
+    font-weight: 400;
+    font-size: 12px;
 }
