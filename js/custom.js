@@ -69,6 +69,11 @@
             }
         });
 
+        // =============================
+        $('input[type="checkbox"] + label').click(function(){
+            $(this).toggleClass('active');
+          });
+
     
 
     });
