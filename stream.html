@@ -464,9 +464,9 @@
                                             <a href="#" class="bxCloseSearch"><i class="bi bi-plus text-white"></i></a>
                                         </div>
                                     </form>
-                                    <ul class="">
+                                    <div class="bxMoreActionOnCheck d-flex align-items-center">
                                         <li class=""></li>
-                                    </ul>
+                                    </div>
 
                                     <ul class="pagination mb-0 py-2">
                                         <li class="page-item">
@@ -545,7 +545,7 @@
         </div>
     </footer>
 
-    <div class="bxAddStreamOffCanvas offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="bxAddStreamOffCanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Streams</h5>
           <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
@@ -642,59 +642,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="offcanvas-footer ">
+            <nav class="bxPagination" aria-label="Page navigation example">
+                <ul class="pagination mb-0 py-2">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class="offcanvas_result"><span>5 Streams Added</span></div>
+                <div>
+                    <a type="button" class="text-white" data-bs-dismiss="offcanvas" aria-label="Close">Close</a>
+                    <button type="button" class="btn btn-primary">Apply</button>
                 </div>
             </div>
         </div>
@@ -771,7 +743,6 @@
             </div>
         </div>
     </div>
-    
 
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>    
