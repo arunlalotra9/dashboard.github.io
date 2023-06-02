@@ -252,7 +252,7 @@ display: none;
     float: left;
     height: 47px;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -261,6 +261,7 @@ display: none;
     border: 1px solid #0d6efd;
     border-radius: 4px;
     cursor: pointer;
+    left: 0;
 }
 .bxRightSearchBox .rightSidebar-search .search-icon {
     width: 40px;
@@ -301,6 +302,14 @@ display: none;
 }
 .bxRightSearchBox .rightSidebar-search.open {
     width: 100%;
+    position: absolute;
+    z-index: 111;
+    background-color: #121212;
+    max-width: 520px;
+}
+.rightSidebar_OuterBox {
+    position: relative;
+    padding-left: 35px;
 }
 .bxcolorYellow{
     color: #E8B906;
@@ -426,4 +435,24 @@ display: none;
 }
 .bxAddStreamOffCanvas {
     background-color: #010F33;
+}
+.bxMoreActionOnCheck  li {
+    margin-left: 15px;
+}
+.bxMoreActionOnCheck  li a{
+    padding: 10px 15px;
+    border-radius: 2px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.bxMoreActionOnCheck li a:hover{
+    background: rgba(73, 153, 254, 0.2);
+}
+.bxBgAddEvents{
+    background: #1A4478;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+.rightSideCardLgBox.bxAddEventText .card .card-body {
+    padding: 0 !important;
 }

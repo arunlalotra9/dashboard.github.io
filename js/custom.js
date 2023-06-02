@@ -37,7 +37,7 @@
          // ================ search bar css =======================
 
         $(".rightSidebar-search").click(function(){
-            var id = $(this).parent().parent().attr('id');
+            var id = $(this).parent().parent().parent().attr('id');
             $("#"+id+" .rightSidebar-search").addClass("open");
         });
 
@@ -45,7 +45,7 @@
         // ================ search bar close css =======================
 
         $(document ).delegate( ".bxCloseSearch", "click", function() {
-            var id = $(this).parent().parent().parent().parent().attr('id');
+            var id = $(this).parent().parent().parent().parent().parent().attr('id');
             $("#"+id+" .rightSidebar-search").removeClass("open");
         });
         
@@ -74,6 +74,8 @@
             $(this).toggleClass('active');
           });
 
-    
+        //====================== custom checkbox 
+        $('#selectall').click(function() { $(this.form.elements).filter(':checkbox').prop('checked', this.checked);
+        });
 
     });

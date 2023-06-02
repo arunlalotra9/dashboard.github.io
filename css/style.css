@@ -131,3 +131,7 @@ z-index: 0;
 .bxMessageApply .alert span i{
   font-size: 24px;
 }
+.form-check-input[type=checkbox] {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+}

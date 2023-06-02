@@ -1,0 +1,156 @@
+.left-sidebar {
+    width: 300px;
+    height: 100vh;
+}
+.right-section {
+    width: calc(100% - 300px);
+}
+#left-switch.collapsed {
+    margin-left: -300px;
+}
+.bxLeftSideBar  li a{
+    border-bottom: 1px solid rgba(73, 153, 254, 0.2);
+}
+.bxLeftSideBar  li.active a,
+.bxLeftSideBar  li a:hover {
+    background-color: rgba(73, 153, 254, 0.1);
+}
+.bxNavTabs{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.bxNavTabs button.nav-link{
+    padding: 5px 0;
+    margin: 0 15px !important;
+    border-radius: 0;
+    border: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.7);
+}
+.bxNavTabs button.nav-link:hover, .bxNavTabs button.nav-link:focus,
+.bxNavTabs button.nav-link.active {
+    background-color: transparent;
+    color: #fff;
+    border-color: transparent transparent #3C92FF transparent;
+}
+.leftnavResultActionBtns a {
+    margin: 0 10px;
+}
+.bxAddUserForm .form-select,
+.bxAddUserForm .form-control{
+    background-color: transparent;
+    color: #C5C6CC;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+.offcanvas-body {
+    background: #010F33;
+}
+.bxAddUserForm  small {
+    font-size: 12px;
+    margin-top: 4px;
+}
+.bxAddUserForm label{
+    font-weight: 400;
+    font-size: 12px;
+}
+.bxAddStreamOffCanvas .offcanvas-header {
+    background-color: #010F33;
+    border-bottom: 1px solid rgba(73, 153, 254, 0.2);
+}
+.bxListHeadBg{
+    background-color:  #0E2948;
+}
+.bxListFormCheck table td{
+    border: none;
+    padding-left: 25px;
+}
+.bxAddStreamOffCanvas .offcanvas-footer{
+    background-color:  #111D36;
+}
+.form-switch .form-check-input {
+    background-color: #3c92ff;
+}
+.bxAddRoleTopHeadLeft {
+    position: relative;
+    padding-left: 50px;
+    margin-top: 30px;
+}
+
+summary {
+    display: block;
+    cursor: pointer;
+    outline: 0; 
+  }
+  
+  summary::-webkit-details-marker {
+      display: none;
+    }
+
+  
+  
+  .tree-nav__item {
+    display: block;
+    white-space: nowrap;
+    color: #ccc;
+    position: relative;
+  }
+  .tree-nav__item.is-expandable::before {
+    border-left: 1px solid #333;
+    content: "";
+    height: 100%;
+    left: 0.8rem;
+    position: absolute;
+    top: 2.4rem;
+    height: calc(100% - 2.4rem);
+  }
+  .tree-nav__item .tree-nav__item {
+    margin-left: 2.4rem;
+  }
+  .tree-nav__item.is-expandable[open] > .tree-nav__item-title::before {
+    font-family: "ionicons";
+    transform: rotate(90deg);
+  }
+  .tree-nav__item.is-expandable > .tree-nav__item-title {
+    padding-left: 2.4rem;
+  }
+  .tree-nav__item.is-expandable > .tree-nav__item-title::before {
+    position: absolute;
+    will-change: transform;
+    transition: transform 300ms ease;
+    font-family: "ionicons";
+    color: #fff;
+    font-size: 1.1rem;
+    content: "\f125";
+    left: 0;
+    display: inline-block;
+    width: 1.6rem;
+    text-align: center;
+  }
+  
+  .tree-nav__item-title {
+    cursor: pointer;
+    display: block;
+    outline: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+  }
+  .tree-nav__item-title .icon {
+    display: inline;
+    padding-left: 1.6rem;
+    margin-right: 0.8rem;
+    color: #666;
+    font-size: 1.4rem;
+    position: relative;
+  }
+  .tree-nav__item-title .icon::before {
+    top: 0;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 1.6rem;
+    text-align: center;
+  }
+  
+  .tree-nav__item-title::-webkit-details-marker {
+    display: none;
+  }

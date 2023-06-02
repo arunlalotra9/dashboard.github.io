@@ -455,18 +455,61 @@
 
                             <div class="row bxRightSearchBox" id="bxRightSearchBox">
                                 <div class="d-flex align-items-center justify-content-between">
-
-                                    <form class="rightSidebar-search">
-                                        <div class="input-group">
-                                            <span class="bi bi-search search-icon text-white"></span>
-                                            <input type="search" class="form-control" placeholder="Search..." id="top-search">
-                                            <button class="input-group-text btn" type="submit">Search</button>
-                                            <a href="#" class="bxCloseSearch"><i class="bi bi-plus text-white"></i></a>
+                                    <div class="rightSidebar_OuterBox d-flex align-items-center justify-content-between">
+                                        <form class="rightSidebar-search">
+                                            <div class="input-group">
+                                                <span class="bi bi-search search-icon text-white"></span>
+                                                <input type="search" class="form-control" placeholder="Search..." id="top-search">
+                                                <button class="input-group-text btn" type="submit">Search</button>
+                                                <a href="#" class="bxCloseSearch"><i class="bi bi-plus text-white"></i></a>
+                                            </div>
+                                        </form>
+                                        <div class="bxMoreActionOnCheck d-flex align-items-center">
+                                            <li class="bxResole">
+                                                <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-clipboard-check"></i> Resolve</a>
+                                            </li>
+                                            <li class="bxRemind">
+                                                <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-alarm"></i> Remind</a>
+                                            </li>
+                                            <li class="bxCopy">
+                                                <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-files"></i> Copy</a>
+                                            </li>
+                                            <li class="bxShare">
+                                                <div class="dropdown">
+                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-share"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="bxThreeDots">
+                                                <div class="dropdown">
+                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                        <!-- item-->
+                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </div>
-                                    </form>
-                                    <div class="bxMoreActionOnCheck d-flex align-items-center">
-                                        <li class=""></li>
-                                    </div>
+                                    </div>                                    
 
                                     <ul class="pagination mb-0 py-2">
                                         <li class="page-item">
@@ -530,7 +573,24 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
+                            
+                            <div class="col-12 rightSideCardLgBox bxAddEventText mt-2">
+                                <div class="card mb-0">
+                                    <div class="card-body p-0">
+                                        <div class="p-5">
+                                            <img class="mb-3" src="images/no_events_yet.svg" alt="no_events_yet">
+                                            <h5 class="text-white">No Events Yet</h5>
+                                            <p class="p-0">This may take some time. Be Patient while system is ready to setup. <br> We will Notify you when this is ready. ETA 2hrs 20 mins...</p>
+                                            
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between p-3 bxBgAddEvents">
+                                            <span class="text-white">5 New Streams Created</span>
+                                            <a href="">Dismiss</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
