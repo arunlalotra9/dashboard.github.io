@@ -1,8 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Nunito:wght@400;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+:root, [data-bs-theme=light] {
+  --bx-blue: #2c8ef8;   
+  --bx-indigo: #727cf5;
+  --bx-purple: #6b5eae;
+  --bx-pink: #ff679b;
+  --bx-red: #fa5c7c;
+  --bx-orange: #fd7e14;
+  --bx-yellow: #ffc35a;
+  --bx-green: #0acf97;
+  --bx-teal: #02a8b5;
+  --bx-cyan: #39afd1;
+  --bx-black: #000;
+  --bx-white: #fff;
+  --bx-gray: #8a969c;
+  --bx-gray-dark: #343a40;
+  --bx-gray-100: #f6f7fb;
+  --bx-gray-200: #eef2f7;
+  --bx-gray-300: #dee2e6;
+  --bx-gray-400: #ced4da;
+  --bx-gray-500: #a1a9b1;
+  --bx-gray-600: #8a969c;
+  --bx-gray-700: #6c757d;
+  --bx-gray-800: #343a40;
+  --bx-gray-900: #313a46;
+  --bx-primary: #727cf5;
+  --bx-secondary: #6c757d;
+  --bx-success: #0acf97;
+  --bx-info: #39afd1;
+  --bx-warning: #ffc35a;
+  --bx-danger: #fa5c7c;
+  --bx-light: #eef2f7;
+  --bx-dark: #313a46;
+  --bx-primary-rgb: 114,124,245;
+  --bx-secondary-rgb: 108,117,125;
+  --bx-success-rgb: 10,207,151;
+  --bx-info-rgb: 57,175,209;
+  --bx-warning-rgb: 255,195,90;
+  --bx-danger-rgb: 250,92,124;
+  --bx-light-rgb: 238,242,247;
+  --bx-dark-rgb: 49,58,70;
+  --bx-primary-text-emphasis: #2e3262;
+  --bx-secondary-text-emphasis: #8a969c;
+  --bx-success-text-emphasis: #04533c;
+  --bx-info-text-emphasis: #174654;
+  --bx-warning-text-emphasis: #664e24;
+  --bx-danger-text-emphasis: #642532;
+  --bx-light-text-emphasis: #495057;
+  --bx-dark-text-emphasis: #495057;
+  --bx-primary-bg-subtle: #f1f2fe;
+  --bx-secondary-bg-subtle: #f6f7fb;
+  --bx-success-bg-subtle: #e7faf5;
+  --bx-info-bg-subtle: #ebf7fa;
+  --bx-warning-bg-subtle: #fff9ef;
+  --bx-danger-bg-subtle: #ffeff2;
+  --bx-light-bg-subtle: #fbfbfd;
+  --bx-dark-bg-subtle: #ced4da;
+  --bx-primary-border-subtle: #e3e5fd;
+  --bx-secondary-border-subtle: #eef2f7;
+  --bx-success-border-subtle: #cef5ea;
+  --bx-info-border-subtle: #d7eff6;
+  --bx-warning-border-subtle: #fff3de;
+  --bx-danger-border-subtle: #fedee5;
+  --bx-light-border-subtle: #eef2f7;
+  --bx-dark-border-subtle: #a1a9b1;
+  --bx-white-rgb: 255,255,255;
+  --bx-black-rgb: 0,0,0;
+  --bx-font-sans-serif: "Nunito",sans-serif;
+  --bx-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bx-gradient: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
+  --bx-body-font-family: var(--bx-font-sans-serif);
+  --bx-body-font-size: 0.9rem;
+  --bx-body-font-weight: 400;
+  --bx-body-line-height: 1.5;
+  --bx-body-color: #6c757d;
+  --bx-body-color-rgb: 108,117,125;
+  --bx-body-bg: #fafbfe;
+  --bx-body-bg-rgb: 250,251,254;
+  --bx-emphasis-color: rgba(108, 117, 125, 0.75);
+  --bx-emphasis-color-rgb: 108,117,125;
+  --bx-secondary-color: rgba(108, 117, 125, 0.75);
+  --bx-secondary-color-rgb: 108,117,125;
+  --bx-secondary-bg: #fff;
+  --bx-secondary-bg-rgb: 255,255,255;
+  --bx-tertiary-color: #313539;
+  --bx-tertiary-color-rgb: 49,53,57;
+  --bx-tertiary-bg: #f6f7fb;
+  --bx-tertiary-bg-rgb: 246,247,251;
+  --bx-link-color: #727cf5;
+  --bx-link-color-rgb: 114,124,245;
+  --bx-link-decoration: none;
+  --bx-link-hover-color: #6169d0;
+  --bx-link-hover-color-rgb: 97,105,208;
+  --bx-code-color: #39afd1;
+  --bx-highlight-bg: #fff3de;
+  --bx-border-width: 1px;
+  --bx-border-style: solid;
+  --bx-border-color: #dee2e6;
+  --bx-border-color-translucent: #dee2e6;
+  --bx-border-radius: 0.25rem;
+  --bx-border-radius-sm: 0.2rem;
+  --bx-border-radius-lg: 0.3rem;
+  --bx-border-radius-xl: 1rem;
+  --bx-border-radius-xxl: 2rem;
+  --bx-border-radius-2xl: var(--bx-border-radius-xxl);
+  --bx-border-radius-pill: 50rem;
+  --bx-box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+  --bx-box-shadow-sm: 0 0.125rem 0.25rem rgba(var(--bx-body-color-rgb), 0.15);
+  --bx-box-shadow-lg: 0 0 45px 0 rgba(var(--bx-body-color-rgb), 0.2);
+  --bx-box-shadow-inset: inset 0 1px 2px rgba(var(--bx-body-color-rgb), 0.075);
+  --bx-focus-ring-width: 0.15rem;
+  --bx-focus-ring-opacity: 0.25;
+  --bx-focus-ring-color: rgba(114, 124, 245, 0.25);
+  --bx-form-valid-color: #0acf97;
+  --bx-form-valid-border-color: #0acf97;
+  --bx-form-invalid-color: #fa5c7c;
+  --bx-form-invalid-border-color: #fa5c7c;
+}
+[data-bs-theme=dark] {  
+  color-scheme: dark;
+  --bx-body-color: #aab8c5;
+  --bx-body-color-rgb: 170,184,197;
+  --bx-body-bg: var(--bx-gradient);
+  --bx-body-bg-rgb: 52,58,64;
+  --bx-emphasis-color: #dee2e6;
+  --bx-emphasis-color-rgb: 222,226,230;
+  --bx-secondary-color: #8391a2;
+  --bx-secondary-color-rgb: 131,145,162;
+  --bx-secondary-bg: #37404a;
+  --bx-secondary-bg-rgb: 55,64,74;
+  --bx-tertiary-color: #f1f1f1;
+  --bx-tertiary-color-rgb: 241,241,241;
+  --bx-tertiary-bg: #404954;
+  --bx-tertiary-bg-rgb: 64,73,84;
+  --bx-primary-text-emphasis: #aab0f9;
+  --bx-secondary-text-emphasis: #dee2e6;
+  --bx-success-text-emphasis: #6ce2c1;
+  --bx-info-text-emphasis: #88cfe3;
+  --bx-warning-text-emphasis: #ffdb9c;
+  --bx-danger-text-emphasis: #fc9db0;
+  --bx-light-text-emphasis: #f6f7fb;
+  --bx-dark-text-emphasis: #dee2e6;
+  --bx-primary-bg-subtle: rgba(var(--bx-primary-rgb), 0.15);
+  --bx-secondary-bg-subtle: rgba(108, 117, 125, 0.15);
+  --bx-success-bg-subtle: rgba(var(--bx-success-rgb), 0.15);
+  --bx-info-bg-subtle: rgba(var(--bx-info-rgb), 0.15);
+  --bx-warning-bg-subtle: rgba(var(--bx-warning-rgb), 0.15);
+  --bx-danger-bg-subtle: rgba(var(--bx-danger-rgb), 0.15);
+  --bx-light-bg-subtle: rgba(var(--bx-light-rgb), 0.15);
+  --bx-dark-bg-subtle: rgba(var(--bx-dark-rgb), 0.15);
+  --bx-primary-border-subtle: #444a93;
+  --bx-secondary-border-subtle: #6c757d;
+  --bx-success-border-subtle: #067c5b;
+  --bx-info-border-subtle: #22697d;
+  --bx-warning-border-subtle: #997536;
+  --bx-danger-border-subtle: #96374a;
+  --bx-light-border-subtle: #6c757d;
+  --bx-dark-border-subtle: #343a40;
+  --bx-heading-color: inherit;
+  --bx-link-color: #aab0f9;
+  --bx-link-hover-color: #b7bcfa;
+  --bx-link-color-rgb: 170,176,249;
+  --bx-link-hover-color-rgb: 183,188,250;
+  --bx-code-color: #88cfe3;
+  --bx-border-color: #464f5b;
+  --bx-border-color-translucent: #8391a2;
+  --bx-form-valid-color: #6ce2c1;
+  --bx-form-valid-border-color: #6ce2c1;
+  --bx-form-invalid-color: #fc9db0;
+  --bx-form-invalid-border-color: #fc9db0;
+}
 
 * {margin: 0;padding: 0;box-sizing: border-box;}
-body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);}
+
+body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; }
 html,body{
   overflow-x: hidden;
 }
@@ -19,9 +190,33 @@ a{text-decoration: none;color: rgba(255, 255, 255, 0.6);}
 a:hover{
   color: #fff;
 }
+[data-bs-theme=dark] body{
+  background: var(--bx-gradient);
+}
+[data-bs-theme=light] body{
+  background: var(--bx-gray-100);
+}
+[data-bs-theme=light] .text-white {
+  color: var(--bx-dark) !important;
+}
+[data-bs-theme=light] .bxLogin::before{
+  background: linear-gradient(139.07deg, var(--bx-gray-300) 13.12%, rgba(56, 78, 117, 0) 94.08%);
+}
+[data-bs-theme=light] .bxBgColorDangerOuter h6,
+[data-bs-theme=light] .bxBgColorDangerOuter h6 small,
+[data-bs-theme=light] a{
+  color: var(--bx-dark);
+}
+[data-bs-theme=light] .bxRightBox input{
+  background-color: var(--bx-gray-300);
+}
+[data-bs-theme=light]  .bxLogin{
+  background-color: var(--bx-gray-100);
+  background-blend-mode: multiply;
+}
 .bxLogin{
-  background-image: url(https://arunlalotra9.github.io/dashboard.github.io/images/Login.jpg); 
-  background-size: 100%;
+  background-image: url(../images/Login.png); 
+  background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
   position: relative;
@@ -110,7 +305,7 @@ z-index: 0;
 .form-floating>label {
   font-size: 12px;
 }
-.bxMessageApply .alert {
+/* .bxMessageApply .alert {
   background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
   border: 1px solid #00529D;
   box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
@@ -121,12 +316,9 @@ z-index: 0;
   padding: 10px 15px;
   display: inline-block;
   margin-right: 10px;
-}
+} */
 .bxBgColorSuccess{
   background-color: #045311;
-}
-.bxBgColorDanger{
-  background-color: #57070E;
 }
 .bxMessageApply .alert span i{
   font-size: 24px;
@@ -134,4 +326,56 @@ z-index: 0;
 .form-check-input[type=checkbox] {
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.4);
+}
+.bxAleartTextMessage{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bxBgColorDangerOuter {
+  border: 1px solid #ff0000;
+  background-color: transparent;
+  padding: 7px 10px;
+}
+.bxBgColorDangerOuter h6{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.bxBgColorDangerOuter h6 small{
+  text-transform: lowercase;
+  font-size: 12px;
+  color: #fff;
+}
+.bxBgColorDangerOuter span {
+  text-align: right;
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+  color: #ff0000;
+}
+.bxBgColorDangerOuter span i{ margin-left: 10px;}
+.bxAleartActionBtn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.bxAleartActionBtn a{
+  text-transform: uppercase;
+  margin-left: 10px;
+  color: #ff0000;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.bxMessageApplyOuter {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+  max-width: 360px;
+  width: 100%;
 }

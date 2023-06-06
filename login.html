@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en" class="" data-bs-theme="dark">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,7 +7,6 @@
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -55,17 +54,38 @@
                     <div class="bxErrorMessage">Please enter your password</div>
                     <small class="d-block text-end mb-3 mt-2">Required</small>
                   </div>
-                  <button type="submit" class="btn btn-lg bxBtn-primary w-100">Apply</button>
+                  <button type="button" class="btn btn-lg bxBtn-primary w-100" id="liveToastBtn">Apply</button>
 
                   <div class="bxMessageApply mt-3">
-                    <div class="alert">
-                      <span class="bxBgColorSuccess"><i class="bi bi-check2"></i></span> Login Success!</a>.
+                    <!-- <div class="alert">
+                      <h6 class="bxBgColorSuccess">Success!</h6> <span> Your login is successfuly  <i class="bi bi-check-circle-fill"></i></span>
+                    </div> -->
+                    <div class="alert bxBgColorDangerOuter">
+                      <div class="bxAleartTextMessage">
+                        <h6 class="bxBgColorDanger"> Invalid combination <small class="d-block">username/password/accountid</small></h6>
+                        <span> <i class="bi bi-x-circle-fill"></i></span>
+                      </div>                      
+                      <!-- <div class="bxAleartActionBtn">
+                        <a href="#">Cancel</a>
+                        <a href="#">Retry</a>
+                      </div> -->
                     </div>
-                    <div class="alert">
-                      <span class="bxBgColorDanger"><i class="bi bi-x"></i></span> Login Error!</a>.
-                    </div>
+
+
                   </div>
                 </form>
+              </div>
+            </div>
+            <div class="bxMessageApplyOuter">
+              <div class="bxMessageApply">
+                <div class="alert bxBgColorDangerOuter">
+                  <div class="bxAleartTextMessage">
+                    <h6 class="bxBgColorDanger"> Invalid combination <small class="d-block">username/password/accountid</small></h6>
+                    <span> <i class="bi bi-x-circle-fill"></i></span>
+                  </div>                      
+                </div>
+
+
               </div>
             </div>
           </div>

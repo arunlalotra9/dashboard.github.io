@@ -77,5 +77,6 @@
         //====================== custom checkbox 
         $('#selectall').click(function() { $(this.form.elements).filter(':checkbox').prop('checked', this.checked);
         });
+        
 
     });

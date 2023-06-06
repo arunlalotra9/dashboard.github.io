@@ -15,7 +15,7 @@
     width: 28px;
     height: 28px;
     padding: 0;
-    background: #717171;
+    background: #084298;
     z-index: 1;
     color: #fff;
     cursor: pointer!important;
@@ -87,13 +87,14 @@
     z-index: 0;
     padding: 20px 30px;
 }
+#left-switch.collapsed {
+    margin-left: -700px;
+}
 /* .left-section,
 .right-section {
     overflow: auto;
 } */
-#left-switch.collapsed {
-    margin-left: -700px;
-}
+
 .right-section.left-collapsed {
     width: 100%;
 }
@@ -455,4 +456,154 @@ display: none;
 }
 .rightSideCardLgBox.bxAddEventText .card .card-body {
     padding: 0 !important;
+}
+
+/* filter css============================================= */
+#bxFilterTop .modal-content {
+    background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
+    border: 1px solid #00529D;
+    box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+#bxFilterTop .modal-header {
+    background-color: #010F33;
+    border-color: #00529D;
+}
+#bxFilterTop .modal-header .modal-title {
+    color: #fff;
+}
+#bxFilterTop .bxClose {
+    font-size: 25px;
+    font-weight: 400;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+#bxFilterTop .filterHead h1{
+    font-size: 22px;
+    color: #fff;
+}
+#bxFilterTop .filterBody ul .btn{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+#bxFilterTop .filterBody ul li{ margin-right: 5px;}
+#bxFilterTop .filterBody ul li i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.bxDropdown-menu {
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 95px;
+    z-index: 999;
+}
+.bxDropdown-menu.active{
+    display: block;
+}
+.bxDropdown {
+    position: relative;
+    padding-left: 20px;
+}
+
+#bxFilterTop label {
+cursor: pointer; }
+
+#bxFilterTop .ellipsis {
+text-overflow: ellipsis;
+width: 100%;
+white-space: nowrap;
+overflow: hidden; }
+
+#bxFilterTop .apply-selection {
+display: none;
+width: 100%;
+margin: 0;
+padding: 5px 10px;
+border-bottom: 1px solid #ccc; }
+#bxFilterTop .apply-selection .ajax-link {
+display: none; }
+
+#bxFilterTop .checkboxes {
+margin: 0;
+display: none;
+border: 1px solid #ccc;
+border-top: 0; }
+#bxFilterTop .checkboxes .inner-wrap {
+padding: 5px 10px;
+max-height: 140px;
+overflow: auto; }
+#bxFilterTop .filterBody span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+#bxFilterTop .toggle-next {
+    background-color: transparent;
+    color: #fff;
+    text-align: left;
+    border-radius: 5px;
+}
+#bxFilterTop .dropdown.bootstrap-select.show-tick {
+    width: 100% !important;
+}
+#bxFilterTop .bootstrap-select>.dropdown-toggle{
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+}
+#bxFilterTop .filter-option-inner-inner {
+    color: #fff;
+}
+#bxFilterTop .form-control,
+#bxFilterTop .bootstrap-select .no-results {
+    background: #010F33;
+    color: #fff;
+}
+#bxFilterTop .dropdown-item:focus, #bxFilterTop .dropdown-item:hover {
+    color: #fff;
+    background-color: #010F33;
+}
+#bxFilterTop .bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
+    position: absolute;
+    display: inline-block;
+    left: 15px;
+    top: 9px;
+}
+.bootstrap-select .dropdown-menu li a{
+    padding-left: 40px;
+}
+#bxFilterTop .dropdown-item::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    left: 10px;
+    top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+
+@media (max-width: 1500px){
+    .left-sidebar{ width: 450px;}
+    .right-section { width: calc(100% - 450px);}
+    .rightResultActionBtns  a {padding-left: 0; }
+    .bxMoreActionOnCheck li { margin-left: 5px;}
+    .rightSidebar_OuterBox { padding-left: 39px; }
+    .bxRightCardTop .card h3 { font-size: 16px; }
+    #left-switch.collapsed {margin-left: -450px;}
+}
+
+@media (max-width: 1199px){
+    .left-sidebar{ margin-left: -450px; position: absolute;}
+    .right-section { width: calc(100% - 0px);}
+    #left-switch.collapsed {margin-left: 450px;}
 }
