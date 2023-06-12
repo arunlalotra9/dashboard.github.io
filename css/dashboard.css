@@ -232,7 +232,7 @@ display: none;
 .bxPagination {
     position: sticky;
     bottom: 20px;
-    background-color: #0F1226;
+    background-color: transparent;
 }
 .pagination {
     align-items: end;

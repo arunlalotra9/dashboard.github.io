@@ -259,7 +259,7 @@
                                     </div>
                                 </form>
                                 <div class="bxDropdown">
-                                    <span class="bxDropdown-toggle arrow-none" type="button">
+                                    <span class="bxDropdown-toggle arrow-none" type="button" data-bs-toggle="modal" data-bs-target="#bxFilterTop">
                                         <i class="bi bi-filter-left text-white"></i>
                                     </span>
                                 </div>
@@ -601,65 +601,68 @@
         </div>
     </footer>
 
-    <div class="bxDropdown-menu" id="bxFilterTop">
-        <div class="modal-content">
-            <div class="filterHead modal-header">
-                <h1>Filters</h1>
-                <button type="button" class="bi bi-x bxClose"></button>
-            </div>
-            <div class="filterBody modal-body">
-                <form action="">
-                    <div class="form-group mb-2">
-                        <h6 class="text-white">Severity</h6>
-                        <ul class="d-flex align-items-center m-0 p-0">                                                    
-                            <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i> Critical</button></li>
-                            <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Medium</button></li>
-                            <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Information</button></li>
-                            <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Low</button></li>
-                        </ul>
+    <div class="modal bxPopup fade" id="bxFilterTop" tabindex="-1" aria-labelledby="bxFilterTop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="filterHead modal-header">
+                    <h1>Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="filterBody modal-body">
+                    <form action="">
+                        <div class="form-group mb-2">
+                            <h6 class="text-white">Severity</h6>
+                            <ul class="d-flex align-items-center m-0 p-0">                                                    
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i> Critical</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Medium</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Information</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Low</button></li>
+                            </ul>
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                    </form>
+                </div>
+                <div class="filterFooter modal-footer">
+                    <div>
+                        <a type="button" class="text-white me-3" data-bs-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn btn-primary">Apply</button>
                     </div>
-                    <div class="form-group mb-2">
-                        <span class="d-block mb-1">Log Types</span>
-                        <div class="col-12">
-                            <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                              <option value="4">Four</option>
-                            </select>
-                          </div>                                
-                    </div>
-                    <div class="form-group mb-2">
-                        <span class="d-block mb-1">Log Types</span>
-                        <div class="col-12">
-                            <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                              <option value="4">Four</option>
-                            </select>
-                          </div>                                
-                    </div>
-                    <div class="form-group mb-2">
-                        <span class="d-block mb-1">Log Types</span>
-                        <div class="col-12">
-                            <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                              <option value="4">Four</option>
-                            </select>
-                          </div>                                
-                    </div>
-                </form>
-            </div>
-            <div class="filterFooter modal-footer">
-                <div>
-                    <a type="button" class="text-white" data-bs-dismiss="offcanvas" aria-label="Close">Close</a>
-                    <button type="button" class="btn btn-primary">Apply</button>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="bxAddStreamOffCanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -865,71 +868,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>    
     <script src="js/select2.min.js"></script> 
     <script src="js/custom.js"></script>
-    <script>
-        $(function() {                       
-            $(".bxDropdown-toggle").click(function() {  
-                $('.bxDropdown-menu').addClass("active");      
-            });
-            $(".filterHead .bxClose").click(function() {  
-                $('.bxDropdown-menu').removeClass("active");    
-            });     
-        });
-        $(function() {
-  
-            setCheckboxSelectLabels();
-            
-            $('.toggle-next').click(function() {
-                $(this).next('.checkboxes').slideToggle(400);
-            });
-            
-            $('.ckkBox').change(function() {
-                toggleCheckedAll(this);
-                setCheckboxSelectLabels(); 
-            });
-            
-            });
-            
-            function setCheckboxSelectLabels(elem) {
-            var wrappers = $('.wrapper'); 
-            $.each( wrappers, function( key, wrapper ) {
-                var checkboxes = $(wrapper).find('.ckkBox');
-                var label = $(wrapper).find('.checkboxes').attr('id');
-                var prevText = '';
-                $.each( checkboxes, function( i, checkbox ) {
-                var button = $(wrapper).find('button');
-                if( $(checkbox).prop('checked') == true) {
-                    var text = $(checkbox).next().html();
-                    var btnText = prevText + text;
-                    var numberOfChecked = $(wrapper).find('input.val:checkbox:checked').length;
-                    if(numberOfChecked >= 4) {
-                    btnText = numberOfChecked +' '+ label + ' selected';
-                    }
-                    $(button).text(btnText); 
-                    prevText = btnText + ', ';
-                }
-                });
-            });
-            }
 
-            function toggleCheckedAll(checkbox) {
-            var apply = $(checkbox).closest('.wrapper').find('.apply-selection');
-            apply.fadeIn('slow'); 
-            
-            var val = $(checkbox).closest('.checkboxes').find('.val');
-            var all = $(checkbox).closest('.checkboxes').find('.all');
-            var ckkBox = $(checkbox).closest('.checkboxes').find('.ckkBox');
-
-            if(!$(ckkBox).is(':checked')) {
-                $(all).prop('checked', true);
-                return;
-            }
-
-            if( $(checkbox).hasClass('all') ) {
-                $(val).prop('checked', false);
-            } else {
-                $(all).prop('checked', false);
-            }
-            }
-    </script>
   </body>
 </html>
