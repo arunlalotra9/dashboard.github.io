@@ -505,7 +505,7 @@
 
                                 <div class="tab-pane fade" id="v-pills-timeline" role="tabpanel" aria-labelledby="v-pills-timeline-tab" tabindex="0">
                                     <div class="p-4 bxTabsRightSide">
-                                        <h4 class="text-white mb-2 px-4 pb-2">Timeline</h4>
+                                        <h4 class="text-white mb-2 pb-2">Timeline</h4>
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="timeline">
@@ -598,6 +598,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="v-pills-code" role="tabpanel" aria-labelledby="v-pills-code-tab" tabindex="0">
                                     <div class="bxTabsRightSide col-12">
                                         <h4 class="text-white mb-0 px-4 pt-4 pb-2">Investigations</h4>
@@ -688,16 +689,15 @@
                                 <div class="tab-pane fade show active" id="v-pills-events" role="tabpanel" aria-labelledby="v-pills-events-tab" tabindex="0">
                                     <div class="p-4 bxTabsRightSide w-100 bxTabsRelations">
                                         <h4 class="text-white mb-2 pb-2">Relationships</h4>
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Departments
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                              <li><a class="dropdown-item" href="#">Action</a></li>
-                                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            </ul>
+                                        <div class="bxCustomSelect">
+                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                <option selected>Departments</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>
+
                                         <div class="bxTabelRelations mt-4">
                                             <table class="table table-centered mb-0">
                                                 <thead class="table-dark">
@@ -728,13 +728,55 @@
                                                         <td class="text-success">+20</td>
                                                         <td>3rd</td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Market Research</td>
+                                                        <td class="text-danger">+10</td>
+                                                        <td>3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sales Department</td>
+                                                        <td >+10</td>
+                                                        <td> 3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Half Sleeve Shirt</td>
+                                                        <td class="text-info">+10</td>
+                                                        <td> 3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lightweight Jacket</td>
+                                                        <td class="text-success">+20</td>
+                                                        <td>3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Market Research</td>
+                                                        <td class="text-danger">+10</td>
+                                                        <td>3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sales Department</td>
+                                                        <td >+10</td>
+                                                        <td> 3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Half Sleeve Shirt</td>
+                                                        <td class="text-info">+10</td>
+                                                        <td> 3rd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lightweight Jacket</td>
+                                                        <td class="text-success">+20</td>
+                                                        <td>3rd</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="v-pills-tags" role="tabpanel" aria-labelledby="v-pills-code-tags" tabindex="0">
                                     <div class="p-4 bxTabsRightSide col-12">
+                                        <h4 class="text-white mb-2 pb-2">Tags</h4>
                                         <form action="">
                                             <div class="form_topTags my-2">
                                                 <div class="container m-0 p-0">
@@ -757,6 +799,7 @@
                                         </form>
                                     </div>                                    
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -764,8 +807,7 @@
                 <div id="center-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="centerSwitch-tab">
                     
                     <section class="center-task  center-section" id="taskContent">
-                        <div class="bxLiveDemo">
-                            <img src="images/live_demo.png" class="w-100" alt="">
+                        <div class="bxLiveDemo" style="background-image: url(./images/live_demo.png);"> 
                         </div>
                     </section>
 
