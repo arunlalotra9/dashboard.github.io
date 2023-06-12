@@ -9,7 +9,20 @@
     overflow: hidden;
     position: relative;
     z-index: 0;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
     transition: 0.2s;
+    height: 100vh;
+}
+.bxLiveDemo {
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
 }
 .center-section.left-collapsed {
     width: calc(100% - 600px);
@@ -674,12 +687,35 @@ textarea.form-control{
 .bxTabsRelations td:first-child{
     text-align: left;
 }
-.bxTabsRelations .btn {
-    border: 1px solid #fff;
-    background-color: transparent;
-}
+
 .bxTabelRelations .table-dark th{
     background: #0E2948 !important;
     color: #C5C6CC;
     border-bottom-color: rgba(73, 153, 254, 0.4) !important;
+}
+.bxTabsRelations .form-select {
+    background: #010F33;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: #Fff;
+    padding: 10px 15px;
+}
+.form-select:focus {
+    box-shadow: none;
+}
+.bxCustomSelect{
+    position: relative;
+    width: 60%;
+}
+.bxCustomSelect::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    border-width: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    right: 10px;
 }
