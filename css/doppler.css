@@ -113,7 +113,7 @@
 .bxSearchLeftStatus {
     padding-left: 23px;
 }
-.bxSearchLeftInnerCard li {
+.bxSearchLeftInnerCard .rightSearchStatus li {
     display: inline-block;
     font-size: 12px;
     color: #fff;
@@ -121,10 +121,10 @@
     position: relative;
     margin-right: 10px;
 }
-.bxSearchLeftInnerCard li:nth-child(1) {
+.bxSearchLeftInnerCard .rightSearchStatus li:nth-child(1) {
     padding-left: 0;
 }
-.bxSearchLeftInnerCard li span {
+.bxSearchLeftInnerCard .rightSearchStatus li span {
     opacity: .7;
     margin-right: 5px;
     font-size: 12px;
@@ -657,6 +657,7 @@ textarea.form-control{
     background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
     box-shadow: 0px -15px 30px rgba(0, 0, 0, 0.4), inset 0px 5px 100px rgba(73, 153, 254, 0.2);
     backdrop-filter: blur(15px);
+    color: #fff;
 }
 .comment-area-box .bg-light{
     border-top: 1px solid rgba(73, 153, 254, 0.4);
@@ -718,4 +719,45 @@ textarea.form-control{
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
     right: 10px;
+}
+.tab-pane{
+    padding-bottom: 40px;
+}
+
+@media(max-width: 1500px){
+.left-sidebar{
+    width: 320px;
+}
+#left-switch.collapsed {
+    margin-left: -320px;
+}
+#right-switch .right-section{
+    width: 450px;
+}
+#right-switch.collapsed {
+    margin-right: -450px;
+}
+.center-section.left-collapsed {
+    width: calc(100% - 0px );
+}
+.bxSearchLeftInnerCard label {
+    font-size: 14px;
+}
+.bxSearchLeftInnerCard .rightSearchStatus li {
+    font-size: 10px;
+    padding-left: 10px;
+    margin-right: 0;
+}
+.bxSearchLeftInnerCard  h4 {
+    font-size: 18px;
+}
+.bxSearchLeftInnerCard h6 {
+    font-size: 14px;
+}
+#v-pills-risks .bxTabsRightSide {
+    position: relative;
+    max-width: 93%;
+}
+
+
 }

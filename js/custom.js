@@ -20,9 +20,9 @@
 
         $("#bxFullwidthContent").css('min-height', bxTabsHeight+'px');
       
-        $(".bxNavPills ").css('height', bxTabsHeight+'px');
+        //$(".bxNavPills ").css('height', bxTabsHeight+'px');
         
-        $(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
+        //$(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
 
         var width = $( window ).width();
       
