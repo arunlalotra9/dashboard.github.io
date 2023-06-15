@@ -220,6 +220,7 @@ display: none;
 }
 .rightSearchBoxArea .card {
     border-top: 0;
+    margin-bottom: 20px;
 }
 .leftSearchBoxArea .form-check input {
     background-color: transparent;

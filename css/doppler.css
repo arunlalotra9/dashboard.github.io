@@ -4,7 +4,7 @@
     background-color: transparent;
 }
 .center-section {
-    width: calc(100% - 0px);
+    width: calc(100% - 1050px);
     float: left;
     overflow: hidden;
     position: relative;
@@ -12,7 +12,7 @@
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     transition: 0.2s;
-    height: 100vh;
+    height: 100%;
 }
 .bxLiveDemo {
     position: relative;
@@ -27,11 +27,14 @@
 .center-section.left-collapsed {
     width: calc(100% - 600px);
 }
-.center-section.agent-collapsed.left-collapsed{
+.center-section.center-collapsed.left-collapsed{
     width: 100%;
 }
-.center-section.agent-collapsed{
-    width: calc(100% - 0px);
+.center-section.both-collapsed{
+    width: calc(100% - 600px);
+}
+.center-section.center-collapsed{
+    width: calc(100% - 450px);
 }
 #left-switch.collapsed {
     margin-left: -450px;
@@ -68,6 +71,14 @@
 }
 #right-switch.collapsed {
     margin-right: -600px;
+}
+#right-switch{
+    position: relative;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 #left-switch {
     float: left;
@@ -292,8 +303,11 @@ ul.rightSearchStatus.mb-0 {
     height: 100%;
 }
 .offcanvas{
-    background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
-    border: 1px solid #6286b28c;
+    /* background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%); */
+    /* border: 1px solid #6286b28c; */
+    background: #0E2948;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 .offcanvas-header .btn-close {
     background-color: #fff;
@@ -377,7 +391,8 @@ span.badge.text-bg-secondary{
     height: 100%;
     width: 100%;
 }
-.show {
+.searchContainer .show,
+.addContainer .show {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -393,7 +408,6 @@ span.badge.text-bg-secondary{
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    display: none;
 }
 .addContainer .buttonClass {
     font-size: 12px;
@@ -598,11 +612,11 @@ ul li button:hover {
     display: block;
     height: 24px;
     left: 19px;
-    margin-top: -12px;
     position: absolute;
     text-align: center;
     top: 50%;
     width: 24px;
+    transform: translateY(-50%);
 }
 .timeline-icon::after {
     border-top: 2px dashed #42667D;
@@ -628,8 +642,17 @@ ul li button:hover {
 .bxTabsRightSide .border-bottom {
     border-bottom: 1px solid #42667D!important;
 }
+div#bxTimeLine {
+    overflow: auto;
+    max-height: 613px;
+}
+.bxTabsRightSide {
+    width: 100%;
+    display: block;
+    position: relative;
+}
 .bxChatLayout{
-    max-height: 500px;
+    max-height: 542px;
     overflow: auto;
 }
 .bxChatLayout  h3 {
@@ -720,9 +743,124 @@ textarea.form-control{
     transform: translateX(-50%);
     right: 10px;
 }
-.tab-pane{
-    padding-bottom: 40px;
+
+.bxDopplerChatAction button.bxDopplerAutomation {
+    background-color: transparent;
+    border: none;
 }
+.bxDopplerAutomation .offcanvas-body{
+    border-top:1px solid rgba(73, 153, 254, 0.4) !important;
+}
+.cardSideLeft h5{
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+}
+.cardSideLeft p{
+    color: #A6A6A6;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+}
+.cardSideRight a{
+    font-weight: 600;
+    font-size: 14px;
+    color: #3C92FF;
+}
+.bxDopplerAutomation .offcanvas-body h6{
+    font-weight: 600;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.bxDopplerAutomation .card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 0;
+}
+.bxDopplerAutomation .card:hover{
+    background: #1A4478;
+}
+.bxDopplerAction #bxTimeLine {
+    overflow: auto;
+    max-height: 100%;
+}
+.bxDopplerAction .timeline .timeline-box {
+    background: #010F33;
+    border-radius: 3px;
+    margin-left: 40px;
+    border: none;
+}
+.bxDopplerAction .timeline:before {
+    left: 10px;
+}
+.bxDopplerAction .timeline .timeline-icon {
+    height: 14px;
+    left: 4px;
+    margin-top: 0;
+    width: 14px;
+}
+.bxDopplerAction .timeline-icon::after {
+    width: 30px;
+    top: 7px;
+}
+.bxDopplerActionTimeline h5{
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+.bxDopplerActionTimeline span{
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.bxDopplerActionTimeline a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #3C92FF;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+}
+.bxDopplerActionTimeline i{
+    font-size: 30px;
+}
+.bxDopplerActionTimeline{
+    display: flex;
+    align-items: center;
+}
+.bxDopplerActionTimeline .spinner-border {
+    width: 24px;
+    height: 24px;
+}
+.bxDopplerActionTimeline .collapse p{ margin-bottom: 0;}
+.bxDopplerAction .offcanvas-header{
+    box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
+}
+.bxDopplerAction .offcanvas-body {
+    background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media(max-width: 1500px){
 .left-sidebar{

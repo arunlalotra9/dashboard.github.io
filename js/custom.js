@@ -6,7 +6,13 @@
         var bxFooter_height = $("#bxFooter").height();
         var bxPagination_height = $(".bxPagination").height();
         var bxLeftHeader_height = $(".pane-header").height();
-      
+        var bxRightHeader_height = $(".bxNavPillsContent").height();
+        var bxRightSidebar_width = $("#right-switch").width();
+        
+        var bxNPContentHead_height = $(".bxNPContentHead").height();
+         
+        var bxExtension_height = parseInt(bxHeader_height) + parseInt(bxNPContentHead_height);
+
         var bxTotal_height = parseInt(bxHeader_height) + parseInt(bxFooter_height);
 
         var  bxLeftInnerHeight = parseInt(bxLeftHeader_height) + parseInt(bxPagination_height);
@@ -15,14 +21,19 @@
 
         var bxLeftSearchTotal_height = parseInt(bxTabsHeight) - parseInt(bxLeftInnerHeight);
       
+        var bxRightTabsPills = parseInt(bxTabsHeight) - parseInt(bxRightHeader_height);
       
         $(".bxContent").css('min-height', windowHeight+'px');
 
         $("#bxFullwidthContent").css('min-height', bxTabsHeight+'px');
       
-        //$(".bxNavPills ").css('height', bxTabsHeight+'px');
+        $(".bxNavPills ").css('height', bxRightTabsPills+'px');
         
-        //$(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
+        $(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
+
+        $("#bxDopplerAutomation, #bxDopplerAction").css('margin-right', bxRightSidebar_width+'px');
+        $("#bxDopplerAutomation, #bxDopplerAction").css('margin-top', '+=' + (bxExtension_height + 10) + 'px');
+
 
         var width = $( window ).width();
       
@@ -54,9 +65,10 @@
 
         $("#left-switch .collapse-sidebar").click(function(){
             $("#left-switch").toggleClass("collapsed");
-            $('.center-section').toggleClass("left-collapsed");
+            $('.right-section').toggleClass("left-collapsed");
+            $('.center-section').toggleClass("both-collapsed");
 
-            if($('.right-section').hasClass('task-collapsed') && $('.right-section').hasClass('agent-collapsed')){
+            if($('.right-section').hasClass('desktop-right') && $('.right-section').hasClass('center-collapsed')){
                 $('.right-section').addClass('both-collapsed');
             }else{
                 $('.right-section').removeClass('both-collapsed');
@@ -66,22 +78,24 @@
 
         $("#right-switch .collapse-sidebar").click(function(){
             $("#right-switch").toggleClass("collapsed");
-            $('.center-section').toggleClass("agent-collapsed");
-            if($('.right-section').hasClass('task-collapsed') && $('.left-section').hasClass('agent-collapsed')){
+            $('.center-section').toggleClass("center-collapsed");
+
+            if($('.right-section').hasClass('task-collapsed') && $('.left-section').hasClass('center-collapsed')){
                 $('.center-section').addClass('both-collapsed');
             }else{
                 $('.center-section').removeClass('both-collapsed');
             }
         });
+
         // ======================  Expand / Hide ========================
 
         $('.moreless-button').click(function() {
             $('.moretext').slideToggle();
-            if ($('.moreless-button').text() == "Expand") {
+                if ($('.moreless-button').text() == "Expand") {
             $(this).text("Collapse");
 
             } else {
-            $(this).text("Expand")
+                $(this).text("Expand")
             }
         });
 
@@ -90,14 +104,12 @@
             $(this).toggleClass('active');
         });
 
-        
-
-        //====================== custom checkbox 
+        //====================== custom checkbox ==============================
         $('#selectall').click(function() { $(this.form.elements).filter(':checkbox').prop('checked', this.checked);
         });
 
-         // ====================== bxUserOnclick btn
-         $('.bxUserOnclick').click(function(){
+        // ====================== bxUserOnclick btn ==================================
+        $('.bxUserOnclick').click(function(){
             $(".bxUserOnclick").toggleClass("rotate");
             $('.bxUserBox').toggleClass("d-none");
 

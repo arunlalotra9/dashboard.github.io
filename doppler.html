@@ -8,11 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Daterangepicker css -->
+    <link rel="stylesheet" href="assets/vendor/daterangepicker/daterangepicker.css" type="text/css" />
     <link href="css/select2.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/doppler.css" rel="stylesheet">
+    
 
     <title>Binaryflux Doppler</title>
   </head>
@@ -273,6 +276,7 @@
                                 <!-- Date Range Picker With Times -->
                                 <div class="mb-3">
                                     <label class="form-label">Date Range Picker With Times</label>
+                                    <input type="text" class="form-control date" id="daterangetime" data-toggle="date-picker" data-time-picker="true" data-locale="{'format': 'DD/MM hh:mm A'}">
                                 </div>
                             </div>
                                                       
@@ -391,10 +395,15 @@
                                         <p class="d-flex"><i class="bi bi-hash me-2"></i>  Joel Embiid</p>
                                         <small class="d-flex">Seen <span>2 days ago </span></small>
                                     </div>
-                                    <div class="d-block position-relative"><p class="pe-5"> 20.22<small>Critical</small></p> <a class="bxUserOnclick" href="#"><span class="material-symbols-outlined">expand_more</span></a></div>
+                                    <div class="d-block position-relative">
+                                        <p class="pe-5"> 20.22<small>Critical</small></p> 
+                                        <a class="bxUserOnclick" href="#">
+                                            <span class="material-symbols-outlined">expand_more</span>
+                                        </a>
+                                    </div>
                                     
                                 </div>
-                                <div class="row bxUserBox">
+                                <div class="row bxUserBox d-none">
                                     <div class="col-md-12">
                                         <ul class="bxStatusBar mb-0 row">
                                             <li class="col-4">Email 
@@ -481,25 +490,27 @@
                                                     <h4>10.00</h4>
                                                 </div>
                                             </div>
-                                            <nav class="bxPagination mt-4" aria-label="Page navigation example">
-                                                <ul class="pagination mb-0 py-2">
-                                                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                                                </ul>
-                                            </nav>
+                                            
                                         </div>
+                                        <nav class="bxPagination mt-4" aria-label="Page navigation example">
+                                            <ul class="pagination mb-0 py-2">
+                                                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                            </ul>
+                                        </nav>
 
                                     </div>
+                                    
                                    
                                 </div>
 
                                 <div class="tab-pane fade" id="v-pills-timeline" role="tabpanel" aria-labelledby="v-pills-timeline-tab" tabindex="0">
                                     <div class="p-4 bxTabsRightSide">
                                         <h4 class="text-white mb-2 pb-2">Timeline</h4>
-                                        <div class="row">
+                                        <div class="row" id="bxTimeLine">
                                             <div class="col-12">
                                                 <div class="timeline">
                                                     <div class="timeline-show mb-3">
@@ -613,7 +624,6 @@
                                                     <h3 class="mb-2">Kamalakannan Swaminathan <small class="time float-end bxFont14">10:30PM</small></h3>
                                                     <div class="messageText text-white">
                                                         <p class="bxJsonText my-2 p-0 bxFont14">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat </p>
-                                                        <a href="#" class="replies">2 Replies</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -633,7 +643,16 @@
                                                     <div class="messageText text-white">
                                                         <p class="bxFont18">Good afternoon, <a href="#" class="tags"> @ArjunKapoor,</a> <br>  
                                                             In addition to putting new data products in front of customers, organizations are using data to improve daily decisions and actions in every aspect of their businesses. Improving employee productivity with data has been a major benefit of the digital era. Regardless of maturity level, significant numbers of respondents are using a wide range of data sources to help employees work smarter </p>
-                                                        <a href="#" class="replies">2 Replies</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex userOne mb-3">
+                                                <span class="bxFirstLetter me-2"> <i class="bi bi-code"></i></span>
+                                                <div class="w-100">
+                                                    <h3 class="mb-2">Binary Bot <small class="time float-end bxFont14">10:30PM</small></h3>
+                                                    <div class="messageText text-white">
+                                                        <p class="bxFont18"><span class="text-success"> Quarantine</span> action updated  </p>
+                                                        <a class="border-start px-2" data-bs-toggle="offcanvas" href="#bxDopplerAction" role="button" aria-controls="bxDopplerAction">5 tasks executed </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -643,10 +662,10 @@
                                             <form action="#" class="comment-area-box">
                                                 <textarea rows="3" class="form-control border-0 resize-none" placeholder="Your comment..."></textarea>
                                                 <div class="p-2 bg-light d-flex justify-content-between align-items-center">
-                                                    <div>
+                                                    <div class="bxDopplerChatAction">
                                                         <a href="#" class=""><img src="images/Chat1.svg" alt=""></a>
                                                         <a href="#" class=""><img src="images/Chat2.svg" alt=""></a>
-                                                        <a href="#" class=""><img src="images/Chat3.svg" alt=""></a>
+                                                        <button type="button" class="bxDopplerAutomation" data-bs-toggle="offcanvas" href="#bxDopplerAutomation" role="button" aria-controls="bxDopplerAutomation"><img src="images/Chat3.svg" alt=""></button>
                                                     </div>
                                                     <button type="submit" class="btn btn-sm btn-primary" fdprocessedid="d1fcui">
                                                         <img src="images/Chat4.svg" alt="">
@@ -676,6 +695,15 @@
                                                 <a class="moreless-button" href="#">Expand</a>
                                             </div>
                                         </div>
+                                        <nav class="bxPagination mt-4" aria-label="Page navigation example">
+                                            <ul class="pagination mb-0 py-2">
+                                                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                                 
@@ -764,6 +792,15 @@
                                                 </tbody>
                                             </table>
                                         </div>
+                                        <nav class="bxPagination mt-4" aria-label="Page navigation example">
+                                            <ul class="pagination mb-0 py-2">
+                                                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
 
@@ -879,26 +916,294 @@
 
     </div>
 
-    <div class="bxAddTags offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div class="offcanvas-header pb-0">
-          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Add Tags</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="bxDopplerAutomation offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDopplerAutomation" aria-labelledby="bxDopplerAutomationLabel">
+        <div class="offcanvas-header">
+            <form class="sidebar-search">
+                <div class="input-group">
+                  <span class="bi bi-search search-icon text-white"></span>
+                  <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                </div>
+            </form>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body pt-0">
-            
-        </div>
-        <div class="offcanvas-footer p-2">
-            <div class="float-end">
-                <a type="button" class="text-white me-3" data-bs-dismiss="offcanvas" aria-label="Close">Close</a>
-                <button type="submit" class="btn btn-primary">Apply Now </button>
+        <div class="offcanvas-body px-0 pt-0">
+            <h6 class="px-3 pt-4">Top Action</h6>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <h6 class="px-3 pt-4">More</h6>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#"  data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
+
+    </div>
+
+    <div class="bxDopplerAction offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDopplerAction" aria-labelledby="bxDopplerActionLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Quarantine </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row" id="bxTimeLine">
+                <div class="col-12">
+                    <div class="timeline">
+                        <div class="timeline-show mb-3">
+                            <h5 class="m-0 time-show-name">Apr 27</h5>
+                        </div>
+                        <div class="timeline-lg-item timeline-item-right mb-3">
+                            <div class="timeline-desk">
+                                <div class="timeline-box">
+                                    <span class="timeline-icon"></span>
+                                    <div class="row g-0 bxDopplerActionTimeline">
+                                        <div class="col-6">
+                                            <h5 class="m-0">Escalate to manager </h5>
+                                            <span class="">10:20 AM</span>
+                                        </div>
+                                        <a class="col-6" data-bs-toggle="collapse" href="#bxShowOutput" role="button" aria-expanded="false" aria-controls="bxShowOutput">
+                                            <i class="bi bi-check text-success"></i>
+                                            Show Output
+                                        </a>
+                                        <div class="collapse mt-3 col-12" id="bxShowOutput">
+                                            <div class="card card-body">
+                                                <p class="bxFont14">
+                                                    import java.io.FileNotFoundException;
+                                                    import java.io.PrintWriter;
+                                                    
+                                                    public class GenerateDummyCode {
+                                                        public static void main(String[] args) {
+                                                            String className = "Eben";
+                                                            String newLine = "\n";
+                                                            String tab = "\t";
+                                                            String classStart = "public class " + className + " {";
+                                                            String closeBracket = "}";
+                                                            String mainStart = "public static void main(String[] args) {";
+                                                            String dummyContent = "";
+                                                            String temp = null;
+                                                            int size = 10000;
+                                                            for (int i = 1; i <= size; i++) {
+                                                                temp = String.format("System.out.println(\" %6d .ci satir\");", i);
+                                                                dummyContent += tab + tab + temp + newLine;
+                                                            }
+                                                            
+                                                            String outputCode = 
+                                                                    classStart + newLine + newLine + 
+                                                                    tab + mainStart + newLine + newLine +  
+                                                                    dummyContent + newLine + 
+                                                                    tab + closeBracket + newLine + 
+                                                                    closeBracket + newLine;
+                                                            
+                                                    //		System.out.println(result); // To print the output to the console
+                                                    
+                                                            PrintWriter out = null;
+                                                            
+                                                            try {
+                                                                out = new PrintWriter(className + ".java");
+                                                            } catch (FileNotFoundException e) {
+                                                                System.out.println("File not found!");
+                                                            }
+                                                            
+                                                            out.println(outputCode);
+                                                            out.close();
+                                                        }
+                                                    }
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-lg-item timeline-item-right mb-3">
+                            <div class="timeline-desk">
+                                <div class="timeline-box">
+                                    <span class="timeline-icon"></span>
+                                    <div class="row g-0 bxDopplerActionTimeline">
+                                        <div class="col-6">
+                                            <h5 class="m-0">Escalate to manager </h5>
+                                            <span class="">10:20 AM</span>
+                                        </div>
+                                        <a class="col-6" data-bs-toggle="collapse" href="#bxShowOutput1" role="button" aria-expanded="false" aria-controls="bxShowOutput1">
+                                            <i class="bi bi-info-circle text-danger"></i>
+                                            Show Output
+                                        </a>
+                                        <div class="collapse mt-3 col-12" id="bxShowOutput1">
+                                            <div class="card card-body">
+                                                <p class="bxFont14">
+                                                    import java.io.FileNotFoundException;
+                                                    import java.io.PrintWriter;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-lg-item timeline-item-right mb-3">
+                            <div class="timeline-desk">
+                                <div class="timeline-box">
+                                    <span class="timeline-icon"></span>
+                                    <div class="row g-0 bxDopplerActionTimeline">
+                                        <div class="col-6">
+                                            <h5 class="m-0">Escalate to manager </h5>
+                                            <span class="">10:20 AM</span>
+                                        </div>
+                                        <a class="col-6" data-bs-toggle="collapse" href="#bxShowOutput2" role="button" aria-expanded="false" aria-controls="bxShowOutput2">
+                                            <i class="bi bi-check text-success"></i>
+                                            Show Output
+                                        </a>
+                                        <div class="collapse mt-3 col-12" id="bxShowOutput2">
+                                            <div class="card card-body">
+                                                <p class="bxFont14">
+                                                    import java.io.FileNotFoundException;
+                                                    import java.io.PrintWriter;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-lg-item timeline-item-right mb-3">
+                            <div class="timeline-desk">
+                                <div class="timeline-box">
+                                    <span class="timeline-icon"></span>
+                                    <div class="row g-0 bxDopplerActionTimeline">
+                                        <div class="col-6">
+                                            <h5 class="m-0">Escalate to manager </h5>
+                                            <span class="">10:20 AM</span>
+                                        </div>
+                                        <a class="col-6" data-bs-toggle="collapse" href="#bxShowOutput3" role="button" aria-expanded="false" aria-controls="bxShowOutput3">
+                                            <div class="spinner-border" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            Show Output
+                                        </a>
+                                        <div class="collapse mt-3 col-12" id="bxShowOutput3">
+                                            <div class="card card-body">
+                                                <p class="bxFont14">
+                                                    import java.io.FileNotFoundException;
+                                                    import java.io.PrintWriter;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script> 
     <script src="js/select2.min.js"></script> 
+    <!-- Daterangepicker js -->
+    <script src="assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
+
     <script src="js/custom.js"></script>
+
+
 
   </body>
 </html>
