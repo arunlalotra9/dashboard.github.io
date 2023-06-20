@@ -173,9 +173,9 @@
 
 * {margin: 0;padding: 0;box-sizing: border-box;}
 
-body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; }
+body{margin: 0;font-size: 18px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none; }
 html,body{
-  overflow-x: hidden;
+  overflow: hidden;
 }
 /* width */
 ::-webkit-scrollbar {width: 6px;}
@@ -214,168 +214,18 @@ a:hover{
   background-color: var(--bx-gray-100);
   background-blend-mode: multiply;
 }
-.bxLogin{
-  background-image: url(../images/Login.png); 
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.bxLogin::before{
-position: absolute;
-content: "";
-width: 50%;
-height: 100%;
-border-radius: 0 20px 20px 0;
-background: linear-gradient(139.07deg, #0E2948 13.12%, rgba(56, 78, 117, 0) 94.08%);
-backdrop-filter: blur(10px);
-border: 1px solid;
-border-image-source: linear-gradient(344.83deg, #4999FE 7.71%, rgba(73, 153, 254, 0) 113%);
-z-index: 0;
-}
-.bxLoginArea{
-  position: relative;
-  z-index: 1;
-}
-.bxLogin .row{
-  min-height: 100vh;
-}
-.bxLogin .bxLgSize{
-  font-size: 42px;
-  font-weight: 700;
-}
-.bxRightBox input {
-  background-color: #010F33;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  color: #fff;
-}
-.bxRightBox .form-control:focus {
-  color: #fff;
-  background-color: #010F33;
-  border-color: rgba(255, 255, 255, 0.4);
-  outline: 0;
-  box-shadow: 0 0 0 .25rem rgba(13,110,253,0);
-}
-.bxRightBox p{
-  font-weight: 700;
-  font-size: 20px;
-}
-.bxRightBox small{
-  font-weight: 400;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.6);
-}
-.bxBtn-primary{
-  background: #1A4478;
-  box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
-  border-radius: 2px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  color: #FFFFFF;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-}
-.bxBtn-primary:hover{
-  background: #296fc3;
-  color: #FFFFFF;
-}
-.dropdown-menu{
-  background-color: #010F33;
-}
-.rightSideCardLgBox a.dropdown-item,
-.dropdown-item{
-  color: #fff;
-}
-.rightSideCardLgBox a.dropdown-item:hover, .dropdown-item:hover {
-  color: #010F33;
-}
-.bxErrorMessage {
-  position: absolute;
-  font-size: 14px;
-  color: red;
-  bottom: 0;
-}
-.form-floating>label {
-  font-size: 12px;
-}
-/* .bxMessageApply .alert {
-  background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
-  border: 1px solid #00529D;
-  box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
-  backdrop-filter: blur(5px);
-  padding: 0;
-}
-.bxMessageApply .alert span {
-  padding: 10px 15px;
-  display: inline-block;
-  margin-right: 10px;
-} */
-.bxBgColorSuccess{
-  background-color: #045311;
-}
-.bxMessageApply .alert span i{
-  font-size: 24px;
-}
-.form-check-input[type=checkbox] {
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.4);
-}
-.bxAleartTextMessage{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.bxBgColorDangerOuter {
-  border: 1px solid #ff0000;
-  background-color: transparent;
-  padding: 7px 10px;
-}
-.bxBgColorDangerOuter h6{
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-}
-.bxBgColorDangerOuter h6 small{
-  text-transform: lowercase;
-  font-size: 12px;
-  color: #fff;
-}
-.bxBgColorDangerOuter span {
-  text-align: right;
-  font-size: 14px;
-  align-items: center;
-  display: flex;
-  color: #ff0000;
-}
-.bxBgColorDangerOuter span i{ margin-left: 10px;}
-.bxAleartActionBtn {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.bxAleartActionBtn a{
-  text-transform: uppercase;
-  margin-left: 10px;
-  color: #ff0000;
-  font-size: 14px;
-  text-decoration: underline;
-  font-weight: 600;
-  line-height: 1.5;
+
+/* ============================================= login / sign up page  css ========================================================= */
+.bxLogin{background-image: url(../images/Login.png);background-size: cover;background-position: center right;background-repeat: no-repeat;position: relative;}.bxLogin::before{position: absolute;content: "";width: 50%;height: 100%;border-radius: 0 20px 20px 0;background: linear-gradient(139.07deg, #0E2948 13.12%, rgba(56, 78, 117, 0) 94.08%);backdrop-filter: blur(10px);border: 1px solid;border-image-source: linear-gradient(344.83deg, #4999FE 7.71%, rgba(73, 153, 254, 0) 113%);z-index: 0;}.bxLoginArea{position: relative;z-index: 1;}.bxLogin .row{min-height: 100vh;}.bxLogin .bxLgSize{font-size: 42px;font-weight: 700;}.bxRightBox input {background-color: #010F33;border: 1px solid rgba(255, 255, 255, 0.4);border-radius: 4px;box-sizing: border-box;font-weight: 400;font-size: 14px;line-height: 14px;color: #fff;}.bxRightBox .form-control:focus {color: #fff;background-color: #010F33;border-color: rgba(255, 255, 255, 0.4);outline: 0;box-shadow: 0 0 0 .25rem rgba(13,110,253,0);}.bxRightBox p{font-weight: 700;font-size: 20px;}.bxRightBox small{font-weight: 400;font-size: 10px;color: rgba(255, 255, 255, 0.6);}.bxBtn-primary{background: #1A4478;box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);border-radius: 2px;font-weight: 700;font-size: 16px;line-height: 30px;color: #FFFFFF;-webkit-transition: 0.5s;-moz-transition: 0.5s;transition: 0.5s;}.bxBtn-primary:hover{background: #296fc3;color: #FFFFFF;}.dropdown-menu{background-color: #010F33;}.rightSideCardLgBox a.dropdown-item, .dropdown-item{color: #fff;}.rightSideCardLgBox a.dropdown-item:hover, .dropdown-item:hover {color: #010F33;}.bxErrorMessage {position: absolute;font-size: 14px;color: red;bottom: 0;}.form-floating>label {font-size: 12px;}.bxBgColorSuccess{background-color: #045311;}.bxMessageApply .alert span i{font-size: 24px;}.form-check-input[type=checkbox] {background-color: transparent;border-color: rgba(255, 255, 255, 0.4);}.bxAleartTextMessage{display: flex;justify-content: space-between;align-items: center;}.bxBgColorDangerOuter {border: 1px solid #ff0000;background-color: transparent;padding: 7px 10px;}.bxBgColorDangerOuter h6{text-transform: uppercase;color: #fff;font-size: 16px;font-weight: 700;margin: 0;}.bxBgColorDangerOuter h6 small{text-transform: lowercase;font-size: 12px;color: #fff;}.bxBgColorDangerOuter span {text-align: right;font-size: 14px;align-items: center;display: flex;color: #ff0000;}.bxBgColorDangerOuter span i{margin-left: 10px;}.bxAleartActionBtn {display: flex;justify-content: end;align-items: center;}.bxAleartActionBtn a{text-transform: uppercase;margin-left: 10px;color: #ff0000;font-size: 14px;text-decoration: underline;font-weight: 600;line-height: 1.5;}.bxMessageApplyOuter {position: absolute;right: 15px;top: 2px;max-width: 360px;width: 100%;}
+/* ============================================= login / sign up page css end ========================================================= */
+
+
+@media (max-width: 1500px){
+body{font-size: 14px;}
 }
 
-.bxMessageApplyOuter {
-  position: absolute;
-  right: 15px;
-  top: 2px;
-  max-width: 360px;
-  width: 100%;
-}
+
+
+
+
+

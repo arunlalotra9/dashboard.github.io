@@ -77,18 +77,19 @@ a.navbar-brand {
     right: 0;
 }
 .nav-user {
-    padding: calc(31px * .5) 20px calc(31px * .5) 57px !important;
+    padding: calc(10px * .5) 20px calc(10px * .5) 57px !important;
     text-align: left !important;
     position: relative;
     background-color: transparent;
-    min-height: 70px;
+    min-height: auto;
     -webkit-transition: none;
     transition: none;
 }
 .nav-user .account-user-avatar {
     position: absolute;
-    top: calc(38px * .5);
+    top: 50%;
     left: 15px;
+    transform: translateY(-50%);
 }
 .nav-user .account-user-avatar img {
     height: 32px;
@@ -97,7 +98,6 @@ a.navbar-brand {
 .nav-user .account-user-name {
     display: block;
     font-weight: 400;
-    margin-top: 10px;
     font-size: 14px;
 }
 .dropdown-menu-animated {

@@ -23,13 +23,13 @@
       
         var bxRightTabsPills = parseInt(bxTabsHeight) - parseInt(bxRightHeader_height);
       
-        $(".bxContent").css('min-height', windowHeight+'px');
+        $("body").css('min-height', windowHeight+'px');
 
         $("#bxFullwidthContent").css('min-height', bxTabsHeight+'px');
       
         $(".bxNavPills ").css('height', bxRightTabsPills+'px');
         
-        $(".leftSearchBoxArea").css('height', bxLeftSearchTotal_height+'px');
+        $(".DopplerPage .left-sidebar ").css('height', bxTabsHeight+'px');
 
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-right', bxRightSidebar_width+'px');
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-top', '+=' + (bxExtension_height + 10) + 'px');

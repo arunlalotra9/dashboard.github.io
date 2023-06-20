@@ -11,17 +11,18 @@
     <!-- Daterangepicker css -->
     <link rel="stylesheet" href="assets/vendor/daterangepicker/daterangepicker.css" type="text/css" />
     <link href="css/select2.min.css" rel="stylesheet">
+
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/doppler.css" rel="stylesheet">
     
 
     <title>Binaryflux Doppler</title>
   </head>
-  <body class="">
+  <body class="DopplerPage">
     
-    <div id="wrapper" class="bxContent DopplerPage">
+    <div id="wrapper" class="bxContent ">
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
             <div class="container-fluid p-md-2 p-0">
                 <div class="bxHeaderLeftNav d-flex align-items-center">
@@ -30,7 +31,7 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item dropdown dropdown-fullwidth">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Stream
+                                    Doppler
                                     <small>Lorem ipsum dolor sit amet, consectetur adipiscing el</small>
                                     </a>
                                     <ul class="dropdown-menu  px-5 py-4">
@@ -273,11 +274,7 @@
                                 </div>
                             </div>
                             <div class="leftDopplerDateSearch mt-3 mb-1">
-                                <!-- Date Range Picker With Times -->
-                                <div class="mb-3">
-                                    <label class="form-label">Date Range Picker With Times</label>
-                                    <input type="text" class="form-control date" id="daterangetime" data-toggle="date-picker" data-time-picker="true" data-locale="{'format': 'DD/MM hh:mm A'}">
-                                </div>
+                                <i class="bi bi-calendar3 me-2"></i> 12/01/23, 02:30 PM -12/01/23, 02:30 PM
                             </div>
                                                       
                         </div> 
@@ -304,7 +301,7 @@
                                 </div>
                             </div>
                             <div class="bxSearchLeftInnerCard px-2 py-3 bxColorRed">
-                                <div class="row m-0">
+                                <div class="row g-0">
                                     <div class="col-8">
                                         <label class="text-truncate d-block" title="jones.singh@abc.xyz"><i class="bi bi-hash"></i> jones.singh@abc.xyz</label>
                                         <ul class="rightSearchStatus  mb-0">                                                            
@@ -319,7 +316,7 @@
                                 </div>
                             </div>
                             <div class="bxSearchLeftInnerCard px-2 py-3">
-                                <div class="row m-0">
+                                <div class="row g-0">
                                     <div class="col-8">
                                         <label class="text-truncate d-block" title="krishna.singh@abc.xyz"><i class="bi bi-hash"></i> krishna.singh@abc.xyz</label>
                                         <ul class="rightSearchStatus  mb-0">                                                            
@@ -334,7 +331,7 @@
                                 </div>
                             </div>
                             <div class="bxSearchLeftInnerCard px-2 py-3 bxColorRed">
-                                <div class="row m-0">
+                                <div class="row g-0">
                                     <div class="col-8">
                                         <label class="text-truncate d-block" title="rahul.singh@abc.xyz"><i class="bi bi-hash"></i> rahul.singh@abc.xyz</label>
                                         <ul class="rightSearchStatus  mb-0">                                                            
@@ -349,9 +346,9 @@
                                 </div>
                             </div>
                             <div class="bxSearchLeftInnerCard px-2 py-3">
-                                <div class="row m-0">
+                                <div class="row g-0">
                                     <div class="col-8">
-                                        <label class="text-truncate d-block" title="vishal.singh@abc.xyz"><i class="bi bi-hash"></i> vishal.singh@abc.xyz</label>
+                                        <label class="text-truncate d-block" title="krishna.singh@abc.xyz"><i class="bi bi-hash"></i> krishna.singh@abc.xyz</label>
                                         <ul class="rightSearchStatus  mb-0">                                                            
                                             <li><span>Entity</span> User</li>
                                             <li><span>Seen</span> 2 days ago</li>
@@ -390,7 +387,7 @@
                     <div class="right-section left-sidebar easy-3s desktop-right">
                         <div class="bxNavPillsContent mb-2">
                             <div class="bxNPContentHead bxColorRed">
-                                <div class="d-flex justify-content-between align-items-center p-3">
+                                <div class="d-flex justify-content-between align-items-center p-1">
                                     <div class="bxNPContentText">
                                         <p class="d-flex"><i class="bi bi-hash me-2"></i>  Joel Embiid</p>
                                         <small class="d-flex">Seen <span>2 days ago </span></small>
@@ -469,9 +466,9 @@
                                     <div class="bxTabsRightSide">
 
                                         <div class="p-4 bxTabsRightSideHead">
-                                            <h4 class="text-white mb-4">Risk Trends</h4>
+                                            <h4 class="text-white mb-2">Risk Trends</h4>
                                             <img class="w-100 mb-4" src="images/frame1.png" alt="frame1">
-                                            <h4 class="text-white mb-4">Risk Reasons <span class="badge text-bg-secondary">4</span></h4>
+                                            <h4 class="text-white mb-2">Risk Reasons <span class="badge text-bg-secondary">4</span></h4>
                                             <div class="card p-3 bxcolorYellow">
                                                 <div class="d-flex align-items-center justify-content-between">
                                                     <p class="text-truncate">Sensitive information ex-filtration attempt <span class="d-block">April, 10:10 AM</span></p>
@@ -492,8 +489,8 @@
                                             </div>
                                             
                                         </div>
-                                        <nav class="bxPagination mt-4" aria-label="Page navigation example">
-                                            <ul class="pagination mb-0 py-2">
+                                        <nav class="bxPagination" aria-label="Page navigation example">
+                                            <ul class="pagination mb-0 p-2">
                                                 <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -511,7 +508,7 @@
                                     <div class="p-4 bxTabsRightSide">
                                         <h4 class="text-white mb-2 pb-2">Timeline</h4>
                                         <div class="row" id="bxTimeLine">
-                                            <div class="col-12">
+                                            <div class="col-12 p-0">
                                                 <div class="timeline">
                                                     <div class="timeline-show mb-3">
                                                         <h5 class="m-0 time-show-name">Today</h5>
@@ -606,7 +603,7 @@
                                 <div class="tab-pane fade" id="v-pills-code" role="tabpanel" aria-labelledby="v-pills-code-tab" tabindex="0">
                                     <div class="bxTabsRightSide col-12">
                                         <h4 class="text-white mb-0 px-4 pt-4 pb-2">Investigations</h4>
-                                        <div class="bxChatLayout row p-4">
+                                        <div class="bxChatLayout p-2">
                                             <div class="col-12 mb-2">
                                                 <small class="date">April 4</small>
                                             </div>
@@ -679,7 +676,7 @@
 
                                 <div class="tab-pane fade" id="v-pills-investigations" role="tabpanel" aria-labelledby="v-pills-investigations-tab" tabindex="0">
                                     <div class="p-4 bxTabsRightSide w-100 bxTabsEvents">
-                                        <h4 class="text-white mb-4">Events</h4>
+                                        <h4 class="text-white mb-2">Events</h4>
                                         <div class="d-block mb-3">
                                             <form class="sidebar-search w-100">
                                                 <div class="input-group">
@@ -688,14 +685,23 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="card mb-3">
-                                            <div class="card-body">
-                                                <p class="bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat </p>
-                                                <p class="moretext bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat</p>
-                                                <a class="moreless-button" href="#">Expand</a>
+                                        <div class="bxTabsEventsCards">
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <p class="bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat </p>
+                                                    <p class="moretext bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat</p>
+                                                    <a class="moreless-button" href="#">Expand</a>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <p class="bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat </p>
+                                                    <p class="moretext bxJsonText my-2 p-0">cef: 0| blue coat | Proxy 5g | TCP _HIT| low |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat</p>
+                                                    <a class="moreless-button" href="#">Expand</a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <nav class="bxPagination mt-4" aria-label="Page navigation example">
+                                        <nav class="bxPagination" aria-label="Page navigation example">
                                             <ul class="pagination mb-0 py-2">
                                                 <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -792,7 +798,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <nav class="bxPagination mt-4" aria-label="Page navigation example">
+                                        <nav class="bxPagination" aria-label="Page navigation example">
                                             <ul class="pagination mb-0 py-2">
                                                 <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -834,6 +840,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div id="center-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="centerSwitch-tab">
                     
                     <section class="center-task  center-section" id="taskContent">
@@ -1038,8 +1045,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="row" id="bxTimeLine">
-                <div class="col-12">
+            <div class="row" id="bxTimeLineTask">
+                <div class="col-12 p-0">
                     <div class="timeline">
                         <div class="timeline-show mb-3">
                             <h5 class="m-0 time-show-name">Apr 27</h5>

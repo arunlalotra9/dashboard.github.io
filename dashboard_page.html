@@ -11,11 +11,11 @@
     <link href="css/header.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
 
-    <title>Usermanagement</title>
+    <title>Binaryflux Dashboard</title>
   </head>
   <body class="">
     
-    <div id="wrapper" class="bxContent">
+    <div id="wrapper" class="DashboardPage">
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
             <div class="container-fluid p-md-2 p-0">
                 <div class="bxHeaderLeftNav d-flex align-items-center">
@@ -24,7 +24,7 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item dropdown dropdown-fullwidth">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Stream
+                                    Dashboard
                                     <small>Lorem ipsum dolor sit amet, consectetur adipiscing el</small>
                                     </a>
                                     <ul class="dropdown-menu  px-5 py-4">
@@ -195,23 +195,10 @@
 
                         </div>
                     </li>
-                    <li class="dropdown setting-list">
-                        <a class="nav-link dropdown-toggle nav-setting arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <li class="setting-list">
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#">
                             <i class="bi bi-gear"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
-                            <a href="manage_organizations.html" class="dropdown-item notify-item">
-                                <span>Manage Organizations</span>
-                            </a>      
-                            <!-- item-->
-                            <a href="features.html" class="dropdown-item notify-item">
-                                <span>Features</span>
-                            </a>
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <span>Setting 2</span>
-                            </a>
-                        </div>
                     </li>
                     <li class="dropdown user-list">
                         <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -270,44 +257,19 @@
                                       <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
                                     </div>
                                 </form>
-                                <div class="dropdown">
-                                    <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="bxDropdown">
+                                    <span class="bxDropdown-toggle arrow-none" type="button" data-bs-toggle="modal" data-bs-target="#bxFilterTop">
                                         <i class="bi bi-filter-left text-white"></i>
                                     </span>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
                                 </div>
                             </div>
-                            <div class="leftSearchResult d-flex justify-content-between align-items-center mt-3 mb-1 pe-3">
+                            <div class="leftSearchResult d-flex justify-content-between align-items-center mt-3 mb-1">
                                 <div class="leftResultCount">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="Results">
-                                        <label class="form-check-label" for="Results"> 200 Results</label>
-                                    </div>
+                                    <span>5 Dashboard</span>
                                 </div>
                                 <div class="leftResultActionBtns row g-4">
-                                    <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-arrow-repeat"></i> Update</a>
                                     <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-trash"></i> Delete</a>
-                                    <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-play"></i> Test</a>
                                     <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-diagram-3"></i> Add New</a>
-                                    <div class="dropdown p-0">
-                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Copy</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Share</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Assign</a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>                            
                         </div>                        
@@ -315,72 +277,41 @@
                         <div class="leftSearchBoxArea col-12">
                             <div class="card mb-0">
                                 <div class="card-body">
-                                    <div class="row justify-content-sm-between g-2 align-items-center">
-                                        <div class="col-sm-8">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="task1">
-                                                <i class="bi bi-hash bxHash"></i>
-                                                <label class="form-check-label" for="task1">
-                                                    <span class="text-turncate"> Data exfiltration using external drive </span>
-                                                </label>
-                                                <p class="">Protect from transferring confidential data to external drives.</p>
-                                                <ul class="list-inline mb-0">
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4 bxUMGraphText">
-                                            <div class="row g-2">
-                                                <div class="col">
-                                                    <img class="w-100" src="images/Graph.png" alt="">
-                                                </div>
-                                                <div class="col">
-                                                    <p class="mb-0 bxcolorRed p-0">1000 Failed</p>
-                                                    <span>24k Total </span>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="task1">
+                                        <i class="bi bi-hash bxHash"></i>
+                                        <label class="form-check-label" for="task1">
+                                            <span class="text-turncate"> Data exfiltration using external drive</span>
+                                        </label>
+                                        <p class="">Protect from transferring confidential data to external drives.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card mb-0">
                                 <div class="card-body">
-                                    <div class="row justify-content-sm-between g-2 align-items-center">
-                                        <div class="col-sm-8">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="task1">
-                                                <i class="bi bi-hash bxHash"></i>
-                                                <label class="form-check-label" for="task1">
-                                                    <span class="text-turncate"> Data exfiltration using external drive </span>
-                                                </label>
-                                                <p class="">Protect from transferring confidential data to external drives.</p>
-                                                <ul class="list-inline mb-0">
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                                    <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4 bxUMGraphText">
-                                            <div class="row g-2">
-                                                <div class="col">
-                                                    <img class="w-100" src="images/Graph.png" alt="">
-                                                </div>
-                                                <div class="col">
-                                                    <p class="mb-0 bxcolorRed p-0">1000 Failed</p>
-                                                    <span>24k Total </span>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="task1">
+                                        <i class="bi bi-hash bxHash"></i>
+                                        <label class="form-check-label" for="task1">
+                                            <span class="text-turncate"> Data exfiltration using external drive</span>
+                                        </label>
+                                        <p class="">Protect from transferring confidential data to external drives.</p>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="task1">
+                                        <i class="bi bi-hash bxHash"></i>
+                                        <label class="form-check-label" for="task1">
+                                            <span class="text-turncate"> Data exfiltration using external drive</span>
+                                        </label>
+                                        <p class="">Protect from transferring confidential data to external drives.</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <nav class="bxPagination" aria-label="Page navigation example">
@@ -406,27 +337,153 @@
 
                 <div id="right-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
                     <div class="right-section easy-3s desktop-right">
-                        <div class="rightSearchBoxArea col-12">
-                            <div class="row">
-                                <div class="col-sm-8">
+                        <div class="rightDashBoxArea  col-12">
+                            <div class="row mb-3">
+                                <div class="col-xl-7">
                                     <label class="d-flex">
                                         <i class="bi bi-hash bxHash me-2"></i>                                          
-                                        <span class="">US Jumpcloud Cisco</span> 
+                                        <span class="text-white"> Critical Risk Management</span> 
                                     </label>
+                                    <p class="">or incididunt ut labore et dolore magna aliqua. </p>
                                     <ul class="rightSearchStatus list-inline-item mb-0 p-0">
-                                        <li><span>Last Update</span> 12 May 2021</li>
-                                        <li><span>Status</span> Active</li>
+                                        <li><span>Created by</span> alice</li>
+                                        <li><span>On</span> 06/18/2021, 01:57:05</li>
                                     </ul>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="rightResultActionBtns row g-4">
-                                        <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-trash"></i> Delete</a>
-                                        <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-arrow-repeat"></i> Update</a>
-                                        <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-play"></i> Test</a>
-                                        
+                                <div class="col-xl-5">
+                                    <div class="rightResultActionBtns align-items-end">
+                                        <ul class="d-flex mb-0 p-0 align-items-center float-end">
+                                            <li class="me-3 lastUpdate"><span>Last updated</span> 06/18/2021, 01:57:05</li>
+                                            <li><a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-arrow-repeat"></i> Update</a></li>
+                                        </ul>
+                                        <div class="leftDopplerDateSearch mt-3 mb-1 float-end">
+                                            <i class="bi bi-calendar3 me-3"></i> 12/01/23, 02:30 PM -12/01/23, 02:30 PM
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                           
+                            </div>
+
+                            <div class="row mb-3 g-3">
+                                <div class="col-xl-5 col-lg-6">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card widget-flat">
+                                                <div class="card-body">
+                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of security events analyzed">security events</h5>
+                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                                    <p class="mb-0 text-muted d-flex">
+                                                        <span class="text-danger me-2"><i class="bi bi-arrow-down"></i> 5.27%</span>
+                                                        <span class="text-nowrap">Since last month</span>  
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card widget-flat">
+                                                <div class="card-body">
+                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of data exfiltration">data exfiltration</h5>
+                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                                    <p class="mb-0 text-muted d-flex">
+                                                        <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
+                                                        <span class="text-nowrap">Since last month</span>  
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card widget-flat">
+                                                <div class="card-body">
+                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of security events analyzed">security events</h5>
+                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                                    <p class="mb-0 text-muted d-flex">
+                                                        <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
+                                                        <span class="text-nowrap">Since last month</span>  
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card widget-flat">
+                                                <div class="card-body">
+                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of destinations targeted">destinations targeted</h5>
+                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                                    <p class="mb-0 text-muted d-flex">
+                                                        <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
+                                                        <span class="text-nowrap">Since last month</span>  
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-xl-7 col-lg-6">
+                                    <div class="card widget-flat">
+                                        <div class="card-body">
+                                            <div class="card-head">                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="float-end">
+                                                            <div class="bxActionBtns d-flex align-items-end">
+                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#bxWidgetTrends" role="button" aria-expanded="false" aria-controls="bxWidgetTrends">
+                                                                    <i class="bi bi-funnel"></i>
+                                                                </a>
+                                                                <div class="dropdown ms-3">
+                                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="text-capitalize text-white fw-normal mt-0" title="data exfiltration Trends">Data Exfiltration Trends</h5>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <ul class="d-flex">
+                                                    <li class="me-3">
+                                                        
+                                                    </li>
+                                                    <li>
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <div class="collapse w-100 text-dark" id="bxWidgetTrends">
+                                                    <div class="card card-body">
+                                                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxDashboardGraph">
+                                                <img class="w-100" src="images/dash_graph.png" alt="dash graph">
+                                            </div>
+                                            <nav class="bxPagination" aria-label="Page navigation example">
+                                                <ul class="pagination mb-0 py-2">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
 
                         </div>
                     </div>
@@ -441,7 +498,71 @@
         </div>
     </footer>
 
-    <div class="bxAddStreamOffCanvas offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="modal bxPopup fade" id="bxFilterTop" tabindex="-1" aria-labelledby="bxFilterTop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="filterHead modal-header">
+                    <h1>Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="filterBody modal-body">
+                    <form action="">
+                        <div class="form-group mb-2">
+                            <h6 class="text-white">Severity</h6>
+                            <ul class="d-flex align-items-center m-0 p-0">                                                    
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i> Critical</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Medium</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Information</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Low</button></li>
+                            </ul>
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                    </form>
+                </div>
+                <div class="filterFooter modal-footer">
+                    <div>
+                        <a type="button" class="text-white me-3" data-bs-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bxAddStreamOffCanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Streams</h5>
           <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
@@ -478,62 +599,8 @@
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
                                 <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">120 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">3 automatons</span></li>                                
                             </ul>
                         </div>
                     </div>
@@ -594,10 +661,110 @@
                 </div>
             </div>
         </div>
-      </div>
+        <div class="offcanvas-footer ">
+            <nav class="bxPagination" aria-label="Page navigation example">
+                <ul class="pagination mb-0 py-2">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class="offcanvas_result"><span>5 Streams Added</span></div>
+                <div>
+                    <a type="button" class="text-white" data-bs-dismiss="offcanvas" aria-label="Close">Close</a>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="automatons" tabindex="-1" aria-labelledby="automatonsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="automatonsLabel">Automations</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Sensitive information exfiltration attempt</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 Automation</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>Escalate to manager</h4>
+                        <span>Escalate the incident to the reporting manager.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="detections" tabindex="-1" aria-labelledby="detectionsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="detectionsLabel">Detections</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Sensitive information exfiltration attempt</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 Detections</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Unusual Logon Activities.</h4>
+                        <span>Detects unusual account activity for logon after usual office hours.</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>Exfiltrating confidential information</h4>
+                        <span>Detects download of confidential information from sharepoint.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="filters" tabindex="-1" aria-labelledby="filtersLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="filtersLabel">Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Sensitive information exfiltration attempt</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 Filters</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Logon Events</h4>
+                        <span>Fetch Device Logon events.</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>File Download Events </h4>
+                        <span>Fetch download events from sharepoint.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/select2.min.js"></script> 
     <script src="js/custom.js"></script>
+
   </body>
 </html>
