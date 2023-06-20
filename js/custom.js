@@ -7,7 +7,7 @@
         var bxPagination_height = $(".bxPagination").height();
         var bxLeftHeader_height = $(".pane-header").height();
         var bxRightHeader_height = $(".bxNavPillsContent").height();
-        var bxRightSidebar_width = $("#right-switch").width();
+        var bxRightSidebar_width = $("#agents-switch").width();
         
         var bxNPContentHead_height = $(".bxNPContentHead").height();
          
@@ -40,8 +40,8 @@
         if (width<767) {
          
             $('body').addClass('mobileResponsive');
-            $('#left-switch').removeClass('active');
-            $('#center-switch').removeClass('active');
+            $('#tasks-switch').removeClass('active');
+            $('#agents-switch').removeClass('active');
             $('.right-section').css('width', '100%')
         }
       
@@ -59,33 +59,35 @@
             var id = $(this).parent().parent().parent().parent().parent().attr('id');
             $("#"+id+" .rightSidebar-search").removeClass("open");
         });
-        
-        
-        // =============== #left-switch left side bar ======================
 
-        $("#left-switch .collapse-sidebar").click(function(){
-            $("#left-switch").toggleClass("collapsed");
-            $('.right-section').toggleClass("left-collapsed");
-            $('.center-section').toggleClass("both-collapsed");
+        // =============== #tasks-switch left side bar ======================
 
-            if($('.right-section').hasClass('desktop-right') && $('.right-section').hasClass('center-collapsed')){
+        $("#tasks-switch .collapse-sidebar").click(function(){
+            $("#tasks-switch").toggleClass("collapsed");
+            $('.right-section').toggleClass("task-collapsed");
+
+            if($('.right-section').hasClass('task-collapsed') && $('.right-section').hasClass('agent-collapsed')){
                 $('.right-section').addClass('both-collapsed');
             }else{
                 $('.right-section').removeClass('both-collapsed');
             }
         });
+
+
         // =============== #tasks-switch right side bar =========================
 
-        $("#right-switch .collapse-sidebar").click(function(){
-            $("#right-switch").toggleClass("collapsed");
-            $('.center-section').toggleClass("center-collapsed");
-
-            if($('.right-section').hasClass('task-collapsed') && $('.left-section').hasClass('center-collapsed')){
-                $('.center-section').addClass('both-collapsed');
+        $("#agents-switch .collapse-sidebar").click(function(){
+            $("#agents-switch").toggleClass("collapsed");
+            $('.right-section').toggleClass("agent-collapsed");
+            if($('.right-section').hasClass('task-collapsed') && $('.right-section').hasClass('agent-collapsed')){
+                $('.right-section').addClass('both-collapsed');
             }else{
-                $('.center-section').removeClass('both-collapsed');
+                $('.right-section').removeClass('both-collapsed');
             }
         });
+        
+        
+        
 
         // ======================  Expand / Hide ========================
 
