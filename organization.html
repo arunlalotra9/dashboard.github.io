@@ -260,9 +260,9 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div id="left-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
+                <div id="tasks-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
                     <div class="collapse-sidebar right"><i class="bi bi-chevron-compact-right text-white"></i></div>
-                    <section class="left-task left-sidebar left-section" id="taskContent">
+                    <section class="left-task left-sidebar float-start" id="taskContent">
                         <div class="bxLeftSideBar mt-4 mb-1">
                             <ul class="p-0 m-0">
                                 <li class="active">
@@ -301,8 +301,8 @@
                     </section>
                 </div>
 
-                <div id="right-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
-                    <div class="right-section easy-3s desktop-right">
+                <div id="map-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
+                    <div class="right-section easy-3s desktop-right float-end">
                         <div class="rightSearchBoxArea col-12">
                             <div class="row">
                                 <div class="col-sm-12">
@@ -495,7 +495,7 @@
         </div>
     </footer>
 
-    <div class="bxAddStreamOffCanvas offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasAddUser" aria-labelledby="offcanvasAddUserLabel">
+    <div class="bxOffcanvasAddOrg AddUser offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasAddUser" aria-labelledby="offcanvasAddUserLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title text-white" id="offcanvasAddUserLabel">Add User</h5>
             <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
@@ -598,14 +598,14 @@
             </div>
         </div>
         <div class="offcanvas-footer py-2 px-3">
-            <div class="d-flex align-items-end justify-content-end">
+            <div class="d-flex align-items-center justify-content-end">
                 <a type="button" class="text-white me-3" data-bs-dismiss="offcanvas">Cancel</a>
                 <button type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
     </div>
 
-    <div class="bxAddStreamOffCanvas offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasAddRole" aria-labelledby="offcanvasAddRoleLabel">
+    <div class="bxOffcanvasAddOrg AddRole offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasAddRole" aria-labelledby="offcanvasAddRoleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title text-white" id="offcanvasAddRoleLabel">Add Role</h5>
             <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
@@ -709,7 +709,7 @@
             </div>
         </div>
         <div class="offcanvas-footer py-2 px-3">
-            <div class="d-flex align-items-end justify-content-end">
+            <div class="d-flex align-items-center justify-content-end">
                 <a type="button" class="text-white me-3" data-bs-dismiss="offcanvas">Cancel</a>
                 <button type="button" class="btn btn-primary">Save</button>
             </div>

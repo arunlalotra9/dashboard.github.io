@@ -1,7 +1,7 @@
 .daterangepicker {
   position: absolute;
   color: inherit;
-  background-color: #fff;
+  background-color: #010F33;
   border-radius: 4px;
   border: 1px solid #ddd;
   width: 278px;
@@ -127,7 +127,7 @@
 
 .daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
   color: #fff;
-  border: solid black;
+  border: solid #fff;
   border-width: 0 2px 2px 0;
   border-radius: 0;
   display: inline-block;
@@ -160,9 +160,9 @@
 }
 
 .daterangepicker .calendar-table {
-  border: 1px solid #fff;
+  border: 1px solid #010F33;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #010F33;
 }
 
 .daterangepicker .calendar-table table {
@@ -173,7 +173,7 @@
 }
 
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
-  background-color: #eee;
+  background-color: #08c;
   border-color: transparent;
   color: inherit;
 }
@@ -184,13 +184,15 @@
 }
 
 .daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
-  background-color: #fff;
+  background-color: #1F3562;
   border-color: transparent;
-  color: #999;
+  color: #eee;
+  opacity: 0;
+  cursor: default;
 }
 
 .daterangepicker td.in-range {
-  background-color: #ebf4f8;
+  background-color: #08c;
   border-color: transparent;
   color: #000;
   border-radius: 0;
@@ -244,8 +246,8 @@
 .daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
   width: 50px;
   margin: 0 auto;
-  background: #eee;
-  border: 1px solid #eee;
+  background: #010F33;
+  border: 1px solid #010F33;
   padding: 2px;
   outline: 0;
   font-size: 12px;
@@ -284,6 +286,7 @@
   font-size: 12px;
   font-weight: bold;
   padding: 4px 8px;
+  color: #fff;
 }
 
 .daterangepicker.show-ranges.single.rtl .drp-calendar.left {
@@ -326,7 +329,7 @@
 }
 
 .daterangepicker .ranges li:hover {
-  background-color: #eee;
+  background-color: rgba(73, 153, 254, 0.2);
 }
 
 .daterangepicker .ranges li.active {

@@ -3,6 +3,9 @@ nav.navbar {
     background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
     width: 100%;
     border-bottom: 1px solid rgba(73, 153, 254, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 .navbar .dropdown-fullwidth {
     position: static;
@@ -26,11 +29,12 @@ nav.navbar {
     max-width: 100%;
     padding: 1rem 0;
     right: 0;
-    top: 70px;
+    top: 65px;
     background: #0E2948;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
+    z-index: 9;
 }
 .bxNavlist {
     background-color: #010F33;
@@ -142,6 +146,9 @@ li.dropdown.user-list {
 }
 .nav-link:focus{
     color: inherit;
+}
+div#bxFullwidthContent {
+    margin-top: 66px;
 }
 @-webkit-keyframes DropDownSlide {
     100% {

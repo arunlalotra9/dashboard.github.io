@@ -39,15 +39,13 @@
 .collapse-sidebar i {
 	font-size: 20px;
 }
-
-.left-sidebar {
-	width: 700px;
+.StreamPage #tasks-switch.collapsed{
+	margin-left: -550px;
+}
+.StreamPage #tasks-switch .left-sidebar {
+	width: 550px;
 	background-color: #010F33;
-	box-shadow: 6px 0 30px 0 rgba(0,0,0,.15);
-	position: relative;
-	z-index: 2;
-	padding: 0;
-	overflow: hidden;
+	transition: 0.5s;
 }
 
 .leftSearchBoxArea {
@@ -103,25 +101,23 @@
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.right-section {
-	width: calc(100% - 700px);
-	float: left;
+.StreamPage #map-switch .right-section {
+	width: calc(100% - 550px);
+    padding: 10px 30px;
+	transition: 0.01s;
 	overflow: hidden;
 	position: relative;
 	z-index: 0;
-	padding: 20px 30px;
+	top: 0;
+	vertical-align: top;
 }
-
-#agent-switch.collapsed {
-	margin-left: -700px;
-}
-
-.right-section.left-collapsed {
+.StreamPage #map-switch  .right-section.task-collapsed {
 	width: 100%;
 }
 
 .leftSearchBoxArea .card {
 	cursor: pointer;
+	background-color: transparent;
 }
 
 .notification-list h6.m-0.font-16.fw-semibold {
@@ -167,7 +163,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	margin-bottom: 3px;
-	padding-left: 32px;
+	padding-left: 3px;
 }
 
 .leftSearchBoxArea .card:hover {
@@ -282,7 +278,7 @@
 .leftSearchBoxArea .form-check input {
 	background-color: transparent;
 	border: 1px solid #eee;
-	margin-right: 20px;
+	margin-right: 0;
 }
 
 .list-inline {
@@ -942,6 +938,7 @@
 
 .DopplerPage .left-sidebar {
 	width: 450px;
+	background-color: #010F33;
 }
 
 .DopplerPage .bxSearchLeftInnerCard {
@@ -1027,7 +1024,7 @@
 	border-radius: 5px 0px 0 5px;
 	border-style: solid;
 	margin-right: -1px;
-	z-index: 999;
+	z-index: 9;
 }
 
 .DopplerPage .bxNavPills .nav-pills .nav-link span:hover, .DopplerPage .bxNavPills .nav-pills .nav-link.active span, .DopplerPage .bxNavPills .nav-pills .show>.nav-link span {
@@ -2152,14 +2149,17 @@
 .OrganizationPage .left-sidebar {
 	width: 300px;
 	height: 100vh;
+	background-color: #010F33;
 }
-
+.OrganizationPage #tasks-switch.collapsed{
+	margin-left: -300px;
+}
 .OrganizationPage .right-section {
 	width: calc(100% - 300px);
+	padding: 10px 10px 10px 40px;
 }
-
-.OrganizationPage #agent-switch.collapsed {
-	margin-left: -300px;
+.OrganizationPage .right-section.task-collapsed {
+	width: 100%;
 }
 
 .OrganizationPage .bxLeftSideBar li a {
@@ -2192,73 +2192,97 @@
 	margin: 0 10px;
 }
 
-.OrganizationPage .bxAddUserForm .form-select, .OrganizationPage .bxAddUserForm .form-control {
-	background-color: transparent;
+.bxOffcanvasAddOrg .bxAddUserForm .form-select, 
+.bxOffcanvasAddOrg .bxAddUserForm .form-control {
+	background-color: #010F33;
 	color: #C5C6CC;
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-radius: 4px;
 }
-
-.OrganizationPage .offcanvas-body {
+.bxOffcanvasAddOrg {
+	width: 700px;
+}
+.bxOffcanvasAddOrg  .offcanvas-body {
 	background: #010F33;
 }
 
-.OrganizationPage .bxAddUserForm small {
+.bxOffcanvasAddOrg  .bxAddUserForm small {
 	font-size: 12px;
 	margin-top: 4px;
 }
 
-.OrganizationPage .bxAddUserForm label {
+.bxOffcanvasAddOrg  .bxAddUserForm label {
 	font-weight: 400;
 	font-size: 12px;
 }
 
-.OrganizationPage .bxAddStreamOffCanvas .offcanvas-header {
+.bxOffcanvasAddOrg .offcanvas-header {
 	background-color: #010F33;
 	border-bottom: 1px solid rgba(73, 153, 254, 0.2);
 }
 
-.OrganizationPage .bxListHeadBg {
+.bxOffcanvasAddOrg .bxListHeadBg {
 	background-color: #0E2948;
 }
 
-.OrganizationPage .bxListFormCheck table td {
+.bxOffcanvasAddOrg .bxListFormCheck table td {
 	border: none;
 	padding-left: 25px;
 }
 
-.OrganizationPage .bxAddStreamOffCanvas .offcanvas-footer {
+.bxOffcanvasAddOrg .offcanvas-footer {
 	background-color: #111D36;
 }
 
-.OrganizationPage .form-switch .form-check-input {
-	background-color: #3c92ff;
+.bxOffcanvasAddOrg .form-switch .form-check-input {
+    background-color: #010f33;
+    border-color: #fff;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
-.OrganizationPage .bxAddRoleTopHeadLeft {
+.bxOffcanvasAddOrg .bxAddRoleTopHeadLeft {
 	position: relative;
 	padding-left: 50px;
-	margin-top: 30px;
 }
 
-.OrganizationPage summary {
+.bxOffcanvasAddOrg  summary {
 	display: block;
 	cursor: pointer;
 	outline: 0;
 }
 
-.OrganizationPage summary::-webkit-details-marker {
+.bxOffcanvasAddOrg  summary::-webkit-details-marker {
 	display: none;
 }
+.tree-nav__item-title label {
+    font-size: 16px;
+}
+#checkboxlist label{
+	margin-bottom: 10px;
+}
+#checkboxlist input,
+.tree-nav__item-title label input {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-color: red;
+    border: 1px solid #fff;
+}
 
-.OrganizationPage .tree-nav__item {
+#checkboxlist input:checked{
+	color: #000;
+}
+
+.bxOffcanvasAddOrg .tree-nav__item {
 	display: block;
 	white-space: nowrap;
 	color: #ccc;
 	position: relative;
+	margin-top: 10px;
 }
 
-.OrganizationPage .tree-nav__item.is-expandable::before {
+.bxOffcanvasAddOrg .tree-nav__item.is-expandable::before {
 	border-left: 1px solid #333;
 	content: "";
 	height: 100%;
@@ -2268,34 +2292,34 @@
 	height: calc(100% - 2.4rem);
 }
 
-.OrganizationPage .tree-nav__item .tree-nav__item {
+.bxOffcanvasAddOrg  .tree-nav__item .tree-nav__item {
 	margin-left: 2.4rem;
 }
 
-.OrganizationPage .tree-nav__item.is-expandable[open] > .tree-nav__item-title::before {
-	font-family: "ionicons";
+.bxOffcanvasAddOrg  .tree-nav__item.is-expandable[open] > .tree-nav__item-title::before {
+	font-family: "bootstrap-icons";
 	transform: rotate(90deg);
 }
 
-.OrganizationPage .tree-nav__item.is-expandable > .tree-nav__item-title {
+.bxOffcanvasAddOrg  .tree-nav__item.is-expandable > .tree-nav__item-title {
 	padding-left: 2.4rem;
 }
 
-.OrganizationPage .tree-nav__item.is-expandable > .tree-nav__item-title::before {
+.bxOffcanvasAddOrg  .tree-nav__item.is-expandable > .tree-nav__item-title::before {
 	position: absolute;
 	will-change: transform;
 	transition: transform 300ms ease;
-	font-family: "ionicons";
+	font-family: "bootstrap-icons";
 	color: #fff;
 	font-size: 1.1rem;
-	content: "\f125";
+	content: "\F229";
 	left: 0;
 	display: inline-block;
 	width: 1.6rem;
 	text-align: center;
 }
 
-.OrganizationPage .tree-nav__item-title {
+.bxOffcanvasAddOrg  .tree-nav__item-title {
 	cursor: pointer;
 	display: block;
 	outline: 0;
@@ -2304,7 +2328,7 @@
 	line-height: 3.2rem;
 }
 
-.OrganizationPage .tree-nav__item-title .icon {
+.bxOffcanvasAddOrg  .tree-nav__item-title .icon {
 	display: inline;
 	padding-left: 1.6rem;
 	margin-right: 0.8rem;
@@ -2313,7 +2337,7 @@
 	position: relative;
 }
 
-.OrganizationPage .tree-nav__item-title .icon::before {
+.bxOffcanvasAddOrg  .tree-nav__item-title .icon::before {
 	top: 0;
 	position: absolute;
 	left: 0;
@@ -2322,7 +2346,7 @@
 	text-align: center;
 }
 
-.OrganizationPage .tree-nav__item-title::-webkit-details-marker {
+.bxOffcanvasAddOrg  .tree-nav__item-title::-webkit-details-marker {
 	display: none;
 }
 
@@ -2332,13 +2356,31 @@
 /* ======================================================== DashboardPage css start here ======================================================*/
 .DashboardPage .left-sidebar {
 	width: 380px;
+	background-color: #010F33;
 }
-
+.DashboardPage .card.widget-flat .card{
+	background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);
+	backdrop-filter: blur(15px);
+	border-radius: 0;
+}
+.DashboardPage .widget-flat .card-head{
+	background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);
+	border: 1px solid rgba(73, 153, 254, 0.2);
+	box-shadow: 0px -15px 30px rgba(0, 0, 0, 0.4), inset 0px 5px 100px rgba(73, 153, 254, 0.2);
+	backdrop-filter: blur(15px);
+	border-radius: 8px 8px 0px 0px;
+}
+.DashboardPage .widget-flat .bxDashboardGraph{
+	border-bottom: 1px solid rgba(73, 153, 254, 0.2);
+}
 .DashboardPage .right-section {
 	width: calc(100% - 380px);
+	padding: 10px 20px 10px 40px;
 }
-
-.DashboardPage #agent-switch.collapsed {
+.DashboardPage .right-section.task-collapsed{
+	width: 100%;
+} 
+.DashboardPage #tasks-switch.collapsed {
 	margin-left: -380px;
 }
 
@@ -2352,15 +2394,32 @@
 	margin-right: 5px;
 }
 
-.DashboardPage .leftDopplerDateSearch {
-	position: relative;
-	font-size: 14px;
-	background: #010F33;
-	border-radius: 4px;
-	padding: 10px 30px 10px 10px;
+.bxDateTimePicker {
+    position: relative;
+    font-size: 14px;
+    background: #010F33;
+    border-radius: 4px;
+    padding: 10px 30px;
+    display: inline-block;
+	vertical-align: top;
+}
+.bxDateTimePicker i {
+    position: absolute;
+    left: 8px;
+}
+.bxDateTimePicker input[type="text"] {
+    border: 0;
+    background-color: transparent;
+    width: 210px;
+    display: block;
+    float: left;
+}
+.bxDateTimePicker input[type="text"]:focus{
+	box-shadow: none;
+	outline: 0;
 }
 
-.DashboardPage .leftDopplerDateSearch::before {
+.bxDateTimePicker::before {
 	position: absolute;
 	content: "";
 	border-color: rgba(255, 255, 255, 0.6) transparent transparent transparent;
@@ -2376,11 +2435,121 @@
 .DashboardPage .widget-flat {
 	background: #0F1226;
 	margin-bottom: 20px;
+	border: 1px solid rgba(73, 153, 254, 0.2);
+	border-radius: 8px;
 }
-
+.DashboardPage .widget-flat .leftDopplerDateSearch{
+	float: left;
+	margin-top: 5px;
+}
+.widget-flat .bxCustomSelect {
+    position: relative;
+    width: 100%;
+	max-width: 300px;
+	display: inline-block;
+}
+.widget-flat .bxCustomSelect::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    border-width: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    right: 10px;
+}
+.widget-flat .form-select {
+    background: #010F33;
+    border: 0;
+    border-radius: 4px;
+    color: #Fff;
+    padding: 10px 15px;
+    margin-left: 70px;
+    max-width: 230px;
+}
+.bxCustomSelect label{
+    position: absolute;
+    margin: 0 !important;
+    padding-top: 14px;
+    font-size: 14px;
+}
 .DashboardPage .font-16 {
 	font-size: 16px;
 }
+[ data-bs-theme-data="full"] .desktop-right .rightDashBoxArea {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.DashboardPage .equal-height-column {
+display: flex;
+flex-direction: column;
+}
+.DashboardPage .equal-height-column > div {
+flex-grow: 1;
+}
+
+.DashboardPage .bxTabsRelations th:first-child, .DashboardPage .bxTabsRelations td:first-child {
+    text-align: left;
+}
+.DashboardPage .bxTabelRelations .table-dark th {
+    background: #0E2948 !important;
+    color: #C5C6CC;
+    border-bottom-color: rgba(73, 153, 254, 0.4) !important;
+}
+.DashboardPage  .table.table-centered {
+    color: #fff;
+    text-align: center;
+}
+.DashboardPage  .table.table-centered tr th:last-child,
+.DashboardPage  .table.table-centered tr td:last-child{
+	text-align: right;
+}
+.DashboardPage  .table.table-centered tr td{
+	font-size: 14px;
+}
+.DashboardPage  .table.table-centered tr th,
+.DashboardPage  .table.table-centered tr td:first-child{
+	text-align: left;
+}
+.bxDashboardAction.offcanvas {
+    background-color: #0E2948;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 800px;
+    margin-top: 66px;
+}
+.bxDashboardAction .offcanvas-body {
+    background: #010F33;
+}
+.bxDashboardAction .offcanvas-header .btn-close {
+    background-color: #fff;
+    background-size: 14px;
+    padding: 4px;
+}
+.bxDashboardAction .offcanvas-header{
+	background-color: #0D1529;
+	box-shadow: 0px 0px 150px 0px rgba(73, 153, 254, 0.10) inset;
+}
+.bxDashboardAction .bxAddCard{
+	background-color: #010F33;
+}
+.bxDashboardAction .bxAddCard .card-body{
+	background-color: #182143;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.bxDashboardAction .bxAddCard .card-body:hover{
+	background-color: #0E2948;
+}
+.bxCritical .card-body{   	
+	border: 1px solid rgba(255, 61, 0, 0.40);
+}
+.bxCritical .card-body h3{
+	color: #FF3D00;
+}
+
+
     /* ============================================= DashboardPage page responsive css start ========================================================= */
 
 @media(max-width: 1500px) {
@@ -2398,3 +2567,5 @@
 }
     /* ============================================= DashboardPage page responsive css end ========================================================= */
 /* ======================================================== DashboardPage css end here ======================================================*/
+
+  

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bxHtml" data-bs-theme="dark">
+<html lang="en" class="bxHtml" data-bs-theme="dark" data-bs-theme-data="full">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,7 +9,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <link href="css/dashboard.css" rel="stylesheet">
+    
 
     <title>Binaryflux Dashboard</title>
   </head>
@@ -246,9 +248,9 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div id="left-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
+                <div id="tasks-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
                     <div class="collapse-sidebar right"><i class="bi bi-chevron-compact-right text-white"></i></div>
-                    <section class="left-task left-sidebar left-section" id="taskContent">
+                    <section class="left-task left-sidebar float-start" id="taskContent">
                         <div class="pane-header px-3 py-2">
                             <div class="leftSearchHeader d-flex align-items-center">
                                 <form class="sidebar-search">
@@ -335,9 +337,9 @@
                     </section>
                 </div>
 
-                <div id="right-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
-                    <div class="right-section easy-3s desktop-right">
-                        <div class="rightDashBoxArea  col-12">
+                <div id="map-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
+                    <div class="right-section easy-3s desktop-right float-end">
+                        <div class="rightDashBoxArea col-12 mb-4">
                             <div class="row mb-3">
                                 <div class="col-xl-7">
                                     <label class="d-flex">
@@ -356,76 +358,75 @@
                                             <li class="me-3 lastUpdate"><span>Last updated</span> 06/18/2021, 01:57:05</li>
                                             <li><a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-arrow-repeat"></i> Update</a></li>
                                         </ul>
-                                        <div class="leftDopplerDateSearch mt-3 mb-1 float-end">
-                                            <i class="bi bi-calendar3 me-3"></i> 12/01/23, 02:30 PM -12/01/23, 02:30 PM
+                                        <div class="d-block w-100 mt-3 mb-1 float-end">
+                                            <div class="bxDateTimePicker">
+                                                <i class="bi bi-calendar3"></i>
+                                                <input type="text" name="datetimes" />
+                                            </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="row mb-3 g-3">
-                                <div class="col-xl-5 col-lg-6">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="card widget-flat">
-                                                <div class="card-body">
-                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of security events analyzed">security events</h5>
-                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
-                                                    <p class="mb-0 text-muted d-flex">
-                                                        <span class="text-danger me-2"><i class="bi bi-arrow-down"></i> 5.27%</span>
-                                                        <span class="text-nowrap">Since last month</span>  
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="card widget-flat">
-                                                <div class="card-body">
-                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of data exfiltration">data exfiltration</h5>
-                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
-                                                    <p class="mb-0 text-muted d-flex">
-                                                        <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
-                                                        <span class="text-nowrap">Since last month</span>  
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="card widget-flat">
-                                                <div class="card-body">
-                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of security events analyzed">security events</h5>
-                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
-                                                    <p class="mb-0 text-muted d-flex">
-                                                        <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
-                                                        <span class="text-nowrap">Since last month</span>  
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="card widget-flat">
-                                                <div class="card-body">
-                                                    <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of destinations targeted">destinations targeted</h5>
-                                                    <h3 class="mt-3 mb-3 text-white">36,254</h3>
-                                                    <p class="mb-0 text-muted d-flex">
-                                                        <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
-                                                        <span class="text-nowrap">Since last month</span>  
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-xl-7 col-lg-6">
+                            <div class="row" id="bxDashboardWiget">
+                                <div class="col-sm-3 equal-height-column">
                                     <div class="card widget-flat">
                                         <div class="card-body">
-                                            <div class="card-head">                                                
+                                            <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of security events analyzed">security events</h5>
+                                            <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                            <p class="mb-0 text-muted d-flex">
+                                                <span class="text-danger me-2"><i class="bi bi-arrow-down"></i> 5.27%</span>
+                                                <span class="text-nowrap">Since last month</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body">
+                                            <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of data exfiltration">data exfiltration</h5>
+                                            <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                            <p class="mb-0 text-muted d-flex">
+                                                <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
+                                                <span class="text-nowrap">Since last month</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body">
+                                            <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of security events analyzed">security events</h5>
+                                            <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                            <p class="mb-0 text-muted d-flex">
+                                                <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
+                                                <span class="text-nowrap">Since last month</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body">
+                                            <h5 class="text-capitalize text-muted fw-normal mt-0" title="Number of destinations targeted">destinations targeted</h5>
+                                            <h3 class="mt-3 mb-3 text-white">36,254</h3>
+                                            <p class="mb-0 text-muted d-flex">
+                                                <span class="text-success me-2"><i class="bi bi-arrow-up"></i> 5.27%</span>
+                                                <span class="text-nowrap">Since last month</span>  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-7 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body p-0">
+                                            <div class="card-head p-3">                                                
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="float-end">
                                                             <div class="bxActionBtns d-flex align-items-end">
-                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#bxWidgetTrends" role="button" aria-expanded="false" aria-controls="bxWidgetTrends">
+                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#dataTrends" role="button" aria-expanded="false" aria-controls="dataTrends">
                                                                     <i class="bi bi-funnel"></i>
                                                                 </a>
                                                                 <div class="dropdown ms-3">
@@ -441,22 +442,28 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <h5 class="text-capitalize text-white fw-normal mt-0" title="data exfiltration Trends">Data Exfiltration Trends</h5>
-                                                        
+                                                        <h5 class="text-capitalize text-white fw-normal m-0" title="data exfiltration Trends">Data Exfiltration Trends</h5>                                                        
                                                     </div>
-                                                </div>
-                                                <ul class="d-flex">
-                                                    <li class="me-3">
-                                                        
-                                                    </li>
-                                                    <li>
-                                                        
-                                                    </li>
-                                                </ul>
-                                                <div class="collapse w-100 text-dark" id="bxWidgetTrends">
-                                                    <div class="card card-body">
-                                                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                                </div>                                                
+                                            </div>
+                                            <div class="collapse w-100" id="dataTrends">
+                                                <div class="card card-body">
+                                                    <div class="col-12">
+                                                        <div class="bxDateTimePicker me-3 mt-1">
+                                                            <i class="bi bi-calendar3"></i>
+                                                            <input type="text" name="datetimes" />
+                                                        </div>
+                                                        <div class="bxCustomSelect text-nowrap mt-1">
+                                                            <label for="" class="me-3 text-nowrap">View By</label>
+                                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                                <option selected="">Departments</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="bxDashboardGraph">
@@ -483,6 +490,308 @@
                                     </div>
                                 </div>
                                 
+                                <div class="col-sm-5 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body p-0">
+                                            <div class="card-head p-3">                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="float-end">
+                                                            <div class="bxActionBtns d-flex align-items-end">
+                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#EventAnalysis" role="button" aria-expanded="false" aria-controls="EventAnalysis">
+                                                                    <i class="bi bi-funnel"></i>
+                                                                </a>
+                                                                <div class="dropdown ms-3">
+                                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="text-capitalize text-white fw-normal m-0" title="Event Analysis">Event Analysis</h5>                                                        
+                                                    </div>
+                                                </div>                                                
+                                            </div>
+                                            <div class="collapse w-100" id="EventAnalysis">
+                                                <div class="card card-body">
+                                                    <div class="col-12">
+                                                        <div class="bxDateTimePicker me-3 mt-1">
+                                                            <i class="bi bi-calendar3"></i>
+                                                            <input type="text" name="datetimes" />
+                                                        </div>
+                                                        <div class="bxCustomSelect text-nowrap mt-1">
+                                                            <label for="" class="me-3 text-nowrap">View By</label>
+                                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                                <option selected="">Departments</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="bxDashboardGraph">
+                                                <img class="w-100" src="images/dash_graph1.png" alt="dash graph">
+                                            </div>
+                                            <nav class="bxPagination" aria-label="Page navigation example">
+                                                <ul class="pagination mb-0 py-2">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body p-0">
+                                            <div class="card-head p-3">                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="float-end">
+                                                            <div class="bxActionBtns d-flex align-items-end">
+                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#EventAnalysis" role="button" aria-expanded="false" aria-controls="EventAnalysis">
+                                                                    <i class="bi bi-funnel"></i>
+                                                                </a>
+                                                                <div class="dropdown ms-3">
+                                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="text-capitalize text-white fw-normal m-0" title="Event Analysis">Event Analysis</h5>                                                        
+                                                    </div>
+                                                </div>                                                
+                                            </div>
+                                            <div class="collapse w-100" id="EventAnalysis">
+                                                <div class="card card-body">
+                                                    <div class="col-12">
+                                                        <div class="bxDateTimePicker me-3 mt-1">
+                                                            <i class="bi bi-calendar3"></i>
+                                                            <input type="text" name="datetimes" />
+                                                        </div>
+                                                        <div class="bxCustomSelect text-nowrap mt-1">
+                                                            <label for="" class="me-3 text-nowrap">View By</label>
+                                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                                <option selected="">Departments</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="bxDashboardGraph">
+                                                <div class="bxTabelRelations">
+                                                    <table class="table table-centered mb-0">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>File Name</th>
+                                                                <th>Score</th>
+                                                                <th>Position In Network</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a  data-bs-toggle="offcanvas" href="#bxDashboardAction" role="button" aria-controls="bxDashboardAction">Patents</a></td>
+                                                                <td class="text-danger">+10</td>
+                                                                <td>3rd</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Sales Department</td>
+                                                                <td>+10</td>
+                                                                <td> 3rd</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Half Sleeve Shirt</td>
+                                                                <td class="text-info">+10</td>
+                                                                <td> 3rd</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Lightweight Jacket</td>
+                                                                <td class="text-success">+20</td>
+                                                                <td>3rd</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Market Research</td>
+                                                                <td class="text-danger">+10</td>
+                                                                <td>3rd</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Sales Department</td>
+                                                                <td>+10</td>
+                                                                <td> 3rd</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Half Sleeve Shirt</td>
+                                                                <td class="text-info">+10</td>
+                                                                <td> 3rd</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <nav class="bxPagination" aria-label="Page navigation example">
+                                                <ul class="pagination mb-0 py-2">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body p-0">
+                                            <div class="card-head p-3">                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="float-end">
+                                                            <div class="bxActionBtns d-flex align-items-end">
+                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#EventAnalysis" role="button" aria-expanded="false" aria-controls="EventAnalysis">
+                                                                    <i class="bi bi-funnel"></i>
+                                                                </a>
+                                                                <div class="dropdown ms-3">
+                                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="text-capitalize text-white fw-normal m-0" title="Event Analysis">Event Analysis</h5>                                                        
+                                                    </div>
+                                                </div>                                                
+                                            </div>
+                                            <div class="collapse w-100" id="EventAnalysis">
+                                                <div class="card card-body">
+                                                    <div class="col-12">
+                                                        <div class="bxDateTimePicker me-3 mt-1">
+                                                            <i class="bi bi-calendar3"></i>
+                                                            <input type="text" name="datetimes" />
+                                                        </div>
+                                                        <div class="bxCustomSelect text-nowrap mt-1">
+                                                            <label for="" class="me-3 text-nowrap">View By</label>
+                                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                                <option selected="">Departments</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="bxDashboardGraph">
+                                                <img class="w-100" src="images/dash_graph2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 equal-height-column">
+                                    <div class="card widget-flat">
+                                        <div class="card-body p-0">
+                                            <div class="card-head p-3">                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="float-end">
+                                                            <div class="bxActionBtns d-flex align-items-end">
+                                                                <a class="p-0 text-white" data-bs-toggle="collapse" href="#EventAnalysis" role="button" aria-expanded="false" aria-controls="EventAnalysis">
+                                                                    <i class="bi bi-funnel"></i>
+                                                                </a>
+                                                                <div class="dropdown ms-3">
+                                                                    <a href="#" class="dropdown-toggle arrow-none card-drop text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Resolve</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Copy</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Share</a>
+                                                                        <a href="javascript:void(0);" class="dropdown-item">Assign</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="text-capitalize text-white fw-normal m-0" title="Event Analysis">Event Analysis</h5>                                                        
+                                                    </div>
+                                                </div>                                                
+                                            </div>
+                                            <div class="collapse w-100" id="EventAnalysis">
+                                                <div class="card card-body">
+                                                    <div class="col-12">
+                                                        <div class="bxDateTimePicker me-3 mt-1">
+                                                            <i class="bi bi-calendar3"></i>
+                                                            <input type="text" name="datetimes" />
+                                                        </div>
+                                                        <div class="bxCustomSelect text-nowrap mt-1">
+                                                            <label for="" class="me-3 text-nowrap">View By</label>
+                                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                                <option selected="">Departments</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="bxDashboardGraph">
+                                                <img class="w-100" src="images/dash_graph3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
 
                         </div>
@@ -498,74 +807,12 @@
         </div>
     </footer>
 
-    <div class="modal bxPopup fade" id="bxFilterTop" tabindex="-1" aria-labelledby="bxFilterTop" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="filterHead modal-header">
-                    <h1>Filters</h1>
-                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="filterBody modal-body">
-                    <form action="">
-                        <div class="form-group mb-2">
-                            <h6 class="text-white">Severity</h6>
-                            <ul class="d-flex align-items-center m-0 p-0">                                                    
-                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i> Critical</button></li>
-                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Medium</button></li>
-                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Information</button></li>
-                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Low</button></li>
-                            </ul>
-                        </div>
-                        <div class="form-group mb-2">
-                            <span class="d-block mb-1">Log Types</span>
-                            <div class="col-12">
-                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                </select>
-                            </div>                                
-                        </div>
-                        <div class="form-group mb-2">
-                            <span class="d-block mb-1">Log Types</span>
-                            <div class="col-12">
-                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                </select>
-                            </div>                                
-                        </div>
-                        <div class="form-group mb-2">
-                            <span class="d-block mb-1">Log Types</span>
-                            <div class="col-12">
-                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                </select>
-                            </div>                                
-                        </div>
-                    </form>
-                </div>
-                <div class="filterFooter modal-footer">
-                    <div>
-                        <a type="button" class="text-white me-3" data-bs-dismiss="modal" aria-label="Close">Close</a>
-                        <button type="button" class="btn btn-primary">Apply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
 
-    </div>
-
-    <div class="bxAddStreamOffCanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="bxDashboardAction offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDashboardAction" aria-labelledby="bxDashboardActionLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Streams</h5>
-          <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+            <h5 class="offcanvas-title" id="bxDashboardActionLabel">Events </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body p-0">
             <div class="bxSuggestionTopBar">
@@ -575,196 +822,91 @@
                       <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
                     </div>
                 </form>
-                <ul class="d-flex align-items-center mt-3 m-0 p-0">
-                    <span>Add to search: </span>
-                    <li><button type="button" class="btn bxSearchBtn">Cloud Computing</button></li>
-                    <li><button type="button" class="btn bxSearchBtn">Network</button></li>
-                    <li><button type="button" class="btn bxSearchBtn">Security</button></li>
-                    <li><button type="button" class="btn bxSearchBtn">Operating System</button></li>
-                </ul>
             </div>
             <div class="bxSuggestionArea">
-                <span>200 Streams, 10 Added</span>
+                <span>6 Events</span>
             </div>
-            <div class="col-12 bxAddCard">
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">120 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">3 automatons</span></li>                                
+            <div class="bxAddCard py-3">
+                <div class="card px-3 mb-3">
+                    <div class="card-body d-flex">
+                        <div class="bxDashboardCard  pe-5">
+                            <h5 class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <ul class="rightSearchStatus list-inline-item mb-0 p-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Moderate</span></li>
+                                <li class="list-inline-item">
+                                    <span>Last Update</span> 12 May 2021
+                                </li>
                             </ul>
                         </div>
+                        <h3>22:30</h3>
                     </div>
                 </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+
+                <div class="card px-3 mb-3">
+                    <div class="card-body d-flex">
+                        <div class="bxDashboardCard  pe-5">
+                            <h5 class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <ul class="rightSearchStatus list-inline-item mb-0 p-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Moderate</span></li>
+                                <li class="list-inline-item">
+                                    <span>Last Update</span> 12 May 2021
+                                </li>
                             </ul>
                         </div>
+                        <h3>22:30</h3>
                     </div>
                 </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+
+                <div class="card px-3 mb-3 bxCritical">
+                    <div class="card-body d-flex">
+                        <div class="bxDashboardCard pe-5">
+                            <h5 class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h5>
+                            <ul class="rightSearchStatus list-inline-item mb-0 p-0">
+                                <li class="list-inline-item"><span class="badge bg-danger p-1">Critical</span></li>
+                                <li class="list-inline-item">
+                                    <span>Last Update</span> 12 May 2021
+                                </li>
                             </ul>
                         </div>
+                        <h3>22:30</h3>
                     </div>
                 </div>
-                <div class="card mb-0">
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="task1">
-                            <i class="bi bi-hash bxHash"></i>
-                            <label class="form-check-label" for="task1">
-                                <span class="text-turncate"> Data exfiltration using external drive </span>
-                            </label>
-                            <p class="">Protect from transferring confidential data to external drives.</p>
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
-                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
-        <div class="offcanvas-footer ">
-            <nav class="bxPagination" aria-label="Page navigation example">
-                <ul class="pagination mb-0 py-2">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="d-flex align-items-center justify-content-between px-3 py-2">
-                <div class="offcanvas_result"><span>5 Streams Added</span></div>
-                <div>
-                    <a type="button" class="text-white" data-bs-dismiss="offcanvas" aria-label="Close">Close</a>
-                    <button type="button" class="btn btn-primary">Apply</button>
-                </div>
-            </div>
-        </div>
+
     </div>
 
-    <!-- Modal -->
-    <div class="modal bxPopup fade" id="automatons" tabindex="-1" aria-labelledby="automatonsLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="automatonsLabel">Automations</h1>
-                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="bxPopupContent mb-4">
-                        <p class="m-0">Sensitive information exfiltration attempt</p>
-                        <span class="badge bg-bxinfo p-1 text-trans">1 Automation</span>
-                    </div>
-                    <div class="bxPopupLowerText pb-2 border-bottom">
-                        <h4>Escalate to manager</h4>
-                        <span>Escalate the incident to the reporting manager.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal bxPopup fade" id="detections" tabindex="-1" aria-labelledby="detectionsLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="detectionsLabel">Detections</h1>
-                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="bxPopupContent mb-4">
-                        <p class="m-0">Sensitive information exfiltration attempt</p>
-                        <span class="badge bg-bxinfo p-1 text-trans">1 Detections</span>
-                    </div>
-                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
-                        <h4>Unusual Logon Activities.</h4>
-                        <span>Detects unusual account activity for logon after usual office hours.</span>
-                    </div>
-                    <div class="bxPopupLowerText pb-2 border-bottom">
-                        <h4>Exfiltrating confidential information</h4>
-                        <span>Detects download of confidential information from sharepoint.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal bxPopup fade" id="filters" tabindex="-1" aria-labelledby="filtersLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="filtersLabel">Filters</h1>
-                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="bxPopupContent mb-4">
-                        <p class="m-0">Sensitive information exfiltration attempt</p>
-                        <span class="badge bg-bxinfo p-1 text-trans">1 Filters</span>
-                    </div>
-                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
-                        <h4>Logon Events</h4>
-                        <span>Fetch Device Logon events.</span>
-                    </div>
-                    <div class="bxPopupLowerText pb-2 border-bottom">
-                        <h4>File Download Events </h4>
-                        <span>Fetch download events from sharepoint.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="js/vendor.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>    
-    <script src="js/select2.min.js"></script> 
+    <!-- <script src="js/select2.min.js"></script>  -->
     <script src="js/custom.js"></script>
+
+    <script>
+        jQuery(function() {
+            jQuery('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                    locale: {
+                    format: 'M/DD hh:mm A'
+                    },
+                    ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    }
+          });
+        });
+    </script>
+    
 
   </body>
 </html>
