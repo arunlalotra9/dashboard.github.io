@@ -8,7 +8,10 @@
         var bxLeftHeader_height = $(".pane-header").height();
         var bxRightHeader_height = $(".bxNavPillsContent").height();
         var bxRightSidebar_width = $("#agents-switch").width();
+        var bxLeftSideCard_height = $(".leftSearchBoxArea .card").height();
         
+
+        var bxCardLeft_height = parseInt(bxTabsHeight) - parseInt(bxLeftHeader_height);
         var bxNPContentHead_height = $(".bxNPContentHead").height();
          
         var bxExtension_height = parseInt(bxHeader_height) + parseInt(bxNPContentHead_height);
@@ -29,6 +32,11 @@
         $(".DashboardPage .desktop-right .rightDashBoxArea").css('max-height', bxTabsHeight+'px');
       
         $(".bxNavPills ").css('height', bxRightTabsPills+'px');
+
+        $(".pane-header").css('height', bxLeftHeader_height+'px')
+        $(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
+
+        $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px') 
         
         $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar, .DashboardPage .left-sidebar ").css('height', bxTabsHeight+'px');
 
