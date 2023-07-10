@@ -1799,9 +1799,13 @@ div#v-pills-tab{
 }
 /* ============================================= doppler page responsive css ========================================================= */
 @media(max-width:1500px) {
+	.DopplerPage .bxTabsRightSide .card p {
+		font-size: 12px;
+	}
     .DopplerPage .left-sidebar {
         width: 350px;
     }
+
     .DopplerPage #tasks-switch.collapsed {
         margin-left: -350px;
     }
