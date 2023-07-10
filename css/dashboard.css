@@ -1879,7 +1879,7 @@ div#v-pills-tab{
 	} */
 
 	.DopplerPage .bxChatLayout {
-		max-height: 424px;
+		max-height: 392px;
 	}
 
 	.DopplerPage div#bxTimeLine {
@@ -1892,7 +1892,7 @@ div#v-pills-tab{
 	}
 
 	.bxTabsEventsCards {
-		max-height: 330px;
+		max-height: 450px;
 		overflow: auto;
 	}
 }
