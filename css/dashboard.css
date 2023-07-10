@@ -1,5 +1,5 @@
 /*======================================= Stream page css  ============================================= */
-.leftSearchBoxArea .list-inline-item {
+.StreamPage .leftSearchBoxArea .list-inline-item {
 	margin-bottom: 5px;
 }
 .collapse-sidebar.left {
@@ -165,7 +165,7 @@
 	margin-bottom: 3px;
 	padding-left: 3px;
 }
-
+.leftSearchBoxArea .card.active,
 .leftSearchBoxArea .card:hover {
 	background-color: #0F1226;
 }
@@ -349,7 +349,7 @@
 	border: 1px solid #fff;
 	line-height: normal;
 	height: 22px;
-	margin-top: 12px;
+	margin-top: 6px;
 	margin-right: 0;
 	border-radius: 10px !important;
 	overflow: hidden;
@@ -362,7 +362,7 @@
 	color: #fff;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
-	top: 2px;
+	top: -4px;
 	font-size: 30px;
 }
 
@@ -378,7 +378,9 @@
 	position: relative;
 	padding-left: 35px;
 }
-
+.bxcolorGreen{
+	color: forestgreen;
+}
 .bxcolorYellow {
 	color: #E8B906;
 }
@@ -401,7 +403,7 @@
 
 .bxAddStreamOffCanvas {
 	width: 100%;
-	margin-top: 87px;
+	margin-top: 66px;
 	max-width: 800px;
 }
 
@@ -996,11 +998,15 @@
 	background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
 	height: 100%;
 }
-
+div#v-pills-tab{
+	z-index: 11;
+	position: relative;
+}
 .DopplerPage .bxNavPills .tab-content {
 	background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
 	height: 100%;
 	width: 100%;
+	z-index: 11;
 }
 
 .DopplerPage .bxNavPills .nav-pills .nav-link {
@@ -1867,21 +1873,21 @@
 		width: calc(100% - 450px);
 	}
 
-	.bxTabsRightSideHead {
+	/* .bxTabsRightSideHead {
 		overflow: auto;
 		max-height: 460px;
-	}
+	} */
 
 	.DopplerPage .bxChatLayout {
-		max-height: 300px;
+		max-height: 424px;
 	}
 
 	.DopplerPage div#bxTimeLine {
-		max-height: 463px;
+		max-height: 663px;
 	}
 
 	.bxTabelRelations.mt-4 {
-		max-height: 330px;
+		max-height: 450px;
 		overflow: auto;
 	}
 
@@ -1896,6 +1902,9 @@
 
 /* ======================================================== SearchPage css strat here ======================================================*/
 
+#bxFullwidthContent {
+    margin-top: 66px;
+}
 .SearchPage .bxSearchPage {
 	display: block;
 	background-image: url(../images/search_bg.png);
@@ -2140,7 +2149,24 @@
 .SearchPage .bxSearchAssociation tbody tr {
 	border-top: 1px solid #4999FE66;
 }
-
+/* ================ Search page responsive css start ==== */
+@media(max-width: 1500px){
+	.SearchPage .bxSearchLeftInnerCard label{
+		font-size: 13px;
+	}
+	.SearchPage .bxColorBgSearch {
+		min-height: 240px;
+	}
+	.SearchPage .bxSearchLeftInnerCard li{
+		font-size: 10px;
+		padding-left: 5px;
+		margin-right: 0;
+	}
+	.SearchPage .bxSearchLeftStatus {
+		padding-left: 17px;
+	}
+}
+/* ================ Search page responsive css end ==== */
 /* ======================================================== SearchPage css end here ======================================================*/
 
 
@@ -2357,6 +2383,15 @@
 .DashboardPage .left-sidebar {
 	width: 380px;
 	background-color: #010F33;
+}
+.DashboardPage .widget-flat .bxDashboardGraph img.w-100 {
+    min-height: 280px;
+}
+.DashboardPage .widget-flat nav.bxPagination {
+    position: relative;
+}
+.DashboardPage .bxTabelRelations {
+    min-height: 304px;
 }
 .DashboardPage .card.widget-flat .card{
 	background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);

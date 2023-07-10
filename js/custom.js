@@ -1,6 +1,8 @@
 
     $(document).ready(function(){
 
+        
+
         var windowHeight = window.innerHeight;
         var bxHeader_height = $('#bxNavBar').height();
         var bxFooter_height = $("#bxFooter").height();
@@ -34,7 +36,7 @@
         $(".bxNavPills ").css('height', bxRightTabsPills+'px');
 
         $(".pane-header").css('height', bxLeftHeader_height+'px')
-        $(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
+        //$(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
 
         $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px') 
         

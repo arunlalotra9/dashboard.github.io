@@ -114,6 +114,7 @@ a.navbar-brand {
     position: absolute;
     margin: 0;
     z-index: 1000;
+    width: 230px;
 }
 .footer {
     position: fixed;
@@ -147,8 +148,8 @@ li.dropdown.user-list {
 .nav-link:focus{
     color: inherit;
 }
-div#bxFullwidthContent {
-    margin-top: 66px;
+ul.dropdown-menu.px-5.py-4.show .row.mb-4 {
+    margin-bottom: 0 !important;
 }
 @-webkit-keyframes DropDownSlide {
     100% {
@@ -198,3 +199,21 @@ div#bxFullwidthContent {
     }
     
 }
+
+#bxNavBar .equal-height-column > div {
+    flex-grow: 1;
+  }
+  #bxNavBar  .equal-height-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .bxNavlist span.material-symbols-outlined {
+    line-height: 38px;
+  }
+  .bxNavlist span.btn.btn-dark {
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
