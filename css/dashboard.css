@@ -103,7 +103,7 @@
 
 .StreamPage #map-switch .right-section {
 	width: calc(100% - 550px);
-    padding: 10px 30px;
+    padding: 10px 10px 10px 30px;
 	transition: 0.01s;
 	overflow: hidden;
 	position: relative;
@@ -1106,7 +1106,7 @@ div#v-pills-tab{
 }
 
 .DopplerPage .bxNPContentText small {
-	padding-left: 30px;
+	padding-left: 25px;
 	font-size: 14px;
 }
 
@@ -1450,7 +1450,6 @@ div#v-pills-tab{
 }
 
 .DopplerPage .timeline {
-	margin-bottom: 50px;
 	position: relative;
 }
 
@@ -1553,11 +1552,11 @@ div#v-pills-tab{
 .DopplerPage .bxTabsRightSide .border-bottom {
 	border-bottom: 1px solid #42667D!important;
 }
-
+/* 
 .DopplerPage div#bxTimeLine {
 	overflow: auto;
 	max-height: 713px;
-}
+} */
 
 .DopplerPage .bxTabsRightSide {
 	width: 100%;
@@ -1895,9 +1894,9 @@ div#v-pills-tab{
 		max-height: 420px;
 	}
 
-	.DopplerPage div#bxTimeLine {
+	/* .DopplerPage div#bxTimeLine {
 		max-height: 663px;
-	}
+	} */
 
 	.bxTabelRelations.mt-4 {
 		max-height: 450px;
