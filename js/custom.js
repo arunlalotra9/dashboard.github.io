@@ -35,7 +35,7 @@
       
         $(".bxNavPills ").css('height', bxRightTabsPills+'px');
 
-        $(".pane-header").css('height', bxLeftHeader_height+'px')
+        //$(".pane-header").css('height', bxLeftHeader_height+'px')
         //$(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
 
         $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px') 

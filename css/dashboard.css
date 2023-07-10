@@ -1003,7 +1003,7 @@
 	height: 100%;
 }
 div#v-pills-tab{
-	z-index: 11;
+	z-index: 13;
 	position: relative;
 }
 .DopplerPage .bxNavPills .tab-content {
@@ -1017,6 +1017,7 @@ div#v-pills-tab{
 	padding: 10px;
 	line-height: normal;
 	display: flex;
+	position: relative;
 }
 
 .DopplerPage .bxNavPills .nav-pills .nav-link span {
@@ -1025,7 +1026,15 @@ div#v-pills-tab{
 	display: flex;
 	border-radius: 5px;
 }
-
+.DopplerPage .bxNavPills .nav-pills .nav-link.active span::before {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: rgb(13 38 68);;
+    content: "";
+    top: 0;
+    right: -1px;
+}
 .DopplerPage .bxNavPills .nav-pills .nav-link.active, .DopplerPage .bxNavPills .nav-pills .show>.nav-link {
 	color: #fff;
 	background: rgb(13 38 68);
@@ -1883,7 +1892,7 @@ div#v-pills-tab{
 	} */
 
 	.DopplerPage .bxChatLayout {
-		max-height: 392px;
+		max-height: 420px;
 	}
 
 	.DopplerPage div#bxTimeLine {
@@ -2388,6 +2397,10 @@ div#v-pills-tab{
 	width: 380px;
 	background-color: #010F33;
 }
+.widgetHead-flat .bxDateTimePicker input[type="text"] {padding: 0 0 0 18px;cursor: pointer;}
+.widgetHead-flat .bxDateTimePicker i {left: 0;}
+.widgetHead-flat .bxDateTimePicker {font-size: 12px;background: transparent;padding: 0;}
+.widgetHead-flat .bxDateTimePicker::before {display: none;}
 .DashboardPage .widget-flat .bxDashboardGraph img.w-100 {
     min-height: 280px;
 }
