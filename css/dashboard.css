@@ -117,8 +117,9 @@
 }
 
 .leftSearchBoxArea .card {
-	cursor: pointer;
-	background-color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 1px solid #4999FE66;
 }
 
 .notification-list h6.m-0.font-16.fw-semibold {
