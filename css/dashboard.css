@@ -2423,7 +2423,7 @@ div#v-pills-tab{
 .widgetHead-flat .bxDateTimePicker i {left: 0;}
 .widgetHead-flat .bxDateTimePicker {font-size: 12px;background: transparent;padding: 0;}
 .widgetHead-flat .bxDateTimePicker::before {display: none;}
-.DashboardPage .widget-flat .bxDashboardGraph{
+.DashboardPage .widget-flat .bxDashboardGraph {
 	background-color: #0F1327;
 }
 .DashboardPage .widget-flat .bxDashboardGraph img.w-100 {
