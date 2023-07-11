@@ -1,8 +1,6 @@
 
     $(document).ready(function(){
 
-        
-
         var windowHeight = window.innerHeight;
         var bxHeader_height = $('#bxNavBar').height();
         // alert(bxHeader_height);
@@ -10,7 +8,7 @@
 
        // alert(bxTabsRightSideHead);
 
-        var bxPagination_height = $(".bxPagination").height();
+        //var bxPagination_height = $(".bxPagination").height();
         var bxLeftHeader_height = $(".pane-header").height();
         var bxRightHeader_height = $(".bxNavPillsContent").height();
         var bxRightSidebar_width = $("#agents-switch").width();
