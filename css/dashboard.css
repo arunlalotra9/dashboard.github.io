@@ -2538,10 +2538,10 @@ div#v-pills-tab{
 .DashboardPage .font-16 {
 	font-size: 16px;
 }
-[ data-bs-theme-data="full"] .desktop-right .rightDashBoxArea {
+/* [ data-bs-theme-data="full"] .desktop-right .rightDashBoxArea {
     overflow-y: auto;
     overflow-x: hidden;
-}
+} */
 .DashboardPage .equal-height-column {
 display: flex;
 flex-direction: column;
