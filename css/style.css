@@ -173,9 +173,9 @@
 
 * {margin: 0;padding: 0;box-sizing: border-box;}
 body{margin: 0;font-size: 16px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none; }
-html,body{
+/* html,body{
   overflow-x: hidden;
-}
+} */
 /* width */
 ::-webkit-scrollbar {width: 6px;}
 /* Track */
