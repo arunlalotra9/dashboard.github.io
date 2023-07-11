@@ -43,6 +43,9 @@
         //$(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
 
         $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px') 
+
+        $("#taskContent").css('height', bxTabsHeight+'px')
+        $("#agents-switch").css('height', bxTabsHeight+'px')
         
         $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar,  ").css('height', bxTabsHeight+'px');
 

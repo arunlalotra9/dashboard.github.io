@@ -563,10 +563,12 @@
 .rightSideCardLgBox.bxAddEventText .card .card-body {
 	padding: 0 !important;
 }
-.StreamPage .rightSearchStatus.list-inline-item.mb-0.p-0 {
+.StreamPage .rightSearchStatus{
     padding-left: 27px !important;
 }
-
+.StreamPage .rightSideCardLgBox .rightSearchStatus{
+	padding-left: 0 !important;
+}
 /* ============================================= stream page responsive css ========================================================= */
 @media(max-width:1500px) {
 	.StreamPage .left-sidebar {
@@ -1565,7 +1567,6 @@ div#v-pills-tab{
 	width: 100%;
 	display: block;
 	position: relative;
-	overflow-x: scroll;
 }
 
 .DopplerPage .bxChatLayout {
