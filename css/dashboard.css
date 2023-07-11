@@ -2430,6 +2430,17 @@ div#v-pills-tab{
 .DashboardPage .widget-flat .bxDashboardGraph.geoMap {
 	background-color: #1D315D
 }
+.bxDashboardGraph.killChain {
+    position: relative;
+    padding-bottom: 38%;
+}
+.DashboardPage .widget-flat .bxDashboardGraph.killChain img.w-100 {
+    min-height: inherit;
+    max-height: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 .DashboardPage .widget-flat .bxDashboardGraph.geoMap img.w-100{
 	min-height: 350px;
     max-height: 350px;
