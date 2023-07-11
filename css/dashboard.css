@@ -15,6 +15,7 @@
 	-ms-transition: all .3s;
 	-o-transition: all .3s;
 	transition: all .3s;
+	background-color: #010F33;
 }
 
 #agents-switch {
@@ -2537,6 +2538,9 @@ div#v-pills-tab{
 }
 .DashboardPage .font-16 {
 	font-size: 16px;
+}
+.DashboardPage .sidebar-search{
+	width: 100%;
 }
 /* [ data-bs-theme-data="full"] .desktop-right .rightDashBoxArea {
     overflow-y: auto;

@@ -14,7 +14,7 @@
         var bxLeftHeader_height = $(".pane-header").height();
         var bxRightHeader_height = $(".bxNavPillsContent").height();
         var bxRightSidebar_width = $("#agents-switch").width();
-        var bxLeftSideCard_height = $(".leftSearchBoxArea .card").height();      
+        //var bxLeftSideCard_height = $(".leftSearchBoxArea .card").height();      
         
 
         var bxCardLeft_height = parseInt(bxTabsHeight) - parseInt(bxLeftHeader_height);
@@ -24,11 +24,11 @@
 
         var bxTotal_height = parseInt(bxHeader_height) + parseInt(bxFooter_height);
 
-        var  bxLeftInnerHeight = parseInt(bxLeftHeader_height) + parseInt(bxPagination_height);
+        //var  bxLeftInnerHeight = parseInt(bxLeftHeader_height) + parseInt(bxPagination_height);
       
         var bxTabsHeight = parseInt(windowHeight) - parseInt(bxTotal_height);
 
-        var bxLeftSearchTotal_height = parseInt(bxTabsHeight) - parseInt(bxLeftInnerHeight);
+        //var bxLeftSearchTotal_height = parseInt(bxTabsHeight) - parseInt(bxLeftInnerHeight);
       
         var bxRightTabsPills = parseInt(bxTabsHeight) - parseInt(bxRightHeader_height);
       
@@ -42,11 +42,9 @@
         //$(".pane-header").css('height', bxLeftHeader_height+'px')
         //$(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
 
-        $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px') 
+        $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px');
 
-        $("#taskContent").css('height', bxTabsHeight+'px')
-        $("#agents-switch").css('height', bxTabsHeight+'px')
-        
+        $("#tasks-switch, #agents-switch").css('height', bxTabsHeight+'px');
         $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar,  ").css('height', bxTabsHeight+'px');
 
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-right', bxRightSidebar_width+'px');
@@ -109,24 +107,24 @@
 
         // ======================  Expand / Hide ========================
 
-        $('.moreless-button').click(function() {
-            $('.moretext').slideToggle();
-                if ($('.moreless-button').text() == "Expand") {
-            $(this).text("Collapse");
+        // $('.moreless-button').click(function() {
+        //     $('.moretext').slideToggle();
+        //         if ($('.moreless-button').text() == "Expand") {
+        //     $(this).text("Collapse");
 
-            } else {
-                $(this).text("Expand")
-            }
-        });
+        //     } else {
+        //         $(this).text("Expand")
+        //     }
+        // });
 
         // ============================= input type check box =================
-        $('input[type="checkbox"] + label').click(function(){
-            $(this).toggleClass('active');
-        });
+        // $('input[type="checkbox"] + label').click(function(){
+        //     $(this).toggleClass('active');
+        // });
 
         //====================== custom checkbox ==============================
-        $('#selectall').click(function() { $(this.form.elements).filter(':checkbox').prop('checked', this.checked);
-        });
+        // $('#selectall').click(function() { $(this.form.elements).filter(':checkbox').prop('checked', this.checked);
+        // });
 
         // ====================== bxUserOnclick btn ==================================
         $('.bxUserOnclick').click(function(){
