@@ -2424,13 +2424,13 @@ div#v-pills-tab{
 .widgetHead-flat .bxDateTimePicker {font-size: 12px;background: transparent;padding: 0;}
 .widgetHead-flat .bxDateTimePicker::before {display: none;}
 .DashboardPage .widget-flat .bxDashboardGraph img.w-100 {
-    min-height: 280px;
+    min-height: 220px;
 }
 .DashboardPage .widget-flat nav.bxPagination {
     position: relative;
 }
 .DashboardPage .bxTabelRelations {
-    min-height: 304px;
+    min-height: 200px;
 }
 .DashboardPage .card.widget-flat .card{
 	background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);
