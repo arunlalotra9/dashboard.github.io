@@ -1937,7 +1937,7 @@ div#v-pills-tab{
 
 /* ======================================================== SearchPage css strat here ======================================================*/
 
-#bxFullwidthContent {
+ #bxFullwidthContent {
     margin-top: 66px;
 }
 .SearchPage .bxSearchPage {
@@ -2446,6 +2446,23 @@ div#v-pills-tab{
 }
 .DashboardPage .widget-flat .bxDashboardGraph{
 	border-bottom: 1px solid rgba(73, 153, 254, 0.2);
+}
+.DashboardPage {
+	overflow: hidden;
+}
+.DashboardPage .rightDashBoxArea p.m-0 {
+    padding-left: 28px;
+}
+.DashboardPage .rightSearchStatus.list-inline-item{
+    padding-left: 28px !important;
+}
+.text-muted {
+    color: #acb0b4!important;
+}
+.DashboardPage .rightDashBoxArea {
+	overflow-y: scroll;
+	margin-bottom: 60px;
+	overflow-x: hidden;
 }
 .DashboardPage .right-section {
 	width: calc(100% - 380px);

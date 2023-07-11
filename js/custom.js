@@ -30,7 +30,7 @@
       
         var bxRightTabsPills = parseInt(bxTabsHeight) - parseInt(bxRightHeader_height);
       
-        $("body").css('min-height', windowHeight+'px');
+        //$("body").css('min-height', windowHeight+'px');
 
         $("#bxFullwidthContent").css('min-height', bxTabsHeight+'px');
         $(".DashboardPage .desktop-right .rightDashBoxArea").css('max-height', bxTabsHeight+'px');
@@ -42,7 +42,7 @@
 
         $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px');
 
-        $("#tasks-switch, #agents-switch").css('height', bxTabsHeight+'px');
+        $("#tasks-switch, #agents-switch").css('min-height', bxTabsHeight+'px');
         $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar,  ").css('height', bxTabsHeight+'px');
 
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-right', bxRightSidebar_width+'px');
