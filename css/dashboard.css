@@ -284,7 +284,10 @@
 	margin-right: 0;
 }
 .bxAddStreamOffCanvas .list-inline {
-	padding-left: 34px;
+	padding-left: 24px;
+}
+.bxSuggestionTopBar .sidebar-search{
+	width: 100%;
 }
 .list-inline {
 	padding-left: 0;
@@ -438,7 +441,7 @@
 }
 
 .bxSuggestionArea {
-	background: #0E2948;
+	background-color: #0E2948;
 	padding: 10px 20px;
 }
 
@@ -447,7 +450,8 @@
 }
 
 .bxAddCard .card {
-	background: #010F33;
+	background-color: #010F33;
+	border-bottom: 1px solid #4999FE66;
 }
 
 .bxAddCard label {
@@ -463,13 +467,13 @@
 	font-size: 12px;
 	line-height: 16px;
 	margin-bottom: 3px;
-	padding-left: 35px;
+	padding-left: 24px;
 }
 
 .bxAddCard .form-check input {
 	background-color: transparent;
 	border: 1px solid #eee;
-	margin-right: 20px;
+	margin-right: 0;
 }
 
 .bxAddCard .card:hover {
