@@ -1821,7 +1821,10 @@ div#v-pills-tab{
     .DopplerPage .left-sidebar {
         width: 350px;
     }
-
+	#bxTimeLine {
+		max-height: 500px;
+		overflow-y: scroll;
+	}
     .DopplerPage #tasks-switch.collapsed {
         margin-left: -350px;
     }
