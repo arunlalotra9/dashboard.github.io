@@ -2425,6 +2425,14 @@ div#v-pills-tab{
 .widgetHead-flat .bxDateTimePicker::before {display: none;}
 .DashboardPage .widget-flat .bxDashboardGraph {
 	background-color: #0F1327;
+	overflow: hidden;
+}
+.DashboardPage .widget-flat .bxDashboardGraph.geoMap {
+	background-color: #1D315D
+}
+.DashboardPage .widget-flat .bxDashboardGraph.geoMap img.w-100{
+	min-height: 350px;
+    max-height: 350px;
 }
 .DashboardPage .widget-flat .bxDashboardGraph img.w-100 {
     min-height: 220px;
@@ -2534,6 +2542,7 @@ div#v-pills-tab{
     background: #0E2948;
     border: none;
     border-radius: 4px;
+	overflow: hidden;
 }
 .DashboardPage .widget-flat .leftDopplerDateSearch{
 	float: left;

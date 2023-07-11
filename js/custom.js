@@ -43,7 +43,7 @@
         $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px');
 
         $("#tasks-switch, #agents-switch").css('min-height', bxTabsHeight+'px');
-        $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar,  ").css('height', bxTabsHeight+'px');
+        $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar").css('height', bxTabsHeight+'px');
 
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-right', bxRightSidebar_width+'px');
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-top', '+=' + (bxExtension_height + 10) + 'px');
@@ -78,7 +78,6 @@
         // =============== #tasks-switch left side   ======================
 
         $("#tasks-switch .collapse-sidebar").click(function(){
-            alert('asdad');
             $("#tasks-switch").toggleClass("collapsed");
             $('.right-section').toggleClass("task-collapsed");
 
