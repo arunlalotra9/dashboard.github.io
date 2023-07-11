@@ -801,6 +801,9 @@
 	z-index: 0;
     padding: 0;
 }
+body.DopplerPage {
+    overflow: hidden;
+}
 
 .DopplerPage .left-sidebar.float-end {
 	width: 550px;
@@ -1562,6 +1565,7 @@ div#v-pills-tab{
 	width: 100%;
 	display: block;
 	position: relative;
+	overflow-x: scroll;
 }
 
 .DopplerPage .bxChatLayout {
@@ -1903,7 +1907,7 @@ div#v-pills-tab{
 	} */
 
 	.bxTabelRelations.mt-4 {
-		max-height: 450px;
+		max-height: 420px;
 		overflow: auto;
 	}
 
@@ -2430,7 +2434,7 @@ div#v-pills-tab{
 }
 .DashboardPage .right-section {
 	width: calc(100% - 380px);
-	padding: 10px 20px 10px 40px;
+	padding: 10px 10px 10px 40px;
 }
 .DashboardPage .right-section.task-collapsed{
 	width: 100%;
@@ -2603,13 +2607,18 @@ flex-grow: 1;
 .bxCritical .card-body h3{
 	color: #FF3D00;
 }
-
+.DashboardPage .leftSearchBoxArea p {
+    padding-left: 23px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
     /* ============================================= DashboardPage page responsive css start ========================================================= */
 
 @media(max-width: 1500px) {
 	.DashboardPage .card.widget-flat h5 {
-		font-size: 12px;
+		font-size: 15px;
 	}
 
 	.DashboardPage .card.widget-flat h3 {

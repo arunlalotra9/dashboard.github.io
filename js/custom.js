@@ -5,12 +5,16 @@
 
         var windowHeight = window.innerHeight;
         var bxHeader_height = $('#bxNavBar').height();
+        // alert(bxHeader_height);
         var bxFooter_height = $("#bxFooter").height();
+
+       // alert(bxTabsRightSideHead);
+
         var bxPagination_height = $(".bxPagination").height();
         var bxLeftHeader_height = $(".pane-header").height();
         var bxRightHeader_height = $(".bxNavPillsContent").height();
         var bxRightSidebar_width = $("#agents-switch").width();
-        var bxLeftSideCard_height = $(".leftSearchBoxArea .card").height();
+        var bxLeftSideCard_height = $(".leftSearchBoxArea .card").height();      
         
 
         var bxCardLeft_height = parseInt(bxTabsHeight) - parseInt(bxLeftHeader_height);
@@ -33,14 +37,14 @@
         $("#bxFullwidthContent").css('min-height', bxTabsHeight+'px');
         $(".DashboardPage .desktop-right .rightDashBoxArea").css('max-height', bxTabsHeight+'px');
       
-        $(".bxNavPills ").css('height', bxRightTabsPills+'px');
+        $(".bxNavPills .bxTabsRightSide ").css('height', bxRightTabsPills+'px');
 
         //$(".pane-header").css('height', bxLeftHeader_height+'px')
         //$(".leftSearchBoxArea .card").css('height', bxLeftSideCard_height+'px') 
 
         $(".leftSearchBoxArea").css('height', bxCardLeft_height+'px') 
         
-        $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar, .DashboardPage .left-sidebar ").css('height', bxTabsHeight+'px');
+        $(".DopplerPage .left-sidebar, .StreamPage .left-sidebar,  ").css('height', bxTabsHeight+'px');
 
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-right', bxRightSidebar_width+'px');
         $("#bxDopplerAutomation, #bxDopplerAction").css('margin-top', '+=' + (bxExtension_height + 10) + 'px');
