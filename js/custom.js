@@ -64,6 +64,7 @@
          // ================ search bar css =======================
 
         $(".rightSidebar-search").click(function(){
+        
             var id = $(this).parent().parent().parent().attr('id');
             $("#"+id+" .rightSidebar-search").addClass("open");
         });
@@ -76,9 +77,10 @@
             $("#"+id+" .rightSidebar-search").removeClass("open");
         });
 
-        // =============== #tasks-switch left side bar ======================
+        // =============== #tasks-switch left side   ======================
 
         $("#tasks-switch .collapse-sidebar").click(function(){
+            alert('asdad');
             $("#tasks-switch").toggleClass("collapsed");
             $('.right-section').toggleClass("task-collapsed");
 
