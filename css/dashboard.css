@@ -2532,10 +2532,11 @@ div#bxShowOutput .card.card-body {
 	overflow-y: scroll;
 	margin-bottom: 60px;
 	overflow-x: hidden;
+	padding-right: 20px;
 }
 .DashboardPage .right-section {
 	width: calc(100% - 380px);
-	padding: 10px 10px 10px 40px;
+	padding: 10px 0 10px 40px;
 }
 .DashboardPage .right-section.task-collapsed{
 	width: 100%;
