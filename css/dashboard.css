@@ -811,6 +811,9 @@
 	z-index: 0;
     padding: 0;
 }
+.bxSearchLeftInnerCard  h6 {
+    margin: 0;
+}
 body.DopplerPage {
     overflow: hidden;
 }
@@ -1119,10 +1122,12 @@ div#v-pills-tab{
 }
 
 .DopplerPage .bxNPContentText small {
-	padding-left: 25px;
+	padding-left: 30px;
 	font-size: 14px;
 }
-
+div#bxShowOutput .card.card-body {
+    border-color: cadetblue;
+}
 .DopplerPage .bxNPContentText small span {
 	padding-left: 6px;
 	color: #fff;
@@ -1514,7 +1519,9 @@ div#v-pills-tab{
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 }
-
+.border-dashed {
+	border-style: dashed !important;
+}
 .DopplerPage .timeline-lg-item .timeline-desk .arrow {
 	border-bottom: 12px solid transparent;
 	border-right: 12px solid #6286b28c !important;
@@ -1578,10 +1585,11 @@ div#v-pills-tab{
 	width: 100%;
 	display: block;
 	position: relative;
+	overflow: auto;
 }
 
 .DopplerPage .bxChatLayout {
-	max-height: 587px;
+	min-height: 536px;
 	overflow: auto;
 }
 
