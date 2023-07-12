@@ -160,7 +160,20 @@
 	line-height: 16px;
 	margin-bottom: 3px;
 }
-
+ .bxJsonText {
+	font-size: 16px;
+	line-height: 24px;
+}
+ .bxJsonText .bxEventValue {
+	color: #fff;
+	font-size: 16px;
+	opacity: .7;
+}
+ .bxJsonText .bxEventKey {
+    color: #ffbf01;
+    opacity: .8;
+    font-size: 14px;
+}
 .leftSearchBoxArea p {
 	font-size: 12px;
 	line-height: 16px;

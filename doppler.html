@@ -444,12 +444,12 @@
                         </div>
                         <div class="d-flex align-items-start bxNavPills">
                             <div class="nav flex-md-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <button class="nav-link " id="v-pills-risks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-risks" type="button" role="tab" aria-controls="v-pills-risks" aria-selected="true" title="Trends">
+                                <button class="nav-link active" id="v-pills-risks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-risks" type="button" role="tab" aria-controls="v-pills-risks" aria-selected="true" title="Trends">
                                     <span class="material-symbols-outlined">
                                         trending_up
                                         </span>
                                 </button>
-                                <button class="nav-link active" id="v-pills-timeline-tab" data-bs-toggle="pill" data-bs-target="#v-pills-timeline" type="button" role="tab" aria-controls="v-pills-timeline" aria-selected="false" title="Timeline">
+                                <button class="nav-link " id="v-pills-timeline-tab" data-bs-toggle="pill" data-bs-target="#v-pills-timeline" type="button" role="tab" aria-controls="v-pills-timeline" aria-selected="false" title="Timeline">
                                     <span class="material-symbols-outlined">
                                         acute
                                         </span>
@@ -465,7 +465,7 @@
                                         connect_without_contact
                                         </span>
                                 </button>
-                                <button class="nav-link" id="v-pills-investigations-tab" data-bs-toggle="pill" data-bs-target="#v-pills-investigations" type="button" role="tab" aria-controls="v-pills-investigations" aria-selected="false" title="Search">
+                                <!-- <button class="nav-link" id="v-pills-investigations-tab" data-bs-toggle="pill" data-bs-target="#v-pills-investigations" type="button" role="tab" aria-controls="v-pills-investigations" aria-selected="false" title="Search">
                                     <span class="material-symbols-outlined">
                                         manage_search
                                         </span>
@@ -474,12 +474,12 @@
                                     <span class="material-symbols-outlined">
                                         more
                                     </span>
-                                </button>
+                                </button> -->
                             </div>
                             
                             <div class="tab-content" id="v-pills-tabContent">
 
-                                <div class="tab-pane fade" id="v-pills-risks" role="tabpanel" aria-labelledby="v-pills-risks-tab" tabindex="0">
+                                <div class="tab-pane fade show active" id="v-pills-risks" role="tabpanel" aria-labelledby="v-pills-risks-tab" tabindex="0">
                                     <div class="bxTabsRightSide">
 
                                         <div class="p-4 bxTabsRightSideHead">
@@ -506,7 +506,7 @@
                                             </div>
                                             
                                         </div>
-                                        <nav class="bxPagination" aria-label="Page navigation example">
+                                        <nav class="bxPagination d-none" aria-label="Page navigation example">
                                             <ul class="pagination mb-0 p-2">
                                                 <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -519,7 +519,7 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade show active" id="v-pills-timeline" role="tabpanel" aria-labelledby="v-pills-timeline-tab" tabindex="0">
+                                <div class="tab-pane fade " id="v-pills-timeline" role="tabpanel" aria-labelledby="v-pills-timeline-tab" tabindex="0">
                                     <div class="p-4 bxTabsRightSide">
                                         <h4 class="text-white mb-2 pb-2">Timeline</h4>
                                         <div class="row" id="bxTimeLine">
@@ -688,19 +688,39 @@
                                             <div class="d-flex userOne mb-3">
                                                 <span class="bxFirstLetter me-2"> <i class="bi bi-code"></i></span>
                                                 <div class="w-100">
-                                                    <h3 class="mb-2">Automation<small class="time float-end bxFont14">10:30PM</small></h3>
+                                                    <h3 class="mb-2">Binary Bot<small class="time float-end bxFont14">10:30PM</small></h3>
                                                     <div class="messageText text-white">
                                                         <p class="bxFont18"><span class="text-success"> Escalate to manager </span> action updated  </p>
-                                                        <a class="border-start px-2" data-bs-toggle="offcanvas" href="#bxDopplerAction" role="button" aria-controls="bxDopplerAction">5 tasks executed </a>
+                                                        <a class="border-start px-2" data-bs-toggle="offcanvas" href="#bxDopplerAction" role="button" aria-controls="bxDopplerAction">
+                                                            1 tasks executed </a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="d-flex userTwo mb-3">
                                                 <span class="bxFirstLetter me-2"> <i class="bi bi-person"></i></span>
                                                 <div class="w-100">
-                                                    <h3 class="mb-2">Kamalakannan Swaminathan <small class="time float-end bxFont14">10:30PM</small></h3>
+                                                    <h3 class="mb-2"> Rahul Neekhara<small class="time float-end bxFont14">10:30PM</small></h3>
                                                     <div class="messageText text-white">
-                                                        <p class="bxJsonText my-2 p-0 bxFont14">cef: 0| blue coat |<span class="bxcolorRed"> EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 fn=76661 out=9181 category 18888188 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorYellow">EventsID</span>=78182772 app= c919882fb-188821-7872-919991999991 | cef: 0| blue coat | Proxy 5g | TCP _HIT| low | <span class="bxcolorRed">EventsID</span>=78182772 cef: 0| blue coat </p>
+                                                        <p class="bxJsonText my-2 p-0">
+                                                            <span class="bxEventKey"> Event Type</span>
+                                                            <span class="bxEventValue mx-2">Data Exfiltration Attempt</span>
+                                                            <span class="bxEventKey"> Date/Time</span>
+                                                            <span class="bxEventValue mx-2"> July 12, 2023, 14:30:15</span>
+                                                            <span class="bxEventKey">User:</span>
+                                                            <span class="bxEventValue mx-2"> Vishal Kharche </span>
+                                                            <span class="bxEventKey">Source IP:</span>
+                                                            <span class="bxEventValue mx-2">192.168.0.123</span>
+                                                            <span class="bxEventKey">Destination IP:</span>
+                                                            <span class="bxEventValue mx-2">203.0.113.45</span>
+                                                            <span class="bxEventKey">Device:</span>
+                                                            <span class="bxEventValue mx-2">PC-4773</span>
+                                                            <span class="bxEventKey">Rule Triggered:</span>
+                                                            <span class="bxEventValue mx-2">External Drive Used</span>
+                                                            <span class="bxEventKey">Policy Action:</span>
+                                                            <span class="bxEventValue mx-2">Block and Notify</span>
+                                                            <span class="bxEventKey">Action Taken:</span>
+                                                            <span class="bxEventValue mx-2">Escalate to manager</span>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>                                            
@@ -781,7 +801,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Vishal Kharche <br><small class="text-white"> Engineering</small></td>
+                                                        <td>Arun Lalotra <br><small class="text-white"> Engineering</small></td>
                                                         <td class="text-danger">35.30</td>
                                                         <td> 1st</td>
                                                     </tr>
@@ -830,7 +850,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <nav class="bxPagination" aria-label="Page navigation example">
+                                        <nav class="bxPagination d-none" aria-label="Page navigation example">
                                             <ul class="pagination mb-0 py-2">
                                                 <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -1100,7 +1120,7 @@
                                             <div class="card card-body">
                                                 <p class="bxFont14">
                                                      Subject: Urgent Data Exfiltration Notification: Immediate Action Required<br>
-                                                    <div id=":4nl" class="Am Al editable LW-avf tS-tW tS-tY" hidefocus="true" aria-label="Message Body" g_editable="true" role="textbox" aria-multiline="true" contenteditable="true" tabindex="1" style="direction: ltr; min-height: 40px;" itacorner="6,7:1,1,0,0" spellcheck="false" aria-owns=":4q7" aria-controls=":4q7"><br>Dear Rahul Neekhara,<br><br>I hope this email finds you well. I am writing to bring your immediate attention to a critical security incident involving data exfiltration that has been detected within our network. It is of utmost importance that we address this matter promptly to mitigate any potential risks and protect our sensitive information.<br><br>Key Details of the Incident:<br><br>Incident Type: Data Exfiltration<br>Time and Date Detected: 12/07/2023<br>Affected Systems: [List of affected systems]<br>Potentially Compromised Data: Data exfiltration attempted using external drive<br><br>Our security team has been working diligently to contain the incident and minimize any potential impact. However, we require your assistance and guidance to ensure a swift and effective response. We recommend the following course of action:<br><br>Assemble a Response Team: Please designate a cross-functional team comprising IT, Security, and Legal representatives to coordinate the incident response efforts.<br><br>Conduct Immediate Investigation: Initiate a thorough investigation to determine the extent of the data exfiltration, identify the root cause, and assess the potential impact on our organization.<br><br>Implement Remediation Measures: Collaborate with the response team to implement necessary remediation measures promptly. This may include patching vulnerabilities, strengthening access controls, and enhancing monitoring capabilities.<br><br>Communicate with Stakeholders: Develop a clear communication plan to inform relevant stakeholders about the incident, including employees, customers, and any regulatory bodies, as required. Transparency and timely updates are crucial in maintaining trust during this situation.<br><br>Enhance Security Measures: Evaluate the existing security infrastructure and policies to identify areas for improvement. Consider implementing additional safeguards, such as advanced threat detection systems and employee training programs to mitigate future risks.<br><br>I kindly request your immediate attention to this matter, as the impact of data exfiltration can be severe for our organization's reputation, financial standing, and legal compliance. Please acknowledge the receipt of this email and confirm your availability for a meeting to discuss the incident response strategy.<br><br>Thank you for your immediate attention to this urgent matter.<br><br>Sincerely,<br><br>Ravi Menon<br>Security <span zeum4c9="PR_1_0" data-ddnwab="PR_1_0" aria-invalid="spelling" class="LI ng">Admministrator</span><br>ravi@binaryflux.xyz<br></div>
+                                                    <div id=":4nl" class="Am Al editable LW-avf tS-tW tS-tY" hidefocus="true" aria-label="Message Body" g_editable="true" role="textbox" aria-multiline="true" contenteditable="true" tabindex="1" style="direction: ltr; min-height: 40px;" itacorner="6,7:1,1,0,0" spellcheck="false" aria-owns=":4q7" aria-controls=":4q7"><br>Dear Rahul Neekhara,<br><br>I hope this email finds you well. I am writing to bring your immediate attention to a critical security incident involving data exfiltration that has been detected within our network. It is of utmost importance that we address this matter promptly to mitigate any potential risks and protect our sensitive information.<br><br>Key Details of the Incident:<br><br>Incident Type: Data Exfiltration<br>Time and Date Detected: 12/07/2023<br>Affected Systems:PC4773<br>Potentially Compromised Data: Data exfiltration attempted using external drive<br><br>Our security team has been working diligently to contain the incident and minimize any potential impact. However, we require your assistance and guidance to ensure a swift and effective response. We recommend the following course of action:<br><br>Assemble a Response Team: Please designate a cross-functional team comprising IT, Security, and Legal representatives to coordinate the incident response efforts.<br><br>Conduct Immediate Investigation: Initiate a thorough investigation to determine the extent of the data exfiltration, identify the root cause, and assess the potential impact on our organization.<br><br>Implement Remediation Measures: Collaborate with the response team to implement necessary remediation measures promptly. This may include patching vulnerabilities, strengthening access controls, and enhancing monitoring capabilities.<br><br>Communicate with Stakeholders: Develop a clear communication plan to inform relevant stakeholders about the incident, including employees, customers, and any regulatory bodies, as required. Transparency and timely updates are crucial in maintaining trust during this situation.<br><br>Enhance Security Measures: Evaluate the existing security infrastructure and policies to identify areas for improvement. Consider implementing additional safeguards, such as advanced threat detection systems and employee training programs to mitigate future risks.<br><br>I kindly request your immediate attention to this matter, as the impact of data exfiltration can be severe for our organization's reputation, financial standing, and legal compliance. Please acknowledge the receipt of this email and confirm your availability for a meeting to discuss the incident response strategy.<br><br>Thank you for your immediate attention to this urgent matter.<br><br>Sincerely,<br><br>Ravi Menon<br>Security <span zeum4c9="PR_1_0" data-ddnwab="PR_1_0" aria-invalid="spelling" class="LI ng">Admministrator</span><br>ravi@binaryflux.xyz<br></div>
                                                 </p>
                                             </div>
                                         </div>
