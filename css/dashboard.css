@@ -2,6 +2,10 @@
 .StreamPage .leftSearchBoxArea .list-inline-item {
 	margin-bottom: 5px;
 }
+label.form-check-label {
+    text-transform: uppercase;
+    font-size: 13px !important;
+}
 .collapse-sidebar.left {
     left: auto;
     right: 100%;
@@ -145,7 +149,7 @@
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 20px;
-	vertical-align: top;
+	vertical-align: text-top;
 	display: inline-block;
 }
 
@@ -279,7 +283,7 @@
 .bxHash {
 	color: #607191;
 	font-size: 20px;
-	line-height: 20px;
+	line-height: 26px;
 }
 
 .rightSearchBoxArea .form-check {
