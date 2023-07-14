@@ -1,4 +1,89 @@
 /*======================================= Stream page css  ============================================= */
+.card{
+	background-color: transparent;
+	border-radius: 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	-webkit-transition: all .5s;
+    transition: all .5s;
+}
+.bxStream_link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 20px;
+}
+.bxStreamList_sec .card:hover,
+.bxStreamList_sec .card.active{
+	background-color: #092550;
+	color: #fff;
+}
+.bxStream_linkContent {
+    padding-left: 30px;
+}
+.bxStreamIcon_link {
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    background-color: #173E78;
+    border-radius: 7px;
+    font-size: 40px;
+    font-weight: 600;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.bxStreamDiscription_link {
+    margin: 0;
+	font-size: 18px;
+	opacity: .5;
+}
+.bxStreamTitle_link{
+	font-size: 20px;
+    font-weight: 600;
+}
+.bxStreamAction_link {
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    right: -180px;
+    top: 0;
+    max-width: 150px;
+    width: 100%;
+    background-color: #081e40e3;
+    height: 100%;
+    text-align: center;
+}
+.bxStreamAction_link .btn-group-vertical {
+    margin-top: 17px;
+}
+.bxStreamList_sec .card:hover .bxStreamAction_link {
+    opacity: 1;
+}
+.btnSteram {
+    background-color: #173E78;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    margin: 12px auto;
+}
+.btnSteram:hover {
+    color: #fff;
+    background-color: #173e788c;
+}
+.btnSteram span {
+    font-size: 16px;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+.bxStreamList_sec .card:hover .bxStreamAction_link{
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    right: 0;
+}
 .StreamPage .leftSearchBoxArea .list-inline-item {
 	margin-bottom: 5px;
 }
@@ -45,69 +130,49 @@ label.form-check-label {
 	font-size: 20px;
 }
 .StreamPage #tasks-switch.collapsed{
-	margin-left: -550px;
+	margin-left: -650px;
 }
 .StreamPage #tasks-switch .left-sidebar {
-	width: 550px;
-	background-color: #010F33;
+	width: 650px;
+	background-color: #112F5C;
 	transition: 0.5s;
 }
-
-.leftSearchBoxArea {
-	overflow: hidden;
+.bxStreamLeftSideBar_searchArea .sidebar-search {
+	width: 100%;
 }
-
-.leftResultCount span {
-	opacity: 0.6;
-}
-
 .sidebar-search {
-	width: calc(100% - 50px);
-	background-color: transparent;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-radius: 4px;
-	color: rgba(255, 255, 255, 0.6);
+    background-color: #092550;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
 }
-
-.form-control:focus {
-	color: inherit;
-	background-color: transparent;
-	border-color: none;
-	outline: 0;
-	box-shadow: none;
+.sidebar-search  span {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
 }
-
-.sidebar-search .input-group {
-	align-items: center;
-	padding-left: 10px;
+.sidebar-search span.search-icon{
+	border-right: 1px solid rgba(255, 255, 255, 0.4)
 }
-
-.sidebar-search input {
+.sidebar-search input:focus,
+.sidebar-search input{
 	background-color: transparent;
 	border: none;
+	outline: none;
+	box-shadow: none;
+	color: #fff;
 }
-
-.pane-header .dropdown {
-	width: auto;
-	padding: 0 0 0 20px;
+.bxFilterTop{
+	background-color: #143D7A;
+	border-left: 1px solid rgba(255, 255, 255, 0.4);
+	cursor: pointer;
 }
-
-.pane-header .dropdown i {
-	font-size: 24px;
-}
-
-.sidebar-search {
-	width: calc(100% - 50px);
-	background-color: transparent;
-	display: flex;
-	align-items: center;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-radius: 4px;
-	color: rgba(255, 255, 255, 0.6);
-}
-
 .StreamPage #map-switch .right-section {
-	width: calc(100% - 550px);
+	width: calc(100% - 650px);
     padding: 10px 10px 10px 30px;
 	transition: 0.01s;
 	overflow: hidden;
@@ -120,195 +185,6 @@ label.form-check-label {
 	width: 100%;
 }
 
-.leftSearchBoxArea .card {
-    cursor: pointer;
-    background-color: transparent;
-    border-bottom: 1px solid #4999FE66;
-}
-
-.notification-list h6.m-0.font-16.fw-semibold {
-	color: #fff;
-}
-
-#agent-switch .card {
-	background-color: transparent;
-	border-radius: 0;
-	border-top: 1px solid rgba(73, 153, 254, 0.4);
-}
-
-.bg-bxinfo {
-	background-color: #42667D;
-	text-transform: uppercase;
-	font-family: 'Barlow', sans-serif;
-	font-size: 10px;
-	line-height: 14px;
-}
-
-.rightSearchBoxArea label, .leftSearchBoxArea label {
-	color: #fff;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 20px;
-	vertical-align: text-top;
-	display: inline-block;
-}
-
-.rightResultActionBtns {
-	text-align: right;
-	float: right;
-}
-
-.rightSearchBoxArea p {
-	padding-left: 27px;
-	font-size: 12px;
-	line-height: 16px;
-	margin-bottom: 3px;
-}
- .bxJsonText {
-	font-size: 16px;
-	line-height: 24px;
-}
- .bxJsonText .bxEventValue {
-	color: #fff;
-	font-size: 16px;
-	opacity: .7;
-}
- .bxJsonText .bxEventKey {
-    color: #ffbf01;
-    opacity: .8;
-    font-size: 14px;
-}
-.leftSearchBoxArea p {
-	font-size: 12px;
-	line-height: 16px;
-	margin-bottom: 3px;
-	padding-left: 3px;
-}
-.leftSearchBoxArea .card.active,
-.leftSearchBoxArea .card:hover {
-	background-color: #0F1226;
-}
-
-.rightSearchBoxArea label span {
-	display: block;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-.rightSearchStatus li {
-	display: inline-block;
-	font-size: 12px;
-	color: #fff;
-	padding-left: 15px;
-	position: relative;
-	margin-right: 10px;
-}
-
-.rightSearchStatus li:after {
-	position: absolute;
-	content: "";
-	height: 5px;
-	width: 5px;
-	background: rgba(73, 153, 254, 0.4);
-	border-radius: 5px;
-	left: 0;
-	top: 6px;
-}
-
-.rightSideCardLgBox .card .card-body {
-	background: linear-gradient(172.51deg, #051138 -140.82%, #263051 200.27%);
-	box-shadow: inset 0px 4px 150px rgba(15, 18, 38, 0.2);
-	border-radius: 4px 4px 0px 0px;
-	padding: 10px 20px !important;
-}
-
-.rightSideCardLgBox .form-check {
-	margin-left: 30px;
-}
-
-.rightSideCardLgBox .form-check input[type="checkbox"] {
-	background-color: transparent;
-	border: 1px solid #fff;
-}
-
-.rightSideCardLgBox label.form-check-label {
-	display: block;
-}
-
-.rightSearchStatus li:nth-child(1) {
-	padding-left: 0;
-}
-
-.rightSearchStatus li:nth-child(1)::after {
-	display: none;
-}
-
-.rightSearchStatus li span {
-	opacity: .7;
-	margin-right: 5px;
-}
-
-.bxRightCardTop .card {
-	background-color: #0E2948;
-	border-radius: 4px;
-}
-
-.bxRightCardTop .card h3 {
-	font-size: 20px;
-}
-
-.bxRightCardTop .card h5 {
-	font-size: 14px;
-	color: #C5C6CC;
-}
-
-.bxRightCardTop .card h3 small {
-	font-size: 12px;
-}
-
-.bxRightCardTop i {
-	font-size: 16px;
-}
-
-.bxRightCardTop span {
-	font-size: 12px;
-}
-
-.rightSearchBoxArea .card .card-body {
-	padding-bottom: 5px;
-	padding-top: 10px;
-}
-
-.bxHash {
-	color: #607191;
-	font-size: 20px;
-	line-height: 26px;
-}
-
-.rightSearchBoxArea .form-check {
-	padding-left: 0;
-}
-
-.rightSearchBoxArea .card {
-	border: 0;
-	margin-bottom: 20px;
-}
-
-.leftSearchBoxArea .form-check input {
-	background-color: transparent;
-	border: 1px solid #eee;
-	margin-right: 0;
-}
-.bxAddStreamOffCanvas .list-inline {
-	padding-left: 24px;
-}
-.bxSuggestionTopBar .sidebar-search{
-	width: 100%;
-}
-.list-inline {
-	padding-left: 0;
-}
 
 .bxPagination {
 	position: sticky;
@@ -321,185 +197,6 @@ label.form-check-label {
 	justify-content: end;
 }
 
-.page-link {
-	color: #fff;
-	background-color: transparent;
-	border: none;
-}
-
-.page-item.active .page-link {
-	color: #fff;
-	background-color: #3C92FF;
-	border-radius: 2px;
-}
-
-.bxRightSearchBox .rightSidebar-search {
-	width: 40px;
-	float: left;
-	height: 37px;
-	overflow: hidden;
-	position: absolute;
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	-ms-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;
-	border: 1px solid #0d6efd;
-	border-radius: 4px;
-	cursor: pointer;
-	left: 0;
-}
-
-.bxRightSearchBox .rightSidebar-search .search-icon {
-	width: 40px;
-	text-align: center;
-	height: 46px;
-	position: absolute;
-	left: 0;
-	line-height: 2.5;
-	cursor: pointer;
-	z-index: 999;
-}
-
-.bxRightSearchBox .rightSidebar-search input {
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	padding-left: 40px;
-}
-
-.bxRightSearchBox .rightSidebar-search button.input-group-text.btn {
-	color: #fff;
-	padding: 0 10px;
-	border: 1px solid #fff;
-	line-height: normal;
-	height: 22px;
-	margin-top: 6px;
-	margin-right: 0;
-	border-radius: 10px !important;
-	overflow: hidden;
-	font-size: 12px;
-}
-
-.bxCloseSearch {
-	position: relative;
-	right: 0;
-	color: #fff;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	top: -4px;
-	font-size: 30px;
-}
-
-.bxRightSearchBox .rightSidebar-search.open {
-	width: 100%;
-	position: absolute;
-	z-index: 111;
-	background-color: #121212;
-	max-width: 520px;
-}
-
-.rightSidebar_OuterBox {
-	position: relative;
-	padding-left: 35px;
-}
-.bxcolorGreen{
-	color: forestgreen;
-}
-.bxcolorYellow {
-	color: #E8B906;
-}
-
-.bxcolorRed {
-	color: #FF3D00;
-}
-
-.bxJsonText {
-	color: #C5C6CC;
-}
-
-.rightSideCardLgBox a {
-	color: #0d6efd;
-}
-
-.moretext {
-	display: none;
-}
-
-.bxAddStreamOffCanvas {
-	width: 100%;
-	margin-top: 66px;
-	max-width: 800px;
-}
-
-.bxAddStreamOffCanvas .offcanvas-header {
-	background-color: #090B19;
-}
-
-.bxAddStreamOffCanvas .offcanvas-header a {
-	font-size: 24px;
-}
-
-.bxSuggestionTopBar {
-	background: #010F33;
-	box-shadow: inset 0px 4px 150px rgba(73, 153, 254, 0.2);
-	padding: 20px;
-}
-
-.bxSearchBtn {
-	border: 1px solid #0d6efd;
-	border-radius: 3px;
-	color: #ccc;
-}
-
-.bxSuggestionTopBar ul li {
-	margin-left: 20px;
-	font-size: 14px;
-}
-
-.bxSuggestionArea {
-	background-color: #0E2948;
-	padding: 10px 20px;
-}
-
-.bxSuggestionArea span {
-	font-size: 12px;
-}
-
-.bxAddCard .card {
-	background-color: #010F33;
-	border-bottom: 1px solid #4999FE66;
-}
-
-.bxAddCard label {
-	color: #fff;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 20px;
-	vertical-align: middle;
-	display: inline-block;
-}
-
-.bxAddCard p {
-	font-size: 12px;
-	line-height: 16px;
-	margin-bottom: 3px;
-	padding-left: 24px;
-}
-
-.bxAddCard .form-check input {
-	background-color: transparent;
-	border: 1px solid #eee;
-	margin-right: 0;
-}
-
-.bxAddCard .card:hover {
-	background-color: #0F1226;
-}
-
-.bxSearchBtn:hover {
-	color: #4999FE;
-}
 
 .bxPopup .modal-content {
 	background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
@@ -720,7 +417,7 @@ label.form-check-label {
 
 .bxDropdown {
 	position: relative;
-	padding-left: 20px;
+	padding-left: 0;
 }
 
 #bxFilterTop label {
@@ -1962,9 +1659,10 @@ div#bxShowOutput .card.card-body {
 
 /* ======================================================== SearchPage css strat here ======================================================*/
 
- #bxFullwidthContent {
+#bxFullwidthContent {
     margin-top: 66px;
 }
+
 .SearchPage .bxSearchPage {
 	display: block;
 	background-image: url(../images/search_bg.png);

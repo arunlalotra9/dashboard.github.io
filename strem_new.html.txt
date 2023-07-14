@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en" class="bxHtml" data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="css/select2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <title>Binaryflux Stream</title>
+  </head>
+  <body class="">
+    
+    <div id="wrapper" class="StreamPage">
+        
+        <div class="fullwidth main-inner" id="bxFullwidthContent">
+            <div class="tab-content">
+                <div id="tasks-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="leftSwitch-tab">
+                    <div class="collapse-sidebar right"><i class="bi bi-chevron-compact-right text-white"></i></div>
+                    <section class="left-task left-sidebar float-start" id="taskContent">
+                        <p>sadasd asd216498 16 494 984 98  9 4 9 94 456 456 456 645 645 456 456</p>
+
+                    </section>
+                </div>
+
+                <div id="map-switch" class="tab-pane show active" role="tabpanel" aria-labelledby="rightSwitch-tab">
+                    <div class="right-section easy-3s desktop-right float-end">
+                        <p>dasdas asdasdas asdas d 12164564987 19497</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="bxFooter" class="footer">
+        <div class="container-fluid">
+            <p class="text-end m-0">Copyright © <a href="https://binaryflux.xyz/">Binaryflux.</a> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="DEUDEautomatons" tabindex="-1" aria-labelledby="DEUDEautomatonsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="DEUDEautomatonsLabel">Automatons</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Data exfiltration using external drive</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 automatons</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Transfer blocked</h4>
+                        <span>Blocked the file upload operation to external drive.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="DEUDEfilters" tabindex="-1" aria-labelledby="DEUDEfiltersLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="DEUDEfiltersLabel">Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Data exfiltration using external drive</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 Filters</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Access change</h4>
+                        <span>Fetch events where access was modified for an account.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="DEUDEdetections" tabindex="-1" aria-labelledby="DEUDEdetectionsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="DEUDEdetectionsLabel">Detections</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Data exfiltration using external drive</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 Detections</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Confidential file upload.</h4>
+                        <span>Confidential files like code , ppts etc. are upload to device.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="APMautomatons" tabindex="-1" aria-labelledby="APMautomatonsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="APMautomatonsLabel">Automatons</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Account privilege misuse</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 automatons</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Revoke access.</h4>
+                        <span>Revoke the access of the account and open a investigation.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="APMdetections" tabindex="-1" aria-labelledby="APMdetectionsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="APMdetectionsLabel">Detections</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Account privilege misuse</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">2 Detections</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Privileged access granted.</h4>
+                        <span>Fetch accounts that were provided access to all operations.</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>Misuse of privilege</h4>
+                        <span>Some who have access to all , performs create / delete / export operation.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal bxPopup fade" id="bxFilterTop" tabindex="-1" aria-labelledby="bxFilterTop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="filterHead modal-header">
+                    <h1>Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="filterBody modal-body">
+                    <form action="">
+                        <div class="form-group mb-2">
+                            <h6 class="text-white">Severity</h6>
+                            <ul class="d-flex align-items-center m-0 p-0">                                                    
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i> Critical</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Medium</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Information</button></li>
+                                <li><button type="button" class="btn bg-bxinfo"><i class="bi bi-check-circle-fill"></i>  Low</button></li>
+                            </ul>
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                        <div class="form-group mb-2">
+                            <span class="d-block mb-1">Log Types</span>
+                            <div class="col-12">
+                                <select class="selectpicker text-white" multiple aria-label="Default select example" data-live-search="true">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                </select>
+                            </div>                                
+                        </div>
+                    </form>
+                </div>
+                <div class="filterFooter modal-footer">
+                    <div>
+                        <a type="button" class="text-white me-3" data-bs-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bxAddStreamOffCanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Add Streams</h5>
+          <a type="button" class="bi bi-x" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="bxSuggestionTopBar">
+                <form class="sidebar-search">
+                    <div class="input-group">
+                      <span class="bi bi-search search-icon text-white"></span>
+                      <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                    </div>
+                </form>
+                <ul class="d-flex align-items-center mt-3 m-0 p-0">
+                    <span>Add to search: </span>
+                    <li><button type="button" class="btn bxSearchBtn btn-primary">Cloud</button></li>
+                    <li><button type="button" class="btn bxSearchBtn">Network</button></li>
+                    <li><button type="button" class="btn bxSearchBtn">Security</button></li>
+                    <li><button type="button" class="btn bxSearchBtn">Operating System</button></li>
+                </ul>
+            </div>
+            <div class="bxSuggestionArea">
+                <span>100 Streams, 30 Added</span>
+            </div>
+            <div class="col-12 bxAddCard">
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate">Sensitive information exfiltration attempt.</span>
+                            </label>
+                            <p class="">Analyze logon and download events from microsoft 365.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Microsoft Office 365</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">120 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">3 automatons</span></li>                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Account privilege misuse</span>
+                            </label>
+                            <p class="">Monitor accounts with admin privileges.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Sales force</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Data exfiltration using external drive</span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Symantec DLP</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Unusual Data Transfer Through Chat</span>
+                            </label>
+                            <p class="">Monitor chat that involve data transfer from company asset.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">Slack</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate">  Analyze Git Hub Settings Update</span>
+                            </label>
+                            <p class="">Monitor Admin Setting changes in Git Hub.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">GITHUB</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate">  Audit Meeting for suspicious partipants</span>
+                            </label>
+                            <p class="">Monitor meeting events and thier participants for suspicious activities</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">zoom</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-body py-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="task1">
+                            <i class="bi bi-hash bxHash"></i>
+                            <label class="form-check-label" for="task1">
+                                <span class="text-turncate"> Confidential Data sent outside domain</span>
+                            </label>
+                            <p class="">Protect from transferring confidential data to external drives.</p>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">GSUITE</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 Filters</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 DETECTIONS</span></li>
+                                <li class="list-inline-item"><span class="badge bg-bxinfo p-1">1 automatons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-footer ">
+            <nav class="bxPagination" aria-label="Page navigation example">
+                <ul class="pagination mb-0 py-2">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class="offcanvas_result"><span>30 Streams Added</span></div>
+                <div>
+                    <a type="button" class="text-white me-3" data-bs-dismiss="offcanvas" aria-label="Close">Close</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas" aria-label="Close">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="automatons" tabindex="-1" aria-labelledby="automatonsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="automatonsLabel">Automations</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Sensitive information exfiltration attempt</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">1 Automation</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>Escalate to manager</h4>
+                        <span>Escalate the incident to the reporting manager.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="detections" tabindex="-1" aria-labelledby="detectionsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="detectionsLabel">Detections</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Sensitive information exfiltration attempt</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">2 Detections</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Unusual Logon Activities.</h4>
+                        <span>Detects unusual account activity for logon after usual office hours.</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>Exfiltrating confidential information</h4>
+                        <span>Detects download of confidential information from sharepoint.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="filters" tabindex="-1" aria-labelledby="filtersLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="filtersLabel">Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Sensitive information exfiltration attempt</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">2 Filters</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Logon Events</h4>
+                        <span>Fetch Device Logon events.</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>File Download Events </h4>
+                        <span>Fetch download events from sharepoint.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal bxPopup fade" id="APMfilters" tabindex="-1" aria-labelledby="APMfiltersLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="APMfiltersLabel">Filters</h1>
+                    <button type="button" class="bi bi-x bxClose" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bxPopupContent mb-4">
+                        <p class="m-0">Account privilege misuse</p>
+                        <span class="badge bg-bxinfo p-1 text-trans">2 Filters</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom mb-4">
+                        <h4>Access change</h4>
+                        <span>Fetch events where access was modified for an account.</span>
+                    </div>
+                    <div class="bxPopupLowerText pb-2 border-bottom">
+                        <h4>Report Operations</h4>
+                        <span>Fetch create / delete / export events.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/select2.min.js"></script> 
+    <script src="js/custom.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var dropdownHeader = document.querySelector(".dropdown-header");
+            var dropdownMenu = document.querySelector(".dropdown-menu");
+          
+            dropdownHeader.addEventListener("click", function() {
+              dropdownHeader.classList.toggle("open");
+              if (dropdownHeader.classList.contains("open")) {
+                dropdownMenu.style.display = "block";
+              } else {
+                dropdownMenu.style.display = "none";
+              }
+            });
+          
+            var options = document.querySelectorAll(".option");
+            options.forEach(function(option) {
+              option.addEventListener("click", function() {
+                var selectedOption = this.querySelector("a");
+                var selectedHeader = dropdownHeader.querySelector("a");
+                selectedHeader.innerHTML = selectedOption.innerHTML;
+                dropdownHeader.classList.remove("open");
+                dropdownMenu.style.display = "none";
+              });
+            });
+          });
+    </script>
+
+  </body>
+</html>
