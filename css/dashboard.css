@@ -23,6 +23,10 @@
 .bxStream_linkContent {
     padding-left: 30px;
 }
+.bxStreamLstOffCanvas {
+    width: 600px;
+    background-color: #092550;
+}
 .bxStreamIcon_link {
     height: 70px;
     width: 70px;
@@ -33,6 +37,8 @@
     font-size: 40px;
     font-weight: 600;
 	border: 1px solid rgba(255, 255, 255, 0.4);
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .bxStreamDiscription_link {
     margin: 0;
@@ -44,8 +50,19 @@
     font-weight: 600;
 }
 .bxStreamAction_link {
-    opacity: 0;
-    position: absolute;
+    visibility: hidden;
+}
+.bxS_IconZoom{
+	background-image: url(../images/Stream_1.png);
+}
+.bxS_IconCloud{
+	background-image: url(../images/Stream_2.png);
+}
+.bxS_IconSlack{
+	background-image: url(../images/Stream_3.png);
+}
+.bxStreamActionBtn_link{
+	position: absolute;
     -webkit-transition: all .5s;
     transition: all .5s;
     right: -180px;
@@ -56,11 +73,11 @@
     height: 100%;
     text-align: center;
 }
-.bxStreamAction_link .btn-group-vertical {
-    margin-top: 17px;
-}
 .bxStreamList_sec .card:hover .bxStreamAction_link {
-    opacity: 1;
+    visibility: visible
+}
+.bxStreamList_sec .card:hover .bxStreamActionBtn_link {
+    right: 0;
 }
 .btnSteram {
     background-color: #173E78;
