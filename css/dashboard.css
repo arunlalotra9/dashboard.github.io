@@ -1,8 +1,14 @@
 /*======================================= Stream page css  ============================================= */
+.bxStreamList_sec .card{
+	border-color: rgba(255, 255, 255, 0.2);
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-radius:0;
+}
 .card{
 	background-color: transparent;
-	border-radius: 0;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius:5px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	-webkit-transition: all .5s;
     transition: all .5s;
 }
@@ -22,7 +28,50 @@
 }
 .bxStream_linkContent {
     padding-left: 30px;
+	overflow: hidden;
 }
+.bxStreamEDHead .bxStreamDiscription_link{
+	opacity: .7;
+}
+
+.bxSEActionBtn li a span {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    display: block;
+    background-color: rgb(255 255 255 / 8%);
+}
+.bxSEActionBtn li.bxDelete a span {
+    background-color: rgb(255 0 0 / 44%);
+}
+.bxSEActionBtn .border-start{
+	border-color: rgb(255 255 255 / 8%) !important;
+}
+.bxSearchBtn {
+    border: 1px solid #4999FE;
+    border-radius: 3px;
+    color: #ccc;
+    font-size: 12px;
+}
+.bxSearchBtn:hover {
+	color: #4999FE;
+}
+.bxSuggestionTopBar ul li {
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+.bxSuggestionArea {
+	background: #0E2948;
+	padding: 10px 20px;
+}
+
+.bxSuggestionArea span {
+	font-size: 12px;
+}
+.bxAddStreamOffCanvas,
 .bxStreamLstOffCanvas {
     width: 600px;
     background-color: #092550;
@@ -39,15 +88,22 @@
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	background-position: center;
 	background-repeat: no-repeat;
+	min-width: 70px;
 }
 .bxStreamDiscription_link {
     margin: 0;
 	font-size: 18px;
 	opacity: .5;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .bxStreamTitle_link{
 	font-size: 20px;
     font-weight: 600;
+	/* text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
 }
 .bxStreamAction_link {
     visibility: hidden;
@@ -60,6 +116,32 @@
 }
 .bxS_IconSlack{
 	background-image: url(../images/Stream_3.png);
+}
+.bxS_IconGitHub{
+	background-image: url(../images/Stream_4.png);
+}
+.bxS_IconGitZoom{
+	background-image: url(../images/Stream_5.png);
+}
+.bxStreamList_box{
+	position: relative;
+	height: calc(100% - 70px);
+}
+.bxFloatingAddSteramBtn{
+	position: absolute;
+	bottom: 5px;	
+	right: 5px;
+}
+.bxFloatingAddSteramBtn .action-icon span{
+	font-size: 50px;
+	height: 70px;
+	width: 70px;
+	line-height: 70px;
+	border-radius: 100%;
+	text-align: center;
+	background-color: #3C92FF;
+	color: #fff;
+	display: block;
 }
 .bxStreamActionBtn_link{
 	position: absolute;
@@ -146,8 +228,8 @@ label.form-check-label {
 .collapse-sidebar i {
 	font-size: 20px;
 }
-.StreamPage #tasks-switch.collapsed{
-	margin-left: -650px;
+.StreamPage #tasks-switch.collapsed {
+    margin-left: 0;
 }
 .StreamPage #tasks-switch .left-sidebar {
 	width: 650px;
@@ -161,7 +243,7 @@ label.form-check-label {
     background-color: #092550;
     display: flex;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.6);
     overflow: hidden;
@@ -173,7 +255,42 @@ label.form-check-label {
     text-align: center;
 }
 .sidebar-search span.search-icon{
-	border-right: 1px solid rgba(255, 255, 255, 0.4)
+	border-right: 1px solid rgba(255, 255, 255, 0.2)
+}
+.bxStreamEventDetection {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    background-color: #112F5C;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1.2px;
+}
+.bxSEDFoot{
+	background-color: #092550;
+}
+span.bxEventValue:last-child{
+	margin: 0;
+	padding: 0;
+	border-right: 0;
+}
+.bxSEDHead p,
+.bxSEDHead h2{
+	color: #fff;
+}
+.bxEventKey {
+    margin-right: 10px;
+	opacity: .4;
+}
+span.bxEventValue {
+    border-right: 1px solid;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.bxSEDHead small {
+    font-size: 18px;
+}
+.bxSEDHead {
+    background-color: #0D274D;
+    padding: 10px 20px;
 }
 .sidebar-search input:focus,
 .sidebar-search input{
@@ -183,9 +300,13 @@ label.form-check-label {
 	box-shadow: none;
 	color: #fff;
 }
+.bxRightSearchBox .sidebar-search{
+	max-width: 600px;
+	width: 100%;
+}
 .bxFilterTop{
 	background-color: #143D7A;
-	border-left: 1px solid rgba(255, 255, 255, 0.4);
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
 	cursor: pointer;
 }
 .StreamPage #map-switch .right-section {
@@ -199,69 +320,76 @@ label.form-check-label {
 	vertical-align: top;
 }
 .StreamPage #map-switch  .right-section.task-collapsed {
+	width: calc(100% - 70px);
+}
+.collapsed .sidebar-search {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+.StreamPage #tasks-switch.collapsed .left-sidebar{
+	width: 70px;
+}
+.bxStreamLeftSideBar {
+    height: 100%;
+}
+.collapsed .btnSteram {
+    font-size: 0;
+    margin: 7px auto;
+    padding: 3px 10px;
+}
+.collapsed .btnSteram span{
+	margin: 0;
+}
+.collapsed .bxStreamList_box .bxPagination,
+.collapsed .input-group,
+.collapsed .bxStream_linkContent{
+	display: none !important;
+}
+.collapsed .sidebar-search span{
 	width: 100%;
 }
-
-
-.bxPagination {
+.collapsed .bxFilterTop {
+    border-left: 0;
+    width: 100%;
+}
+.collapsed  .bxStream_link{
+	padding: 0;
+}
+.collapsed .bxFloatingAddSteramBtn,
+.collapsed .bxStreamIcon_link{
+	transform: scale(0.8);
+}
+.collapsed .bxFloatingAddSteramBtn{
+	left: 0;
+}
+.bxStreamList_box .bxPagination {
 	position: sticky;
 	bottom: 0px;
 	background-color: transparent;
 }
-
 .pagination {
 	align-items: end;
 	justify-content: end;
 }
-
-
-.bxPopup .modal-content {
-	background: linear-gradient(276.43deg, rgba(1, 15, 51, 0.9) 8.2%, rgba(14, 41, 72, 0.9) 98.53%);
-	border: 1px solid #00529D;
-	box-shadow: inset 0px 0px 150px rgba(73, 153, 254, 0.1);
-	backdrop-filter: blur(5px);
-	position: relative;
+.bxStreamList_box .pagination {
+	align-items: start;
+	justify-content: start;
 }
-
-.bxPopup .modal-header {
-	background-color: #010F33;
-	border-color: #00529D;
-	;
-}
-
-.bxPopup .modal-header .modal-title {
+.page-link {
 	color: #fff;
-}
-
-.bxPopup .bxClose {
-	font-size: 25px;
-	font-weight: 400;
 	background-color: transparent;
-	color: #fff;
 	border: none;
-	position: absolute;
-	right: 10px;
-	top: 15px;
 }
-
-.bxPopupLowerText {
-	border-color: #00529D !important;
+.pagination a.page-link {
+    padding: 0 6px;
+    font-size: 12px;
 }
-
-.bxPopupContent p {
-	font-size: 12px;
-	font-weight: 700;
-}
-
-.bxPopupLowerText h4 {
-	color: #fff;
-	margin-bottom: 0;
-	font-size: 14px;
-	font-weight: 700;
-}
-
-.bxPopupLowerText span {
-	font-size: 14px;
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
 }
 
 .bxUMGraphText p {
