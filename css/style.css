@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Nunito:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@400;700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Wallpoet&display=swap');
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 :root, [data-bs-theme=light] {
   --bx-blue: #2c8ef8;   
@@ -171,7 +173,109 @@
   --bx-form-invalid-color: #fc9db0;
   --bx-form-invalid-border-color: #fc9db0;
 }
+@font-face {
+  font-family: "neontubes";
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2")
+      format("woff2"),
+    url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff")
+      format("woff"),
+    url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 
+font-family: 'Black Ops One', cursive;
+font-family: 'Wallpoet', cursive;
+*/
 
+.text--glitch {
+  margin: 0;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: 2px;
+  text-transform: uppercase;  
+  text-shadow: .05em 0 0 rgba(255, 0, 0, .75),
+              -.05em -.025em 0 rgba(0, 255, 0, .75),
+              .025em .05em 0 rgba(0, 0, 255, .75);
+  
+  animation: glitch 525ms infinite;
+}
+
+.text--glitch::before, 
+.text--glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  letter-spacing: .025em;
+  top: 0;
+  left: 0;
+  opacity: .7;
+}
+.text--glitch::before {
+  animation: glitch 675ms infinite;
+  transform: translate(-.035em, -.025em);
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+.text--glitch::after {
+  animation: glitch 333ms infinite;
+  transform: translate(.035em, .025em);
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: .05em 0 0 rgba(255, 0, 0, .75),
+                -.05em -.025em 0 rgba(0, 255, 0, .75),
+                .025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  14% {
+    text-shadow: .05em 0 0 rgba(255, 0, 0, .75),
+                -.05em -.025em 0 rgba(0, 255, 0, .75),
+                .025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  15% {
+    text-shadow: -.05em -.025em 0 rgba(255, 0, 0, .75),
+                .025em .025em 0 rgba(0, 255, 0, .75),
+                -.05em -.05em 0 rgba(0, 0, 255, .75);
+  }
+  49% {
+    text-shadow: -.05em -.025em 0 rgba(255, 0, 0, .75),
+                .025em .025em 0 rgba(0, 255, 0, .75),
+                -.05em -.05em 0 rgba(0, 0, 255, .75);
+  }
+  50% {
+    text-shadow: .025em .05em 0 rgba(255, 0, 0, .75),
+                .05em 0 0 rgba(0, 255, 0, .75),
+                 0 -.05em 0 rgba(0, 0, 255, .75);
+  }
+  99% {
+    text-shadow: .025em .05em 0 rgba(255, 0, 0, .75),
+                .05em 0 0 rgba(0, 255, 0, .75),
+                 0 -.05em 0 rgba(0, 0, 255, .75);
+  }
+  100% {
+    text-shadow: -.025em 0 0 rgba(255, 0, 0, .75),
+                -.025em -.025em 0 rgba(0, 255, 0, .75),
+                -.025em -.05em 0 rgba(0, 0, 255, .75);
+  }
+}
+
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-delay: 0s !important;
+    animation-delay: -1ms !important;
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    transition-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+  }
+}
 * {margin: 0;padding: 0;box-sizing: border-box;}
 body{margin: 0;font-size: 16px;color: rgba(255, 255, 255, 0.6);font-family: 'Nunito', sans-serif;user-select: none;overflow-x: hidden; }
 /* html,body{
