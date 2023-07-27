@@ -461,9 +461,7 @@ span.bxEventValue {
     margin-left: -.25rem;
     overflow-y: auto;
 }
-.DopplerPage .bxLeftSideDoppler, .DopplerPage .bxDopplerEventDetection{
-	font-family: 'Roboto Mono', monospace;
-}
+
 .bxFont14{font-size: 14px;}
 .bxDT_50{opacity: .5;}
 .bxDT_60{opacity: .6;}

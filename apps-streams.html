@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" class="bxHtml" data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="css/select2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/settingPage.css" rel="stylesheet">    
+
+    <title>Binaryflux Setting</title>
+  </head>
+  <body class="bxSettingPage">
+
+    <div class="container-fluid py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="leftside-menu-container" class="setting_Left_SideBar h-100">
+                            <button class="d-block d-md-none bxMobile"><span class="material-symbols-outlined">clear_all</span></button>
+                            <div class="leftbar-area">
+                                <form class="sidebar-search">
+                                    <div class="input-group">
+                                    <span class="bi bi-search search-icon text-white"></span>
+                                    <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                                    </div>
+                                </form>
+                                <ul class="side-nav mt-3">
+                                    <li class="side-nav-item menuitem-active">
+                                        <a href="apps-streams.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">database</span>
+                                            Streams <small class="ms-3">(option)</small> 
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-dictionary.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">batch_prediction</span>
+                                            dictionary
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-filters.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">instant_mix</span>
+                                            Filters
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-transformations.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">move_down</span>
+                                            transformations
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-correlations.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">all_match</span>
+                                            correlations
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-detections.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">detection_and_zone</span>
+                                            detections
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-sequences.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">animation</span>
+                                            sequences
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="apps-automations.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">macro_auto</span>
+                                            automations
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="bxContent">
+                            <div class="bxContent_head">
+                                <div class="btn_Group float-end d-flex align-items-center">
+                                    <button class="btn btn-info px-5 text-white">Create Stream</button>
+                                    <div class="filter-buttons">
+                                        <div class="list-view-button"><span class="material-symbols-outlined">list</span></div>
+                                        <div class="grid-view-button"><span class="material-symbols-outlined">widgets</span></div>
+                                      </div>
+                                </div>
+                                <h4 class="m-0 text-white">Streams available</h4>
+                            </div>
+                            <div id="" class="bxSettingPage_listBox">
+                                <ol class="list list-view-filter">
+                                    <li>
+                                        <ul class="p-0 m-0 d-flex align-items-center justify-content-between">
+                                            <li>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="bxStreamEDHead d-flex align-items-center">
+                                                        <span class="bxStreamIcon_link bxS_IconZoom d-block"></span>
+                                                        <div class="bxStream_linkContent">
+                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
+                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
+                                                        </div>
+                                                        <div class="bxStreamAction_link">
+                                                            <div class="bxStreamActionBtn_link">
+                                                                <button type="button" class="btn btnSteram"><span class="material-symbols-outlined">content_copy</span> Copy</button>
+                                                                <button type="button" class="btn btnSteram" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters"><span class="material-symbols-outlined">visibility</span> View</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                           
+                                                    <ul class="d-flex bxSEActionBtn">
+                                                        <li class="">
+                                                            <a href="#"><span class="material-symbols-outlined">apk_install</span></a>
+                                                        </li>
+                                                        <li class="mx-3">
+                                                            <a href="#"><span class="material-symbols-outlined">cached</span></a>
+                                                        </li>
+                                                        <li class="border-start"></li>
+                                                        <li class="ms-3 bxDelete">
+                                                            <a href="#"><span class="material-symbols-outlined">delete</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>List item 1</li>
+                                            <li>List item 1</li>
+                                        </ul>
+                                    </li>
+                                    <li>List item 2</li>
+                                    <li>List item 3</li>
+                                    <li>List item 4</li>
+                                    <li>List item 5</li>
+                                    <li>List item 6</li>
+                                  </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/select2.min.js"></script> 
+    <script src="js/custom.js"></script>
+
+    <script>
+        const listViewButton = document.querySelector('.list-view-button');
+        const gridViewButton = document.querySelector('.grid-view-button');
+        const list = document.querySelector('ol');
+
+        listViewButton.onclick = function () {
+        list.classList.remove('grid-view-filter');
+        list.classList.add('list-view-filter');
+        }
+
+        gridViewButton.onclick = function () {
+        list.classList.remove('list-view-filter');
+        list.classList.add('grid-view-filter');
+        }
+    </script>
+  </body>
+</html>

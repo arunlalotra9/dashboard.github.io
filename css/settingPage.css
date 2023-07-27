@@ -1,0 +1,128 @@
+.sidebar-search {
+    background-color: #051F44;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+}
+.sidebar-search span.search-icon {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.sidebar-search  span {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar-search input:focus, .sidebar-search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+}
+/* =============== Repeat css top ====================*/
+
+.side-nav {
+    padding-left: 0;
+    list-style-type: none;
+}
+.side-nav .side-nav-link {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+.side-nav .side-nav-link {
+    list-style: none;
+    position: relative;
+    white-space: nowrap;
+    color: #8391a2;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    font-size: 14px;
+    padding: 15px;
+    text-transform: uppercase;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.side-nav .side-nav-link:hover, 
+.menuitem-active .side-nav-link{ 
+    background-color: #051F44;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.side-nav .side-nav-link small{
+    text-transform: capitalize;
+}
+.bxContent_head {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.btn_Group .btn-info{
+    height: 40px;
+}
+
+.filter-buttons {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .list-view-button,
+  .grid-view-button {
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+  }
+  
+  .list-view-button:hover,
+  .grid-view-button:hover {
+    background: white;
+    color: #0e2439;
+  }
+  
+  .list-view-button {
+    margin-right: 10px;
+  }
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .bxSettingPage_listBox li {
+    color: white;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+  
+  
+  .list.list-view-filter {
+    flex-direction: column;
+  }
+  
+  .list.list-view-filter li {
+    padding: 10px;
+  }
+  
+  .list.grid-view-filter {
+    flex-flow: row wrap;
+  }
+  
+  .list.grid-view-filter li {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
