@@ -81,14 +81,14 @@
     width: 70px;
     line-height: 70px;
     text-align: center;
-    background-color: #173E78;
+    background-color: #0B2346;
     border-radius: 7px;
     font-size: 40px;
     font-weight: 600;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	background-position: center;
-	background-repeat: no-repeat;
-	min-width: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 70px;
 }
 .bxStreamDiscription_link {
     margin: 0;

@@ -17,6 +17,7 @@
     <title>Binaryflux Setting</title>
   </head>
   <body class="bxSettingPage">
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
         <div class="container-fluid p-md-2 p-0">
             <div class="bxHeaderLeftNav d-flex align-items-center">
@@ -192,7 +193,7 @@
                                     </div>
                                 </form>
                                 <ul class="side-nav mt-3">
-                                    <li class="side-nav-item menuitem-active">
+                                    <li class="side-nav-item">
                                         <a href="apps-streams.html" class="side-nav-link">
                                             <span class="material-symbols-outlined me-3">database</span>
                                             Streams <small class="ms-3">(option)</small> 
@@ -234,7 +235,7 @@
                                             sequences
                                         </a>
                                     </li>
-                                    <li class="side-nav-item">
+                                    <li class="side-nav-item menuitem-active">
                                         <a href="apps-automations.html" class="side-nav-link">
                                             <span class="material-symbols-outlined me-3">macro_auto</span>
                                             automations
@@ -248,22 +249,21 @@
                         <div class="bxContent">
                             <div class="bxContent_head">
                                 <div class="btn_Group float-end d-flex align-items-center">
-                                    <a href="apps-create-page.html" class="btn btn-info px-5 text-white">Create Stream</a>
+                                    <button class="btn btn-info px-5 text-white">Create automations</button>
                                     <div class="filter-buttons">
                                         <div class="list-view-button"><span class="material-symbols-outlined">list</span></div>
                                         <div class="grid-view-button"><span class="material-symbols-outlined">widgets</span></div>
                                       </div>
                                 </div>
-                                <h4 class="m-0 text-white">Streams available</h4>
+                                <h4 class="m-0 text-white">Automations available</h4>
                             </div>
-                            <div id="" class="bxSettingPage_listBox">
+                            <div id="" class="bxSettingPage_listBox w--icon">
                                 <ol class="list list-view-filter">
                                     <li class="list_area">
                                         <ul class="p-0 m-0 d-flex align-items-center justify-content-between">
                                             <li class="list_area_inner">                                                
                                                 <div class="bxStreamEDHead">
                                                     <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconZoom d-block"></span>
                                                         <div class="bxStream_linkContent">
                                                             <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
                                                             <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
@@ -275,7 +275,6 @@
                                             <li class="list_area_inner">                                                
                                                 <div class="bxStreamEDHead">
                                                     <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconCloud d-block"></span>
                                                         <div class="bxStream_linkContent">
                                                             <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
                                                             <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
@@ -287,7 +286,6 @@
                                             <li class="list_area_inner">                                                
                                                 <div class="bxStreamEDHead">
                                                     <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconSlack d-block"></span>
                                                         <div class="bxStream_linkContent">
                                                             <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
                                                             <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
@@ -298,87 +296,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="list_area">
-                                        <ul class="p-0 m-0 d-flex align-items-center justify-content-between">
-                                            <li class="list_area_inner">                                                
-                                                <div class="bxStreamEDHead">
-                                                    <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconZoom d-block"></span>
-                                                        <div class="bxStream_linkContent">
-                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
-                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <button class="btn btn-dark text-white">PUBLISH</button>                                                
-                                            </li>
-                                            <li class="list_area_inner">                                                
-                                                <div class="bxStreamEDHead">
-                                                    <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconCloud d-block"></span>
-                                                        <div class="bxStream_linkContent">
-                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
-                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <button class="btn btn-dark text-white">PUBLISH</button>                                                
-                                            </li>
-                                            <li class="list_area_inner">                                                
-                                                <div class="bxStreamEDHead">
-                                                    <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconSlack d-block"></span>
-                                                        <div class="bxStream_linkContent">
-                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
-                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <button class="btn btn-dark text-white">PUBLISH</button>                                                
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="list_area">
-                                        <ul class="p-0 m-0 d-flex align-items-center justify-content-between">
-                                            <li class="list_area_inner">                                                
-                                                <div class="bxStreamEDHead">
-                                                    <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconZoom d-block"></span>
-                                                        <div class="bxStream_linkContent">
-                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
-                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <button class="btn btn-dark text-white">PUBLISH</button>                                                
-                                            </li>
-                                            <li class="list_area_inner">                                                
-                                                <div class="bxStreamEDHead">
-                                                    <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconCloud d-block"></span>
-                                                        <div class="bxStream_linkContent">
-                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
-                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <button class="btn btn-dark text-white">PUBLISH</button>                                                
-                                            </li>
-                                            <li class="list_area_inner">                                                
-                                                <div class="bxStreamEDHead">
-                                                    <a href="apps-streams-edit.html" class="d-flex align-items-center">
-                                                        <span class="bxStreamIcon_link bxS_IconSlack d-block"></span>
-                                                        <div class="bxStream_linkContent">
-                                                            <h3 class="bxStreamTitle_link text-white">Sensitive information exfiltration attempt</h3>
-                                                            <p class="bxStreamDiscription_link">Analyze logon and download events from microsoft 365.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <button class="btn btn-dark text-white">PUBLISH</button>                                                
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ol>
+                                  </ol>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,6 @@
+
+/* ----------------------------------------------------------------------------------------- */
+
 .sidebar-search {
     background-color: #051F44;
     display: flex;
@@ -57,72 +60,220 @@
     text-transform: capitalize;
 }
 .bxContent_head {
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 20px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 15px;
 }
 .btn_Group .btn-info{
     height: 40px;
 }
 
 .filter-buttons {
-    display: flex;
-    margin-left: 10px;
-  }
-  
-  .list-view-button,
-  .grid-view-button {
-    color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 3px;
-    text-align: center;
-  }
-  
-  .list-view-button:hover,
-  .grid-view-button:hover {
-    background: white;
-    color: #0e2439;
-  }
-  
-  .list-view-button {
-    margin-right: 10px;
-  }
-  
-  .list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .bxSettingPage_listBox li {
-    color: white;
-    margin-bottom: 10px;
-    transition: 0.3s;
-  }
-  
-  
-  .list.list-view-filter {
-    flex-direction: column;
-  }
-  
-  .list.list-view-filter li {
-    padding: 10px;
-  }
-  
-  .list.grid-view-filter {
-    flex-flow: row wrap;
-  }
-  
-  .list.grid-view-filter li {
-    width: 100%;
-    padding: 10px;
-    margin-right: 10px;
-    text-align: center;
+  display: flex;
+  margin-left: 10px;
+}
+.list-view-button, .grid-view-button {
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 40px;
+  width: 40px;
+  line-height: 53px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #3c92ff29;
+}
+.list-view-button:hover,
+.grid-view-button:hover {
+  background: white;
+  color: #0e2439;
+}
+.list-view-button {
+  margin-right: 10px;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.bxSettingPage_listBox .list_area {
+  color: white;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.list.list-view-filter {
+  flex-direction: column;
+}
+.list.grid-view-filter {
+  flex-flow: row wrap;
+}
+
+.list.grid-view-filter .list_area {
+  width: 100%;
+  padding: 0;
+  margin-right: 10px;
+  text-align: center;
+}
+.list.grid-view-filter .bxStreamEDHead a.d-flex.align-items-center {
+  display: block !important;
+}
+.bxStreamIcon_link {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  min-width: 50px;
+  background-size: 80%;
+}
+.bxStreamTitle_link{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bxStream_linkContent {
+  padding-left: 15px;
+}
+.bxStreamEDHead {
+  max-width: 75%;
+}
+.list_area_inner {
+  width: 33.33%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.list_area_inner .btn-dark {
+  background: #173E78;
+  opacity: 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+.list_area_inner .btn-dark:hover{
+  background: #0dcaf0;
+  opacity: 1;
+}
+.bxStreamEDHead .bxStreamDiscription_link {
+  font-size: 16px;
+}
+.list.grid-view-filter .list_area_inner {
+  display: block;
+}
+.list.grid-view-filter .bxStream_linkContent {
+  padding-left: 0;
+  text-align: left;
+  padding-top: 10px;
+}
+.list.grid-view-filter .bxStreamEDHead {
+  max-width: 100%;
+  display: block !important;
+}
+.list.grid-view-filter .btn-dark {
+  float: left;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+.list.grid-view-filter  .bxStreamIcon_link {
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  min-width: 70px;
+  background-size: 80%;
+}
+.list_area_inner::before{
+  width: 78%;
+  height: 1px;
+  background-color: #fff;
+  opacity: .2;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 15px;
+}
+.list.grid-view-filter .list_area_inner::before {
+  width: 93%;
+}
+.bxContent_head .btn-info {
+  background-color: #3C92FF;
+  border-color: #3C92FF;
+}
+.bxSP_ELBox_head .bxStreamIcon_link {
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  min-width: 80px;
+}
+.border-bottom {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.bxSTP-states label{
+  text-transform: uppercase;
+  color: #3C92FF;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.w--icon .list_area_inner::before {
+  width: 93%;
+}
+.w--icon .bxStream_linkContent {
+  padding-left: 0;
+}
+.bxSTP-states .bxform-control {
+  background-color: #031126;
+  width: 100%;
+  border: 0;
+  min-height: 60px;
+  padding: 10px 20px;
+}
+.bxSTP-states .bxform-control:focus{
+  outline: none;
+}
+.bxStreamIcon_link{
+  position: relative;
+}
+.bxStreamIcon_link input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  left: 0;
+}
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.bxStreamIcon_link:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.bxStreamIcon_link input:checked ~ .checkmark {
+  background-color: #fff;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.bxStreamIcon_link input:checked ~ .checkmark:after {
+  display: block;
+}
+.bxStreamIcon_link .checkmark:after {
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2196F3;
 }
