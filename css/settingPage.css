@@ -574,3 +574,9 @@ input#top-search {
 .bxOffcanvasAddOrg  .bxAddUserForm small.d-block.text-start {
   min-height: 50px;
 }
+.table>:not(:last-child)>:last-child>* {
+  border-bottom-color: #fff0;
+}
+table.table.table-dark td {
+  opacity: .5;
+}
