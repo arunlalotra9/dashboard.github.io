@@ -527,3 +527,50 @@
 .gutter.gutter-horizontal {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
 }
+
+/* ================================ usermanagement css ==================================== */
+.nav-tabs {
+  border-bottom: 1px solid #031126;
+}
+div#myTabContent{
+  background-color: #031126;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #3C92FF;
+  background-color: #031126;
+  border-color: #031126;
+}
+.nav-tabs .nav-item .nav-link{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.leftnavResultActionBtns a {
+  margin: 0 10px;
+}
+table.table.table-dark{
+  background-color: #020D1F;
+}
+table.table.table-dark {
+  --bs-table-bg: transparent;
+}
+table.table.table-dark thead {
+  background-color: #051F44 ;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: transparent;
+  color: #fff;
+}
+.bxSelectAllPermissions {
+  white-space: nowrap;
+  margin-left: 20px;
+}
+input#top-search {
+  display: none;
+}
+.bxOffcanvasAddOrg .bxAddRoleTopHeadLeft {
+  position: relative;
+  padding-left: 0;
+}
+.bxOffcanvasAddOrg  .bxAddUserForm small.d-block.text-start {
+  min-height: 50px;
+}
