@@ -616,3 +616,31 @@ table.table.table-dark th span.material-symbols-outlined {
   padding: 3px 0;
   width: 70px;
 }
+.leftNavResultCount input#top-search {
+  display: block;
+}
+.tab-content{
+  position: relative;
+}
+.tab-content a.addNewBtn span {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.tab-content .addNewBtn {
+  font-size: 14px;
+  height: auto;
+  width: auto;
+  line-height: initial;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #3C92FF;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  padding-left: 40px;
+}

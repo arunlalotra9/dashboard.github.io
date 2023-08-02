@@ -236,21 +236,25 @@
                                           <button class="nav-link" id="bxRoles-tab" data-bs-toggle="tab" data-bs-target="#bxRoles-tab-pane" type="button" role="tab" aria-controls="bxRoles-tab-pane" aria-selected="false">Roles</button>
                                         </li>
                                     </ul>
-                                    <div class="tab-content" id="myTabContent">
-                                        
+                                    <div class="tab-content" id="myTabContent">                                        
                                             
                                         <div class="tab-pane fade show active" id="bxUsers-tab-pane" role="tabpanel" aria-labelledby="bxUsers-tab" tabindex="0">
+                                            <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser" aria-controls="offcanvasAddUser" href="javascript: void(0);" class="addNewBtn action-icon"><span class="material-symbols-outlined">person_add</span>Add new user </a>
                                             <div class="col-12">
                                                 <div class="leftNavResult d-flex justify-content-between align-items-center py-2 px-4">
                                                     <div class="leftNavResultCount d-flex justify-content-between align-items-center">
-                                                        <div class="form-check">
+                                                        <form class="sidebar-search">
+                                                            <div class="input-group">
+                                                                <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                                                            </div>
+                                                        </form>
+                                                        <div class="form-check ms-3">
                                                             <input type="checkbox" class="form-check-input" id="Results">
                                                             <label class="form-check-label" for="Results"> 200 Results</label>
                                                         </div>
                                                         <div class="leftnavResultActionBtns d-flex ms-4">
                                                             <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-arrow-repeat"></i> Update</a>
                                                             <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-trash"></i> Delete</a>
-                                                            <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-play"></i> Report</a>
                                                             <div class="dropdown p-0">
                                                                 <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <i class="bi bi-three-dots-vertical"></i>
@@ -269,7 +273,6 @@
                                                         </div>
                                                     </div>
                                                     <div class="rightNavAction d-flex align-items-center">
-                                                        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser" aria-controls="offcanvasAddUser" href="javascript: void(0);" class="action-icon"> <i class="bi bi-person-plus"></i> Add New User </a>
                                                         <ul class="pagination mb-0 py-2">
                                                             <li class="page-item">
                                                                 <a class="page-link" href="#" aria-label="Previous">
@@ -310,7 +313,7 @@
                                                         <td>Group 1</td>
                                                         <td>Administrator</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td><span class="material-symbols-outlined">edit</span> <span class="material-symbols-outlined">delete</span></td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Jake O'Brien</th>
@@ -320,7 +323,7 @@
                                                         <td>Group 1</td>
                                                         <td>Administrator</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td><span class="material-symbols-outlined">edit</span> <span class="material-symbols-outlined">delete</span></td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Wilson O'Connor</th>
@@ -330,7 +333,7 @@
                                                         <td>Group 1</td>
                                                         <td>Administrator</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td><span class="material-symbols-outlined">edit</span> <span class="material-symbols-outlined">delete</span></td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Roberts Rodriguez</th>
@@ -340,7 +343,7 @@
                                                         <td>Group 1</td>
                                                         <td>Administrator</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td><span class="material-symbols-outlined">edit</span> <span class="material-symbols-outlined">delete</span></td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lam Williams</th>
@@ -350,7 +353,7 @@
                                                         <td>Group 1</td>
                                                         <td>Administrator</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td><span class="material-symbols-outlined">edit</span> <span class="material-symbols-outlined">delete</span></td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Gelbero Taylor</th>
@@ -360,23 +363,28 @@
                                                         <td>Group 1</td>
                                                         <td>Administrator</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td><span class="material-symbols-outlined">edit</span> <span class="material-symbols-outlined">delete</span></td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="tab-pane fade" id="bxRoles-tab-pane" role="tabpanel" aria-labelledby="bxRoles-tab" tabindex="0">
+                                            <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddRole" aria-controls="offcanvasAddRole" href="javascript: void(0);" class="addNewBtn action-icon"><span class="material-symbols-outlined">manage_accounts</span> Add New Role </a>
                                             <div class="col-12">
                                                 <div class="leftNavResult d-flex justify-content-between align-items-center py-2 px-4">
                                                     <div class="leftNavResultCount d-flex justify-content-between align-items-center">
-                                                        <div class="form-check">
+                                                        <form class="sidebar-search">
+                                                            <div class="input-group">
+                                                                <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                                                            </div>
+                                                        </form>
+                                                        <div class="form-check ms-4">
                                                             <input type="checkbox" class="form-check-input" id="Results">
                                                             <label class="form-check-label" for="Results"> 200 Results</label>
                                                         </div>
                                                         <div class="leftnavResultActionBtns d-flex ms-4">
                                                             <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-arrow-repeat"></i> Update</a>
                                                             <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-trash"></i> Delete</a>
-                                                            <a href="javascript: void(0);" class="action-icon col-auto"> <i class="bi bi-play"></i> Report</a>
                                                             <div class="dropdown p-0">
                                                                 <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
                                                                     <i class="bi bi-three-dots-vertical"></i>
@@ -395,7 +403,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="rightNavAction d-flex align-items-center">
-                                                        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddRole" aria-controls="offcanvasAddRole" href="javascript: void(0);" class="action-icon"> <i class="bi bi-person-plus"></i> Add New Role </a>
+                                                        
                                                         <ul class="pagination mb-0 py-2">
                                                             <li class="page-item">
                                                                 <a class="page-link" href="#" aria-label="Previous">
@@ -432,10 +440,7 @@
                                                         <td class="bxOpacity"><span class="badge-success-lighten">Active</span></td>
                                                         <td>True</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td>
-                                                            <span class="material-symbols-outlined">edit</span>
-                                                            <span class="material-symbols-outlined">delete</span>
-                                                        </td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>role:admin</th>
@@ -443,10 +448,39 @@
                                                         <td class="bxOpacity"><span class="badge-success-lighten">Active</span></td>
                                                         <td>True</td>
                                                         <td>12 Jan 2023, 12:00 PM</td>
-                                                        <td>
-                                                            <span class="material-symbols-outlined">edit</span> 
-                                                            <span class="material-symbols-outlined">delete</span>
-                                                        </td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>group1:administrator</th>
+                                                        <td>oliver.brown@email.com</td>
+                                                        <td class="bxOpacity"><span class="badge-success-lighten">Active</span></td>
+                                                        <td>True</td>
+                                                        <td>12 Jan 2023, 12:00 PM</td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>role1:admin</th>
+                                                        <td>jakeobrain@email.com</td>
+                                                        <td class="bxOpacity"><span class="badge-success-lighten">Active</span></td>
+                                                        <td>True</td>
+                                                        <td>12 Jan 2023, 12:00 PM</td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>group2:administrator</th>
+                                                        <td>oliver.brown@email.com</td>
+                                                        <td class="bxOpacity"><span class="badge-success-lighten">Active</span></td>
+                                                        <td>True</td>
+                                                        <td>12 Jan 2023, 12:00 PM</td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>role3:admin</th>
+                                                        <td>jakeobrain@email.com</td>
+                                                        <td class="bxOpacity"><span class="badge-success-lighten">Active</span></td>
+                                                        <td>True</td>
+                                                        <td>12 Jan 2023, 12:00 PM</td>
+                                                        <td><a href="#"><span class="material-symbols-outlined">edit</span></a><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
