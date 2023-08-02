@@ -357,14 +357,12 @@
   height: 100%;
   position: relative;
   overflow: hidden;
-  background: #0a0d1e;
+  background: #031126;
   box-shadow: 0px 3px 3px #0a0d1e;
-  border-radius: 4px;
-  border: 2px solid #252f69;
-  width: 960px;
-  max-width: calc(100% - 3rem);
+  border-radius: 0;
+  width: 100%;
   max-height: 480px;
-  margin: 3rem auto;
+  margin: 10px auto;
 }
 @media (max-width: 760px) {
   .app {
@@ -378,7 +376,7 @@
 }
 .header {
   height: 2.6rem;
-  background: #252f69;
+  background: #031126;
   overflow: hidden;
   font-size: 14px;
   font-weight: 700;
@@ -442,7 +440,7 @@
   word-break: break-word;
   white-space: pre-wrap;
   padding: 0.5rem;
-  background: #111631;
+  background: #051F44;
   color: #e8ebff;
 }
 .content #log a {
@@ -471,7 +469,7 @@
   white-space: pre-wrap;
   padding: 0;
   transition: background 500ms ease;
-  background: #171e44;
+  background: #051F44;
   color: #e8ebff;
 }
 .content #editor .CodeMirror {
@@ -483,7 +481,7 @@
   font-size: 13px;
   letter-spacing: 1.5px;
   transition: background 500ms ease;
-  background: #171e44;
+  background: #051F44;
   color: #e8ebff;
 }
 .content #editor .CodeMirror .CodeMirror-linenumber {
@@ -493,12 +491,12 @@
   border-left: 1px solid white;
 }
 .content #editor .cm-s-material-palenight {
-  background: #171e44;
+  background: #051F44;
   color: #e8ebff;
   height: 100%;
 }
 .content #editor .cm-s-material-palenight .CodeMirror-gutter {
-  background: #171e44;
+  background: #051F44;
   border-right: 1px solid #111631;
   user-select: none;
 }
@@ -580,6 +578,7 @@ table.table.table-dark td {
 }
 table.table.table-dark thead th {
   position: relative;
+  cursor: pointer;
 }
 
 .form-check {
@@ -605,7 +604,7 @@ table.table.table-dark th span.material-symbols-outlined {
   color: #FF3E3E;
   background-color: rgba(255, 62, 62, 0.28);
 }
-.bxOpacity{
+.bxOpacity {
   opacity: 1 !important;
 }
 .bxOpacity span {
