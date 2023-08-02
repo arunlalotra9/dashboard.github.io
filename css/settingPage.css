@@ -475,9 +475,8 @@
   line-height: 1.5;
   width: 100%;
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: bolder;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 14px;
   letter-spacing: 1.5px;
   transition: background 500ms ease;
   background: #051F44;
@@ -502,7 +501,7 @@
 .content #editor .cm-s-material-palenight:hover, .content #editor .cm-s-material-palenight:focus {
   transition: background 500ms ease;
   outline: none;
-  background: #151b3c;
+  background: #010d1e;
 }
 .clearing {
   animation: clear 800ms ease;
