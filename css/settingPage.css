@@ -532,7 +532,7 @@
 .nav-tabs {
   border-bottom: 1px solid #031126;
 }
-div#myTabContent{
+div#myTabContent .leftNavResult {
   background-color: #031126;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -546,9 +546,6 @@ div#myTabContent{
 }
 .leftnavResultActionBtns a {
   margin: 0 10px;
-}
-table.table.table-dark{
-  background-color: #020D1F;
 }
 table.table.table-dark {
   --bs-table-bg: transparent;
@@ -579,4 +576,43 @@ input#top-search {
 }
 table.table.table-dark td {
   opacity: .5;
+  padding-top: 20px;
+}
+table.table.table-dark thead th {
+  position: relative;
+}
+
+.form-check {
+  margin-bottom: 0;
+  min-height: 0;
+}
+.leftNavResultCount label.form-check-label {
+    margin-left: 5px;
+}
+table.table.table-dark th span.material-symbols-outlined {
+  position: absolute;
+  opacity: .5;
+}
+.badge-success-lighten {
+  color: #1DEBBA;
+  background-color: rgba(29, 235, 186, 0.28);
+}
+.badge-warning-lighten {
+  color: #F5C304;
+  background-color: #4D4A23;
+}
+.badge-danger-lighten {
+  color: #FF3E3E;
+  background-color: rgba(255, 62, 62, 0.28);
+}
+.bxOpacity{
+  opacity: 1 !important;
+}
+.bxOpacity span {
+  font-size: 12px;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+  padding: 3px 0;
+  width: 70px;
 }
