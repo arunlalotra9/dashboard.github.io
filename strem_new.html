@@ -12,7 +12,30 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LikaloLLC/tourguide.js@0.2.0/tourguide.css">
 
+<style>
+.modal-content {
+background-color: #061731;
+}
+.guided-tour-step.active .guided-tour-step-tooltip {
+background: linear-gradient(134.75deg, #061731 4%, #112F5C 100%);
+color: #fff;
+}
+.guided-tour-step.active .guided-tour-step-tooltip.guided-tour-arrow-top .guided-tour-arrow {
+    border-bottom-color: #061731;
+}
+.guided-tour-step.active .guided-tour-step-tooltip .guided-tour-step-button-complete {
+    color: #112F5C;
+}
+.guided-tour-step.active .guided-tour-step-tooltip .guided-tour-step-footer-bullets ul li {
+    background-color: #3b7ad8;
+    border: 0;
+}
+.guided-tour-step.active .guided-tour-step-tooltip .guided-tour-step-footer-bullets ul li.current {
+    background-color: #fff;
+}
+</style>
     <title>Binaryflux Stream</title>
   </head>
   <body class="">
@@ -23,7 +46,7 @@
                 <div class="bxHeaderLeftNav d-flex align-items-center">
                     <div class="float-star order-md-2">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0" data-tour="step: 1; title: Your cart; content: Example cart description text displays cart description">
                                 <li class="nav-item dropdown dropdown-fullwidth">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Stream
@@ -90,7 +113,7 @@
                 </div>
                 <!-- topbar-menu float-end right side -->
 
-                <ul class="list-unstyled topbar-menu float-end mb-0 d-flex align-items-center">
+                <ul class="list-unstyled topbar-menu float-end mb-0 d-flex align-items-center" data-tour="step: 2; title: Right nav; content: Example cart description text displays cart description">
                     
                     <li class="search-list active">
                         <a class="nav-link" href="search.html">
@@ -805,10 +828,50 @@
         
     </div>
 
+    <div id="startTour" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            
+            <div class="modal-body text-center">
+              <h1>Full screen Transparent Bootstrap Modal</h1>
+              <p>FEEL FRREE TO GET YOUR MODAL CODE HERE FOLKS.</p>
+              <button class="btn btn-success btn-lg btn-block" data-dismiss="modal" id="tourbutton">
+                Start tour
+              </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default text-white" data-dismiss="modal">Skip</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>    
     <script src="js/select2.min.js"></script> 
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/LikaloLLC/tourguide.js@0.2.0/tourguide.min.js"></script>
+    <script>
+        $(document).ready(function(){       
+            $('#startTour').modal('show');
+
+            $('#startTour').click(function() {
+                $(this).modal('hide');
+            });
+        }); 
+        /*
+        * Initialize Tourguide.js
+        */
+        var tourguide = new Tourguide();
+        function startTour() {
+            tourguide.start();
+        }
+        // Attach the touruide start evene to the button press
+        var tourbutton = document.getElementById("tourbutton");
+        tourbutton.addEventListener("click", startTour);
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
