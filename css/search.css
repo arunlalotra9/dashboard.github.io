@@ -153,6 +153,7 @@ textarea:focus {
   right: 0;
   margin: 0 auto;
   padding: 0 0 20px 0;
+  z-index: 9;
 }
 .Foot_Bottom_Search_Form {
   padding: 20px 15px;
@@ -377,6 +378,7 @@ color: rgba(255, 255, 255, 0.5);
   padding: 20px 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
+  clear: both;
 }
 .DopplerInputFiled:hover .editBtn{
   visibility: visible;
@@ -562,4 +564,25 @@ color: rgba(255, 255, 255, 0.5);
   display: inline-block;
   color: #3C92FF;
   vertical-align: middle;
+}
+
+@media(max-width: 767px){
+.Foot_Bottom_Search {
+    width: 99%;
+}
+.dooplerCardBoxLeft {
+  position: relative;
+  margin-left: 0;
+  max-width: max-content;
+  text-align: left;
+}
+.dooplerCardBoxLeft .text-end {
+  text-align: left !important;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+.circleBorder{
+  left: 0;
+}
+
 }

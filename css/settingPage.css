@@ -641,3 +641,14 @@ table.table.table-dark th span.material-symbols-outlined {
   top: -40px;
   padding-left: 40px;
 }
+.divScorll{
+  overflow:hidden;
+    overflow-y: scroll;
+    height: 500px;
+}
+table.table.table-dark thead th {
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  background-color: #000;
+}
