@@ -14,7 +14,7 @@
     <title>Binaryflux 404</title>
   </head>
   <body class="bxErrorPage">
-    <div class="center-container  d-none 404">
+    <div class="center-container  404">
         <div class="container text-center">
             <h1 class="text-white mb-4">We are sorry, the page you requested cannot be found.</h1>
             <h4 class="text-white mb-4">The URL may be misspelled or the page you're looking for is no longer available.</h4>
@@ -24,11 +24,11 @@
                 <span class="img"></span>
             </div>
             <div class="bxLgIcons">
-                <img src="images/gif-1.gif" alt="gif-1.gif" width="250">
+                <img src="images/gif-a1.gif" alt="gif-1.gif" width="250">
             </div>
         </div>
     </div>
-    <div class="center-container 500">
+    <div class="center-container  d-none 500">
         <div class="container text-center">
             <h1 class="text-white mb-4">Internal server error.</h1>
             <h4 class="text-white mb-4">We are currently trying to fix the problem.</h4>
@@ -47,19 +47,13 @@
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <script>
-        //Creates an event that fires every time the mouse moves over any div with the class of "img".
-        $(".img").mousemove(function(event){        
-            //Both the x and y value are calculated by taking the mouse x,y position on the page and subtracting it from the x,y position of the image on the page. "this" is the hovered element with the class of "img"
+        $(".img").mousemove(function(event){
             var mousex = event.pageX - $(this).offset().left;
             var mousey = event.pageY - $(this).offset().top;
-            //If you just used the mouse position values the translation effect will only go up and to the right, by subtracting half of the length / width of the imagevfrom the values  we get either a positive or negitive number so that the image will move in any direction.
-            //The 40 controls the amount of "movement" that will happen by giving us a smaller number, feel free to change it to get the effect that you want.
             var imgx = (mousex - 300) / 40;
-            var imgy = (mousey - 200) / 40;            
-            //Adds a translation css styles to the image element
+            var imgy = (mousey - 200) / 40;
             $(this).css("transform", "translate(" + imgx + "px," + imgy + "px)");
         });
-        //This function will fire every time the user mouses off of the image. It resets the translation back to 0.
         $(".img").mouseout(function(){
             $(this).css("transform", "translate(0px,0px)");
         });

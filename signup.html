@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" class="" data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <title>Binaryflux Signup</title>
+    <style>
+        .bxRightBox .form-control {
+            background-color: #010F33;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #fff;
+        }
+        .bxRightBox .pnul span{
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .bxRightBox .pnul a{
+            opacity: 1;color: #fff;text-decoration: underline;
+        }
+        .bxRightBox .pnul a:hover{color: rgba(255, 255, 255, 0.7);text-decoration: none;
+        }
+        .signUpBack a{color: #3C92FF;}
+        .signUpBack a:hover{opacity: .8;}
+        ul.signUpFeatures li:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            border: 1px solid #3C92FF;
+            border-radius: 20px;
+            left: 0;
+            top: 4px;
+        }
+        ul.signUpFeatures li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+        }
+        ul.signUpFeatures {
+            margin-top: 20px;
+            padding: 0;
+        }
+        @media (max-width: 767px) {
+            .bxLogin::before {
+               display: none;
+            }
+        }
+    </style>
+  </head>
+  <body class="">
+    
+    <div id="wrapper" class="bxLogin">
+      <div class="container-fulid">
+
+        <div class="row align-items-center bxLoginArea m-0">
+
+          <div class="col-md-6 p-0 my-md-0 my-5">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-6 offset-sm-0 px-md-0 px-3">
+              <div class="bxLeftBox text-white">
+                <a href="login.html" class="mb-3 d-block"><img src="images/logo.png" alt="Binaryflux"></a>
+                <h2 class="bxLgSize">Start your </br> 30-day free trial</h2>
+                <ul class="signUpFeatures">
+                    <li>Gain immediate access to the Data Cloud</li>
+                    <li>Enable your most critical data workloads</li>
+                    <li>Scale instantly, elastically, and near-infinitely across public clouds</li>
+                    <li>Binaryflux is HIPAA, PCI DSS, SOC 1 and SOC 2 Type 2 compliant, and FedRAMP Authorized</li>
+                </ul>                
+                <a href="#">Dive deep to know more.</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 p-0 my-md-0 my-5">
+            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-6 offset-sm-0 px-md-0 px-3">
+              <div class="bxRightBox text-white">
+                <form action="">
+                    <p>Sign up to continue</p>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="firstname">
+                        <label for="floatingInput">First Name*</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="lastname">
+                        <label for="floatingInput">Last Name*</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="lastname">
+                        <label for="floatingInput">Email*</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="company" class="form-control" id="floatingInput" placeholder="lastname">
+                        <label for="floatingInput">Company*</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select form-control" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Business Executive</option>
+                            <option value="1">BI / Analyst</option>
+                            <option value="2">Business Executive</option>
+                            <option value="3">Consultant</option>
+                        </select>
+                        <label for="floatingSelect">Role*</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select form-control" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>India</option>
+                            <option value="1">India</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelect">Country*</label>
+                    </div>
+                    <div class="pnul mb-3">
+                        <span>By clicking the button below you understand that Binaryflux will process your personal information in accordance with its <a href="#"> Privacy Notice</a>. I may withdraw my consent through <a href="#"> unsubscribe links</a> at any time.</span>
+                    </div>
+                    <button type="button" class="btn btn-lg bxBtn-primary w-100" id="liveToastBtn">Continue</button>
+                    <div class="signUpBack mt-3 text-center">
+                        <span>or <a href="#">sign in to an existing account</a></span>
+                    </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
