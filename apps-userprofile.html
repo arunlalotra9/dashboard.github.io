@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" class="bxHtml" data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/settingPage.css" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+    <title>Binaryflux Setting</title>
+    <style>
+        .location, .edit-location,
+        .profile, .edit-profile {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select:focus,
+        input[type="text"]:focus, input[type="email"]:focus, input[type="file"]:focus{
+            outline: none;
+            border: 1px solid rgba(255,255,255,0);
+            background-color: #010F33;
+            box-shadow: none;
+        }
+        select,
+        input[type="text"], input[type="email"], input[type="file"] {
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0);
+            border-radius: 3px;
+            background-color: #031126;
+            width: 100%;
+            border: 0;
+            min-height: 60px;
+            padding: 10px 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .profile-pic {
+            max-width: 250px;
+            border-radius: 50%;
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+        .location_page_box,
+        .profile_page_box {
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+        }
+        .profile_btn a,  .location_btn a{
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            text-align: center;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .profile_btn a:hover, .location_btn a:hover{
+            background-color: rgba(255,255,255,0.3);
+        }
+        .profile_page_box label, .location_page_box label{
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.3);
+        }
+        .intl-tel-input,
+        .iti{
+            width: 100%;
+        }
+        .iti__country-list {
+            background-color: #010F33;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+  </head>
+  <body class="bxSettingPage">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
+        <div class="container-fluid p-md-2 p-0">
+            <div class="bxHeaderLeftNav d-flex align-items-center">
+                <div class="float-star order-md-2">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown dropdown-fullwidth">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Stream
+                                <small>Is a collection of use cases to enable detection and mitigation in a single package.</small>
+                                </a>
+                                <ul class="dropdown-menu  px-5 py-4">
+                                    <div class="row mb-4">
+                                        <div class="col-md-4 mb-4 mb-lg-0 equal-height-column">
+                                            <div class="bxNavlist p-3">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="btn btn-dark"><span class="material-symbols-outlined">stream</span></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="stream.html">
+                                                            <h5>Stream</h5>
+                                                            <small>Is a collection of use cases to enable detection and mitigation in a single package. </small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4 mb-lg-0 equal-height-column">
+                                            <div class="bxNavlist p-3">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="btn btn-dark"><span class="material-symbols-outlined">hub</span></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="doppler.html">
+                                                            <h5>Doppler</h5>
+                                                            <small>Is a next generation neural network analytics platform helps you triage incidents in realtime.</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4 mb-lg-0 equal-height-column">
+                                            <div class="bxNavlist p-3">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="btn btn-dark"><span class="material-symbols-outlined">dashboard</span></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="dashboard_page.html">
+                                                            <h5>Dashboard</h5>
+                                                            <small>Configurable dashboards provides a interactive way to get a birds eye view.</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="bi bi-list text-white"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand order-md-1" href="#"><img src="images/logo.png" alt="logo" height="35"></a>
+                
+            </div>
+            <!-- topbar-menu float-end right side -->
+
+            <ul class="list-unstyled topbar-menu float-end mb-0 d-flex align-items-center">
+                
+                <li class="search-list active">
+                    <a class="nav-link" href="search.html">
+                        <img src="images/search.svg" alt="search">
+                    </a>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="bi bi-bell"></i>  
+                        <span class="noti-icon-badge"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
+                        <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-0 font-16 fw-semibold"> Notification</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                        <small>Clear All</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
+                            View All
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <li class="dropdown setting-list">
+                    <a class="nav-link dropdown-toggle nav-setting arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                        <a href="manage_organizations.html" class="dropdown-item notify-item">
+                            <span>Manage Organizations</span>
+                        </a>      
+                        <!-- item-->
+                        <a href="features.html" class="dropdown-item notify-item">
+                            <span>Features</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <span>Setting 2</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="dropdown user-list">
+                    <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="account-user-avatar"> 
+                            <img src="images/avatar-1.png" alt="user-image" class="rounded-circle">
+                        </span>
+                        <span class="account-user-name d-none d-md-block">Sankalp Pandey </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                        <!-- item-->
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">Welcome !</h6>
+                        </div>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="bi bi-person-circle me-1"></i>
+                            <span>My Account</span>
+                        </a>      
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="bi bi-headset me-1"></i>
+                            <span>Support</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="bi bi-door-open me-1"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+                
+            </ul><!-- topbar-menu float-end right side -->
+        </div>
+    </nav>
+    <div class="container-fluid py-5 mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="leftside-menu-container" class="setting_Left_SideBar h-100">
+                            <button class="d-block d-md-none bxMobile"><span class="material-symbols-outlined">clear_all</span></button>
+                            <div class="leftbar-area">
+                                <h2 class="m-0 text-white">Setting</h2>
+                                <ul class="side-nav mt-3">
+                                    <h6 class="text-white">Billing</h6>
+                                    <li class="side-nav-item">
+                                        <a href="apps-billing.html" class="side-nav-link">
+                                            Billing & Payments
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="side-nav mt-3">
+                                    <h6 class="text-white">User Settings</h6>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            Membership
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item menuitem-active">
+                                        <a href="apps-userprofile.html" class="side-nav-link">
+                                            Contact Info
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            Password & Security
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            My Team
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            Notification Settings
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 ">
+                        <div class="bxContent col-12 bxContent_head">
+                            <div class="row profile">
+                                <h4 class="m-0 text-white">My Account</h4>
+
+                                <div class="profile_page_box mt-3 py-4 px-5">
+                                    <div class="profile_btn float-end">
+                                        <a id="editButton" onclick="editProfile()"><span class="material-symbols-outlined">edit</span></a>
+                                    </div>
+                                    <div class="profile_details">
+                                        <label for="name">Name</label>
+                                        <p>John Doe</p>
+                                        <label for="email">Email</label>
+                                        <p>john@example.com</p>
+                                        <label for="company">Company</label>
+                                        <p>Binaryflux</p>
+                                        <label for="role">Role</label>
+                                        <p>Business Executive</p>
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                        
+                            <div class="edit-profile hidden">
+
+                                <h4 class="m-0 text-white">Edit Profile</h4>
+                                <form class="profile_page_box mt-3 py-4 px-5">
+                                    <label for="firstname">First Name:</label>
+                                    <input type="text" id="firstname" name="firstname" value="John">
+                                    <br>
+                                    <label for="lastname">Last Name:</label>
+                                    <input type="text" id="lastname" name="name" value="Doe">
+                                    <br>
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" value="john@example.com">
+                                    <br>
+                                    <label for="role">Role:</label>
+                                    <input type="text" id="role" name="role" value="Business Executive">
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-info text-white" type="submit">Save Changes</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="bxContent col-12 bxContent_head">
+                            <div class="row location">
+                                <h4 class="m-0 text-white">Location</h4>
+                                
+                                <div class="d-flex  align-items-start justify-content-between location_page_box mt-3 py-4 px-5">
+                                    <div class="location_page">
+                                        <label for="location">Location</label>
+                                        <p>India</p>
+                                        <label for="name">Time Zone</label>
+                                        <p>UTC+05:30 Mumbai, Kolkata, Chennai, New Delhi</p>
+                                        <label for="email">Address</label>
+                                        <p>EON Free Zone, <br> Kharadi,<br> Pune,<br> Maharashtra <br> 411014</p>
+                                        <label for="company">Phone</label>
+                                        <p>+91 7837551013</p>
+                                    </div>
+                                    <div class="location_btn">
+                                        <a id="editButton" onclick="editlocation()"><span class="material-symbols-outlined">edit</span></a>
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                        
+                            <div class="edit-location hidden">
+
+                                <h4 class="m-0 text-white">Edit location</h4>
+                                <form class="location_page_box mt-3 py-4 px-5">
+                                    <label for="country">Country</label>
+                                    <select id="timezone" name="timezone">
+                                        <option value="India">India</option>
+                                        <option value="Canada">Canada</option>                                        
+                                        <option value="America">America</option>
+                                        <option value="Los_Angeles">Los Angeles</option>
+                                    </select>
+                                    <br>
+                                    <label for="timezone">Time Zone:</label>
+                                    <select id="timezone" name="timezone">
+                                        <option value="America/New_York">UTC+05:30 Mumbai, Kolkata, Chennai, New Delhi</option>
+                                        <option value="America/Chicago">Central Time (US & Canada)</option>
+                                        <option value="America/Denver">Mountain Time (US & Canada)</option>
+                                        <option value="America/Los_Angeles">Pacific Time (US & Canada)</option>
+                                    </select>
+                                    <br>
+                                    <label for="streetaddress">Street Address:</label>
+                                    <input type="text" name="text" value="EON Free Zone">
+                                    <input type="text" name="text" value="Kharadi">
+                                    <br>
+                                    <label for="city">City:</label>
+                                    <input type="text" id="city" name="city" value="Pune">
+                                    <br>
+                                    <label for="State/Province">State/Province:</label>
+                                    <input type="text" id="State/Province" name="State/Province" value="Maharashtra">
+                                    <br>
+                                    <label for="ZIP_Postal_code">ZIP/Postal code:</label>
+                                    <input type="text" id="ZIP_Postal_code" name="ZIP_Postal_code" value="411014">
+                                    <br>
+                                    <label for="Phone">Phone:</label>
+                                    <input type="text" id="mobile_code" class="form-control" placeholder="7837551013" name="name">
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-info text-white" type="submit">Save Changes</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script>
+        function editProfile() {
+            var profileSection = document.querySelector('.profile');
+            var editSection = document.querySelector('.edit-profile');
+            
+            profileSection.style.display = 'none';
+            editSection.style.display = 'block';
+        }
+        function editlocation() {
+            var profileSection = document.querySelector('.location');
+            var editSection = document.querySelector('.edit-location');
+            
+            profileSection.style.display = 'none';
+            editSection.style.display = 'block';
+        }
+    </script>
+     <script>
+        // -----Country Code Selection
+        $("#mobile_code").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+      </script>
+  </body>
+</html>
