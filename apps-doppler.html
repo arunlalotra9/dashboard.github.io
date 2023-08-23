@@ -144,6 +144,7 @@
         .text-bg-dark.border-bottom{
             border-color: rgba(255, 255, 255, 0.2) !important;
         }
+        .bx_modal_login .modal-content,
         header.header.fixed-top{
             background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
         }
@@ -154,7 +155,18 @@
         ::-webkit-scrollbar-thumb {background: #102A47;}
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {background: #102A47;}
-        
+        .bx_modal_login .modal-content .modal-header, .bx_modal_login .modal-content .modal-footer{
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .bx_modal_login .form-control{
+            background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .bx_modal_login .form-control:focus{box-shadow: none;outline: none;}
+        .modal-backdrop.show {
+            opacity: .9;
+            background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
+        }
     </style>
   </head>
   <body class="">
@@ -164,10 +176,10 @@
             <div class=" text-bg-dark border-bottom">
                 <div class="container">
                     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-decoration-none">
-                        <img height="30" src="images/logo.png" alt="logo">
-                    </a>
-            
+                        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-decoration-none">
+                            <img height="30" src="images/logo.png" alt="logo">
+                        </a>
+                
                         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                             <li>
                                 <a href="#" class="nav-link text-white">
@@ -1684,12 +1696,56 @@
 
     </div>
 
+    <div class="bx_modal_login modal  fade" id="onload" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <!-- Add this line to your code -->
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="mx-auto" src="images/logo.png" alt="">
+                </div>
+                <div class="modal-body text-center">
+                    <div class="my-4 d-block mb-5 px-5">
+                        <h2>Your data, like you never knew it.</h2>
+                        <p>Binary Flux enables IT Operations and Cyber Security Professionals to store, analyse and investigate their ecosystem data powered by deep learning & artificial neural networking.</p>
+                    </div>
+
+                    <form action="" class="col-md-6 mx-auto pb-5">
+                        <h5>Login to continue</h5>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="floatingInput" placeholder="id">
+                          <label for="floatingInput">Account ID</label>
+                          <div class="bxErrorMessage d-none">Please enter your account</div>
+                          <small class="d-block text-end mb-3 mt-2 ">Required</small>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="floatingInput" placeholder="Username">
+                          <label for="floatingInput">Username</label>
+                          <div class="bxErrorMessage d-none">Please enter your username</div>
+                          <small class="d-block text-end mb-3 mt-2 ">Required</small>
+                        </div>
+                        
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                          <label for="floatingPassword">Password</label>
+                          <div class="bxErrorMessage d-none">Please enter your password</div>
+                          <small class="d-block text-end mb-3 mt-2">Required</small>
+                        </div>
+                        <button type="button" class="btn btn-lg bxBtn-primary w-100" data-bs-dismiss="modal" id="liveToastBtn">Apply</button>
+      
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>    
     <script src="js/select2.min.js"></script> 
     <script src="js/custom.js"></script>
 
     <script>
+        window.onload = () => {
+        $('#onload').modal('show');
+        }
         document.addEventListener("DOMContentLoaded", function() {
             var dropdownHeader = document.querySelector(".dropdown-header");
             var dropdownMenu = document.querySelector(".dropdown-menu");
