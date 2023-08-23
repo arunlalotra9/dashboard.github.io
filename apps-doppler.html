@@ -15,42 +15,60 @@
 
     <title>Binaryflux Doppler</title>
     <style>
+        .bxLeftSideDoppler_filer  .bxSEDFoot.bxTagsAddRemove.p-2.d-flex {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .tag-field {
+            height: 30px;
+        }
         #bxFullwidthContent {
-            margin-top: 0;
+            margin-top: 62px;
         }
         .bxPosition_sticky {
             position: sticky;
-            top: 0;
+            top:80px;
             border-top: 0;
             border-bottom: 0;
         }
         .bxLSDFilter_head{
             border:none;
         }
-        .bxLeftSideDoppler_filer.bxBG_secondry.p-3.mb-2.bxPosition_sticky {
+        .bxRightSideDoppler.p-3.pb-1.bxPosition_sticky,
+        .bxCenterSideDoppler_SearchResult.bxBG_secondry.p-3.mb-2{
+            margin-top: 20px ;
+        }
+        .bxLeftSideDoppler_filer.bxBG_secondry.mb-2.bxPosition_sticky {
             padding: 0 !important;
             border: none;
+            background-color: #090b19;
+            border-top: 10px solid #090b19;
+            top: 62px;
         }
-        .bxCADSearch_head input{
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .bxLeftSideDoppler_filer{
+        .bxCADSearch_head input, .bxLeftSideDoppler_filer{
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .bxRightSideDoppler {
             border: 1px solid rgba(255, 255, 255, 0.2);
             margin-top: 0;
         }
+        .bxDopplerAutomationOffcanvas h6,
+        .sidebar-search,
         .bxSEDHead,
         .bxOutliersCardBox .tab-content,
         .bxOutliersCardBox.p-3,
         [data-bs-theme=dark] body{
             background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
-            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px 1px rgba(255, 255, 255, 0.05); */
+        }
+        .bxDopplerAutomationOffcanvas .card{
+            border-left: 0;
+            border-right: 0;
+        }
+        .bxDopplerAutomationOffcanvas .card:hover {
+            background: #1a447840;
         }
         .bxBG_secondry{
             background-color: transparent;
-            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px 1px rgba(255, 255, 255, 0.05); */
         }
         .bxCenterSideDoppler_SearchResult {
             background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
@@ -58,16 +76,22 @@
         .offcanvas-footer.bxPosition_sticky{
             position: relative;
         }
-
+        .offcanvas-header .bxSEDHead {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        .border-bottom {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        .comment-area-box .bg-light, textarea.form-control,
+        .offcanvas,
         #bxCustomDateTime input,
         .bxLSDFilter_head input[type="radio"].toggle + label:after,
         .bxSEDFoot{
             background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
-            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px 1px rgba(255, 255, 255, 0.05); */
         }
 
         .bxDopplerEventDetection{
-            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px 1px rgba(255, 255, 255, 0.05); */
             border: none;
         }
         .bxOutliersCardBox .tab-content{
@@ -116,17 +140,77 @@
         .bxFormCheck {
             margin-bottom: 0px;
         }
+        .nav-link span{ text-align: center;}
+        .text-bg-dark.border-bottom{
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+        header.header.fixed-top{
+            background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);
+        }
+        ::-webkit-scrollbar {width: 6px;}
+        /* Track */
+        ::-webkit-scrollbar-track {background: #090B19;}
+        /* Handle */
+        ::-webkit-scrollbar-thumb {background: #102A47;}
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {background: #102A47;}
+        
     </style>
   </head>
   <body class="">
     
-    <div id="wrapper" class="DopplerPage">       
+    <div id="wrapper" class="DopplerPage">
+        <header class="fixed-top header">
+            <div class=" text-bg-dark border-bottom">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-decoration-none">
+                        <img height="30" src="images/logo.png" alt="logo">
+                    </a>
+            
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">dashboard</span>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">stream</span>
+                                    Stream
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-primary">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">hub</span>
+                                    Doppler
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class="d-block mx-auto mb-1 material-symbols-outlined">corporate_fare</span>
+                                    Organization
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">person</span>
+                                    User-ID
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </header>     
         <div class="fullwidth main-inner" id="bxFullwidthContent">
-            <div class="container p-4">
+            <div class="container">
                 <div class="row">
                     <div class="col-xxl-3 col-md-4 mb-3">
                         <form class="bxLeftSideDoppler">
-                            <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2 bxPosition_sticky">
+                            <div class="bxLeftSideDoppler_filer bxBG_secondry mb-2 bxPosition_sticky">
                                 <div class="bxLSDFilter_head bxBG_primary">
                                     <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
                                     <label for="toggle-on" class="bxToggleBtn text-uppercase">Outliers <span>12K</span></label>
@@ -426,7 +510,7 @@
                         </form>
                     </div>
                     <div class="col-xxl-6 col-md-6 mb-5">
-                        <div class="bxCenterSideDoppler_SearchResult bxBG_secondry p-3 mb-2 bxPosition_sticky">
+                        <div class="bxCenterSideDoppler_SearchResult bxBG_secondry p-3 mb-2">
                             <div class="bxCADSearch_head bxBG_primary">
                                 <div class="input-group">
                                     <input type="search" class="form-control" placeholder="Type here..." id="top-search">                             
