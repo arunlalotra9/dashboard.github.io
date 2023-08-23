@@ -8,98 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/settingPage.css" rel="stylesheet">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    
 
     <title>Binaryflux Setting</title>
-    <style>
-        .bill_payments, .edit-bill_payments,
-        .location, .edit-location,
-        .profile, .edit-profile {
-            max-width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            margin-top: 0;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        select:focus,
-        input[type="text"]:focus, input[type="email"]:focus, input[type="file"]:focus{
-            outline: none;
-            border: 1px solid rgba(255,255,255,0.2);
-            background-color: #010F33;
-            box-shadow: none;
-        }
-        select,
-        input[type="text"], input[type="email"], input[type="file"] {
-            width: 100%;
-            padding: 8px 15px;
-            margin-bottom: 10px;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 3px;
-            background-color: #010F33;
-            height: 50px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        
-        .profile-pic {
-            max-width: 250px;
-            border-radius: 50%;
-            display: block;
-        }
-        .hidden {
-            display: none;
-        }
-        .location_page_box,
-        .profile_page_box {
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-        }
-        .profile_btn a,  .location_btn a{
-            height: 40px;
-            width: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 40px;
-            text-align: center;
-            line-height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        .profile_btn a:hover, .location_btn a:hover{
-            background-color: rgba(255,255,255,0.3);
-        }
-        .profile_page_box label, .location_page_box label{
-            font-size: 18px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.3);
-        }
-        .intl-tel-input,
-        .iti{
-            width: 100%;
-        }
-        .iti__country-list {
-            background-color: #010F33;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-    </style>
   </head>
   <body class="bxSettingPage">
 
@@ -265,7 +181,7 @@
     </nav>
     <div class="container-fluid py-5 mt-5">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-11">
                 <div class="row">
                     <div class="col-md-3">
                         <div id="leftside-menu-container" class="setting_Left_SideBar h-100">
@@ -276,6 +192,7 @@
                                     <h6 class="text-white">Billing</h6>
                                     <li class="side-nav-item  menuitem-active">
                                         <a href="apps-billing.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">credit_card</span>
                                             Billing & Payments
                                         </a>
                                     </li>
@@ -283,27 +200,26 @@
                                 <ul class="side-nav mt-3">
                                     <h6 class="text-white">User Settings</h6>
                                     <li class="side-nav-item">
-                                        <a href="#" class="side-nav-link">
-                                            Membership
-                                        </a>
-                                    </li>
-                                    <li class="side-nav-item">
                                         <a href="apps-userprofile.html" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">person</span>
                                             Contact Info
                                         </a>
                                     </li>
                                     <li class="side-nav-item">
                                         <a href="#" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">password</span>
                                             Password & Security
                                         </a>
                                     </li>
                                     <li class="side-nav-item">
                                         <a href="#" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">group_add</span>
                                             My Team
                                         </a>
                                     </li>
                                     <li class="side-nav-item">
                                         <a href="#" class="side-nav-link">
+                                            <span class="material-symbols-outlined me-3">edit_notifications</span>
                                             Notification Settings
                                         </a>
                                     </li>
@@ -312,67 +228,284 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <div class="bxContent col-12 bxContent_head">
+                        <h4 class="mb-4 text-white ms-3">Manage billing methods</h4>
+                        <div class="row g-2">
+                            <div class="bxContent col-md-4 p-0">
+                                <div class="row card_box subscription  bxContent_head">
+                                    <h6 class="m-0 text-white">Subscription</h6>                                    
+                                    <div class="profile_page_box mt-3 py-3 px-4 mb-4">
+                                        <div class="profile_btn float-end">
+                                            <a href="#" id="editButton" onclick="editProfile()"><span class="material-symbols-outlined">edit</span></a>
+                                        </div>
+                                        <div class="profile_page w-100">                                        
+                                            <label for="renewal_date">Renewal Date</label>
+                                            <p class="m-0">May 9, 2024 </p>
+                                            <div class="d-flex justify-content-between align-items-center my-3">
+                                                <div class="ssAutoRenewSection">
+                                                    <small class="d-block"><i></i> Enable auto renew</small>
+                                                    <input id="toggle-one" checked type="checkbox">
+                                                    <label for="enableauto" data-on-label="On" data-off-label="Off"></label>
+                                                </div>
+                                                <span type="button" class="btn btn-outline-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#centermodal">Renew Now</span>
+                                            </div>
 
-                            <h4 class="m-0 text-white ms-5">Manage billing methods</h4>
-
-                            <div class="row bill_payments">
-
-                                <h6 class="m-0 text-white">Subscription</h6>
-                                
-                                <div class="d-flex profile_page_box align-items-start justify-content-between mt-3 p-5">
-                                    <div class="profile_page">
-                                        
-                                        <label for="renewal_date">Renewal Date</label>
-                                        <p>May 9, 2024</p>
-                                        <label for="licenses">Licenses</label>
-                                        <p>2x Enterprise Annual</p>
-                                        <label for="additional_usage">Additional Usage</label>
-                                        <p>Billed monthly on the 8th </p>
-                                    </div>
-                                    <div class="profile_btn">
-                                        <a href="#" id="editButton" onclick="editProfile()"><span class="material-symbols-outlined">edit</span></a>
-                                    </div>
+                                            <label for="licenses">Licenses</label>
+                                            <p class="mb-3">Enterprise Mode</p>
+                                            
+                                            <label for="additional_usage">Additional Usage</label>
+                                            <p>Billed monthly on the 8th </p>
+                                        </div>                                        
+                                    </div>                                        
                                 </div>
+
+                                <div class="row card_box payments_method bxContent_head">
+
+                                    <h6 class="m-0 text-white">Payments Method <small>Your primary billing method is used for all recurring payments.</small></h6>
                                     
+                                    <div class="profile_page_box mt-3 py-3 px-4 mb-4">
+                                        <div class="profile_btn float-end">
+                                            <a href="#" id="editButton" onclick="editProfile()"><span class="material-symbols-outlined">edit</span></a>
+                                        </div>
+                                        <div class="profile_page w-100">                                        
+                                            <label for="renewal_date">Credit Card</label>
+                                            <p class="mb-0">visa *****1013 exp. 01/2030 </p>
+                                            <p class="mb-3"><span class="badge bg-success">Active</span></p>
+                                            <label for="renewal_date">Credit Card</label>
+                                            <p class="m-0">
+                                                visa *****0989 exp. 01/2028
+                                            </p>
+                                            <p><span class="badge bg-primary text-light">Set as primary</span></p>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                </div>
+
+                                <div class="row card_box payments_method bxContent_head">
+
+                                    <h6 class="m-0 text-white">Billing Email Recipients</h6>
+                                    
+                                    <div class="profile_page_box mt-3 py-3 px-4">
+                                        <div class="profile_btn float-end">
+                                            <a href="#" id="editButton" onclick="editProfile()"><span class="material-symbols-outlined">edit</span></a>
+                                        </div>
+                                        <div class="profile_page w-100">                                        
+                                            <label for="renewal_date">Account Admins</label>
+                                            <p class="mb-0">phoenix@binaryflux.xyz</p>
+                                            <p class="mb-3"><span class="badge bg-success">Active</span></p>
+                                            <label for="renewal_date">shiv_phoenix@binaryflux.xyz</label>
+                                            <p><span class="badge bg-primary text-light">Set as primary</span></p>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                        
+                                </div>
+                        
+
                             </div>
-                    
 
+                            <div class="bxContent col-md-8 p-0">
+
+                                <div class="row card_box subscription  bxContent_head">
+
+                                    <h6 class="m-0 text-white">Bills</h6>
+                                    
+                                    <div class="profile_page_box mt-3 py-3 px-4 mb-4">
+
+                                        <ul class="nav nav-tabs nav-bordered">
+                                            <li class="nav-item">
+                                                <a href="#upcoming_invoices" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    <span>Upcoming Invoices</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#billing_history" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    <span>Billing History</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="upcoming_invoices">
+                                                <div class="p-3 w-100">
+                                                    <div class="d-flex border_center align-items-center justify-content-between py-2">
+                                                        <span>Wed Aug 23 2024</span>
+                                                        <b>$936.00</b>
+                                                    </div>
+                                                    <div class="d-flex color_low align-items-center justify-content-between px-2">
+                                                        <span>Enterprise mode (2)</span>
+                                                        <span>936.00</span>
+                                                    </div>
+                                                    <div class="d-flex border_center align-items-center justify-content-between py-2">
+                                                        <span>Fri Aug 28 2024</span>
+                                                        <b>$56.00</b>
+                                                    </div>
+                                                </div>
+                                                <div class="p-4 w-100 billing_addtional">
+                                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                                        <span>Enterprise Mode (included with license) (2)</span>
+                                                        <span>$00.00</span>
+                                                    </div>
+                                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                                        <span>Enterprise Mode (5)</span>
+                                                        <span>$56.00</span>
+                                                    </div>
+                                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                                        <span>Network Domains and TCP Addresses (included with license) (5)</span>
+                                                        <span>$00.00</span>
+                                                    </div>
+                                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                                        <span>Enterprise Mode (included with license) (2)</span>
+                                                        <span>$00.00</span>
+                                                    </div>
+                                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                                        <span>Enterprise Mode (5)</span>
+                                                        <span>$56.00</span>
+                                                    </div>
+                                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                                        <span>Network Domains and TCP Addresses (included with license) (5)</span>
+                                                        <span>$00.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="billing_history">
+                                                <div class="p-3 w-100">
+                                                    <table class="table mb-0">
+                                                        <thead class="bxtable_light">
+                                                          <tr>
+                                                            <th>Payment ID</th>
+                                                            <th>Invoice ID</th>
+                                                            <th>Services</th>
+                                                            <th>Paid at</th>
+                                                            <th>Amount</th>
+                                                            <th></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody class="bxTable_data">
+                                                          <tr>
+                                                            <td>A_865854</td>
+                                                            <td>ARU-14547</td>
+                                                            <td>Enterprise Mode <small>(billed every 1 year) </small></td>
+                                                            <td>2023-08-23</td>
+                                                            <td>$12056.00</td>
+                                                            <td><a class="bxBtn_downLoadInvoice"><span class="material-symbols-outlined">chevron_right</span></a></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>                      
+
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="centermodal" tabindex="-1" role="dialog" aria-modal="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content py-3 px-4">
+                <div class="modal-header border-0 p-0 mb-2">
+                    <div class="ssPaymentCardHead p-3 w-100">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-globe h1 me-2 text-primary"></i>
+                            <p class="m-0"><span class="text-primary">Enterprise Mode</span><small class="d-block text-light">Deliver mission-critical performance, scale and reliability with Binaryflux Enterprise mode</small></p>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="modal-body p-0 mb-2">
+                    <form class="alCustomCardRadio" action="#">
+                        <p class="mb-2">
+                            <input type="radio" id="test1" name="radio-group" checked="">
+                            <label class="d-block py-2 ps-3 rounded" for="test1">
+                                <span class="ssPriceTag h4">$12 K <small class="text-muted"> / m</small></span>
+                                <span class="ssPriceYears d-block h6 mb-0">3 years</span>
+                            </label>
+                        </p>
+                        <p class="mb-2">
+                            <input type="radio" id="test2" name="radio-group">
+                            <label class="d-block py-2 ps-3 rounded" for="test2">
+                                <span class="ssPriceTag h4">$12 K <small class="text-muted"> / m</small></span>
+                                <span class="ssPriceYears d-block h6 mb-0">2 years</span>
+                            </label>
+                        </p>
+                        <p class="mb-2">
+                            <input type="radio" id="test3" name="radio-group">
+                            <label class="d-block py-2 ps-3 rounded" for="test3">
+                                <span class="ssPriceTag h4">$12 K <small class="text-muted"> / m</small></span>
+                                <span class="ssPriceYears d-block h6 mb-0">1 years</span>
+                            </label>
+                        </p>
+
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="ssPaymentCardSelected py-2 px-3">
+                                          <div class="d-flex align-items-center justify-content-between">
+                                                <span class="ssCardImages"><img src="images/visa.svg" alt="visa"></span>
+                                                <a href="#" class="ssPaymentCardChange badge bg-danger">change</a>
+                                          </div>
+                                          <div class="d-flex align-items-center justify-content-between">
+                                              <div class="ssCardFirst4no text-white h4 fw-bold">1242</div>
+                                              <div class="ssCardSecond4no text-white h4 fw-bold">....</div>
+                                              <div class="ssCardThird4no text-white h4 fw-bold">....</div>
+                                              <div class="ssCardFourth4no text-white h4 fw-bold">3021</div>
+                                          </div>
+                                          <div class="d-flex align-items-center justify-content-between">
+                                              <span class="ssCardHolderName text-white">Sham Sundar</span>
+                                              <span class="ssCardExpireDate text-white">05 / 26</span>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="ssPaymentCardSelected py-2 px-3">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <span class="ssCardImages"><img src="images/visa.svg" alt="visa"></span>
+                                            <a href="#" class="ssPaymentCardChange badge bg-danger">change</a>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="ssCardHolderSign ssSignFont text-lowercase bg-white text-dark px-2">Sham Sundar</div>
+                                            <div class="ssCardCVVnumber bg-white text-dark px-4">541</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="ssCardPaymentLayout">
+                            <div class="d-flex align-items-center justify-content-between border-bottom mb-1 pb-1">
+                                <span class="text-muted">Taxes &amp; Fees</span>
+                                <span class="text-light"> $40.20</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-muted fw-bold">Total</span>
+                                <span class="text-light fw-bold"> $337.20</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between border-0 p-0">
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-bs-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Complete Payment</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
     <script src="js/vendor.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>    
     <script src="js/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script>
-        function editProfile() {
-            var profileSection = document.querySelector('.profile');
-            var editSection = document.querySelector('.edit-profile');
-            
-            profileSection.style.display = 'none';
-            editSection.style.display = 'block';
-        }
-        function editlocation() {
-            var profileSection = document.querySelector('.location');
-            var editSection = document.querySelector('.edit-location');
-            
-            profileSection.style.display = 'none';
-            editSection.style.display = 'block';
-        }
+        $(function() {
+            $('#toggle-one, #toggle-two').bootstrapToggle();
+        })
     </script>
-     <script>
-        // -----Country Code Selection
-        $("#mobile_code").intlTelInput({
-            initialCountry: "in",
-            separateDialCode: true,
-            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-        });
-      </script>
+
   </body>
 </html>
