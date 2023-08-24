@@ -1,0 +1,1689 @@
+<!doctype html>
+<html lang="en" class="bxHtml" data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/material_icon.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+
+    <title>Binaryflux Doppler</title>
+   
+  </head>
+  <body class="">
+    
+    <div id="wrapper" class="DopplerPage">
+        <header class="fixed-top header">
+            <div class=" text-bg-dark border-bottom">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-decoration-none">
+                            <img height="30" src="images/logo.png" alt="logo">
+                        </a>
+                
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">dashboard</span>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">stream</span>
+                                    Stream
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-primary">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">hub</span>
+                                    Doppler
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class="d-block mx-auto mb-1 material-symbols-outlined">corporate_fare</span>
+                                    Organization
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <span class=" d-block mx-auto mb-1 material-symbols-outlined">person</span>
+                                    User-ID
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </header>     
+        <div class="fullwidth main-inner" id="bxFullwidthContent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-3 col-md-4 mb-3">
+                        <form class="bxLeftSideDoppler">
+                            <div class="bxLeftSideDoppler_filer bxBG_secondry mb-2 bxPosition_sticky">
+                                <div class="bxLSDFilter_head bxBG_primary">
+                                    <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                                    <label for="toggle-on" class="bxToggleBtn text-uppercase">Outliers <span>12K</span></label>
+                                    <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                                    <label for="toggle-off" class="bxToggleBtn text-uppercase">Detections <span>23K</span></label>
+                                </div>
+                            </div>
+                            <div class="bd-sidebar offcanvas-body">
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="bxLSDFilter_DateTime">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="m-0 text-uppercase text-white d-flex align-items-center"> 
+                                                <span class=" bxDT_60 ">TIMEFRAME </span>
+                                                <div class="bxCustomDateTimePicker">
+                                                    <i class="bi bi-calendar3"></i>
+                                                    <input type="text" name="datetimes" value="custom" />
+                                                </div>
+                                                
+                                            </div>
+                                            <a data-bs-toggle="collapse" href="#bxCustomDateTime" aria-expanded="true" aria-controls="bxCustomDateTime" class="side-nav-link collapsed  bxDT_60">
+                                                <span class="material-symbols-outlined">remove</span>
+                                            </a>
+                                        </div>
+                                        <div class="collapse mt-2 show" id="bxCustomDateTime" style="">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <label class="text-uppercase text-white bxDT_60" for="form"> form</label>
+                                                <input class="form-control" id="example-date" type="date" name="date">
+                                                <input class="form-control" id="example-time" type="time" name="time">
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <label class="text-uppercase text-white bxDT_60" for="To"> To</label>
+                                                <input class="form-control" id="example-date" type="date" name="date">
+                                                <input class="form-control" id="example-time" type="time" name="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">Severity </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxSeverity" aria-expanded="true" aria-controls="bxSeverity" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxSeverity">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="SeverityHigh">
+                                                <label class="form-check-label bxSHigh text-white bxDT_60" for="SeverityHigh">High</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="SeverityMedium">
+                                                <label class="form-check-label bxSMedium text-white bxDT_60" for="SeverityMedium">Medium</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="SeverityLow">
+                                                <label class="form-check-label bxSLow text-white bxDT_60" for="SeverityLow">Low</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">Entity </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxEntity" aria-expanded="true" aria-controls="bxEntity" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxEntity" style="">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="EntityHigh">
+                                                <label class="form-check-label bxSHigh text-white bxDT_60" for="EntityHigh">Users</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="EntityAccount">
+                                                <label class="form-check-label bxSAccount text-white bxDT_60" for="EntityAccount">Account</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="EntityIPAddress">
+                                                <label class="form-check-label bxSIPAddress text-white bxDT_60" for="EntityIPAddress">IP Address</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">Streams </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxStreams" aria-expanded="true" aria-controls="bxStreams" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxStreams">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamSIE">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamSIE">Sensitive information exfiltration information</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsAccount">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamsAccount">Account privilege misuse</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsIPAddress">
+                                                <label class="form-check-label bxSIPAddress text-white bxDT_60" for="StreamsIPAddress">Data exfiltration using exfiltration using</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">tactics </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxtactics" aria-expanded="true" aria-controls="bxtactics" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxtactics" style="">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamSIE">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamSIE">Defense Evasion</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsAccount">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamsAccount">Resource Development</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsIPAddress">
+                                                <label class="form-check-label bxSIPAddress text-white bxDT_60" for="StreamsIPAddress">Credential Access</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">Provider </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxProvider" aria-expanded="true" aria-controls="bxProvider" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxProvider" style="">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamSIE">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamSIE">Zoom</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsAccount">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamsAccount">o365</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsIPAddress">
+                                                <label class="form-check-label bxSIPAddress text-white bxDT_60" for="StreamsIPAddress">Sales force</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">KILLCHain Stage </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxKILLCHainStage" aria-expanded="true" aria-controls="bxKILLCHainStage" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxKILLCHainStage" style="">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamSIE">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamSIE">Reconnaissance</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsAccount">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamsAccount">Weaponization</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsIPAddress">
+                                                <label class="form-check-label bxSIPAddress text-white bxDT_60" for="StreamsIPAddress">Delivery</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">Tags </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxDopplerTags" aria-expanded="true" aria-controls="bxDopplerTags" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxDopplerTags" style="">
+                                        <div class="bxSEDFoot bxTagsAddRemove p-2 d-flex">
+                                            <span class="material-symbols-outlined">loyalty</span>
+                                            <div class="tag-field js-tags">                                    
+                                                <input class="js-tag-input" placeholder="Enter new tag..." id="textInput"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bxLeftSideDoppler_filer bxBG_secondry p-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="m-0 text-uppercase text-white"> 
+                                            <span class="bxDT_60">Event Type </span>                                      
+                                        </div>
+                                        <a data-bs-toggle="collapse" href="#bxEventType" aria-expanded="true" aria-controls="bxEventType" class="side-nav-link collapsed bxDT_60">
+                                            <span class="material-symbols-outlined">remove</span>
+                                        </a>
+                                    </div>
+                                    <div class="collapse mt-2 show" id="bxEventType" style="">
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamSIE">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamSIE">Reconnaissance</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsAccount">
+                                                <label class="form-check-label text-white bxDT_60" for="StreamsAccount">Weaponization</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                        <div class="bxFormCheck d-flex justify-content-between align-items-center">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="StreamsIPAddress">
+                                                <label class="form-check-label bxSIPAddress text-white bxDT_60" for="StreamsIPAddress">Delivery</label>
+                                            </div>
+                                            <span class="BxCount text-white">230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 mb-5">
+                        <div class="bxCenterSideDoppler_SearchResult bxBG_secondry p-3 mb-2">
+                            <div class="bxCADSearch_head bxBG_primary">
+                                <div class="input-group">
+                                    <input type="search" class="form-control" placeholder="Type here..." id="top-search">                             
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bxDopplerEventDetection mb-3">
+                            <div class="bxSEDHead">
+                                <div class="text-end float-end">
+                                    <h2 class="text--glitch">80.89 </h2>
+                                    <small class="text-danger ms-2 d-block">HIGH</small>
+                                </div>
+                                <div class="bxOutliersCard">
+                                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-2">person</span> arun@binaryflux.xyz</h4>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-14">Engraining </li>
+                                        <li class="BXf-14">Rahul </li>
+                                        <li class="BXf-14">Pune </li>
+                                    </ul>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-12">10/11/2022 @ 04:23:51 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bxOutliersCardBox p-3">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-Risk-tab" data-bs-toggle="tab" data-bs-target="#nav-Risk" type="button" role="tab" aria-controls="nav-Risk" aria-selected="true">RISK</button>
+                                        <button class="nav-link" id="nav-Peers-tab" data-bs-toggle="tab" data-bs-target="#nav-Peers" type="button" role="tab" aria-controls="nav-Peers" aria-selected="false">PEERS</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-Risk" role="tabpanel" aria-labelledby="nav-Risk-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">2X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">4X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">4X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-Peers" role="tabpanel" aria-labelledby="nav-Peers-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">106.94</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">abhishek@binaryflux.xyz <span class="BxRelation text-white">1st</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">40.26</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">sabkalp@binaryflux.xyz  <span class="BxRelation text-white">2nd</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">30.26</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">vishal@binaryflux.xyz  <span class="BxRelation text-white">3rd</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2.23</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">shiv@binaryflux.xyz  <span class="BxRelation text-white">4th</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot bxTagsAddRemove p-2 d-flex">
+                                <span class="material-symbols-outlined">loyalty</span>
+                                <div class="tag-field js-tags">                                    
+                                    <input class="js-tag-input" placeholder="Enter new tag..." id="textInput"/>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot p-2 d-flex align-items-center justify-content-between">                                
+                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
+                                    <li class="BXf-14 d-flex align-items-center"><span class="material-symbols-outlined me-2">manage_history</span> 10/11/2022 @ 04:23:51 </li>
+                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
+                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
+                                </ul>
+                                <a class="text-info BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"><span class="material-symbols-outlined me-2">sweep</span> Take Action</a>
+                            </div>
+                        </div>
+                        <div class="bxDopplerEventDetection mb-3">
+                            <div class="bxSEDHead">
+                                <div class="text-end float-end">
+                                    <h2 class="text--glitch">80.89 </h2>
+                                    <small class="text-danger ms-2 d-block">HIGH</small>
+                                </div>
+                                <div class="bxOutliersCard">
+                                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-2">person</span> sankalp@binaryflux.xyz</h4>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-14">Engraining </li>
+                                        <li class="BXf-14">Rahul </li>
+                                        <li class="BXf-14">Pune </li>
+                                    </ul>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-12">10/11/2022 @ 04:23:51 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bxOutliersCardBox p-3">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-Risk-tab" data-bs-toggle="tab" data-bs-target="#nav-Risk" type="button" role="tab" aria-controls="nav-Risk" aria-selected="true">RISK</button>
+                                        <button class="nav-link" id="nav-Peers-tab" data-bs-toggle="tab" data-bs-target="#nav-Peers" type="button" role="tab" aria-controls="nav-Peers" aria-selected="false">PEERS</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-Risk" role="tabpanel" aria-labelledby="nav-Risk-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">2X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">4X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">4X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-Peers" role="tabpanel" aria-labelledby="nav-Peers-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">106.94</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">abhishek@binaryflux.xyz <span class="BxRelation text-white">1st</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">40.26</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">sabkalp@binaryflux.xyz  <span class="BxRelation text-white">2nd</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">30.26</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">vishal@binaryflux.xyz  <span class="BxRelation text-white">3rd</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2.23</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">shiv@binaryflux.xyz  <span class="BxRelation text-white">4th</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot bxTagsAddRemove p-2 d-flex">
+                                <span class="material-symbols-outlined">loyalty</span>
+                                <div class="tag-field js-tags">                                    
+                                    <input class="js-tag-input" placeholder="Enter new tag..." id="textInput"/>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot p-2 d-flex align-items-center justify-content-between">                                
+                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
+                                    <li class="BXf-14 d-flex align-items-center"><span class="material-symbols-outlined me-2">manage_history</span> 10/11/2022 @ 04:23:51 </li>
+                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
+                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
+                                </ul>
+                                <a class="text-info BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"><span class="material-symbols-outlined me-2">sweep</span> Take Action</a>
+                            </div>
+                        </div>
+                        <div class="bxDopplerEventDetection mb-3">
+                            <div class="bxSEDHead">
+                                <div class="text-end float-end">
+                                    <h2 class="text--glitch">80.89 </h2>
+                                    <small class="text-danger ms-2 d-block">HIGH</small>
+                                </div>
+                                <div class="bxOutliersCard">
+                                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-2">person</span> vishal@binaryflux.xyz</h4>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-14">Engraining </li>
+                                        <li class="BXf-14">Rahul </li>
+                                        <li class="BXf-14">Pune </li>
+                                    </ul>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-12">10/11/2022 @ 04:23:51 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bxOutliersCardBox p-3">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-Risk-tab" data-bs-toggle="tab" data-bs-target="#nav-Risk" type="button" role="tab" aria-controls="nav-Risk" aria-selected="true">RISK</button>
+                                        <button class="nav-link" id="nav-Peers-tab" data-bs-toggle="tab" data-bs-target="#nav-Peers" type="button" role="tab" aria-controls="nav-Peers" aria-selected="false">PEERS</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-Risk" role="tabpanel" aria-labelledby="nav-Risk-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">2X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">4X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">4X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-Peers" role="tabpanel" aria-labelledby="nav-Peers-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">106.94</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">abhishek@binaryflux.xyz <span class="BxRelation text-white">1st</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">40.26</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">sabkalp@binaryflux.xyz  <span class="BxRelation text-white">2nd</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">30.26</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">vishal@binaryflux.xyz  <span class="BxRelation text-white">3rd</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2.23</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">shiv@binaryflux.xyz  <span class="BxRelation text-white">4th</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot bxTagsAddRemove p-2 d-flex">
+                                <span class="material-symbols-outlined">loyalty</span>
+                                <div class="tag-field js-tags">                                    
+                                    <input class="js-tag-input" placeholder="Enter new tag..." id="textInput"/>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot p-2 d-flex align-items-center justify-content-between">                                
+                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
+                                    <li class="BXf-14 d-flex align-items-center"><span class="material-symbols-outlined me-2">manage_history</span> 10/11/2022 @ 04:23:51 </li>
+                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
+                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
+                                </ul>
+                                <a class="text-info BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"><span class="material-symbols-outlined me-2">sweep</span> Take Action</a>
+                            </div>
+                        </div>
+                        <div class="bxDopplerEventDetection mb-3">
+                            <div class="bxSEDHead">
+                                <div class="text-end float-end">
+                                    <h2 class="text--glitch">80.89 </h2>
+                                    <small class="text-danger ms-2 d-block">HIGH</small>
+                                </div>
+                                <div class="bxOutliersCard">
+                                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-2">person</span> rahul@binaryflux.xyz</h4>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-14">Engraining </li>
+                                        <li class="BXf-14">Rahul </li>
+                                        <li class="BXf-14">Pune </li>
+                                    </ul>
+                                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                                        <li class="BXf-12">10/11/2022 @ 04:23:51 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bxOutliersCardBox p-3">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-Risk-tab" data-bs-toggle="tab" data-bs-target="#nav-Risk" type="button" role="tab" aria-controls="nav-Risk" aria-selected="true">RISK</button>
+                                        <button class="nav-link" id="nav-Peers-tab" data-bs-toggle="tab" data-bs-target="#nav-Peers" type="button" role="tab" aria-controls="nav-Peers" aria-selected="false">PEERS</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-Risk" role="tabpanel" aria-labelledby="nav-Risk-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">2X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">4X</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                        <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/risk_graph.png" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Sensitive information exfiltration</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">4X</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">Account privilege misuse</h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Tactic: <span>Credential Access (TA0006)</span> </li>
+                                                            <li class="BXf-14">Technique: <span>Network Sniffing </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/risk_graph.png" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-Peers" role="tabpanel" aria-labelledby="nav-Peers-tab" tabindex="0">
+                                        <div class="bxOCB_inner bxB_Left bxBC_High">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">106.94</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">abhishek@binaryflux.xyz <span class="BxRelation text-white">1st</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="collapse" id="seninfoex">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                            <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis" role="button" aria-expanded="false" aria-controls="accPriMis">
+                                                <div class="bxOCB_iETitle p-3 pb-1">
+                                                    <h4 class="float-end text-white">40.26</h4>
+                                                    <h5 class="BXf-18 pt-1 mb-0">sabkalp@binaryflux.xyz  <span class="BxRelation text-white">2nd</span></h5>
+                                                    <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                        <li class="BXf-14">April, 10:10 AM </li>
+                                                        <li class="BXf-14">Department: <span>Enringing</span> </li>
+                                                        <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                    </ul>
+                                                </div>                                                
+                                                <div class="collapse" id="accPriMis">
+                                                    <div class="card card-body">
+                                                    <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="collapse" id="showAllData1">
+                                            <div class="bxOCB_inner bxB_Left bxBC_Low">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">30.26</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">vishal@binaryflux.xyz  <span class="BxRelation text-white">3rd</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <div class="collapse" id="seninfoex1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bxOCB_inner bxB_Left bxBC_medium">
+                                                <div class="bxOCB_innerExpand" data-bs-toggle="collapse" href="#accPriMis1" role="button" aria-expanded="false" aria-controls="accPriMis1">
+                                                    <div class="bxOCB_iETitle p-3 pb-1">
+                                                        <h4 class="float-end text-white">2.23</h4>
+                                                        <h5 class="BXf-18 pt-1 mb-0">shiv@binaryflux.xyz  <span class="BxRelation text-white">4th</span></h5>
+                                                        <ul class="bxOC_listDot d-flex align-items-center p-0">
+                                                            <li class="BXf-14">April, 10:10 AM </li>
+                                                            <li class="BXf-14">Department:: <span>Enringing</span> </li>
+                                                            <li class="BXf-14">Manager: <span>Rahul </span> </li>
+                                                        </ul>
+                                                    </div>                                                
+                                                    <div class="collapse" id="accPriMis1">
+                                                        <div class="card card-body">
+                                                        <img src="images/doppler_new_graph.svg" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bxOCB_inner bxShowAll w-100 text-center">
+                                            <div class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#showAllData1" role="button" aria-expanded="false" aria-controls="showAllData1">Show All 
+                                                <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot bxTagsAddRemove p-2 d-flex">
+                                <span class="material-symbols-outlined">loyalty</span>
+                                <div class="tag-field js-tags">                                    
+                                    <input class="js-tag-input" placeholder="Enter new tag..." id="textInput"/>
+                                </div>
+                            </div>
+                            <div class="bxSEDFoot p-2 d-flex align-items-center justify-content-between">                                
+                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
+                                    <li class="BXf-14 d-flex align-items-center"><span class="material-symbols-outlined me-2">manage_history</span> 10/11/2022 @ 04:23:51 </li>
+                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
+                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
+                                </ul>
+                                <a class="text-info BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"><span class="material-symbols-outlined me-2">sweep</span> Take Action</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xxl-3 col-md-2">
+                        <div class="bxRightSideDoppler p-3 pb-1 bxPosition_sticky">                            
+                            <div class="bxRSD_Body">
+                                <div class="bxRSD_head col-12">
+                                    <h6 class="text-uppercase text-white bxDT_60 border-bottom pb-2">Today</h6>
+                                </div>
+                                <div class="row border-bottom mb-3">
+                                    <div class="col">
+                                        <p class="m-0 BXf-16 text-center"> <span class="text-danger  BXf-18 d-block">23</span> <small>Outliers</small></p>
+                                    </div>
+                                    <div class="col border-start border-end">
+                                        <p class="m-0 BXf-16 text-center"> <span class="text-success BXf-18  d-block">5</span> <small>Detections</small></p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="m-0 BXf-16 text-center"> <span class="text-warning BXf-18  d-block">13</span> <small>Automations</small></p>
+                                    </div>
+                                    <div class="col-12">
+                                        <img src="images/doppler_rightGraph.png" class="w-100" alt="">
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="bxRSD_head col-12">
+                                        <span class="text-warning float-end">5</span>
+                                        <h6 class="text-uppercase text-white bxDT_60 border-bottom pb-2">Queue</h6>
+                                    </div>
+                                    <div class="bxRelation_score">
+                                        <div class="bxRelation_scoreCard border-bottom">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="text-white m-0">arun@binaryflux.xyz 
+                                                    <small class="bxDT_60 d-block">Sensitive information exfiltration</small>
+                                                </p>
+                                                <span class="text-danger">20.36</span>
+                                            </div>
+                                        </div>
+                                        <div class="bxRelation_scoreCard border-bottom">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="text-white m-0">sankalp@binaryflux.xyz 
+                                                    <small class="bxDT_60 d-block">Account privilege misuse</small>
+                                                </p>
+                                                <span class="text-danger">12.6</span>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="bxRelation_scoreList">
+                                            <div class="bxRelation_scoreCard border-bottom">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <p class="text-white m-0">rahul@binaryflux.xyz 
+                                                        <small class="bxDT_60 d-block">Sensitive information exfiltration</small>
+                                                    </p>
+                                                    <span class="text-danger">15.36</span>
+                                                </div>
+                                            </div>
+                                            <div class="bxRelation_scoreCard border-bottom">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <p class="text-white m-0">vishal@binaryflux.xyz 
+                                                        <small class="bxDT_60 d-block">Account privilege misuse</small>
+                                                    </p>
+                                                    <span class="text-warning">18.65</span>
+                                                </div>
+                                            </div>
+                                            <div class="bxRelation_scoreCard border-bottom">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <p class="text-white m-0">abhishek@binaryflux.xyz 
+                                                        <small class="bxDT_60 d-block">Sensitive information exfiltration</small>
+                                                    </p>
+                                                    <span class="text-success">10.36</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-100 text-center">
+                                            <a class="BXf-12 bxShowAllBtn py-2 d-block" data-bs-toggle="collapse" href="#bxRelation_scoreList" role="button" aria-expanded="false" aria-controls="bxRelation_scoreList">See All <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span></a>
+                                        </div>
+                                    </div>
+                                </div>                                    
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bxStreamLstOffCanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasTakeAction" aria-labelledby="offcanvasTakeActionLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="bxSEDHead">
+                <div class="text-end float-end">
+                    <h2 class="text--glitch">80.89 </h2>
+                    <small class="text-danger ms-2 d-block">HIGH</small>
+                </div>
+                <div class="bxOutliersCard">
+                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-2">person</span> arun@binaryflux.xyz</h4>
+                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                        <li class="BXf-14">Engraining </li>
+                        <li class="BXf-14">Rahul </li>
+                        <li class="BXf-14">Pune </li>
+                    </ul>
+                    <ul class="bxOC_list d-flex align-items-center mb-0">
+                        <li class="BXf-12">10/11/2022 @ 04:23:51 </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="bxChatLayout p-2">
+                <div class="col-12 mb-2">
+                    <small class="date">April 4</small>
+                </div>
+                <div class="d-flex userOne mb-3">
+                    <span class="bxFirstLetter me-2"> <i class="bi bi-code"></i></span>
+                    <div class="w-100">
+                        <h3 class="mb-2">Binary Bot<small class="time float-end bxFont14">10:30PM</small></h3>
+                        <div class="messageText text-white">
+                            <p class="bxFont18"><span class="text-success"> Escalate to manager </span> action updated  </p>
+                            <a class="border-start px-2" data-bs-toggle="offcanvas" href="#bxDopplerAction" role="button" aria-controls="bxDopplerAction">
+                                1 tasks executed </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex userTwo mb-3">
+                    <span class="bxFirstLetter me-2"> <i class="bi bi-person"></i></span>
+                    <div class="w-100">
+                        <h3 class="mb-2"> Rahul Neekhara<small class="time float-end bxFont14">10:30PM</small></h3>
+                        <div class="messageText text-white">
+                            <p class="bxJsonText my-2 p-0">
+                                <span class="bxEventKey"> Event Type</span>
+                                <span class="bxEventValue mx-2">Data Exfiltration Attempt</span>
+                                <span class="bxEventKey"> Date/Time</span>
+                                <span class="bxEventValue mx-2"> July 12, 2023, 14:30:15</span>
+                                <span class="bxEventKey">User:</span>
+                                <span class="bxEventValue mx-2"> Vishal Kharche </span>
+                                <span class="bxEventKey">Source IP:</span>
+                                <span class="bxEventValue mx-2">192.168.0.123</span>
+                                <span class="bxEventKey">Destination IP:</span>
+                                <span class="bxEventValue mx-2">203.0.113.45</span>
+                                <span class="bxEventKey">Device:</span>
+                                <span class="bxEventValue mx-2">PC-4773</span>
+                                <span class="bxEventKey">Rule Triggered:</span>
+                                <span class="bxEventValue mx-2">External Drive Used</span>
+                                <span class="bxEventKey">Policy Action:</span>
+                                <span class="bxEventValue mx-2">Block and Notify</span>
+                                <span class="bxEventKey">Action Taken:</span>
+                                <span class="bxEventValue mx-2">Escalate to manager</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>                                           
+            </div>
+        </div>
+        <div class="offcanvas-footer">
+            <div class="col-12">
+                <form action="#" class="comment-area-box">
+                    <textarea rows="3" class="form-control border-0 resize-none" placeholder="Your comment..."></textarea>
+                    <div class="p-2 bg-light d-flex justify-content-between align-items-center">
+                        <div class="bxDopplerChatAction">
+                            <a href="#" class=""><img src="images/Chat1.svg" alt=""></a>
+                            <a href="#" class=""><img src="images/Chat2.svg" alt=""></a>
+                            <button type="button" class="bxDopplerAutomation" data-bs-toggle="offcanvas" href="#bxDopplerAutomation" role="button" aria-controls="bxDopplerAutomation"><img src="images/Chat3.svg" alt=""></button>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary" fdprocessedid="d1fcui">
+                            <img src="images/Chat4.svg" alt="">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bxDopplerAction offcanvas offcanvas-end" tabindex="-1" id="bxDopplerAction" aria-labelledby="bxDopplerActionLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Escalate to manager  </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row" id="bxTimeLineTask">
+                <div class="col-12 p-0">
+                    <div class="timeline">
+                        <div class="timeline-show mb-3">
+                            <h5 class="m-0 time-show-name">Apr 27</h5>
+                        </div>
+                        <div class="timeline-lg-item timeline-item-right mb-3">
+                            <div class="timeline-desk">
+                                <div class="timeline-box">
+                                    <span class="timeline-icon"></span>
+                                    <div class="row g-0 bxDopplerActionTimeline">
+                                        <div class="col-6">
+                                            <h5 class="m-0">Notification Sent</h5>
+                                            <span class="">10:20 AM</span>
+                                        </div>
+                                        <a class="col-6" data-bs-toggle="collapse" href="#bxShowOutput" role="button" aria-expanded="false" aria-controls="bxShowOutput">
+                                            <i class="bi bi-check text-success"></i>
+                                            Show Output
+                                        </a>
+                                        <div class="collapse mt-3 col-12" id="bxShowOutput">
+                                            <div class="card card-body">
+                                                <p class="bxFont14">
+                                                     Subject: Urgent Data Exfiltration Notification: Immediate Action Required<br>
+                                                    </p><div id=":4nl" class="Am Al editable LW-avf tS-tW tS-tY" hidefocus="true" aria-label="Message Body" g_editable="true" role="textbox" aria-multiline="true" contenteditable="true" tabindex="1" style="direction: ltr; min-height: 40px;" itacorner="6,7:1,1,0,0" spellcheck="false" aria-owns=":4q7" aria-controls=":4q7"><br>Dear Rahul Neekhara,<br><br>I hope this email finds you well. I am writing to bring your immediate attention to a critical security incident involving data exfiltration that has been detected within our network. It is of utmost importance that we address this matter promptly to mitigate any potential risks and protect our sensitive information.<br><br>Key Details of the Incident:<br><br>Incident Type: Data Exfiltration<br>Time and Date Detected: 12/07/2023<br>Affected Systems:PC4773<br>Potentially Compromised Data: Data exfiltration attempted using external drive<br><br>Our security team has been working diligently to contain the incident and minimize any potential impact. However, we require your assistance and guidance to ensure a swift and effective response. We recommend the following course of action:<br><br>Assemble a Response Team: Please designate a cross-functional team comprising IT, Security, and Legal representatives to coordinate the incident response efforts.<br><br>Conduct Immediate Investigation: Initiate a thorough investigation to determine the extent of the data exfiltration, identify the root cause, and assess the potential impact on our organization.<br><br>Implement Remediation Measures: Collaborate with the response team to implement necessary remediation measures promptly. This may include patching vulnerabilities, strengthening access controls, and enhancing monitoring capabilities.<br><br>Communicate with Stakeholders: Develop a clear communication plan to inform relevant stakeholders about the incident, including employees, customers, and any regulatory bodies, as required. Transparency and timely updates are crucial in maintaining trust during this situation.<br><br>Enhance Security Measures: Evaluate the existing security infrastructure and policies to identify areas for improvement. Consider implementing additional safeguards, such as advanced threat detection systems and employee training programs to mitigate future risks.<br><br>I kindly request your immediate attention to this matter, as the impact of data exfiltration can be severe for our organization's reputation, financial standing, and legal compliance. Please acknowledge the receipt of this email and confirm your availability for a meeting to discuss the incident response strategy.<br><br>Thank you for your immediate attention to this urgent matter.<br><br>Sincerely,<br><br>Ravi Menon<br>Security <span zeum4c9="PR_1_0" data-ddnwab="PR_1_0" aria-invalid="spelling" class="LI ng">Admministrator</span><br>ravi@binaryflux.xyz<br></div>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bxDopplerAutomationOffcanvas offcanvas offcanvas-end" tabindex="-1" id="bxDopplerAutomation" aria-labelledby="bxDopplerAutomationLabel">
+        <div class="offcanvas-header">
+            <form class="sidebar-search">
+                <div class="input-group">
+                  <span class="bi bi-search search-icon text-white"></span>
+                  <input type="search" class="form-control" placeholder="Search..." id="top-search">                                
+                </div>
+            </form>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0 pt-0">
+            <h6 class="px-3 py-2 mb-0">Top Action</h6>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <h6 class="px-3 py-2 mb-0">More</h6>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body">
+                <div class="row g-0 d-flex align-items-center justify-content-between">
+                    <div class="col-9 cardSideLeft">
+                        <h5 class="text-truncate">Mark as Non-Concern </h5>
+                        <p class="text-truncate">Lorem ipsum dolor sit amrem ipsum dolor sit ame</p>
+                    </div>
+                    <div class="col-3 cardSideRight text-center">
+                        <a href="#" data-bs-dismiss="offcanvas" aria-label="Close">Execute</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bx_modal_login modal  fade" id="onload" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <!-- Add this line to your code -->
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="mx-auto" src="images/logo.png" alt="">
+                </div>
+                <div class="modal-body text-center">
+                    <div class="my-4 d-block mb-5 px-5">
+                        <h2>Your data, like you never knew it.</h2>
+                        <p>Binary Flux enables IT Operations and Cyber Security Professionals to store, analyse and investigate their ecosystem data powered by deep learning & artificial neural networking.</p>
+                    </div>
+
+                    <form action="" class="col-md-6 mx-auto pb-5">
+                        <h5>Login to continue</h5>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="floatingInput" placeholder="id">
+                          <label for="floatingInput">Account ID</label>
+                          <div class="bxErrorMessage d-none">Please enter your account</div>
+                          <small class="d-block text-end mb-3 mt-2 ">Required</small>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="floatingInput" placeholder="Username">
+                          <label for="floatingInput">Username</label>
+                          <div class="bxErrorMessage d-none">Please enter your username</div>
+                          <small class="d-block text-end mb-3 mt-2 ">Required</small>
+                        </div>
+                        
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                          <label for="floatingPassword">Password</label>
+                          <div class="bxErrorMessage d-none">Please enter your password</div>
+                          <small class="d-block text-end mb-3 mt-2">Required</small>
+                        </div>
+                        <button type="button" class="btn btn-lg bxBtn-primary w-100" data-bs-dismiss="modal" id="liveToastBtn">Apply</button>
+      
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/custom."></script>
+
+    <script>
+        window.onload = () => {
+        $('#onload').modal('show');
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            var dropdownHeader = document.querySelector(".dropdown-header");
+            var dropdownMenu = document.querySelector(".dropdown-menu");
+          
+            dropdownHeader.addEventListener("click", function() {
+              dropdownHeader.classList.toggle("open");
+              if (dropdownHeader.classList.contains("open")) {
+                dropdownMenu.style.display = "block";
+              } else {
+                dropdownMenu.style.display = "none";
+              }
+            });
+          
+            var options = document.querySelectorAll(".option");
+            options.forEach(function(option) {
+              option.addEventListener("click", function() {
+                var selectedOption = this.querySelector("a");
+                var selectedHeader = dropdownHeader.querySelector("a");
+                selectedHeader.innerHTML = selectedOption.innerHTML;
+                dropdownHeader.classList.remove("open");
+                dropdownMenu.style.display = "none";
+              });
+            });
+          });
+    </script>
+    <script>
+        var tags = [];
+        var $container = document.querySelector('div');
+        var $input = document.querySelector('input');
+        var $tags = document.querySelector('.js-tags');
+
+        $container.addEventListener('click', function() {
+        $input.focus();
+        });
+
+        $container.addEventListener('keydown', function(evt) {
+        if ( !evt.target.matches('.js-tag-input') ) {
+            return;
+        }
+        
+        if ( evt.keyCode !== 13 ) {
+            return;
+        }
+        
+        var value = String(evt.target.value);
+        
+        if ( !value.length || value.length > 20 || tags.length === 5 ) {
+            return;
+        }
+        
+        tags.push(evt.target.value);
+        $input.value = '';
+        render(tags, $tags);
+        });
+
+        $container.addEventListener('keydown', function(evt) {
+        if ( !evt.target.matches('.js-tag-input') ) {
+            return;
+        }
+        
+        if ( evt.keyCode !== 8 ) {
+            return;
+        }
+        
+        if ( String(evt.target.value).length ) {
+            return;
+        }
+        
+        tags = tags.slice(0, tags.length - 1);
+        $input.value = '';
+        render(tags, $tags);
+        });
+
+        $container.addEventListener('click', function(evt) {
+        if ( evt.target.matches('.js-tag-close') || evt.target.matches('.js-tag') ) {
+            tags = tags.filter(function(tag, i) {
+            return i != evt.target.getAttribute('data-index');
+            });
+            render(tags, $tags);
+        }
+        }, true);
+        
+
+        function render(tags, el) {
+        el.innerHTML = tags.map(function(tag, i) {
+            return (
+            '<div class="tag js-tag" data-index="' + i + '">' +
+                tag +
+                '<span class="tag-close js-tag-close" data-index="' + i + '">×</span>' +
+            '</div>'
+        );
+        }).join('') + (tags.length === 5 ? '' : '<input placeholder="Enter new tag..." class="js-tag-input">')
+        ;
+        
+        $container.querySelector('.js-tag-input').focus();
+            $("#textInput").css("width","100%")
+
+        }
+    </script>
+
+  </body>
+</html>
