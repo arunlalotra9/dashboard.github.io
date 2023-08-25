@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" class="bxHtml" data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/material_icon.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/settingPage.css" rel="stylesheet">   
+
+    <title>Binaryflux Subscription</title>
+   
+  </head>
+  <body class="bxSettingPage">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
+        <div class="container-fluid p-md-2 p-0">
+            <div class="bxHeaderLeftNav d-flex align-items-center">
+                <div class="float-star order-md-2">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown dropdown-fullwidth">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Stream
+                                <small>Is a collection of use cases to enable detection and mitigation in a single package.</small>
+                                </a>
+                                <ul class="dropdown-menu  px-5 py-4">
+                                    <div class="row mb-4">
+                                        <div class="col-md-4 mb-4 mb-lg-0 equal-height-column">
+                                            <div class="bxNavlist p-3">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="btn btn-dark"><span class="material-symbols-outlined">stream</span></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="stream.html">
+                                                            <h5>Stream</h5>
+                                                            <small>Is a collection of use cases to enable detection and mitigation in a single package. </small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4 mb-lg-0 equal-height-column">
+                                            <div class="bxNavlist p-3">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="btn btn-dark"><span class="material-symbols-outlined">hub</span></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="doppler.html">
+                                                            <h5>Doppler</h5>
+                                                            <small>Is a next generation neural network analytics platform helps you triage incidents in realtime.</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4 mb-lg-0 equal-height-column">
+                                            <div class="bxNavlist p-3">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="btn btn-dark"><span class="material-symbols-outlined">dashboard</span></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="dashboard_page.html">
+                                                            <h5>Dashboard</h5>
+                                                            <small>Configurable dashboards provides a interactive way to get a birds eye view.</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="bi bi-list text-white"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand order-md-1" href="#"><img src="images/logo.png" alt="logo" height="35"></a>
+                
+            </div>
+            <!-- topbar-menu float-end right side -->
+
+            <ul class="list-unstyled topbar-menu float-end mb-0 d-flex align-items-center">
+                
+                <li class="search-list active">
+                    <a class="nav-link" href="search.html">
+                        <img src="images/search.svg" alt="search">
+                    </a>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="bi bi-bell"></i>  
+                        <span class="noti-icon-badge"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
+                        <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-0 font-16 fw-semibold"> Notification</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                        <small>Clear All</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
+                            View All
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <li class="dropdown setting-list">
+                    <a class="nav-link dropdown-toggle nav-setting arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                        <a href="manage_organizations.html" class="dropdown-item notify-item">
+                            <span>Manage Organizations</span>
+                        </a>      
+                        <!-- item-->
+                        <a href="features.html" class="dropdown-item notify-item">
+                            <span>Features</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <span>Setting 2</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="dropdown user-list">
+                    <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="account-user-avatar"> 
+                            <img src="images/avatar-1.png" alt="user-image" class="rounded-circle">
+                        </span>
+                        <span class="account-user-name d-none d-md-block">Sankalp Pandey </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                        <!-- item-->
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">Welcome !</h6>
+                        </div>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="bi bi-person-circle me-1"></i>
+                            <span>My Account</span>
+                        </a>      
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="bi bi-headset me-1"></i>
+                            <span>Support</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="bi bi-door-open me-1"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+                
+            </ul><!-- topbar-menu float-end right side -->
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5 mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7">
+                <div class="bxSubscriptionTitle mb-5">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="apps-billing.html"><span class="material-symbols-outlined">keyboard_backspace</span></a>
+                        <h4 class="text-white">Licenses</h4>                    
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <h2 class="text-white">100% scalable - designed for <br> businesses of all sizes</h2>
+                    <p>Free onboarding, setup, and training. No additional charges</p>
+                    <div class="d-flex align-items-center mx-auto justify-content-center">
+                        <label class="switch mx-3">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Annual</span>
+                    </div>    
+                </div>
+
+            </div>
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4 equal-height-column">
+                                <div class="profile_page_box pricingTable mt-5 py-3 px-4 mb-4">
+                                    <b class="text-white d-block pricingTitle">Embedded Mode</b>
+                                    <p class="d-flex pricingAmount"> 
+                                        <span>$</span>
+                                        <strong>6.5k</strong>
+                                        <span>/mo</span>
+                                    </p>
+                                    <p class="mb-4 pricingDescription">Go from problem detection to resolution in seconds with Binaryflux’s embedded mode plan.</p>
+                                    <a href="#" class="btn w-100 btn-outline-primary pricingBtn">Purchase Plan</a>
+                                    <ul class="p-0 mb-0 pricingIncluded mt-4">
+                                        <li class="mb-3"><label class="text-warning">Included :</label></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>API first</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Analytics</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Automation</span></li>
+                                    </ul>
+                                    <span type="button" class="btn btn-outline-success rounded-pill" data-bs-toggle="modal" data-bs-target="#centermodal">ADD ON</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 equal-height-column">
+                                <div class="profile_page_box pricingTable proTable mt-5 py-3 px-4 mb-4">
+                                    <b class="text-white d-block pricingTitle">Interactive Mode <span class="badge bg-danger">Pro</span></b>
+                                    <p class="d-flex pricingAmount"> 
+                                        <span>$</span>
+                                        <strong>8k</strong>
+                                        <span>/mo</span>
+                                    </p>
+                                    <p class="mb-4 pricingDescription">Detect, investigate and respond to threats from one modern and unified interface with Binaryflyx Interactive mode.</p>
+                                    <a href="#" class="btn w-100 btn-primary pricingBtn">Purchase Plan</a>
+                                    <ul class="p-0 mb-0 pricingIncluded mt-4">
+                                        <li class="mb-3"><label class="text-warning">Included :</label></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>API first</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Advanced analytics</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Automations at scale</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Dashboard & Reports</span></li>
+                                    </ul>
+                                    <span type="button" class="btn btn-outline-success rounded-pill" data-bs-toggle="modal" data-bs-target="#centermodal">ADD ON</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 equal-height-column">
+                                <div class="profile_page_box pricingTable mt-5 py-3 px-4 mb-4">
+                                    <b class="text-white d-block pricingTitle">Enterprise Mode</b>
+                                    <p class="d-flex pricingAmount"> 
+                                        <span>$</span>
+                                        <strong>12k</strong>
+                                        <span>/mo</span>
+                                    </p>
+                                    <p class="mb-4 pricingDescription">Deliver mission-critical performance, scale and reliability with Binaryflux Enterprise mode.</p>
+                                    <a href="#" class="btn w-100 btn-outline-primary pricingBtn">Purchase Plan</a>
+                                    <ul class="p-0 mb-0 pricingIncluded mt-4">
+                                        <li class="mb-3"><label class="text-warning">Included :</label></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>API first</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Data lake</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Advanced Analytics</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Automations at scale</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Investigation workbooks</span></li>
+                                        <li><span class="material-symbols-outlined text-success">check_small</span> <span>Dashboard & Reports</span></li>
+                                    </ul>
+                                    <span type="button" class="btn btn-outline-success rounded-pill" data-bs-toggle="modal" data-bs-target="#centermodal">ADD ON</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 equal-height-column">
+                        <div class="equal-height-column">
+                            <div class="profile_page_box pricingInvoices mt-5 py-3 px-4 mb-4">
+                                <b class="text-white d-block pricingTitle">Upcoming Invoices</b>
+                                <div class="w-100 mt-3 p-2 pricingInvoicesHead">
+                                    <div class="d-flex border_center align-items-center justify-content-between py-2">
+                                        <span>Wed Aug 23 2024</span>
+                                        <b>$936.00</b>
+                                    </div>
+                                    <div class="d-flex color_low align-items-center justify-content-between px-2">
+                                        <span>Enterprise mode (2)</span>
+                                        <span>936.00</span>
+                                    </div>
+                                    <div class="d-flex border_center align-items-center justify-content-between py-2">
+                                        <span>Fri Aug 28 2024</span>
+                                        <b>$56.00</b>
+                                    </div>
+                                </div>
+                                <div class="w-100 p-3 billing_addtional">
+                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                        <span>Enterprise Mode (included with license) (2)</span>
+                                        <span>$00.00</span>
+                                    </div>
+                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                        <span>Enterprise Mode (5)</span>
+                                        <span>$56.00</span>
+                                    </div>
+                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                        <span>Network Domains and TCP Addresses (included with license) (5)</span>
+                                        <span>$00.00</span>
+                                    </div>
+                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                        <span>Enterprise Mode (included with license) (2)</span>
+                                        <span>$00.00</span>
+                                    </div>
+                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                        <span>Enterprise Mode (5)</span>
+                                        <span>$56.00</span>
+                                    </div>
+                                    <div class="d-flex color_low align-items-center justify-content-between py-1">
+                                        <span>Network Domains and TCP Addresses (included with license) (5)</span>
+                                        <span>$00.00</span>
+                                    </div>
+                                </div>
+
+                                <a class="text-center text-danger mt-4 d-block" href="#">Cancle Subscription Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="centermodal" tabindex="-1" role="dialog" aria-modal="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content py-3 px-4">
+                <div class="modal-header border-0 text-center mb-2">
+                    <h4 class="d-block text-white mx-auto">Add On</h4>
+                </div>
+                <div class="modal-body mb-2">
+                    <p class="d-block text-center">Please enter your query for the add on</p>             
+                    <form class="" action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="type here...">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between border-0">
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-bs-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit Now</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/custom."></script>
+
+  </body>
+</html>
