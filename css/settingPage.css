@@ -703,8 +703,7 @@ button {
 .hidden {
   display: none;
 }
-.location_page_box,
-.profile_page_box {
+.card_page_box {
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 10px;
 }
@@ -723,7 +722,7 @@ button {
 .profile_btn a:hover, .location_btn a:hover{
   background-color: rgba(255,255,255,0.3);
 }
-.profile_page_box label, .location_page_box label{
+.card_page_box label{
   font-size: 14px;
   font-weight: 400;
   color: rgba(255,255,255,0.3);
@@ -747,7 +746,7 @@ button {
 .profile_page p{
   width: 100%;
 }
-.profile_page_box p{
+.card_page_box p{
   margin-bottom: 0;
 }
 .toggle-handle {
@@ -802,7 +801,7 @@ border: 1px solid rgba(154, 161, 171, 0.15);border-radius: 7px;}
 .modal-content{
 background-color: #061731;
 }
-.btn-outline-danger{font-size: 12px;}
+
 .border_center{
   position: relative;
 }
@@ -935,3 +934,55 @@ padding: 0 10px;
   top: 0;
 }
 .pricingIncluded {min-height: 200px;}
+.bxBillingMethod .form-check-label {
+  color: #fff;
+  font-size: 18px;
+}
+.bxBillingMethod .form-check-label small{
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+  font-style: italic;
+}
+.bxBillingMethodFrom .input-group {
+  position: relative;
+}
+.bxBillingMethodFrom .input-group-text {
+  line-height: normal;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 0;
+}
+.bxBillingMethodFrom .input-group .form-control {
+  padding-left: 50px;
+  color: #fff;
+  z-index: 0;
+}
+.bxBillingMethodFrom .form-control{
+  color: #fff;
+  border-color: transparent;
+}
+.bxBillingMethodFrom select{
+  border-color: transparent;
+}
+.card_page_box .bxBillingMethodFrom label, .card_page_box label {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.SecurityCode{
+  position: relative;
+}
+.SecurityCode span {
+  position: absolute;
+  margin: 0 0 0 10px;
+  font-size: 18px;
+}
+#billing_history .table>tbody {
+  vertical-align: middle;
+}
+.card_page_box  .btn-outline-danger,
+.bxTable_data td span{font-size: 12px;}
