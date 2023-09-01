@@ -8,11 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
     <link rel="stylesheet" href="css/daterangepicker.css">
     <link href="css/select2.min.css" rel="stylesheet">
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all_css.css">
     
 
     <title>Binaryflux Dashboard</title>
@@ -22,237 +20,14 @@
     .widgetHead-flat .bxDateTimePicker i {left: 0;}
     .widgetHead-flat .bxDateTimePicker {font-size: 12px;background: transparent;padding: 0;}
     .widgetHead-flat .bxDateTimePicker::before {display: none;}
-    .placeholder {display: inline-block;min-height: 1em;vertical-align: middle;cursor: wait;background-color: #343232;opacity: .5;border-radius: 10px;}
-    .placeholder-xs {min-height: .6em;}
-    .placeholder-sm {min-height: .8em;}
-    .placeholder-lg {min-height: 1.2em;}
-    .placeholder-glow .placeholder {animation: placeholder-glow 2s ease-in-out infinite;}
-    @keyframes placeholder-glow {50% {opacity: .2;}}
+    
 
     </style>
   </head>
   <body class="">
     
     <div id="wrapper" class="DashboardPage">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="bxNavBar">
-            <div class="container-fluid p-md-2 p-0">
-                <div class="bxHeaderLeftNav d-flex align-items-center">
-                    <div class="float-star order-md-2">
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item dropdown dropdown-fullwidth">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dashboard
-                                    <small>Lorem ipsum dolor sit amet, consectetur adipiscing el</small>
-                                    </a>
-                                    <ul class="dropdown-menu  px-5 py-4">
-                                        <div class="row mb-4">
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Ingestion & Automation</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-diagram-3"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Pipeline</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Investigation</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Run a Query and Analyse</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Doppler</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Dashboard</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Home</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 mb-4 mb-lg-0">
-                                                <div class="bxNavlist p-3">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <span class="btn btn-dark"><i class="bi bi-database"></i></span>
-                                                        </div>
-                                                        <div class="col">
-                                                            <a href="#">
-                                                                <h5>Organization</h5>
-                                                                <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius</small>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="bi bi-list text-white"></span>
-                        </button>
-                    </div>
-                    <a class="navbar-brand order-md-1" href="#"><img src="images/logo.png" alt="logo" height="35"></a>
-                </div>
-                <!-- topbar-menu float-end right side -->
-                <ul class="list-unstyled topbar-menu float-end mb-0 d-flex align-items-center">                    
-                    <li class="search-list ">
-                        <a class="nav-link" data-bs-toggle="offcanvas" href="search.html">
-                            <img src="images/search.svg" alt="search">
-                        </a>
-                    </li>
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="bi bi-bell"></i>  
-                            <span class="noti-icon-badge"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0" style="">
-                            <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h6 class="m-0 font-16 fw-semibold"> Notification</h6>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="javascript: void(0);" class="text-dark text-decoration-underline">
-                                            <small>Clear All</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
-                                View All
-                            </a>
-
-                        </div>
-                    </li>
-                    <li class="setting-list">
-                        <a class="nav-link" data-bs-toggle="offcanvas" href="#">
-                            <i class="bi bi-gear"></i>
-                        </a>
-                    </li>
-                    <li class="dropdown user-list">
-                        <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <span class="account-user-avatar"> 
-                                <img src="images/avatar-1.png" alt="user-image" class="rounded-circle">
-                            </span>
-                            <span class="account-user-name d-none d-md-block">Dominic Keller </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
-                            <!-- item-->
-                            <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome !</h6>
-                            </div>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="bi bi-person-circle me-1"></i>
-                                <span>My Account</span>
-                            </a>                                
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="bi bi-headset me-1"></i>
-                                <span>Support</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="bi bi-door-open me-1"></i>
-                                <span>Logout</span>
-                            </a>
-                        </div>
-                    </li>                    
-                </ul><!-- topbar-menu float-end right side -->
-            </div>
-        </nav>
         
         <div class="fullwidth main-inner" id="bxFullwidthContent">
             <div class="tab-content">
@@ -373,25 +148,75 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-5">
-                                <div class="col-3 placeholder-glow">
-                                    <div class="card-body placeholder d-block">
-                                        <br><br><br><br>
+
+
+                            <div class="row m-0">
+                                <div class="col-6">
+                                    <div class="ph-item">
+                                        <div class="ph-col-12 placeholder-glow">
+                                            <div class="ph-row">
+                                                <div class="ph-col bg-danger"></div>
+                                                <div class="ph-col bg-warning mx-2"></div>
+                                                <div class="ph-col bg-success"></div>
+                                            </div>
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-12 ph-message lg-ph placeholder">
+                                                    <p class="p-3 px-4 m-0">
+                                                        <span class="text-danger">if top_detection_data is empty:<br></span>
+                                                        <span class="text-warning ps-3">&nbsp;&nbsp;&nbsp;&nbsp;display_message("No top detections available.")<br></span>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display_top_detection_data()<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-10 placeholder big"></div>
+                                                <div class="ph-col-2 empty big"></div>
+                                            </div>
+                                            
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-6 placeholder big"></div>
+                                                <div class="ph-col-4 empty big"></div>
+                                            </div>
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-4 placeholder big"></div>
+                                                <div class="ph-col-8 empty big"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4 placeholder-glow">
-                                    <div class="card-body placeholder d-block">
-                                        <br><br><br><br>
-                                    </div>
-                                </div>
-                                <div class="col-4 placeholder-glow">
-                                    <div class="card-body placeholder d-block">
-                                        <br><br><br><br>
-                                    </div>
-                                </div>
-                                <div class="col-1 placeholder-glow">
-                                    <div class="card-body placeholder d-block">
-                                        <br><br><br><br>
+                                <div class="col-6">
+                                    <div class="ph-item">
+                                        <div class="ph-col-12 placeholder-glow">
+                                            <div class="ph-row">
+                                                <div class="ph-col bg-danger"></div>
+                                                <div class="ph-col bg-warning mx-2"></div>
+                                                <div class="ph-col bg-success"></div>
+                                            </div>
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-12 ph-message lg-ph placeholder">
+                                                    <p class="p-3 px-4 m-0">
+                                                        <span class="text-danger">if top_detection_data is empty:<br></span>
+                                                        <span class="text-warning ps-3">&nbsp;&nbsp;&nbsp;&nbsp;display_message("No top detections available.")<br></span>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display_top_detection_data()<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-10 placeholder big"></div>
+                                                <div class="ph-col-2 empty big"></div>
+                                            </div>
+                                            
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-6 placeholder big"></div>
+                                                <div class="ph-col-4 empty big"></div>
+                                            </div>
+                                            <div class="ph-row placeholder-glow">
+                                                <div class="ph-col-4 placeholder big"></div>
+                                                <div class="ph-col-8 empty big"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -3593,3 +3593,128 @@ color: #fff;
 .guided-tour-step.active .guided-tour-step-tooltip .guided-tour-step-footer-bullets ul li.current {
     background-color: #fff;
 }
+.bxStreamLeftSideBar_searchArea.p-2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ====================== placeholder css ========================= */
+ .ph-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 30px 15px 15px;
+    overflow: hidden;
+    direction: ltr;
+    background: #090b19;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, .1);
+}
+
+.ph-item,.ph-item *,.ph-item :after,.ph-item :before {
+    box-sizing: border-box
+}
+.ph-item>* {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.ph-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -7.5px
+}
+.ph-row div {
+    height: 10px;
+    margin-top: 7.5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ph-row .big,.ph-row.big div {
+    height: 30px
+}
+
+.ph-row .empty {
+    background: hsla(0,0%,100%,0);
+    border:none;
+}
+.ph-col-1 {
+    flex: 0 0 5.8888%
+}
+.ph-col-2 {
+    flex: 0 0 16.66667%
+}
+
+.ph-col-4 {
+    flex: 0 0 33.33333%
+}
+
+.ph-col-6 {
+    flex: 0 0 50%
+}
+
+.ph-col-8 {
+    flex: 0 0 66.66667%
+}
+
+.ph-col-10 {
+    flex: 0 0 83.33333%
+}
+
+.ph-col-12 {
+    flex: 0 0 100%
+}
+
+[class*=ph-col] {
+    direction: ltr
+}
+
+[class*=ph-col]>*+.ph-row {
+    margin-top: 0
+}
+
+[class*=ph-col]>*+* {
+    margin-top: 7.5px
+}
+
+.ph-avatar {
+    position: relative;
+    width: 100%;
+    min-width: 60px;
+    overflow: hidden;
+    background-color:  rgba(255, 255, 255, 0.1);
+    border-radius: 50%
+}
+
+.ph-avatar:before {
+    display: block;
+    padding-top: 100%;
+    content: " "
+}
+
+.ph-picture {
+    width: 100%;
+    height: 120px;
+    background-color:  rgba(255, 255, 255, 0.1);
+}
+.ph-col{
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 30px !important;
+    display: block;
+}
+.lg-ph{
+    height: auto !important;
+    margin: 0;
+}
+
+.placeholder {display: inline-block;min-height: 1em;vertical-align: middle;cursor: wait;opacity: .5;border-radius: 10px;}
+.placeholder-glow .placeholder {animation: placeholder-glow 2s ease-in-out infinite;}
+@keyframes placeholder-glow {50% {opacity: .2;}}
