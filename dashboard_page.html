@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/all_css.css">
+    <link rel="stylesheet" href="css/tree_style.css">
     
 
     <title>Binaryflux Dashboard</title>
@@ -18,8 +19,8 @@
 .bxDashboardAction.offcanvas {background-color: transparent;margin-top: 0;box-shadow: none;border: 0;width: 600px;}
 .bxSEDHead,
 .offcanvas-header{border-bottom:0;}
-.bxDashboardAction .offcanvas-body{background-color: transparent;}
-.bg_canvas{background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);padding: 20px;}
+.bxDashboardAction .offcanvas-body{background-color: transparent; overflow-x: hidden;padding: 10px;}
+.bg_canvas{background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);}
 .bxDashboardActionGraph p{font-weight: 500;font-size: 14px;line-height: 16px;text-transform: uppercase;color: rgba(255, 255, 255, 0.6);}
 .bxDashboardActionGraph ul li{position: relative;font-size: 14px;line-height: 16px;text-transform: uppercase;padding-left: 15px;}
 .bxDashboardAction_listDot li::before,
@@ -40,6 +41,14 @@
 .bxDA_acttionBtn .ABtn{background: rgba(0, 0, 0, 0.42);border: 1px solid rgba(255, 255, 255, 0.1);font-weight: 500;font-size: 10px;line-height: 12px;text-transform: uppercase;color: #FFFFFF;padding:6px 10px;}
 .bxDashboardAction_listDot li{padding: 0 10px 0 15px;}
 .bxDashboardAction_inner {margin-bottom: 2px;}
+.timeline .timeline-box {-webkit-transition: 0.5s;transition: 0.5s; margin-left: 65px;padding: 10px;background: linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);border: 1px solid #0f2844;border-radius: 4px;font-size: 12px;}
+.timeline .timeline-box:hover{    box-shadow: 0px 10px 15px #377ed030;    border-color: transparent;}
+.timeline .timeline-icon {background: #0f2844;border-radius: 50%;display: block;height: 24px;left: 19px;position: absolute;text-align: center;
+top: 50%;width: 24px;-webkit-transform: translateY(-50%);transform: translateY(-50%);}
+.timeline-icon::after {border-top: 2px dashed #0f2844;position: absolute;content: "";height: 2px;width: 35px;top: 13px;z-index: 0;}
+.timeline-show .time-show-name { background:linear-gradient(117.87deg, #090B19 42.87%, #102A47 99.67%);}
+.timeline:before { border-left: 2px dashed #0f2844;}
+.bxDashboardAction .tab-content { background-color: transparent;padding: 10px;border: 1px solid #031126;}
 </style>
   </head>
   <body class="DashboardPage">
@@ -719,8 +728,8 @@
         </div>
     </footer>    
 
-    <div class="bxDashboardAction offcanvas offcanvas-end show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDashboardAction" aria-labelledby="bxDashboardActionLabel">
-        <div class="offcanvas-header p-0 mb-2">
+    <div class="bxDashboardAction offcanvas offcanvas-end bg_canvas show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDashboardAction" aria-labelledby="bxDashboardActionLabel">
+        <div class="offcanvas-header p-0">
             <div class="bxSEDHead">
                 <div class="text-end float-end">
                     <h2 class="text--glitch">80.89 </h2>
@@ -739,208 +748,123 @@
                 </div>
             </div>
         </div>
-        <div class="offcanvas-body p-0">
-
-            <div class="bxDashboardActionGraph bg_canvas mb-2">
-                <div class="d-flex align-items-center justify-content-between">
-                    <p class="m-0">Risk Trends</p>
-                    <ul class="d-flex">
-                        <li class="color_low text-success"> LOW</li>
-                        <li class="color_mid text-warning mx-3"> medium</li>                        
-                        <li class="color_dan text-danger">High</li>
-                    </ul>
-                </div>
-                <div class="col-12">
-                    <img src="images/doppler_rightGraph.png" class="w-100" alt="">
-                </div>
-            </div>
-
-            <div class="bg_canvas mb-2 h-100">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <p class="m-0">latest detection</p>
-                    <p class="m-0"><span class="text-white">23 </span>Assets impacted</p>
-                </div
-                >
-                <div class="bxDashboardAction_inner">
-                    <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
-                        <div class="bxDashboardAction_iETitle p-3">
-                            <h4 class="float-end text-white">2X</h4>
-                            <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                            <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="collapse show pb-2" id="seninfoex">
-                            <div class="card-body bxDAction_sec">
-                                <label for="">Description</label>
-                                <p class="m-0">Abnormal number of edits by sp@binaryflux.xyz of file whose owner is mary@example.com </p>
-                            </div>
-                            <div class="card-body py-0 bxDAction_Tags">
-                                <label class="d-flex align-items-center m-0"><span class="material-symbols-outlined BXf-14 me-3">loyalty</span> Tags</label>
-                                <div class="bxSEDFoot bxTagsAddRemove d-flex">
-                                    <div class="tag-field js-tags">                                    
-                                        <input class="js-tag-input" placeholder="Enter new tag..." id="textInput">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body py-0 bxDA_acttionBtn d-flex align-items-center justify-content-between">
-                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
-                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
-                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
-                                </ul>
-                                <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Take Action</a>
-                            </div>
-                        </div>
+        <div class="offcanvas-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="risk-tab" data-bs-toggle="tab" data-bs-target="#risk-tab-pane" type="button" role="tab" aria-controls="risk-tab-pane" aria-selected="true">Risk</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-tab-pane" type="button" role="tab" aria-controls="events-tab-pane" aria-selected="false">events</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <p class="m-0">Latest detection</p>
+                        <p class="m-0"><span class="text-white">5</span>Assets impacted</p>
                     </div>
-                </div>
-                <div class="bxDashboardAction_inner">
-                    <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
-                        <div class="bxDashboardAction_iETitle p-3">
-                            <h4 class="float-end text-white">2X</h4>
-                            <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                            <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="collapse  pb-2" id="seninfoex1">
-                            <div class="card-body bxDAction_sec">
-                                <label for="">Description</label>
-                                <p class="m-0">Abnormal number of edits by sp@binaryflux.xyz of file whose owner is mary@example.com </p>
-                            </div>
-                            <div class="card-body py-0 bxDAction_Tags">
-                                <label class="d-flex align-items-center m-0"><span class="material-symbols-outlined BXf-14 me-3">loyalty</span> Tags</label>
-                                <div class="bxSEDFoot bxTagsAddRemove d-flex">
-                                    <div class="tag-field js-tags">                                    
-                                        <input class="js-tag-input" placeholder="Enter new tag..." id="textInput">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body py-0 bxDA_acttionBtn d-flex align-items-center justify-content-between">
-                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
-                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
-                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
-                                </ul>
-                                <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Take Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bxDashboardAction_inner">
-                    <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex3" role="button" aria-expanded="false" aria-controls="seninfoex3">
-                        <div class="bxDashboardAction_iETitle p-3">
-                            <h4 class="float-end text-white">2X</h4>
-                            <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                            <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="collapse pb-2" id="seninfoex3">
-                            <div class="card-body bxDAction_sec">
-                                <label for="">Description</label>
-                                <p class="m-0">Abnormal number of edits by sp@binaryflux.xyz of file whose owner is mary@example.com </p>
-                            </div>
-                            <div class="card-body py-0 bxDAction_Tags">
-                                <label class="d-flex align-items-center m-0"><span class="material-symbols-outlined BXf-14 me-3">loyalty</span> Tags</label>
-                                <div class="bxSEDFoot bxTagsAddRemove d-flex">
-                                    <div class="tag-field js-tags">                                    
-                                        <input class="js-tag-input" placeholder="Enter new tag..." id="textInput">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body py-0 bxDA_acttionBtn d-flex align-items-center justify-content-between">
-                                <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
-                                    <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
-                                    <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
-                                </ul>
-                                <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Take Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="collapse  pb-2" id="showAllData">
                     <div class="bxDashboardAction_inner">
-                        <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex4" role="button" aria-expanded="false" aria-controls="seninfoex4">
-                            <div class="bxDashboardAction_iETitle p-3">
-                                <h4 class="float-end text-white">4X</h4>
-                                <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                    <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                    <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="collapse pb-2" id="seninfoex4">
-                                <div class="card-body bxDAction_sec">
-                                    <label for="">Description</label>
-                                    <p class="m-0">Abnormal number of edits by sp@binaryflux.xyz of file whose owner is mary@example.com </p>
-                                </div>
-                                <div class="card-body py-0 bxDAction_Tags">
-                                    <label class="d-flex align-items-center m-0"><span class="material-symbols-outlined BXf-14 me-3">loyalty</span> Tags</label>
-                                    <div class="bxSEDFoot bxTagsAddRemove d-flex">
-                                        <div class="tag-field js-tags">                                    
-                                            <input class="js-tag-input" placeholder="Enter new tag..." id="textInput">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body py-0 bxDA_acttionBtn d-flex align-items-center justify-content-between">
-                                    <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
-                                        <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
-                                        <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
-                                    </ul>
-                                    <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Take Action</a>
-                                </div>
-                            </div>
-                        </div>
+                        <ul id="tree1" class="tree ">
+                            <li><a href="#">Sensitive information exfiltration</a>
+                               <ul>
+                                <li><a href="#">10/11/2022 @ 04:23:51</a></li>
+                                <li><a href="#">Account Name</a>
+                                  <ul>
+                                    <li><a href="#">vishal@binaryflux.xyz</a>
+                                      <ul>
+                                        <li><a href="#">Downloads</a>
+                                            <ul>
+                                                <li>promotions_file.xls</li>
+                                                <li>patented_file.pdf</li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Report2</a>
+                                            <ul>
+                                                <li>monster.com</li>
+                                                <li>winxp.com</li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Ip Address</a>
+                                            <ul>
+                                                <li>190.202.12.3</li>
+                                                <li>190.202.12.3</li>
+                                            </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                
+                            <li><a href="#">Account privilege misuse</a>
+                                <ul>
+                                 <li><a href="#">10/11/2022 @ 04:23:51</a></li>
+                                 <li><a href="#">Account Name</a>
+                                   <ul>
+                                     <li><a href="#">arun@binaryflux.xyz</a>
+                                       <ul>
+                                         <li><a href="#">Downloads</a>
+                                             <ul>
+                                                 <li>promotions_file.xls</li>
+                                                 <li>patented_file.pdf</li>
+                                             </ul>
+                                         </li>
+                                         <li><a href="#">Report2</a>
+                                             <ul>
+                                                 <li>monster.com</li>
+                                                 <li>winxp.com</li>
+                                             </ul>
+                                         </li>
+                                         <li><a href="#">Ip Address</a>
+                                             <ul>
+                                                 <li>190.202.12.3</li>
+                                                 <li>190.202.12.3</li>
+                                             </ul>
+                                         </li>
+                                       </ul>
+                                     </li>
+                                   </ul>
+                                 </li>
+                               </ul>
+                             </li>
+                
+                        </ul>
                     </div>
-                    <div class="bxDashboardAction_inner">
-                        <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex5" role="button" aria-expanded="false" aria-controls="seninfoex5">
-                            <div class="bxDashboardAction_iETitle p-3">
-                                <h4 class="float-end text-white">2X</h4>
-                                <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                    <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                    <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="collapse pb-2" id="seninfoex5">
-                                <div class="card-body bxDAction_sec">
-                                    <label for="">Description</label>
-                                    <p class="m-0">Abnormal number of edits by sp@binaryflux.xyz of file whose owner is mary@example.com </p>
-                                </div>
-                                <div class="card-body py-0 bxDAction_Tags">
-                                    <label class="d-flex align-items-center m-0"><span class="material-symbols-outlined BXf-14 me-3">loyalty</span> Tags</label>
-                                    <div class="bxSEDFoot bxTagsAddRemove d-flex">
-                                        <div class="tag-field js-tags">                                    
-                                            <input class="js-tag-input" placeholder="Enter new tag..." id="textInput">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body py-0 bxDA_acttionBtn d-flex align-items-center justify-content-between">
-                                    <ul class="bxOC_listDot d-flex align-items-center mb-0 p-0">
-                                        <li class="BXf-14"><span class="text-success"> escalated to manager</span> </li>
-                                        <li class="BXf-14"> <span class="badge text-bg-warning">binary bot </span> </li>
-                                    </ul>
-                                    <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Take Action</a>
-                                </div>
-                            </div>
+                    
+                    <div class="bxDashboardAction_iETitle p-2">
+                        <div class="BXf-12 bxShowAllBtn py-2 d-block text-end" data-bs-toggle="collapse" href="#showAllData" role="button" aria-expanded="false" aria-controls="showAllData">Show All 
+                            <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
                         </div>
                     </div>
                 </div>
-                <div class="bxDashboardAction_iETitle p-2">
-                    <div class="BXf-12 bxShowAllBtn py-2 d-block text-end" data-bs-toggle="collapse" href="#showAllData" role="button" aria-expanded="false" aria-controls="showAllData">Show All 
-                        <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
-                    </div>
-                </div>
+                <div class="tab-pane fade" id="events-tab-pane" role="tabpanel" aria-labelledby="events-tab" tabindex="0">...</div>
             </div>
             
+            
+        </div>
+        <div class="offcanvas-footer bg_canvas p-2">
+            <ul class="d-flex align-items-center bxDA_acttionBtn p-0 m-0">
+                <li>
+                    <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Mitigation</a>
+                </li>
+                <li class="mx-3">
+                    <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Escalate</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="material-symbols-outlined text-white">more_vert</span>
+                        </span>
+                        <ul class="dropdown-menu" data-popper-placement="bottom-start">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     </div>
@@ -1036,6 +960,38 @@
                     }
           });
         });
+    </script>
+    <script>
+        var tree = document.getElementById("tree1");
+        if(tree){
+        tree.querySelectorAll("ul").forEach(function(el,key,parent){
+            var elm =  el.parentNode;
+            elm.classList.add("branch");
+            var x = document.createElement("i");
+            x.classList.add("indicator");
+            x.classList.add("bi-folder-plus");
+            elm.insertBefore(x, elm.firstChild);
+            el.classList.add("collapse");
+
+            elm.addEventListener("click", function(event)
+            {
+                if (elm === event.target || elm === event.target.parentNode){
+                
+                    if(el.classList.contains('collapse')){
+                        el.classList.add("expand");
+                        el.classList.remove("collapse");
+                        x.classList.remove("bi-folder-plus");
+                        x.classList.add("bi-folder-minus");
+                    }else{
+                        el.classList.add("collapse");
+                        el.classList.remove("expand");
+                        x.classList.remove("bi-folder-minus");
+                        x.classList.add("bi-folder-plus");
+                    }    
+                }    
+            },false);    
+        });
+        }
     </script>
     
 

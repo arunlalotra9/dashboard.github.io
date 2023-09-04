@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="bxHtml" data-bs-theme="dark" data-bs-theme-data="full">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all_css.css">
+    
+
+    <title>Binaryflux treeview</title>
+
+<style>
+.tree {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.tree ul {
+margin: 0;
+padding: 0;
+list-style: none;
+margin-left: 1em;
+position: relative;
+}
+.tree ul ul {
+margin-left: 0.5em;
+}
+.tree ul:before {
+content: "";
+display: block;
+width: 0;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+border-left: 1px solid;
+}
+.tree ul li:before {
+content: "";
+display: block;
+width: 10px;
+height: 0;
+border-top: 1px solid;
+margin-top: -1px;
+position: absolute;
+top: 1em;
+left: 0;
+}
+.tree ul li:last-child:before {
+background: rgba(203, 170, 0, 0.5);
+height: auto;
+top: 1em;
+bottom: 0;
+width: 1px;
+}
+.tree li {
+margin: 0;
+padding: 0 1em;
+line-height: 2em;
+color: #369;
+font-weight: 700;
+position: relative;
+}
+.tree li .expand {
+display: block;
+}
+.tree li .collapse {
+display: none;
+}
+.tree li a {
+text-decoration: none;
+color: #369;
+}
+.tree li button {
+text-decoration: none;
+color: #369;
+border: none;
+background: transparent;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+outline: 0;
+}
+.tree li button:active {
+text-decoration: none;
+color: #369;
+border: none;
+background: transparent;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+outline: 0;
+}
+.tree li button:focus {
+text-decoration: none;
+color: #369;
+border: none;
+background: transparent;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+outline: 0;
+}
+.indicator {
+margin-right: 5px;
+}
+ 
+</style>
+  </head>
+  <body class="DashboardPage">
+    
+    <div id="wrapper" class="">
+        <ul id="tree1" class="tree ">
+            <li><a href="#">Sensitive information exfiltration</a>
+               <ul>
+                <li><a href="#">10/11/2022 @ 04:23:51</a></li>
+                <li><a href="#">Account Name</a>
+                  <ul>
+                    <li><a href="#">vishal@binaryflux.xyz</a>
+                      <ul>
+                        <li><a href="#">Downloads</a>
+                            <ul>
+                                <li>promotions_file.xls</li>
+                                <li>patented_file.pdf</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Report2</a>
+                            <ul>
+                                <li>monster.com</li>
+                                <li>winxp.com</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ip Address</a>
+                            <ul>
+                                <li>190.202.12.3</li>
+                                <li>190.202.12.3</li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="#">Account privilege misuse</a>
+                <ul>
+                 <li><a href="#">10/11/2022 @ 04:23:51</a></li>
+                 <li><a href="#">Account Name</a>
+                   <ul>
+                     <li><a href="#">arun@binaryflux.xyz</a>
+                       <ul>
+                         <li><a href="#">Downloads</a>
+                             <ul>
+                                 <li>promotions_file.xls</li>
+                                 <li>patented_file.pdf</li>
+                             </ul>
+                         </li>
+                         <li><a href="#">Report2</a>
+                             <ul>
+                                 <li>monster.com</li>
+                                 <li>winxp.com</li>
+                             </ul>
+                         </li>
+                         <li><a href="#">Ip Address</a>
+                             <ul>
+                                 <li>190.202.12.3</li>
+                                 <li>190.202.12.3</li>
+                             </ul>
+                         </li>
+                       </ul>
+                     </li>
+                   </ul>
+                 </li>
+               </ul>
+             </li>
+
+        </ul>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+
+    <script>
+        var tree = document.getElementById("tree1");
+        if(tree){
+        tree.querySelectorAll("ul").forEach(function(el,key,parent){
+            var elm =  el.parentNode;
+            elm.classList.add("branch");
+            var x = document.createElement("i");
+            x.classList.add("indicator");
+            x.classList.add("bi-folder-plus");
+            elm.insertBefore(x, elm.firstChild);
+            el.classList.add("collapse");
+
+            elm.addEventListener("click", function(event)
+            {
+                if (elm === event.target || elm === event.target.parentNode){
+                
+                    if(el.classList.contains('collapse')){
+                        el.classList.add("expand");
+                        el.classList.remove("collapse");
+                        x.classList.remove("bi-folder-plus");
+                        x.classList.add("bi-folder-minus");
+                    }else{
+                        el.classList.add("collapse");
+                        el.classList.remove("expand");
+                        x.classList.remove("bi-folder-minus");
+                        x.classList.add("bi-folder-plus");
+                    }    
+                }    
+            },false);    
+        });
+        }
+    </script>
+    
+
+  </body>
+</html>
