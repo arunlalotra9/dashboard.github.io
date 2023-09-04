@@ -35,7 +35,7 @@ top: 1em;
 left: 0;
 }
 .tree ul li:last-child:before {
-background: rgba(203, 170, 0, 0.5);
+background: rgba(29, 235, 186, 0.7);
 height: auto;
 top: 1em;
 bottom: 0;
