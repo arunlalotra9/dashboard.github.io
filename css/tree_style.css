@@ -31,7 +31,7 @@ height: 0;
 border-top: 1px solid;
 margin-top: -1px;
 position: absolute;
-top: 1em;
+top: 50%;
 left: 0;
 }
 .tree ul li:last-child:before {
@@ -43,7 +43,7 @@ width: 1px;
 }
 .tree li {
 margin: 0 0 1px;
-padding: 1em;
+padding: 15px;
 line-height: 2em;
 color: rgba(255,255,255,0.5);
 font-weight: 700;
@@ -88,5 +88,5 @@ padding: 0px 0px 0px 0px;
 outline: 0;
 }
 .indicator {
-margin-right: 5px;
+    margin-right: 10px;
 }
