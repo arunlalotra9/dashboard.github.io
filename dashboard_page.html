@@ -50,6 +50,17 @@ p.bxJsonText.my-2 .form-group p,
     color: #1DEBBA;
 }
 .bxDashboardAction .tab-content { background-color: transparent;padding: 10px;border: 1px solid #031126;}
+
+.overview_sec label {
+    opacity: .5;
+    font-style: italic;
+}
+.table th{
+    color: #fff;
+}
+.table td{
+    color: #ccc;
+}
 </style>
   </head>
   <body class="DashboardPage">
@@ -732,121 +743,71 @@ p.bxJsonText.my-2 .form-group p,
     <div class="bxDashboardAction offcanvas offcanvas-end bg_canvas show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDashboardAction" aria-labelledby="bxDashboardActionLabel">
         <div class="offcanvas-header p-0">
             <div class="bxSEDHead">
-                <div class="text-end float-end">
-                    <h2 class="m-0">80.89 </h2>
-                    <small class="text-danger ms-2 d-block">HIGH</small>
-                </div>
+                
                 <div class="bxOutliersCard">
-                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-2">person</span> arun@binaryflux.xyz</h4>
-                    <ul class="bxOC_list d-flex align-items-center mb-0">
-                        <li class="BXf-14">Engraining </li>
-                        <li class="BXf-14">Rahul </li>
-                        <li class="BXf-14">Pune </li>
-                    </ul>
-                    <ul class="bxOC_list d-flex align-items-center mb-0">
-                        <li class="BXf-12">10/11/2022 @ 04:23:51 </li>
-                    </ul>
+                    <h4 class="d-flex align-items-center BXf-18 text-white mb-0"><span class="material-symbols-outlined me-3">
+                        business_center
+                        </span>AWS Guard Duty Event</h4>
+                    <p style="margin-left: 40px;">We have received a AWS Guard Duty event with the following information on a resource that is under your assignment</p>
+                    
                 </div>
             </div>
         </div>
         <div class="offcanvas-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="risk-tab" data-bs-toggle="tab" data-bs-target="#risk-tab-pane" type="button" role="tab" aria-controls="risk-tab-pane" aria-selected="true">Risk</button>
+                    <button class="nav-link active" id="Overview-tab" data-bs-toggle="tab" data-bs-target="#Overview-tab-pane" type="button" role="tab" aria-controls="Overview-tab-pane" aria-selected="true">Overview</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-tab-pane" type="button" role="tab" aria-controls="events-tab-pane" aria-selected="false">events</button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="risk-tab-pane" role="tabpanel" aria-labelledby="risk-tab" tabindex="0">
-                    <div class="bxDashboardAction_inner">
-                        <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex" role="button" aria-expanded="false" aria-controls="seninfoex">
-                            <div class="bxDashboardAction_iETitle p-3">
-                                <h4 class="float-end text-white">9X</h4>
-                                <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                    <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                    <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="collapse show pb-2" id="seninfoex">
-                                <p class="m-0"><img src="images/risk_graph.png" class="w-100" alt=""></p>
-                            </div>
-                        </div>
+                <div class="tab-pane fade show active" id="Overview-tab-pane" role="tabpanel" aria-labelledby="Overview-tab" tabindex="0">
+                    <div class="overview_sec">
+                        <label for="">Title :</label>
+                        <p>Unprotected port on EC2 instance 1-2325c2525ca55sa253 is being probed</p>
                     </div>
-                    <div class="bxDashboardAction_inner">
-                        <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex1" role="button" aria-expanded="false" aria-controls="seninfoex1">
-                            <div class="bxDashboardAction_iETitle p-3">
-                                <h4 class="float-end text-white">2X</h4>
-                                <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                    <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                    <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="collapse  pb-2" id="seninfoex1">
-                                <p class="m-0"><img src="images/risk_graph.png" class="w-100" alt=""></p>
-                            </div>
-                        </div>
+                    <div class="overview_sec">
+                        <label for="">Description :</label>
+                        <p> EC2 instance has an unprotected port which is being probed by a known malicious host</p>
                     </div>
-                    <div class="bxDashboardAction_inner">
-                        <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex3" role="button" aria-expanded="false" aria-controls="seninfoex3">
-                            <div class="bxDashboardAction_iETitle p-3">
-                                <h4 class="float-end text-white">2X</h4>
-                                <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                    <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                    <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="collapse pb-2" id="seninfoex3">
-                                <p class="m-0"><img src="images/risk_graph.png" class="w-100" alt=""></p>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="collapse" id="showAllData">
-                        <div class="bxDashboardAction_inner">
-                            <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex4" role="button" aria-expanded="false" aria-controls="seninfoex4">
-                                <div class="bxDashboardAction_iETitle p-3">
-                                    <h4 class="float-end text-white">4X</h4>
-                                    <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                    <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                        <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                        <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="collapse pb-2" id="seninfoex4">
-                                    <p class="m-0"><img src="images/risk_graph.png" class="w-100" alt=""></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bxDashboardAction_inner">
-                            <div class="bxDashboardAction_innerExpand" data-bs-toggle="collapse" href="#seninfoex5" role="button" aria-expanded="false" aria-controls="seninfoex5">
-                                <div class="bxDashboardAction_iETitle p-3">
-                                    <h4 class="float-end text-white">2X</h4>
-                                    <h5 class="BXf-14 pt-1 mb-0">Sensitive information exfiltration <span class="text-warning"><i> Sep, 10:10 AM </i></span></h5>
-                                    <ul class="bxDashboardAction_listDot d-flex align-items-center p-0 m-0">
-                                        <li class="BXf-12 me-2"><span class="text-success me-2"> Tactic:</span> <span>Credential Access (TA0006)</span> </li>
-                                        <li class="BXf-12"><span class="text-success me-2">Technique: </span> <span>Network Sniffing </span> </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="collapse pb-2" id="seninfoex5">
-                                    <p class="m-0"><img src="images/risk_graph.png" class="w-100" alt=""></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bxDashboardAction_iETitle p-2">
-                        <div class="BXf-12 bxShowAllBtn py-2 d-block text-end" data-bs-toggle="collapse" href="#showAllData" role="button" aria-expanded="false" aria-controls="showAllData">Show All 
-                            <span class="material-symbols-outlined BXf-12">keyboard_double_arrow_down</span>
-                        </div>
+                    <div class="overview_sec">
+                        <label for="">Details with IP Address Enrichment :</label>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>IP</th>
+                                    <th>VERDICT</th>
+                                    <th>PORT</th>
+                                    <th>COUNTRY</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>107.122.23.265</td>
+                                    <td>Malicious</td>
+                                    <td>8000</td>
+                                    <td>India</td>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                </tr>
+                                <tr>
+                                    <td>107.122.23.265</td>
+                                    <td>Malicious</td>
+                                    <td>8000</td>
+                                    <td>India</td>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                </tr>
+                                <tr>
+                                    <td>107.122.23.265</td>
+                                    <td>Malicious</td>
+                                    <td>8000</td>
+                                    <td>India</td>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="events-tab-pane" role="tabpanel" aria-labelledby="events-tab" tabindex="0">
@@ -883,31 +844,12 @@ p.bxJsonText.my-2 .form-group p,
             
         </div>
         <div class="offcanvas-footer bg_canvas p-2">
-            <ul class="d-flex align-items-center bxDA_acttionBtn p-0 m-0">
-                <li>
-                    <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Mitigation</a>
-                </li>
-                <li class="mx-3">
-                    <a class="ABtn BXf-14 d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTakeAction" aria-controls="offcanvasTakeAction"> Escalate</a>
-                </li>
-                <li>
-                    <div class="dropdown">
-                        <span class="dropdown-toggle arrow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="material-symbols-outlined text-white">more_vert</span>
-                        </span>
-                        <ul class="dropdown-menu" data-popper-placement="bottom-start">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+            <p>Footer</p>
         </div>
 
     </div>
 
-    <div class="bxDashboardAction offcanvas offcanvas-start bg_canvas show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDashboardAction" aria-labelledby="bxDashboardActionLabel">
+    <div class="bxDashboardAction offcanvas offcanvas-start bg_canvas " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="bxDashboardAction" aria-labelledby="bxDashboardActionLabel">
         <div class="offcanvas-header p-0">
             <div class="bxSEDHead align-items-center">
                 <div class="text-end float-end">
@@ -1036,6 +978,38 @@ p.bxJsonText.my-2 .form-group p,
                 </div>
                 <div class="tab-pane fade" id="events-tab-pane" role="tabpanel" aria-labelledby="events-tab" tabindex="0">...</div>
             </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>  
             
             
         </div>
