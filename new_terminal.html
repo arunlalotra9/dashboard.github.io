@@ -1,360 +1,535 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>terminal </title>
-	<style type="text/css">
-		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-		body{
-			margin: 0;
-			background-color: #020A1B;
-			font-family: 'Roboto Mono', monospace;
-		}
-		.bg_t_c{
-			background: linear-gradient(180deg, #ffffff 0%, rgb(135 135 135) 100%);
-			position: relative;
-			width: 100%;
-			height: 35px;
-		}
-		#header p{
-			font-size: 12px;
-		}
-		#terminal_container{
-			position: relative;
-			z-index: 9;
-			padding-bottom: 10px;
-		}
-		p{
-			margin: 0;
-		}
-		.tC_inner>div,
-		.tC_inner ul label,
-		.tC_inner p, .tC_inner ul li{
-			color: rgba(255, 255, 255, 0.5);
-			font-size: 14px;
-		}
-		.tC_inner ul li{
-			list-style: none;
-		}
-		.tC_inner ul label{
-			font-weight: bold;
-		}
-		#terminal_container output {
-		    clear: both;
-		    width: 100%;
-		}
-		#terminal_container output h3 {
-		    margin: 0;
-		}
-		#terminal_container output pre {
-		    margin: 0;
-		}
-		#prompt {
-		    float: left;
-		    color: green;
-		    margin-right: 7px;
-		}
-		#cmdline {
-		    float: left;
-		    margin: 0;
-		    width: 96%;
-		    font: inherit;
-		    border: none;
-		    background-color: transparent;
-		    outline: none;
-		    color: #fff; 
-			font-size: 14px;
-		}
-		#output .cmd-output .filesystem-ls span {
-		    margin-right: 2%;
-		}
-		#output .cmd-output .filesystem-ls-l span {
-		    display: block;
-		}
-		#output .cmd-output div .is-dir {
-		    color: rgb(0, 82, 255);
-		}
-		.d-flex{
-			display: flex;
-			align-items: center;
-		}
-		.d-flex img{
-			margin-right: 5px;
-		}
-		.cmd-output {padding:0px 0px 0px 20px}
-		.ph-row {
-			display: flex;
-			flex-wrap: wrap;
-			padding-top: 10px;
-			padding-left: 10px;
-		}
-		.ph-col {
-			height: 15px;
-			width: 15px;
-			border-radius: 30px;
-			display: block;
-		}
-		
-		.bg-danger {
-			background-color: #dc3545!important;
-		}
-		.bg-warning {
-			background-color: #ffc107!important;
-		}
-		.bg-success {
-			background-color: #198754!important;
-		}
-		.ph-col:hover {
-			background-color: #5135dc!important;
-		}
-		.mx-2 {
-			margin-right: .5rem!important;
-			margin-left: .5rem!important;
-		}
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminal</title>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    body {
+        margin: 0;
+        background-color: #2D2D2D;
+        font-family: 'Roboto Mono', monospace;
+    }
+    .bg_t_c {
+        background: linear-gradient(180deg, #ffffff 0%, rgb(135 135 135) 100%);
+        position: relative;
+        width: 100%;
+        height: 35px;
+    }
+    #header p {
+        font-size: 12px;
+    }
+    #terminal_container {
+        position: relative;
+        z-index: 9;
+        padding-bottom: 10px;
+    }
+    p {
+        margin: 0;
+    }
+    .tC_inner>div,
+    .tC_inner ul label,
+    .tC_inner p, .tC_inner ul li {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+    }
+    .tC_inner ul li {
+        list-style: none;
+    }
+    .tC_inner ul label {
+        font-weight: bold;
+    }
+    #terminal_container output {
+        clear: both;
+        width: 100%;
+    }
+    #terminal_container output h3 {
+        margin: 0;
+    }
+    #terminal_container output pre {
+        margin: 0;
+    }
+    #prompt {
+        float: left;
+        color: green;
+        margin-right: 7px;
+    }
+    #cmdline {
+        float: left;
+        margin: 0;
+        width: 96%;
+        font: inherit;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+    }
+    #output .cmd-output .filesystem-ls span {
+        margin-right: 2%;
+    }
+    #output .cmd-output .filesystem-ls-l span {
+        display: block;
+    }
+    #output .cmd-output div .is-dir {
+        color: rgb(0, 82, 255);
+    }
+    .d-flex {
+        display: flex;
+        align-items: center;
+    }
+    .d-flex img {
+        margin-right: 5px;
+    }
+    .cmd-output {
+        padding: 0px 0px 0px 20px;
+    }
+    .ph-row {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .ph-col {
+        height: 15px;
+        width: 15px;
+        border-radius: 30px;
+        display: block;
+    }
+    .bg-danger {
+        background-color: #dc3545!important;
+    }
+    .bg-warning {
+        background-color: #ffc107!important;
+    }
+    .bg-success {
+        background-color: #198754!important;
+    }
+    .ph-col:hover {
+        background-color: #5135dc!important;
+    }
+    .mx-2 {
+        margin-right: .5rem!important;
+        margin-left: .5rem!important;
+    }
+    textarea.python-editor {
+        background: transparent;
+        border: none;
+        color: #fff;
+        width: 100%;
+        height: 500px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 14px;
+    }
+    textarea:focus-visible,
+    textarea.python-editor:focus {
+        border: none !important;
+        box-shadow: none !important;
+        outline-offset: 0px;
+        outline: none;
+    }
+    .bage {
+        padding: 2px 4px;
+        font-size: 10px;
+        background-color: #6c757d;
+        border-radius: 2px;
+    }
+    .header_message {
+		background-color: #0000006b;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		margin-bottom: 10px;
+		border-radius: 10px;
+		padding: 10px 20px;
+		display: inline-block;
+		margin-top: 10px;
+	}
+    .header_message p:first-child {
+        margin-bottom: 5px;
+    }
+</style>
 </head>
 <body>
-	<div class="bg_t_c">
-		<div class="ph-row">
-			<div class="ph-col bg-danger"></div>
-			<div class="ph-col bg-warning mx-2"></div>
-			<div class="ph-col bg-success"></div>
-		</div>
-	</div>
-    <div id="terminal_container">
-        <div id="header" class="tC_inner" style="padding:0 20px;">
-            <p>-----------------------------------------------------</p>
-            <p><i> Last login: Mon Sep 18 11:06:01 on ttys011</i></p>
-			<p><i>For Helps type "help"!</i></p>
-            <p>-----------------------------------------------------</p>
-        </div>
-        <output id="output" class="tC_inner"></output>
-        <div class="d-flex tC_inner">
-            <div id="prompt" class="d-flex" style="padding:0px 0px 0px 20px"><img src="images/gif-1.gif" height="20"> doopler:\</div>
-            <input id="cmdline" autofocus="">
+<div class="bg_t_c">
+    <div class="ph-row">
+        <div class="ph-col bg-danger"></div>
+        <div class="ph-col bg-warning mx-2"></div>
+        <div class="ph-col bg-success"></div>
+    </div>
+</div>
+<div id="terminal_container">
+    <div id="header" class="tC_inner" style="padding:0 20px;">
+        <div class="header_message">
+            <p><i> Last login: <span class="bage">Mon Sep 18 at 11:06:01</span></i></p>
+            <p><i>For Helps type <span class="bage"> "help"!</span></i></p>
         </div>
     </div>
+    <output id="output" class="tC_inner"></output>
+    <div class="d-flex tC_inner">
+        <div id="prompt" class="d-flex" style="padding:0px 0px 0px 20px"><img src="images/gif-1.gif" height="20"> doopler:\</div>
+        <input id="cmdline" autofocus="">
+    </div>
+</div>
 
-	<script type="text/javascript">
-		/**
-		 * Namespace
-		 */
-		var Terminal = Terminal || {};
-		var Command  = Command  || {};
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+    /**
+     * Namespace       
+     */
+    var Terminal = Terminal || {};
+    var Command  = Command  || {};
 
-		// Note: The file system has been prefixed as of Google Chrome 12:
-		window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+    // Note: The file system has been prefixed as of Google Chrome 12:
+    window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
 
-		/**
-		 * FilesystemErrorHandler
-		 */
-		Terminal.FilesystemErrorHandler = function(event) {
-		    
-		    // Case
-		    var msg = '';
-		    switch (event.code) {
-		        case FileError.QUOTA_EXCEEDED_ERR:
-		            msg = 'QUOTA_EXCEEDED_ERR';
-		            break;
-		        case FileError.NOT_FOUND_ERR:
-		            msg = 'NOT_FOUND_ERR';
-		            break;
-		        case FileError.SECURITY_ERR:
-		            msg = 'SECURITY_ERR';
-		            break;
-		        case FileError.INVALID_MODIFICATION_ERR:
-		            msg = 'INVALID_MODIFICATION_ERR';
-		            break;
-		        case FileError.INVALID_STATE_ERR:
-		            msg = 'INVALID_STATE_ERR';
-		            break;
-		        default:
-		            msg = 'Unknown Error';
-		            break;
-		    }
+    /**
+     * FilesystemErrorHandler
+     */
+    Terminal.FilesystemErrorHandler = function(event) {
 
-		    // Log
-		    console.log('Filesystem Error: ' + msg);
-		};
+        // Case
+        var msg = '';
+        switch (event.code) {
+            case FileError.QUOTA_EXCEEDED_ERR:
+                msg = 'QUOTA_EXCEEDED_ERR';
+                break;
+            case FileError.NOT_FOUND_ERR:
+                msg = 'NOT_FOUND_ERR';
+                break;
+            case FileError.SECURITY_ERR:
+                msg = 'SECURITY_ERR';
+                break;
+            case FileError.INVALID_MODIFICATION_ERR:
+                msg = 'INVALID_MODIFICATION_ERR';
+                break;
+            case FileError.INVALID_STATE_ERR:
+                msg = 'INVALID_STATE_ERR';
+                break;
+            default:
+                msg = 'Unknown Error';
+                break;
+        }
 
-		/**
-		 * Terminal Events
-		 */
-		Terminal.Events = function(inputElement, OutputElement) {
-		    
-		    // Set Root Pointer
-		    window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {Terminal.Filesystem.pwd = fs.root}, Terminal.FilesystemErrorHandler);
-		    
-		    // Sets
-		    var input = document.getElementById(inputElement);
-		    var body  = document.getElementById('body');
-		      
-		    // Input Keypress
-		    input.onkeydown = function(event) {
-		        if (event.which == 13 || event.keyCode == 13) {
-		            
-		            // Input Value
-		            var inputValue = input.value;
-		            var output     = new Terminal.Output(OutputElement);
-		            
-		            // Check Command Empty
-		            if (inputValue == '') {
-		                return false;
-		            }
-		            
-		            // Command
-		            var inputParse = inputValue.split(' ');
-		            var command    = inputParse[0].toLowerCase();
-		            
-		            // Get Command
-		            var commandInstance = Command.Factory.create(command);
-		            var fsCallback      = commandInstance.getFsCallback(inputParse, output);
+        // Log
+        console.log('Filesystem Error: ' + msg);
+    };
 
-		            // Execute FileSystem Function
-		            if (!(fsCallback instanceof Terminal.Output)) {
-		                window.requestFileSystem(window.TEMPORARY, 1024*1024, fsCallback, Terminal.FilesystemErrorHandler);
-		            }
-		            
-		            // Clear Input
-		            input.value = '';
-		        }
-		        return true;
-		    };
-		    
-		    // Click Body
-		    body.onclick = function() {
-		        input.focus();
-		    };
-		};
+    /**
+     * Terminal Events
+     */
+    Terminal.Events = function(inputElement, OutputElement) {
 
-		/**
-		 * Output
-		 */
-		Terminal.Output = function(element) {
-		    
-		    // OutputElemen
-		    var outputElement = document.getElementById(element);
-		    
-		    // White
-		    this.write = function(content) {
-		        var fromContent = outputElement.innerHTML;
-		        fromContent += '<div class="cmd-output">';
-		        fromContent += content;
-		        fromContent += '</div>';
-		        outputElement.innerHTML = fromContent;
-		        return this;
-		    };
-		    
-		    this.clear = function() {
-		        outputElement.innerHTML = '';
-		        return this;
-		    };
-		};
+        // Set Root Pointer
+        window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {Terminal.Filesystem.pwd = fs.root}, Terminal.FilesystemErrorHandler);
 
-		/**
-		 * Terminal Filesystem Pointer
-		 */
-		Terminal.Filesystem = {
-		    pwd: null
-		};
+        // Sets
+        var input = document.getElementById(inputElement);
+        var body  = document.getElementById('body');
 
-		/**
-		 * Command Help
-		 */
-		Command.Help = {
-		    getFsCallback: function(input, output) {
-		        var helpContent = '';
-		        helpContent += '<div><p>For more information on a specific command, type HELP command-name</p></div>';
-		        helpContent += '<div><label>Sample command format :</label></div>';
-		        helpContent += '<div><br></div>';
-		        helpContent += '<div><p><content-type> --mode = <modes> --name --description </p></div>';
-				helpContent += '<div><p>stream --mode=view --name=Document shared outside domain --type=meta</p></div>';
-				helpContent += '<div><p>stream --mode=view --name=Document shared outside domain --type=script</p></div>';
-				helpContent += '<div><p>stream --mode=create --name=Document shared outside domain --description=analyze documents shared outside domain</p></div>';
-				helpContent += '<div><p>stream --mode=edit --name=Document shared outside domain --type=script</p></div>';
-				helpContent += '<div><p>stream --mode=remove --name=Document shared outside domain</p></div>';
-				helpContent += '<div><p>stream --mode=publish --name=Document shared outside domain</p></div>';
-				helpContent += '<div><p>secret --mode=create --name=AWS_S3_BUCKET_KEY --source=aws --value=12312ADADSA1231</p></div>';
-				helpContent += '<div><p>variable --mode=create --name=HIGH_CRITICALITY --source=global --value=HIGH</p></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><label>Above command will open stream configuration in the view only mode.</label></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><label>Content Types:</label></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><p>stream, detection, filter, dictionary, automation, dashboards,widgets</p></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><label>Modes :</label></div>';
-				helpContent += '<div><p>create : provides a template to create a new content</p></div>';
-				helpContent += '<div><p>view : opens an existing content in a read only mode</p></div>';
-				helpContent += '<div><p>edit : opens an existing content in editable mode.</p></div>';
-				helpContent += '<div><p>remove : removes an existing content </p></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><label>Arguments</label></div>';
-				helpContent += '<div><p> Based on the mode user could pass the required arguments to the command</p></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><label>example</label></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><p>--name = "sesitive information exifltration"</p></div>';
-				helpContent += '<div><p>Above argument specify the name of a content to action on.</p></div>';
-				helpContent += '<div><br></div>';
-				helpContent += '<div><p>For more information on tools see the command-line reference in the online help.</p></div>';
-		        return output.write(helpContent);
-		    }
-		};
+        // Input Keypress
+        input.onkeydown = function(event) {
+            if (event.which == 13 || event.keyCode == 13) {
 
-		/**
-		 * Command Clear
-		 */
-		Command.Clear = {
-		    getFsCallback: function(input, output) {
-		        return output.clear();
-		    }
-		};
+                // Input Value
+                var inputValue = input.value;
+                var output     = new Terminal.Output(OutputElement);
 
-		/**
-		 * Command Exit
-		 */
-		 Command.Exit = {
-		    getFsCallback: function(input, output) {
-		        return output.exit();
-		    }
-		};
+                // Check Command Empty
+                if (inputValue == '') {
+                    return false;
+                }
 
-		/**
-		 * Command Not Found
-		 */
-		Command.Notfound = {
-		    getFsCallback: function(input, output) {
-		        return output.write('Not having');
-		    }
-		};
+                // Command
+                var inputParse = inputValue.split(' ');
+                var command    = inputParse[0].toLowerCase();
 
-		/**
-		 * Terminal CommandFactory
-		 */
-		Command.Factory = {
-		    commandMap : {
-		      
-		      'clear' : Command.Clear,
-		      'exit' : Command.Exit,
-		      'help'  : Command.Help
-		    },
-		  
-		    create: function(option) {
-		        if (this.commandMap[option] != null) {
-		            return this.commandMap[option];
-		        }      
-		        return Command.Notfound;        
-		    }
-		};
+                // Get Command
+                var commandInstance = Command.Factory.create(command);
+                var fsCallback      = commandInstance.getFsCallback(inputParse, output);
 
-		/**
-		 * Window Load
-		 */
-		window.onload = function() {
-		    new Terminal.Events('cmdline', 'output');
-		};
-	</script>
+                // Execute FileSystem Function
+                if (!(fsCallback instanceof Terminal.Output)) {
+                    window.requestFileSystem(window.TEMPORARY, 1024*1024, fsCallback, Terminal.FilesystemErrorHandler);
+                }
+
+                // Clear Input
+                input.value = '';
+            }
+            return true;
+        };
+
+        // Click Body
+        body.onclick = function() {
+            input.focus();
+        };
+    };
+
+    /**
+     * Output
+     */
+    Terminal.Output = function(element) {
+
+        // OutputElement
+        var outputElement = document.getElementById(element);
+
+        // Write
+        this.write = function(content) {
+            var fromContent = outputElement.innerHTML;
+            fromContent += '<div class="cmd-output">';
+            fromContent += content;
+            fromContent += '</div>';
+            outputElement.innerHTML = fromContent;
+            return this;
+        };
+
+        // Clear
+        this.clear = function() {
+            outputElement.innerHTML = '';
+            return this;
+        };
+    };
+
+    /**
+     * Terminal Filesystem Pointer
+     */
+    Terminal.Filesystem = {
+        pwd: null
+    };
+
+    /**
+     * Command Help
+     */
+    Command.Help = {
+        getFsCallback: function(input, output) {
+            var helpContent = '';
+            helpContent += '<div><p>For more information on a specific command, type HELP command-name</p></div>';
+            helpContent += '<div><label>Sample command format :</label></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><p><content-type> --mode = <modes> --name --description </p></div>';
+            helpContent += '<div><p>stream --mode=view --name=Document shared outside domain --type=meta</p></div>';
+            helpContent += '<div><p>stream --mode=view --name=Document shared outside domain --type=script</p></div>';
+            helpContent += '<div><p>stream --mode=create --name=Document shared outside domain --description=analyze documents shared outside domain</p></div>';
+            helpContent += '<div><p>stream --mode=edit --name=Document shared outside domain --type=script</p></div>';
+            helpContent += '<div><p>stream --mode=remove --name=Document shared outside domain</p></div>';
+            helpContent += '<div><p>stream --mode=publish --name=Document shared outside domain</p></div>';
+            helpContent += '<div><p>secret --mode=create --name=AWS_S3_BUCKET_KEY --source=aws --value=12312ADADSA1231</p></div>';
+            helpContent += '<div><p>variable --mode=create --name=HIGH_CRITICALITY --source=global --value=HIGH</p></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><label>Above command will open stream configuration in the view only mode.</label></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><label>Content Types:</label></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><p>stream, detection, filter, dictionary, automation, dashboards,widgets</p></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><label>Modes :</label></div>';
+            helpContent += '<div><p><span class="bage">create</span> : provides a template to create a new content</p></div>';
+            helpContent += '<div><p><span class="bage">view</span> : opens an existing content in a read only mode</p></div>';
+            helpContent += '<div><p><span class="bage">edit</span> : opens an existing content in editable mode.</p></div>';
+            helpContent += '<div><p><span class="bage">remove</span> : removes an existing content </p></div>';
+            helpContent += '<div><p><span class="bage">exit</span> : exit an existing terminal </p></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><label>Arguments</label></div>';
+            helpContent += '<div><p> Based on the mode user could pass the required arguments to the command</p></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><label>example</label></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><p>--name = "sesitive information exifltration"</p></div>';
+            helpContent += '<div><p>Above argument specify the name of a content to action on.</p></div>';
+            helpContent += '<div><br></div>';
+            helpContent += '<div><p>For more information on tools see the command-line reference in the online help.</p></div>';
+            return output.write(helpContent);
+        }
+    };
+
+    /**
+     * Command View
+     */
+    Command.View = {
+        getFsCallback: function (input, output) {
+            // Create a textarea element for Python code
+            var editableTextarea = document.createElement('textarea');
+            editableTextarea.className = 'python-editor'; // Add a class for styling
+
+            // Style the textarea (optional)
+            editableTextarea.style.width = '98%';
+            editableTextarea.style.height = '500px'; // Set an appropriate height
+
+            // Sample Python code for initial content
+            var initialPythonCode = `def greet():
+    print("Hello, world!")`;
+
+            // Set the initial code as the textarea's value
+            editableTextarea.value = initialPythonCode;
+
+            // Append the textarea to the output for editing
+            output.clear(); // Clear existing content
+            output.write(editableTextarea.outerHTML); // Append the HTML content
+
+            // Focus on the textarea for immediate editing
+            editableTextarea.focus();
+
+            return function () {
+                // You can implement logic here to save the edited Python code
+            };
+        }
+    };
+
+    /**
+     * Command Create
+     */
+    Command.Create = {
+        getFsCallback: function (input, output) {
+            // Create a textarea element for Python code
+            var editableTextarea = document.createElement('textarea');
+            editableTextarea.className = 'python-editor'; // Add a class for styling
+
+            // Style the textarea (optional)
+            editableTextarea.style.width = '100%';
+            editableTextarea.style.height = '300px'; // Set an appropriate height
+
+            // Set an empty Python script as the initial content
+            var initialPythonCode = '';
+
+            // Set the initial code as the textarea's value
+            editableTextarea.value = initialPythonCode;
+
+            // Append the textarea to the output for editing
+            output.clear(); // Clear existing content
+            output.write(editableTextarea.outerHTML); // Append the HTML content
+
+            // Focus on the textarea for immediate editing
+            editableTextarea.focus();
+
+            return function () {
+                // You can implement logic here to save the newly created Python code
+            };
+        }
+    };
+
+    /**
+     * Command Edit
+     */
+    Command.Edit = {
+        getFsCallback: function (input, output) {
+            // Create a textarea element for Python code
+            var editableTextarea = document.createElement('textarea');
+            editableTextarea.className = 'python-editor'; // Add a class for styling
+
+            // Style the textarea (optional)
+            editableTextarea.style.width = '100%';
+            editableTextarea.style.height = '300px'; // Set an appropriate height
+
+            // Sample Python code for initial content (replace with your own code retrieval logic)
+            var initialPythonCode = `def greet():
+    print("Hello, edited world!")`;
+
+            // Set the initial code as the textarea's value
+            editableTextarea.value = initialPythonCode;
+
+            // Append the textarea to the output for editing
+            output.clear(); // Clear existing content
+            output.write(editableTextarea.outerHTML); // Append the HTML content
+
+            // Focus on the textarea for immediate editing
+            editableTextarea.focus();
+
+            return function () {
+                // You can implement logic here to save the edited Python code
+            };
+        }
+    };
+
+    /**
+     * Command Remove
+     */
+     Command.Remove = {
+        getFsCallback: function (input, output) {
+            // Create a textarea element for Python code
+            var editableTextarea = document.createElement('textarea');
+            editableTextarea.className = 'python-editor'; // Add a class for styling
+
+            // Style the textarea (optional)
+            editableTextarea.style.width = '100%';
+            editableTextarea.style.height = '300px'; // Set an appropriate height
+
+            // Sample Python code for initial content (replace with your own code retrieval logic)
+            var initialPythonCode = `def greet():
+    print("Hello, edited world!")`;
+
+            // Set the initial code as the textarea's value
+            editableTextarea.value = initialPythonCode;
+
+            // Append the textarea to the output for editing
+            output.clear(); // Clear existing content
+            output.write(editableTextarea.outerHTML); // Append the HTML content
+
+            // Focus on the textarea for immediate editing
+            editableTextarea.focus();
+
+            return function () {
+                // You can implement logic here to save the edited Python code
+            };
+        }
+    };
+
+    /**
+     * Command Clear
+     */
+    Command.Clear = {
+        getFsCallback: function(input, output) {
+            return output.clear();
+        }
+    };
+
+    /**
+     * Command Exit
+     */
+    Command.Exit = {
+        getFsCallback: function(input, output) {
+            return output.exit();
+        }
+    };
+
+    /**
+     * Command Not Found
+     */
+    Command.Notfound = {
+        getFsCallback: function(input, output) {
+            var errorMessage = '<span style="color: #D05E50;">You entered a wrong command. Please type "help" for assistance.</span>';
+            return output.write(errorMessage);
+        }
+    };
+
+
+    /**
+     * Terminal CommandFactory
+     */
+    Command.Factory = {
+        commandMap : {
+            'create' : Command.Create,
+            'clear' : Command.Clear,
+            'exit' : Command.Exit,
+            'help'  : Command.Help,
+            'view' : Command.View,
+            'edit'  : Command.Edit,
+            'remove' : Command.Remove,
+        },
+
+        create: function(option) {
+            if (this.commandMap[option] != null) {
+                return this.commandMap[option];
+            }
+            return Command.Notfound;
+        }
+    };
+
+    /**
+     * Window Load
+     */
+    window.onload = function() {
+        new Terminal.Events('cmdline', 'output');
+    };
+</script>
 </body>
 </html>
