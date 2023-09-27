@@ -253,8 +253,8 @@ background: linear-gradient(117.87deg, #090b19 42.87%, #102a47 99.67%);
 .Saved_bgSecondary{
   background: linear-gradient(117.87deg, #090b19 42.87%, #102a47 99.67%);
 }
-.Saved_bgSecondary .how_search_text p,
-.Saved_bgSecondary .how_search_text .btn {
+.how_search_text p,
+.how_search_text .btn {
   font-size: 12px;
 }
 .Saved_bgSecondary .form-control-plaintext {
@@ -278,6 +278,32 @@ background: linear-gradient(117.87deg, #090b19 42.87%, #102a47 99.67%);
   font-size: 12px;
   color: rgba(255,255,225,.5);
 }
+#newSearch select, #newSearch input[type="text"], #newSearch textarea{
+    width: 100%;
+    padding: 8px 15px;
+    margin-bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    background: linear-gradient(117.87deg, #102a47 99.67%, #090b19 42.87%);
+    height: auto;
+}
+#newSearch select option{
+  background: #090b19;
+}
+#newSearch .modal-footer,
+#newSearch .modal-header{
+  border-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+#newSearch .btn-close{
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#newSearch .modal-title{
+  font-size: 14px;
+}
 </style>
   </head>
   <body class="DashboardPage">
@@ -292,7 +318,11 @@ background: linear-gradient(117.87deg, #090b19 42.87%, #102a47 99.67%);
           <div class="row g-0">
             <div class="col-md-7">              
               <div class="card card-body savedSearchResult">
-                <h4 class="savedSearch_title">Matching Searches</h4>
+                
+                <div class="how_search_text d-flex align-items-center justify-content-between mb-2">
+                  <h4 class="savedSearch_title m-0">Matching Search</h4>
+                  <p class="d-flex align-items-center m-0">Save As <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#newSearch">New Search</button></p>
+                </div>
                 <div class="save_card">
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="saved_dataTitle">
@@ -369,9 +399,8 @@ background: linear-gradient(117.87deg, #090b19 42.87%, #102a47 99.67%);
               </div>
             </div>
             <div class="col-md-5 Saved_bgSecondary">
-              <div class="how_search_text d-flex align-items-center justify-content-between p-2 px-3">
-                <h4 class="savedSearch_title m-0">How to Searche?</h4>
-                <p class="d-flex align-items-center m-0">Save As <button class="btn btn-primary ms-3">New Search</button></p>
+              <div class="how_search_text p-2 px-3">
+                <h4 class="savedSearch_title m-0">How to Search?</h4>
               </div>
               <div class="px-3">
                 <label for="Step1">Step 1: Retrieve Events</label>
@@ -476,6 +505,40 @@ background: linear-gradient(117.87deg, #090b19 42.87%, #102a47 99.67%);
           </ul>
       </div>
     </div>
+
+<!-- Modal -->
+<div class="modal fade" id="newSearch" tabindex="-1" aria-labelledby="newSearchLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title pe-3" id="newSearchLabel">SELECT COUNT(*) AS count,user.email AS email,detection.entity AS entity, detection.criticality AS criticality FROM detection GROUP BY email, entity, criticality </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="mb-3">
+            <label for="">Title</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="">Description</label>
+            <textarea name="" id="" class="form-control"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="">Tentants</label>
+            <select>
+              <option value="value1">value 1</option>
+              <option value="value2">value 2</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
     
 
     <script src="js/vendor.min.js"></script>
